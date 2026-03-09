@@ -1,0 +1,50 @@
+{"timestamp":"2026-02-16T09:51:43.299194Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-02-16T09:51:43.314276Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/weekly_streaming_pipeline.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-02-16T09:51:51.775153Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T09:51:51.776627Z","level":"info","event":"================================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-16T09:51:51.777593Z","level":"info","event":"F1 WEEKLY STREAMING PIPELINE STARTED","logger":"task.stdout"}
+{"timestamp":"2026-02-16T09:51:51.778461Z","level":"info","event":"================================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-16T09:51:51.779452Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T09:51:51.780320Z","level":"info","event":"Execution Date: 2026-02-16 03:00:00+00:00","logger":"task.stdout"}
+{"timestamp":"2026-02-16T09:51:51.781191Z","level":"info","event":"Target Year: 2026","logger":"task.stdout"}
+{"timestamp":"2026-02-16T09:51:51.783335Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T09:51:51.791295Z","level":"info","event":"Pipeline Flow:","logger":"task.stdout"}
+{"timestamp":"2026-02-16T09:51:51.792260Z","level":"info","event":"  PHASE 1: API → Kafka (Producers)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T09:51:51.794886Z","level":"info","event":"    ├─ Dimensions (4): driver, constructor, circuit, race","logger":"task.stdout"}
+{"timestamp":"2026-02-16T09:51:51.795755Z","level":"info","event":"    └─ Facts (5): results, laps, pitstops, driver_standings, constructor_standings","logger":"task.stdout"}
+{"timestamp":"2026-02-16T09:51:51.796720Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T09:51:51.797669Z","level":"info","event":"  PHASE 2: Kafka → Silver (Consumers)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T09:51:51.798469Z","level":"info","event":"    ├─ Incremental merge with existing data","logger":"task.stdout"}
+{"timestamp":"2026-02-16T09:51:51.799338Z","level":"info","event":"    └─ FK resolution for fact tables","logger":"task.stdout"}
+{"timestamp":"2026-02-16T09:51:51.800130Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T09:51:51.801026Z","level":"info","event":"  PHASE 3: Silver → Gold (PostgreSQL)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T09:51:51.801981Z","level":"info","event":"    └─ Load to Gold layer with proper types","logger":"task.stdout"}
+{"timestamp":"2026-02-16T09:51:51.803142Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T09:51:51.804079Z","level":"info","event":"================================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-16T09:51:51.804957Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T09:51:51.781871Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":216}
+{"timestamp":"2026-02-16T11:35:20.778320Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-02-16T11:35:20.780472Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/weekly_streaming_pipeline.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-02-16T11:35:22.136573Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:35:22.137144Z","level":"info","event":"================================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:35:22.137669Z","level":"info","event":"F1 WEEKLY STREAMING PIPELINE STARTED","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:35:22.138114Z","level":"info","event":"================================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:35:22.138571Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:35:22.139157Z","level":"info","event":"Execution Date: 2026-02-16 03:00:00+00:00","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:35:22.139672Z","level":"info","event":"Target Year: 2026","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:35:22.140768Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:35:22.142357Z","level":"info","event":"Pipeline Flow:","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:35:22.143201Z","level":"info","event":"  PHASE 1: API → Kafka (Producers)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:35:22.143697Z","level":"info","event":"    ├─ Dimensions (4): driver, constructor, circuit, race","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:35:22.144115Z","level":"info","event":"    └─ Facts (5): results, laps, pitstops, driver_standings, constructor_standings","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:35:22.144558Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:35:22.144957Z","level":"info","event":"  PHASE 2: Kafka → Silver (Consumers)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:35:22.145295Z","level":"info","event":"    ├─ Incremental merge with existing data","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:35:22.145659Z","level":"info","event":"    └─ FK resolution for fact tables","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:35:22.146046Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:35:22.146395Z","level":"info","event":"  PHASE 3: Silver → Gold (PostgreSQL)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:35:22.146834Z","level":"info","event":"    └─ Load to Gold layer with proper types","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:35:22.147221Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:35:22.147566Z","level":"info","event":"================================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:35:22.147866Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:35:22.137723Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":216}

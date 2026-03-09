@@ -1,0 +1,10 @@
+{"timestamp":"2026-02-03T14:12:26.975847Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-02-03T14:12:26.977610Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/f1_etl_pipeline_silver.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-02-03T14:12:27.255257Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2026-02-03T14:12:27.255934Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2026-02-03T14:12:27.257517Z","level":"info","event":"Current task name:transform_fact_driver_standings","logger":"task.stdout"}
+{"timestamp":"2026-02-03T14:12:27.258108Z","level":"info","event":"Dag name:f1_etl_pipeline_silver","logger":"task.stdout"}
+{"timestamp":"2026-02-03T14:12:27.259730Z","level":"info","event":"TRANSFORM: fact_driver_standings → Silver (Parquet with surrogate keys)","logger":"task.stdout"}
+{"timestamp":"2026-02-03T14:12:37.325415Z","level":"error","event":"Server indicated the task shouldn't be running anymore. Terminating process","detail":{"detail":{"reason":"not_found","message":"Task Instance not found"}},"logger":"task"}
+{"timestamp":"2026-02-03T14:12:41.480359Z","level":"warning","event":"Columns (7,8,13,14,17,42,45,63) have mixed types. Specify dtype option on import or set low_memory=False.","category":"DtypeWarning","filename":"/opt/airflow/dags/f1_etl_pipeline_silver.py","lineno":562,"logger":"py.warnings"}
+{"timestamp":"2026-02-03T14:12:47.335212Z","level":"error","event":"Task killed!","logger":"task"}

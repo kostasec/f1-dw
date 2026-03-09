@@ -1,0 +1,32 @@
+{"timestamp":"2026-02-16T18:54:05.656605Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-02-16T18:54:05.660223Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/kafka_producer_pipeline.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-02-16T18:54:07.590199Z","level":"warning","event":"The `airflow.operators.trigger_dagrun.TriggerDagRunOperator` attribute is deprecated. Please use `'airflow.providers.standard.operators.trigger_dagrun.TriggerDagRunOperator'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/dags/kafka_producer_pipeline.py","lineno":35,"logger":"py.warnings"}
+{"timestamp":"2026-02-16T18:54:07.665248Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-16T18:54:07.668557Z","level":"info","event":"PRODUCER: dim_constructor  (2026+)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T18:54:07.669205Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-16T18:54:07.669885Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T18:54:07.670428Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-16T18:54:07.670932Z","level":"info","event":"SCRAPING CONSTRUCTORS FROM API: 2026-2026","logger":"task.stdout"}
+{"timestamp":"2026-02-16T18:54:07.671427Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-16T18:54:07.672016Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T18:54:07.672606Z","level":"info","event":"Fetching constructors for 2026...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T18:54:32.040317Z","level":"info","event":"11 constructors found","logger":"task.stdout"}
+{"timestamp":"2026-02-16T18:54:32.046558Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T18:54:32.047066Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-16T18:54:32.047500Z","level":"info","event":"SCRAPING COMPLETE","logger":"task.stdout"}
+{"timestamp":"2026-02-16T18:54:32.047901Z","level":"info","event":"Total records: 11","logger":"task.stdout"}
+{"timestamp":"2026-02-16T18:54:32.048399Z","level":"info","event":"Unique constructors (by constructorId): 11","logger":"task.stdout"}
+{"timestamp":"2026-02-16T18:54:32.048971Z","level":"info","event":"Years covered: 2026-2026","logger":"task.stdout"}
+{"timestamp":"2026-02-16T18:54:32.049538Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-16T18:54:32.050076Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T18:54:32.050722Z","level":"info","event":"Transforming API data to Silver schema...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T18:54:32.051206Z","level":"info","event":"Deduplication: 11 records → 11 unique constructors","logger":"task.stdout"}
+{"timestamp":"2026-02-16T18:54:32.051660Z","level":"info","event":"Sorted by constructorId (alphabetically) for stable constructor_id generation","logger":"task.stdout"}
+{"timestamp":"2026-02-16T18:54:32.052079Z","level":"info","event":"Generated constructor_id: 10001 - 10011","logger":"task.stdout"}
+{"timestamp":"2026-02-16T18:54:32.052607Z","level":"info","event":"Transformed 11 constructors to Silver schema","logger":"task.stdout"}
+{"timestamp":"2026-02-16T18:54:32.053109Z","level":"info","event":"Source: api","logger":"task.stdout"}
+{"timestamp":"2026-02-16T18:54:32.053717Z","level":"info","event":"constructor_id range: 10001 - 10011","logger":"task.stdout"}
+{"timestamp":"2026-02-16T18:54:32.077854Z","level":"info","event":" Downloaded dimensions/dim_constructor/dim_constructor.parquet (23 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T18:54:32.082611Z","level":"info","event":"  No new constructors found this week","logger":"task.stdout"}
+{"timestamp":"2026-02-16T18:54:32.104976Z","level":"info","event":"Done. Returned value was: {'new_count': 0}","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":216}
+{"timestamp":"2026-02-16T18:54:32.105524Z","level":"info","event":"Pushing xcom","ti":"RuntimeTaskInstance(id=UUID('019c67cd-7508-76e6-afdb-7d77b13b8e05'), task_id='scrape_publish_constructors', dag_id='kafka_producer_pipeline', run_id='manual__2026-02-16T18:54:02+00:00', try_number=1, dag_version_id=UUID('019c67ca-8f5c-7e42-9c4f-003df19b8153'), map_index=-1, hostname='9ffd7d06cb04', context_carrier={}, task=<Task(PythonOperator): scrape_publish_constructors>, bundle_instance=LocalDagBundle(name=dags-folder), max_tries=2, start_date=datetime.datetime(2026, 2, 16, 18, 54, 5, 60507, tzinfo=datetime.timezone.utc), end_date=None, state=<TaskInstanceState.RUNNING: 'running'>, is_mapped=False, rendered_map_index=None)","logger":"task","filename":"task_runner.py","lineno":1450}

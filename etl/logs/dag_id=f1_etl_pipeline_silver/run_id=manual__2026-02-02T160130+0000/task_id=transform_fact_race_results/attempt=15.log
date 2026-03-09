@@ -1,0 +1,42 @@
+{"timestamp":"2026-02-04T15:40:17.755816Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-02-04T15:40:17.756709Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/f1_etl_bronze_to_silver.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-02-04T15:40:18.287237Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2026-02-04T15:40:18.290565Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2026-02-04T15:40:18.292212Z","level":"info","event":"Current task name:transform_fact_race_results","logger":"task.stdout"}
+{"timestamp":"2026-02-04T15:40:18.294320Z","level":"info","event":"Dag name:f1_etl_pipeline_silver","logger":"task.stdout"}
+{"timestamp":"2026-02-04T15:40:18.302724Z","level":"info","event":"TRANSFORM: fact_race_results → Silver (Parquet with surrogate keys)","logger":"task.stdout"}
+{"timestamp":"2026-02-04T15:40:34.833082Z","level":"warning","event":"Columns (7,8,13,14,17,42,45,63) have mixed types. Specify dtype option on import or set low_memory=False.","category":"DtypeWarning","filename":"/opt/airflow/dags/f1_etl_bronze_to_silver.py","lineno":296,"logger":"py.warnings"}
+{"timestamp":"2026-02-04T15:40:39.941268Z","level":"info","event":" Downloaded dimensions/dim_driver/dim_driver.parquet (65 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-04T15:40:39.948157Z","level":"info","event":" Downloaded dimensions/dim_constructor/dim_constructor.parquet (20 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-04T15:40:39.968695Z","level":"info","event":" Downloaded dimensions/dim_race/dim_race.parquet (232 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-04T15:40:39.989658Z","level":"info","event":" Downloaded dimensions/dim_time/dim_time.parquet (6940 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-04T15:40:40.160660Z","level":"info","event":"Transformed 4,502 race results with surrogate keys","logger":"task.stdout"}
+{"timestamp":"2026-02-04T15:40:40.233704Z","level":"info","event":" Uploaded facts/fact_race_results/year=2012/data.parquet (447 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-04T15:40:40.234132Z","level":"info","event":"Year 2012: 447 rows","logger":"task.stdout"}
+{"timestamp":"2026-02-04T15:40:40.277681Z","level":"info","event":" Uploaded facts/fact_race_results/year=2013/data.parquet (401 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-04T15:40:40.279775Z","level":"info","event":"Year 2013: 401 rows","logger":"task.stdout"}
+{"timestamp":"2026-02-04T15:40:40.309479Z","level":"info","event":" Uploaded facts/fact_race_results/year=2014/data.parquet (378 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-04T15:40:40.309914Z","level":"info","event":"Year 2014: 378 rows","logger":"task.stdout"}
+{"timestamp":"2026-02-04T15:40:40.355846Z","level":"info","event":" Uploaded facts/fact_race_results/year=2015/data.parquet (347 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-04T15:40:40.356601Z","level":"info","event":"Year 2015: 347 rows","logger":"task.stdout"}
+{"timestamp":"2026-02-04T15:40:40.403552Z","level":"info","event":" Uploaded facts/fact_race_results/year=2016/data.parquet (431 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-04T15:40:40.403935Z","level":"info","event":"Year 2016: 431 rows","logger":"task.stdout"}
+{"timestamp":"2026-02-04T15:40:40.450068Z","level":"info","event":" Uploaded facts/fact_race_results/year=2017/data.parquet (357 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-04T15:40:40.450558Z","level":"info","event":"Year 2017: 357 rows","logger":"task.stdout"}
+{"timestamp":"2026-02-04T15:40:40.493242Z","level":"info","event":" Uploaded facts/fact_race_results/year=2018/data.parquet (382 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-04T15:40:40.496133Z","level":"info","event":"Year 2018: 382 rows","logger":"task.stdout"}
+{"timestamp":"2026-02-04T15:40:40.518703Z","level":"info","event":" Uploaded facts/fact_race_results/year=2019/data.parquet (409 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-04T15:40:40.519175Z","level":"info","event":"Year 2019: 409 rows","logger":"task.stdout"}
+{"timestamp":"2026-02-04T15:40:40.532452Z","level":"info","event":" Uploaded facts/fact_race_results/year=2020/data.parquet (313 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-04T15:40:40.532838Z","level":"info","event":"Year 2020: 313 rows","logger":"task.stdout"}
+{"timestamp":"2026-02-04T15:40:40.552124Z","level":"info","event":" Uploaded facts/fact_race_results/year=2021/data.parquet (397 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-04T15:40:40.552473Z","level":"info","event":"Year 2021: 397 rows","logger":"task.stdout"}
+{"timestamp":"2026-02-04T15:40:40.581263Z","level":"info","event":" Uploaded facts/fact_race_results/year=2022/data.parquet (410 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-04T15:40:40.587655Z","level":"info","event":"Year 2022: 410 rows","logger":"task.stdout"}
+{"timestamp":"2026-02-04T15:40:40.602561Z","level":"info","event":" Uploaded facts/fact_race_results/year=2023/data.parquet (230 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-04T15:40:40.603893Z","level":"info","event":"Year 2023: 230 rows","logger":"task.stdout"}
+{"timestamp":"2026-02-04T15:40:40.706179Z","level":"info","event":"Done. Returned value was: 4502","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":216}
+{"timestamp":"2026-02-04T15:40:40.706465Z","level":"info","event":"Pushing xcom","ti":"RuntimeTaskInstance(id=UUID('019c294f-99cf-78bb-9292-87543a5ed161'), task_id='transform_fact_race_results', dag_id='f1_etl_pipeline_silver', run_id='manual__2026-02-02T16:01:30+00:00', try_number=15, dag_version_id=UUID('019c23fb-91df-7f16-83e9-4bd5f07abd13'), map_index=-1, hostname='85b967703fe5', context_carrier={}, task=<Task(PythonOperator): transform_fact_race_results>, bundle_instance=LocalDagBundle(name=dags-folder), max_tries=15, start_date=datetime.datetime(2026, 2, 4, 15, 40, 17, 55365, tzinfo=datetime.timezone.utc), end_date=None, state=<TaskInstanceState.RUNNING: 'running'>, is_mapped=False, rendered_map_index=None)","logger":"task","filename":"task_runner.py","lineno":1450}
+{"timestamp":"2026-02-04T15:40:40.770200Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2026-02-04T15:40:40.770794Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2026-02-04T15:40:40.771992Z","level":"info","event":"Task operator:<Task(PythonOperator): transform_fact_race_results>","logger":"task.stdout"}

@@ -1,0 +1,41 @@
+{"timestamp":"2026-02-26T19:12:36.404293Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-02-26T19:12:36.455600Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/api_driverStandings_bronze_to_silver.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-02-26T19:12:45.344260Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-26T19:12:45.351739Z","level":"info","event":"F1 DRIVER STANDINGS BACKFILL: ERGAST API -> SILVER","logger":"task.stdout"}
+{"timestamp":"2026-02-26T19:12:45.356075Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-26T19:12:45.376649Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-26T19:12:45.377599Z","level":"info","event":"[STEP 1] Scraping API...","logger":"task.stdout"}
+{"timestamp":"2026-02-26T19:12:45.378646Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-26T19:12:45.379464Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-26T19:12:45.381795Z","level":"info","event":"SCRAPING DRIVER STANDINGS FROM ERGAST API: 2024-2025","logger":"task.stdout"}
+{"timestamp":"2026-02-26T19:12:45.383140Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-26T19:12:45.387270Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-26T19:12:45.388143Z","level":"info","event":"Fetching driver standings for 2024...","logger":"task.stdout"}
+{"timestamp":"2026-02-26T19:13:09.296986Z","level":"info","event":"24 standings found for 2024","logger":"task.stdout"}
+{"timestamp":"2026-02-26T19:13:09.298359Z","level":"info","event":"Fetching driver standings for 2025...","logger":"task.stdout"}
+{"timestamp":"2026-02-26T19:13:31.959789Z","level":"info","event":"21 standings found for 2025","logger":"task.stdout"}
+{"timestamp":"2026-02-26T19:13:31.964311Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-26T19:13:31.965746Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-26T19:13:31.967914Z","level":"info","event":"SCRAPING COMPLETE","logger":"task.stdout"}
+{"timestamp":"2026-02-26T19:13:31.971006Z","level":"info","event":"Total records: 45","logger":"task.stdout"}
+{"timestamp":"2026-02-26T19:13:31.972037Z","level":"info","event":"Years covered: 2024-2025","logger":"task.stdout"}
+{"timestamp":"2026-02-26T19:13:31.982334Z","level":"info","event":"Unique races: 2","logger":"task.stdout"}
+{"timestamp":"2026-02-26T19:13:31.984720Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-26T19:13:31.985716Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-26T19:13:31.988112Z","level":"info","event":"API scraping complete: 45 standing records","logger":"task.stdout"}
+{"timestamp":"2026-02-26T19:13:31.989084Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-26T19:13:31.990460Z","level":"info","event":"[STEP 2] Transforming to Silver schema...","logger":"task.stdout"}
+{"timestamp":"2026-02-26T19:13:32.002842Z","level":"info","event":"Transforming API data to Silver schema...","logger":"task.stdout"}
+{"timestamp":"2026-02-26T19:13:32.020814Z","level":"info","event":"Sorted by year + round + position","logger":"task.stdout"}
+{"timestamp":"2026-02-26T19:13:32.028689Z","level":"info","event":"Generated ds_id: 10000001 - 10000045","logger":"task.stdout"}
+{"timestamp":"2026-02-26T19:13:32.047968Z","level":"info","event":"Transformed 45 standings to Silver schema","logger":"task.stdout"}
+{"timestamp":"2026-02-26T19:13:32.049475Z","level":"info","event":"Source: api","logger":"task.stdout"}
+{"timestamp":"2026-02-26T19:13:32.050813Z","level":"info","event":"ds_id range: 10000001 - 10000045","logger":"task.stdout"}
+{"timestamp":"2026-02-26T19:13:32.052654Z","level":"info","event":"Transformation complete: 45 standings","logger":"task.stdout"}
+{"timestamp":"2026-02-26T19:13:32.056702Z","level":"info","event":"ds_id range: 10000001 - 10000045","logger":"task.stdout"}
+{"timestamp":"2026-02-26T19:13:32.057772Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-26T19:13:32.058561Z","level":"info","event":"[STEP 3] Loading dimensions for FK resolution...","logger":"task.stdout"}
+{"timestamp":"2026-02-26T19:13:32.072757Z","level":"info","event":"Error reading dimensions/dim_driver/dim_driver.parquet: S3 operation failed; code: NoSuchKey, message: The specified key does not exist., resource: /f1-silver/dimensions/dim_driver/dim_driver.parquet, request_id: 1897E1C467DB93D0, host_id: dd9025bab4ad464b049177c95eb6ebf374d3b3fd1af9251148b658df7ac2e3e8, bucket_name: f1-silver, object_name: dimensions/dim_driver/dim_driver.parquet","logger":"task.stdout"}
+{"timestamp":"2026-02-26T19:13:32.075584Z","level":"info","event":"ERROR: Cannot load dimensions - FK resolution impossible!","logger":"task.stdout"}
+{"timestamp":"2026-02-26T19:13:32.076588Z","level":"info","event":"Details: S3 operation failed; code: NoSuchKey, message: The specified key does not exist., resource: /f1-silver/dimensions/dim_driver/dim_driver.parquet, request_id: 1897E1C467DB93D0, host_id: dd9025bab4ad464b049177c95eb6ebf374d3b3fd1af9251148b658df7ac2e3e8, bucket_name: f1-silver, object_name: dimensions/dim_driver/dim_driver.parquet","logger":"task.stdout"}
+{"timestamp":"2026-02-26T19:13:32.071000Z","level":"error","event":"Task failed with exception","logger":"task","filename":"task_runner.py","lineno":1078,"error_detail":[{"exc_type":"RuntimeError","exc_value":"All dimensions must exist before loading driver standings","exc_notes":[],"syntax_error":null,"is_cause":false,"frames":[{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/task_runner.py","lineno":1004,"name":"run"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/task_runner.py","lineno":1405,"name":"_execute_task"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/bases/operator.py","lineno":417,"name":"wrapper"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/standard/operators/python.py","lineno":214,"name":"execute"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/standard/operators/python.py","lineno":237,"name":"execute_callable"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/callback_runner.py","lineno":82,"name":"run"},{"filename":"/opt/airflow/dags/api_driverStandings_bronze_to_silver.py","lineno":297,"name":"backfill_fact_driver_standings"}],"is_group":false,"exceptions":[]},{"exc_type":"S3Error","exc_value":"S3 operation failed; code: NoSuchKey, message: The specified key does not exist., resource: /f1-silver/dimensions/dim_driver/dim_driver.parquet, request_id: 1897E1C467DB93D0, host_id: dd9025bab4ad464b049177c95eb6ebf374d3b3fd1af9251148b658df7ac2e3e8, bucket_name: f1-silver, object_name: dimensions/dim_driver/dim_driver.parquet","exc_notes":[],"syntax_error":null,"is_cause":true,"frames":[{"filename":"/opt/airflow/dags/api_driverStandings_bronze_to_silver.py","lineno":271,"name":"backfill_fact_driver_standings"},{"filename":"/opt/airflow/dags/utils/s3_helper.py","lineno":43,"name":"read_parquet"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/minio/api.py","lineno":1244,"name":"get_object"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/minio/api.py","lineno":440,"name":"_execute"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/minio/api.py","lineno":423,"name":"_url_open"}],"is_group":false,"exceptions":[]}]}

@@ -1,0 +1,68 @@
+{"timestamp":"2026-02-16T09:51:57.421407Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-02-16T09:51:57.504230Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/weekly_streaming_pipeline.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-02-16T09:52:10.577788Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T09:52:10.579424Z","level":"info","event":"[PRODUCER] Starting fact_constructor_standings production...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T09:52:10.609907Z","level":"info","event":"<BrokerConnection client_id=f1-streaming-pipeline, node_id=bootstrap-0 host=kafka:29092 <connecting> [IPv4 ('172.18.0.6', 29092)]>: connecting to kafka:29092 [('172.18.0.6', 29092) IPv4]","logger":"kafka.conn","filename":"conn.py","lineno":395}
+{"timestamp":"2026-02-16T09:52:10.746945Z","level":"info","event":"<BrokerConnection client_id=f1-streaming-pipeline, node_id=bootstrap-0 host=kafka:29092 <checking_api_versions_recv> [IPv4 ('172.18.0.6', 29092)]>: Broker version identified as 2.6","logger":"kafka.conn","filename":"conn.py","lineno":615}
+{"timestamp":"2026-02-16T09:52:10.752904Z","level":"info","event":"<BrokerConnection client_id=f1-streaming-pipeline, node_id=bootstrap-0 host=kafka:29092 <connected> [IPv4 ('172.18.0.6', 29092)]>: Connection complete.","logger":"kafka.conn","filename":"conn.py","lineno":456}
+{"timestamp":"2026-02-16T09:52:10.790992Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T09:52:10.792933Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-16T09:52:10.802494Z","level":"info","event":"PRODUCING CONSTRUCTOR STANDINGS FOR 2026 → Kafka Topic: fact-constructor-standings","logger":"task.stdout"}
+{"timestamp":"2026-02-16T09:52:10.804923Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-16T09:52:10.805799Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T09:52:10.809648Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T09:52:10.813384Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-16T09:52:10.814792Z","level":"info","event":"SCRAPING CONSTRUCTOR STANDINGS FROM ERGAST API: 2026-2026","logger":"task.stdout"}
+{"timestamp":"2026-02-16T09:52:10.815713Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-16T09:52:10.817712Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T09:52:10.831084Z","level":"info","event":"Fetching constructor standings for 2026...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T09:52:34.732905Z","level":"info","event":"0 standings found for 2026","logger":"task.stdout"}
+{"timestamp":"2026-02-16T09:52:34.839916Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T09:52:34.853251Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-16T09:52:34.854372Z","level":"info","event":"SCRAPING COMPLETE","logger":"task.stdout"}
+{"timestamp":"2026-02-16T09:52:34.855345Z","level":"info","event":"Total records: 0","logger":"task.stdout"}
+{"timestamp":"2026-02-16T09:52:34.856328Z","level":"info","event":"Years covered: 2026-2026","logger":"task.stdout"}
+{"timestamp":"2026-02-16T09:52:34.865238Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-16T09:52:34.866438Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T09:52:34.868661Z","level":"info","event":"Transforming API data to Silver schema...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T09:52:34.882745Z","level":"info","event":"No data found - returning empty DataFrame with schema: ['cs_id', 'constructor_ref', 'race_year', 'race_round', 'cs_position', 'cs_points', 'cs_wins', 'year', 'source', 'created_at']","logger":"task.stdout"}
+{"timestamp":"2026-02-16T09:52:34.897287Z","level":"info","event":"⚠️  No constructor standings found for 2026","logger":"task.stdout"}
+{"timestamp":"2026-02-16T09:52:34.890224Z","level":"info","event":"<KafkaProducer client_id=f1-streaming-pipeline transactional_id=None>: Closing the Kafka producer with 9223372036.0 secs timeout.","logger":"kafka.producer.kafka","filename":"kafka.py","lineno":630}
+{"timestamp":"2026-02-16T09:52:34.903813Z","level":"info","event":"<BrokerConnection client_id=f1-streaming-pipeline, node_id=bootstrap-0 host=kafka:29092 <connected> [IPv4 ('172.18.0.6', 29092)]>: Closing connection. ","logger":"kafka.conn","filename":"conn.py","lineno":936}
+{"timestamp":"2026-02-16T09:52:35.049656Z","level":"info","event":"[PRODUCER] Completed: {'sent': 0, 'failed': 0}","logger":"task.stdout"}
+{"timestamp":"2026-02-16T09:52:35.048940Z","level":"info","event":"Done. Returned value was: {'sent': 0, 'failed': 0}","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":216}
+{"timestamp":"2026-02-16T09:52:35.065732Z","level":"info","event":"Pushing xcom","ti":"RuntimeTaskInstance(id=UUID('019c65dc-0c2e-7832-8476-9a18a564e7ca'), task_id='produce_fact_constructor_standings', dag_id='weekly_streaming_f1_etl', run_id='scheduled__2026-02-16T03:00:00+00:00', try_number=1, dag_version_id=UUID('019c61bd-e638-74f5-b658-bbd5e8d757b9'), map_index=-1, hostname='eaafa8aeb24e', context_carrier={}, task=<Task(PythonOperator): produce_fact_constructor_standings>, bundle_instance=LocalDagBundle(name=dags-folder), max_tries=2, start_date=datetime.datetime(2026, 2, 16, 9, 51, 56, 536881, tzinfo=datetime.timezone.utc), end_date=None, state=<TaskInstanceState.RUNNING: 'running'>, is_mapped=False, rendered_map_index=None)","logger":"task","filename":"task_runner.py","lineno":1450}
+{"timestamp":"2026-02-16T11:35:23.535933Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-02-16T11:35:23.538536Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/weekly_streaming_pipeline.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-02-16T11:35:27.806755Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:35:27.807557Z","level":"info","event":"[PRODUCER] Starting fact_constructor_standings production...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:35:27.811231Z","level":"info","event":"<BrokerConnection client_id=f1-streaming-pipeline, node_id=bootstrap-0 host=kafka:29092 <connecting> [IPv4 ('172.18.0.4', 29092)]>: connecting to kafka:29092 [('172.18.0.4', 29092) IPv4]","logger":"kafka.conn","filename":"conn.py","lineno":395}
+{"timestamp":"2026-02-16T11:35:27.827201Z","level":"info","event":"<BrokerConnection client_id=f1-streaming-pipeline, node_id=bootstrap-0 host=kafka:29092 <checking_api_versions_recv> [IPv4 ('172.18.0.4', 29092)]>: Broker version identified as 2.6","logger":"kafka.conn","filename":"conn.py","lineno":615}
+{"timestamp":"2026-02-16T11:35:27.832718Z","level":"info","event":"<BrokerConnection client_id=f1-streaming-pipeline, node_id=bootstrap-0 host=kafka:29092 <connected> [IPv4 ('172.18.0.4', 29092)]>: Connection complete.","logger":"kafka.conn","filename":"conn.py","lineno":456}
+{"timestamp":"2026-02-16T11:35:27.837701Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:35:27.839250Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:35:27.840299Z","level":"info","event":"PRODUCING CONSTRUCTOR STANDINGS FOR 2026 → Kafka Topic: fact-constructor-standings","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:35:27.841268Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:35:27.844794Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:35:27.845877Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:35:27.850741Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:35:27.854570Z","level":"info","event":"SCRAPING CONSTRUCTOR STANDINGS FROM ERGAST API: 2026-2026","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:35:27.864073Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:35:27.868191Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:35:27.871377Z","level":"info","event":"Fetching constructor standings for 2026...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:35:52.072350Z","level":"info","event":"0 standings found for 2026","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:35:52.078148Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:35:52.078891Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:35:52.079565Z","level":"info","event":"SCRAPING COMPLETE","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:35:52.080516Z","level":"info","event":"Total records: 0","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:35:52.081131Z","level":"info","event":"Years covered: 2026-2026","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:35:52.083846Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:35:52.085351Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:35:52.088332Z","level":"info","event":"Transforming API data to Silver schema...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:35:52.095557Z","level":"info","event":"No data found - returning empty DataFrame with schema: ['cs_id', 'constructor_ref', 'race_year', 'race_round', 'cs_position', 'cs_points', 'cs_wins', 'year', 'source', 'created_at']","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:35:52.096666Z","level":"info","event":"⚠️  No constructor standings found for 2026","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:35:52.084634Z","level":"info","event":"<KafkaProducer client_id=f1-streaming-pipeline transactional_id=None>: Closing the Kafka producer with 9223372036.0 secs timeout.","logger":"kafka.producer.kafka","filename":"kafka.py","lineno":630}
+{"timestamp":"2026-02-16T11:35:52.085388Z","level":"info","event":"<BrokerConnection client_id=f1-streaming-pipeline, node_id=bootstrap-0 host=kafka:29092 <connected> [IPv4 ('172.18.0.4', 29092)]>: Closing connection. ","logger":"kafka.conn","filename":"conn.py","lineno":936}
+{"timestamp":"2026-02-16T11:35:52.176031Z","level":"info","event":"[PRODUCER] Completed: {'sent': 0, 'failed': 0}","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:35:52.179769Z","level":"info","event":"Done. Returned value was: {'sent': 0, 'failed': 0}","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":216}
+{"timestamp":"2026-02-16T11:35:52.181136Z","level":"info","event":"Pushing xcom","ti":"RuntimeTaskInstance(id=UUID('019c663b-cadf-79b8-8f7a-ef3109ec05c9'), task_id='produce_fact_constructor_standings', dag_id='weekly_streaming_f1_etl', run_id='scheduled__2026-02-16T03:00:00+00:00', try_number=1, dag_version_id=UUID('019c663b-c7a8-7abc-a3fe-4ba651367d8d'), map_index=-1, hostname='8ca1c3cee112', context_carrier={}, task=<Task(PythonOperator): produce_fact_constructor_standings>, bundle_instance=LocalDagBundle(name=dags-folder), max_tries=2, start_date=datetime.datetime(2026, 2, 16, 11, 35, 23, 273880, tzinfo=datetime.timezone.utc), end_date=None, state=<TaskInstanceState.RUNNING: 'running'>, is_mapped=False, rendered_map_index=None)","logger":"task","filename":"task_runner.py","lineno":1450}

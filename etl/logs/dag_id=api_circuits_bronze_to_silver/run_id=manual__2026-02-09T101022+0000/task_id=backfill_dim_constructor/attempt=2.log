@@ -1,0 +1,65 @@
+{"timestamp":"2026-02-09T10:18:35.697612Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-02-09T10:18:35.699225Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/api_etl/api_circuits_bronze_to_silver.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-02-09T10:18:35.897814Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2026-02-09T10:18:35.898421Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2026-02-09T10:18:35.898789Z","level":"info","event":"Current task name:backfill_dim_constructor","logger":"task.stdout"}
+{"timestamp":"2026-02-09T10:18:35.899009Z","level":"info","event":"Dag name:api_circuits_bronze_to_silver","logger":"task.stdout"}
+{"timestamp":"2026-02-09T10:18:35.901703Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-09T10:18:35.902092Z","level":"info","event":"F1 CIRCUIT BACKFILL: ERGAST API → SILVER","logger":"task.stdout"}
+{"timestamp":"2026-02-09T10:18:35.902347Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-09T10:18:35.903418Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-09T10:18:35.903789Z","level":"info","event":"[STEP 1] Scraping API...","logger":"task.stdout"}
+{"timestamp":"2026-02-09T10:18:35.904085Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-09T10:18:35.904481Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-09T10:18:35.904828Z","level":"info","event":"SCRAPING CIRCUITS FROM API: 2011-2025","logger":"task.stdout"}
+{"timestamp":"2026-02-09T10:18:35.905143Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-09T10:18:35.905479Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-09T10:18:35.905800Z","level":"info","event":"Fetching circuits for 2011...","logger":"task.stdout"}
+{"timestamp":"2026-02-09T10:18:46.630907Z","level":"info","event":"19 circuits found","logger":"task.stdout"}
+{"timestamp":"2026-02-09T10:18:46.631448Z","level":"info","event":"Fetching circuits for 2012...","logger":"task.stdout"}
+{"timestamp":"2026-02-09T10:18:59.495048Z","level":"info","event":"20 circuits found","logger":"task.stdout"}
+{"timestamp":"2026-02-09T10:18:59.495353Z","level":"info","event":"Fetching circuits for 2013...","logger":"task.stdout"}
+{"timestamp":"2026-02-09T10:19:12.919909Z","level":"info","event":"19 circuits found","logger":"task.stdout"}
+{"timestamp":"2026-02-09T10:19:12.920265Z","level":"info","event":"Fetching circuits for 2014...","logger":"task.stdout"}
+{"timestamp":"2026-02-09T10:19:25.724427Z","level":"info","event":"19 circuits found","logger":"task.stdout"}
+{"timestamp":"2026-02-09T10:19:25.725010Z","level":"info","event":"Fetching circuits for 2015...","logger":"task.stdout"}
+{"timestamp":"2026-02-09T10:19:40.126182Z","level":"info","event":"19 circuits found","logger":"task.stdout"}
+{"timestamp":"2026-02-09T10:19:40.126864Z","level":"info","event":"Fetching circuits for 2016...","logger":"task.stdout"}
+{"timestamp":"2026-02-09T10:19:51.439251Z","level":"info","event":"21 circuits found","logger":"task.stdout"}
+{"timestamp":"2026-02-09T10:19:51.441125Z","level":"info","event":"Fetching circuits for 2017...","logger":"task.stdout"}
+{"timestamp":"2026-02-09T10:20:04.296675Z","level":"info","event":"20 circuits found","logger":"task.stdout"}
+{"timestamp":"2026-02-09T10:20:04.296983Z","level":"info","event":"Fetching circuits for 2018...","logger":"task.stdout"}
+{"timestamp":"2026-02-09T10:20:18.773568Z","level":"info","event":"21 circuits found","logger":"task.stdout"}
+{"timestamp":"2026-02-09T10:20:18.784952Z","level":"info","event":"Fetching circuits for 2019...","logger":"task.stdout"}
+{"timestamp":"2026-02-09T10:20:32.385154Z","level":"info","event":"21 circuits found","logger":"task.stdout"}
+{"timestamp":"2026-02-09T10:20:32.385610Z","level":"info","event":"Fetching circuits for 2020...","logger":"task.stdout"}
+{"timestamp":"2026-02-09T10:20:45.260047Z","level":"info","event":"14 circuits found","logger":"task.stdout"}
+{"timestamp":"2026-02-09T10:20:45.263412Z","level":"info","event":"Fetching circuits for 2021...","logger":"task.stdout"}
+{"timestamp":"2026-02-09T10:20:55.541198Z","level":"info","event":"21 circuits found","logger":"task.stdout"}
+{"timestamp":"2026-02-09T10:20:55.541728Z","level":"info","event":"Fetching circuits for 2022...","logger":"task.stdout"}
+{"timestamp":"2026-02-09T10:21:06.433112Z","level":"info","event":"22 circuits found","logger":"task.stdout"}
+{"timestamp":"2026-02-09T10:21:06.433835Z","level":"info","event":"Fetching circuits for 2023...","logger":"task.stdout"}
+{"timestamp":"2026-02-09T10:21:17.739464Z","level":"info","event":"22 circuits found","logger":"task.stdout"}
+{"timestamp":"2026-02-09T10:21:17.749117Z","level":"info","event":"Fetching circuits for 2024...","logger":"task.stdout"}
+{"timestamp":"2026-02-09T10:21:29.757955Z","level":"info","event":"24 circuits found","logger":"task.stdout"}
+{"timestamp":"2026-02-09T10:21:29.758463Z","level":"info","event":"Fetching circuits for 2025...","logger":"task.stdout"}
+{"timestamp":"2026-02-09T10:21:43.853063Z","level":"info","event":"24 circuits found","logger":"task.stdout"}
+{"timestamp":"2026-02-09T10:21:43.853423Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-09T10:21:43.856112Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-09T10:21:43.856392Z","level":"info","event":"SCRAPING COMPLETE","logger":"task.stdout"}
+{"timestamp":"2026-02-09T10:21:43.856609Z","level":"info","event":"Total records: 306","logger":"task.stdout"}
+{"timestamp":"2026-02-09T10:21:43.856868Z","level":"info","event":"Unique constructors (by circuitId): 35","logger":"task.stdout"}
+{"timestamp":"2026-02-09T10:21:43.857134Z","level":"info","event":"Years covered: 2011-2025","logger":"task.stdout"}
+{"timestamp":"2026-02-09T10:21:43.857330Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-09T10:21:43.857499Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-09T10:21:43.857664Z","level":"info","event":"API scraping complete: 306 circuit records","logger":"task.stdout"}
+{"timestamp":"2026-02-09T10:21:43.857826Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-09T10:21:43.857987Z","level":"info","event":"[STEP 2] Transforming to Silver schema...","logger":"task.stdout"}
+{"timestamp":"2026-02-09T10:21:43.858156Z","level":"info","event":"Transforming API data to Silver schema...","logger":"task.stdout"}
+{"timestamp":"2026-02-09T10:21:43.858423Z","level":"info","event":"Deduplication: 306 records → 35 unique constructors","logger":"task.stdout"}
+{"timestamp":"2026-02-09T10:21:43.858677Z","level":"info","event":"Sorted by circuitId for stable circuit_id generation","logger":"task.stdout"}
+{"timestamp":"2026-02-09T10:21:43.854827Z","level":"error","event":"Task failed with exception","logger":"task","filename":"task_runner.py","lineno":1078,"error_detail":[{"exc_type":"KeyError","exc_value":"'locality'","exc_notes":[],"syntax_error":null,"is_cause":false,"frames":[{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/task_runner.py","lineno":1004,"name":"run"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/task_runner.py","lineno":1405,"name":"_execute_task"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/bases/operator.py","lineno":417,"name":"wrapper"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/standard/operators/python.py","lineno":214,"name":"execute"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/standard/operators/python.py","lineno":237,"name":"execute_callable"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/callback_runner.py","lineno":82,"name":"run"},{"filename":"/opt/airflow/dags/api_etl/api_circuits_bronze_to_silver.py","lineno":180,"name":"backfill_dim_circuit"},{"filename":"/opt/airflow/dags/utils/scraper/circuit.py","lineno":115,"name":"transform_to_silver_schema"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/pandas/core/frame.py","lineno":3893,"name":"__getitem__"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/pandas/core/indexes/base.py","lineno":3798,"name":"get_loc"}],"is_group":false,"exceptions":[]},{"exc_type":"KeyError","exc_value":"'locality'","exc_notes":[],"syntax_error":null,"is_cause":true,"frames":[{"filename":"/home/airflow/.local/lib/python3.12/site-packages/pandas/core/indexes/base.py","lineno":3791,"name":"get_loc"},{"filename":"/opt/airflow/index.pyx","lineno":152,"name":"pandas._libs.index.IndexEngine.get_loc"},{"filename":"/opt/airflow/index.pyx","lineno":181,"name":"pandas._libs.index.IndexEngine.get_loc"},{"filename":"/opt/airflow/pandas/_libs/hashtable_class_helper.pxi","lineno":7080,"name":"pandas._libs.hashtable.PyObjectHashTable.get_item"},{"filename":"/opt/airflow/pandas/_libs/hashtable_class_helper.pxi","lineno":7088,"name":"pandas._libs.hashtable.PyObjectHashTable.get_item"}],"is_group":false,"exceptions":[]}]}
+{"timestamp":"2026-02-09T10:21:43.877166Z","level":"info","event":"Task instance in failure state","logger":"task.stdout"}
+{"timestamp":"2026-02-09T10:21:43.877612Z","level":"info","event":"Task start","logger":"task.stdout"}
+{"timestamp":"2026-02-09T10:21:43.885089Z","level":"info","event":"Task:<Task(PythonOperator): backfill_dim_constructor>","logger":"task.stdout"}
+{"timestamp":"2026-02-09T10:21:43.885480Z","level":"info","event":"Failure caused by 'locality'","logger":"task.stdout"}

@@ -1,0 +1,40 @@
+{"timestamp":"2026-02-15T15:03:44.700613Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-02-15T15:03:44.718860Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/weekly_streaming_pipeline.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-02-15T15:03:53.032652Z","level":"warning","event":"The `airflow.operators.trigger_dagrun.TriggerDagRunOperator` attribute is deprecated. Please use `'airflow.providers.standard.operators.trigger_dagrun.TriggerDagRunOperator'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/dags/weekly_streaming_pipeline.py","lineno":18,"logger":"py.warnings"}
+{"timestamp":"2026-02-15T15:03:53.294546Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-15T15:03:53.295383Z","level":"info","event":"[PRODUCER] Starting fact_laps production...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T15:03:53.302867Z","level":"info","event":"<BrokerConnection client_id=f1-streaming-pipeline, node_id=bootstrap-0 host=kafka:29092 <connecting> [IPv4 ('172.18.0.4', 29092)]>: connecting to kafka:29092 [('172.18.0.4', 29092) IPv4]","logger":"kafka.conn","filename":"conn.py","lineno":395}
+{"timestamp":"2026-02-15T15:03:53.320869Z","level":"info","event":"<BrokerConnection client_id=f1-streaming-pipeline, node_id=bootstrap-0 host=kafka:29092 <checking_api_versions_recv> [IPv4 ('172.18.0.4', 29092)]>: Broker version identified as 2.6","logger":"kafka.conn","filename":"conn.py","lineno":615}
+{"timestamp":"2026-02-15T15:03:53.336410Z","level":"info","event":"<BrokerConnection client_id=f1-streaming-pipeline, node_id=bootstrap-0 host=kafka:29092 <connected> [IPv4 ('172.18.0.4', 29092)]>: Connection complete.","logger":"kafka.conn","filename":"conn.py","lineno":456}
+{"timestamp":"2026-02-15T15:03:53.353335Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-15T15:03:53.354799Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-15T15:03:53.355848Z","level":"info","event":"PRODUCING LAPS FOR 2026 → Kafka Topic: fact-laps","logger":"task.stdout"}
+{"timestamp":"2026-02-15T15:03:53.356657Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-15T15:03:53.357421Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-15T15:03:53.358125Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-15T15:03:53.358878Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-15T15:03:53.359505Z","level":"info","event":"SCRAPING LAP TIMES FROM ERGAST API: 2026-2026","logger":"task.stdout"}
+{"timestamp":"2026-02-15T15:03:53.360218Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-15T15:03:53.360910Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-15T15:03:53.361537Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-15T15:03:53.362082Z","level":"info","event":"Scraping laps for 2026...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T15:04:17.115550Z","level":"info","event":"  Found 24 rounds in 2026","logger":"task.stdout"}
+{"timestamp":"2026-02-15T15:04:17.118839Z","level":"info","event":"  Fetching laps for 2026 Round 1...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T15:04:40.468570Z","level":"info","event":"  No data for 2026 Round 1","logger":"task.stdout"}
+{"timestamp":"2026-02-15T15:04:40.469116Z","level":"info","event":"  Fetching laps for 2026 Round 2...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T15:05:03.453529Z","level":"info","event":"  No data for 2026 Round 2","logger":"task.stdout"}
+{"timestamp":"2026-02-15T15:05:03.454134Z","level":"info","event":"  Fetching laps for 2026 Round 3...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T15:05:28.175287Z","level":"info","event":"  No data for 2026 Round 3","logger":"task.stdout"}
+{"timestamp":"2026-02-15T15:05:28.176278Z","level":"info","event":"  Fetching laps for 2026 Round 4...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T15:05:51.208391Z","level":"info","event":"  No data for 2026 Round 4","logger":"task.stdout"}
+{"timestamp":"2026-02-15T15:05:51.208968Z","level":"info","event":"  Fetching laps for 2026 Round 5...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T15:06:14.660823Z","level":"info","event":"  No data for 2026 Round 5","logger":"task.stdout"}
+{"timestamp":"2026-02-15T15:06:14.661545Z","level":"info","event":"  Fetching laps for 2026 Round 6...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T15:06:36.409905Z","level":"info","event":"  No data for 2026 Round 6","logger":"task.stdout"}
+{"timestamp":"2026-02-15T15:06:36.410641Z","level":"info","event":"  Fetching laps for 2026 Round 7...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T15:06:59.524824Z","level":"info","event":"  No data for 2026 Round 7","logger":"task.stdout"}
+{"timestamp":"2026-02-15T15:06:59.525515Z","level":"info","event":"  Fetching laps for 2026 Round 8...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T15:07:22.223026Z","level":"info","event":"  No data for 2026 Round 8","logger":"task.stdout"}
+{"timestamp":"2026-02-15T15:07:22.223672Z","level":"info","event":"  Fetching laps for 2026 Round 9...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T15:07:27.252475Z","level":"error","event":"Server indicated the task shouldn't be running anymore. Terminating process","detail":{"detail":{"reason":"not_found","message":"Task Instance not found"}},"logger":"task"}
+{"timestamp":"2026-02-15T15:07:32.469023Z","level":"error","event":"Task killed!","logger":"task"}

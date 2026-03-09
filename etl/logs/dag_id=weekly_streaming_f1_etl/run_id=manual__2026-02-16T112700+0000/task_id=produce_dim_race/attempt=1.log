@@ -1,0 +1,76 @@
+{"timestamp":"2026-02-16T11:27:05.503744Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-02-16T11:27:05.507693Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/weekly_streaming_pipeline.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-02-16T11:27:09.217799Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:27:09.221186Z","level":"info","event":"[PRODUCER] Starting dim_race production...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:27:09.219762Z","level":"info","event":"<BrokerConnection client_id=f1-streaming-pipeline, node_id=bootstrap-0 host=kafka:29092 <connecting> [IPv4 ('172.18.0.4', 29092)]>: connecting to kafka:29092 [('172.18.0.4', 29092) IPv4]","logger":"kafka.conn","filename":"conn.py","lineno":395}
+{"timestamp":"2026-02-16T11:27:09.229972Z","level":"info","event":"<BrokerConnection client_id=f1-streaming-pipeline, node_id=bootstrap-0 host=kafka:29092 <checking_api_versions_recv> [IPv4 ('172.18.0.4', 29092)]>: Broker version identified as 2.6","logger":"kafka.conn","filename":"conn.py","lineno":615}
+{"timestamp":"2026-02-16T11:27:09.234764Z","level":"info","event":"<BrokerConnection client_id=f1-streaming-pipeline, node_id=bootstrap-0 host=kafka:29092 <connected> [IPv4 ('172.18.0.4', 29092)]>: Connection complete.","logger":"kafka.conn","filename":"conn.py","lineno":456}
+{"timestamp":"2026-02-16T11:27:09.252843Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:27:09.258176Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:27:09.262881Z","level":"info","event":"PRODUCING RACES FOR 2026 → Kafka Topic: dim-race","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:27:09.269810Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:27:09.277750Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:27:09.279915Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:27:09.281044Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:27:09.283083Z","level":"info","event":"SCRAPING RACES FROM ERGAST API: 2026-2026","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:27:09.287417Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:27:09.289328Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:27:09.293492Z","level":"info","event":"Fetching races for 2026...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:27:32.349407Z","level":"info","event":"24 races found","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:27:32.353596Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:27:32.358142Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:27:32.363446Z","level":"info","event":"SCRAPING COMPLETE","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:27:32.364544Z","level":"info","event":"Total records: 24","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:27:32.365394Z","level":"info","event":"Years covered: 2026-2026","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:27:32.365934Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:27:32.366465Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:27:32.367083Z","level":"info","event":"Transforming API data to Silver schema...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:27:32.391866Z","level":"info","event":"Sorted by season + round for stable race_id generation","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:27:32.396016Z","level":"info","event":"  Generated race_id: 10001 - 10024","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:27:32.421325Z","level":"warning","event":"Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.","category":"UserWarning","filename":"/opt/airflow/dags/utils/scraper/race.py","lineno":172,"logger":"py.warnings"}
+{"timestamp":"2026-02-16T11:27:32.443395Z","level":"warning","event":"Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.","category":"UserWarning","filename":"/opt/airflow/dags/utils/scraper/race.py","lineno":172,"logger":"py.warnings"}
+{"timestamp":"2026-02-16T11:27:32.449175Z","level":"warning","event":"Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.","category":"UserWarning","filename":"/opt/airflow/dags/utils/scraper/race.py","lineno":172,"logger":"py.warnings"}
+{"timestamp":"2026-02-16T11:27:32.454375Z","level":"warning","event":"Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.","category":"UserWarning","filename":"/opt/airflow/dags/utils/scraper/race.py","lineno":172,"logger":"py.warnings"}
+{"timestamp":"2026-02-16T11:27:32.460181Z","level":"warning","event":"Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.","category":"UserWarning","filename":"/opt/airflow/dags/utils/scraper/race.py","lineno":172,"logger":"py.warnings"}
+{"timestamp":"2026-02-16T11:27:32.464560Z","level":"warning","event":"Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.","category":"UserWarning","filename":"/opt/airflow/dags/utils/scraper/race.py","lineno":172,"logger":"py.warnings"}
+{"timestamp":"2026-02-16T11:27:32.472311Z","level":"info","event":"Transformed 24 races to Silver schema","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:27:32.474812Z","level":"info","event":"Source: api","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:27:32.475523Z","level":"info","event":"race_id range: 10001 - 10024","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:27:32.479105Z","level":"info","event":"Scraped 24 races for 2026","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:27:32.479765Z","level":"info","event":"Sample keys: ['2026_01', '2026_10', '2026_11']","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:27:32.481014Z","level":"info","event":"<BrokerConnection client_id=f1-streaming-pipeline, node_id=1 host=kafka:29092 <connecting> [IPv4 ('172.18.0.4', 29092)]>: connecting to kafka:29092 [('172.18.0.4', 29092) IPv4]","logger":"kafka.conn","filename":"conn.py","lineno":395}
+{"timestamp":"2026-02-16T11:27:32.481947Z","level":"info","event":"<BrokerConnection client_id=f1-streaming-pipeline, node_id=1 host=kafka:29092 <connected> [IPv4 ('172.18.0.4', 29092)]>: Connection complete.","logger":"kafka.conn","filename":"conn.py","lineno":456}
+{"timestamp":"2026-02-16T11:27:32.482396Z","level":"info","event":"<BrokerConnection client_id=f1-streaming-pipeline, node_id=bootstrap-0 host=kafka:29092 <connected> [IPv4 ('172.18.0.4', 29092)]>: Closing connection. ","logger":"kafka.conn","filename":"conn.py","lineno":936}
+{"timestamp":"2026-02-16T11:27:32.492277Z","level":"info","event":" Sent to dim-race | Key: 2026_01 | Partition: 0","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:27:32.497200Z","level":"info","event":" Sent to dim-race | Key: 2026_10 | Partition: 0","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:27:32.501779Z","level":"info","event":" Sent to dim-race | Key: 2026_11 | Partition: 0","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:27:32.505799Z","level":"info","event":" Sent to dim-race | Key: 2026_12 | Partition: 0","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:27:32.509848Z","level":"info","event":" Sent to dim-race | Key: 2026_13 | Partition: 0","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:27:32.513773Z","level":"info","event":" Sent to dim-race | Key: 2026_14 | Partition: 0","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:27:32.517286Z","level":"info","event":" Sent to dim-race | Key: 2026_15 | Partition: 0","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:27:32.520694Z","level":"info","event":" Sent to dim-race | Key: 2026_16 | Partition: 0","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:27:32.525317Z","level":"info","event":" Sent to dim-race | Key: 2026_17 | Partition: 0","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:27:32.529564Z","level":"info","event":" Sent to dim-race | Key: 2026_18 | Partition: 0","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:27:32.533284Z","level":"info","event":" Sent to dim-race | Key: 2026_19 | Partition: 0","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:27:32.536414Z","level":"info","event":" Sent to dim-race | Key: 2026_02 | Partition: 0","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:27:32.540224Z","level":"info","event":" Sent to dim-race | Key: 2026_20 | Partition: 0","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:27:32.544810Z","level":"info","event":" Sent to dim-race | Key: 2026_21 | Partition: 0","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:27:32.548492Z","level":"info","event":" Sent to dim-race | Key: 2026_22 | Partition: 0","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:27:32.552425Z","level":"info","event":" Sent to dim-race | Key: 2026_23 | Partition: 0","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:27:32.556048Z","level":"info","event":" Sent to dim-race | Key: 2026_24 | Partition: 0","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:27:32.561073Z","level":"info","event":" Sent to dim-race | Key: 2026_03 | Partition: 0","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:27:32.568326Z","level":"info","event":" Sent to dim-race | Key: 2026_04 | Partition: 0","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:27:32.578747Z","level":"info","event":" Sent to dim-race | Key: 2026_05 | Partition: 0","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:27:32.585107Z","level":"info","event":" Sent to dim-race | Key: 2026_06 | Partition: 0","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:27:32.591255Z","level":"info","event":" Sent to dim-race | Key: 2026_07 | Partition: 0","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:27:32.594780Z","level":"info","event":" Sent to dim-race | Key: 2026_08 | Partition: 0","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:27:32.598505Z","level":"info","event":" Sent to dim-race | Key: 2026_09 | Partition: 0","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:27:32.599292Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:27:32.599820Z","level":"info","event":"📊 Batch Stats for dim-race:","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:27:32.600301Z","level":"info","event":"    Sent: 24","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:27:32.600924Z","level":"info","event":"   ❌ Failed: 0","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:27:32.599078Z","level":"info","event":"<KafkaProducer client_id=f1-streaming-pipeline transactional_id=None>: Closing the Kafka producer with 9223372036.0 secs timeout.","logger":"kafka.producer.kafka","filename":"kafka.py","lineno":630}
+{"timestamp":"2026-02-16T11:27:32.599726Z","level":"info","event":"<BrokerConnection client_id=f1-streaming-pipeline, node_id=1 host=kafka:29092 <connected> [IPv4 ('172.18.0.4', 29092)]>: Closing connection. ","logger":"kafka.conn","filename":"conn.py","lineno":936}
+{"timestamp":"2026-02-16T11:27:32.691880Z","level":"info","event":"[PRODUCER] Completed: {'sent': 24, 'failed': 0}","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:27:32.696756Z","level":"info","event":"Done. Returned value was: {'sent': 24, 'failed': 0}","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":216}
+{"timestamp":"2026-02-16T11:27:32.697483Z","level":"info","event":"Pushing xcom","ti":"RuntimeTaskInstance(id=UUID('019c6634-2e21-73df-b8fb-9b883bbbdaae'), task_id='produce_dim_race', dag_id='weekly_streaming_f1_etl', run_id='manual__2026-02-16T11:27:00+00:00', try_number=1, dag_version_id=UUID('019c61bd-e638-74f5-b658-bbd5e8d757b9'), map_index=-1, hostname='8ca1c3cee112', context_carrier={}, task=<Task(PythonOperator): produce_dim_race>, bundle_instance=LocalDagBundle(name=dags-folder), max_tries=2, start_date=datetime.datetime(2026, 2, 16, 11, 27, 5, 203164, tzinfo=datetime.timezone.utc), end_date=None, state=<TaskInstanceState.RUNNING: 'running'>, is_mapped=False, rendered_map_index=None)","logger":"task","filename":"task_runner.py","lineno":1450}

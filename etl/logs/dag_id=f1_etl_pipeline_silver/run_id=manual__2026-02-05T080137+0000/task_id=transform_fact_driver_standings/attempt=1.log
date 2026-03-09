@@ -1,0 +1,18 @@
+{"timestamp":"2026-02-05T08:07:14.639577Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-02-05T08:07:14.646740Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/f1_etl_bronze_to_silver.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-02-05T08:07:14.944578Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2026-02-05T08:07:14.945695Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2026-02-05T08:07:14.947513Z","level":"info","event":"Current task name:transform_fact_driver_standings","logger":"task.stdout"}
+{"timestamp":"2026-02-05T08:07:14.949645Z","level":"info","event":"Dag name:f1_etl_pipeline_silver","logger":"task.stdout"}
+{"timestamp":"2026-02-05T08:07:14.950069Z","level":"info","event":"TRANSFORM: fact_driver_standings → Silver (Parquet with surrogate keys)","logger":"task.stdout"}
+{"timestamp":"2026-02-05T08:07:27.326174Z","level":"warning","event":"Columns (7,8,13,14,17,42,45,63) have mixed types. Specify dtype option on import or set low_memory=False.","category":"DtypeWarning","filename":"/opt/airflow/dags/f1_etl_bronze_to_silver.py","lineno":558,"logger":"py.warnings"}
+{"timestamp":"2026-02-05T08:07:29.824680Z","level":"info","event":" Downloaded dimensions/dim_race/dim_race.parquet (232 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-05T08:07:29.836407Z","level":"info","event":" Downloaded dimensions/dim_driver/dim_driver.parquet (65 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-05T08:07:29.842621Z","level":"info","event":" Downloaded dimensions/dim_constructor/dim_constructor.parquet (20 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-05T08:07:29.856040Z","level":"info","event":" Downloaded dimensions/dim_time/dim_time.parquet (6940 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-05T08:07:30.120052Z","level":"info","event":" Uploaded facts/fact_driver_standings/fact_driver_standings.parquet (4502 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-05T08:07:30.206647Z","level":"info","event":"Done. Returned value was: 4502","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":216}
+{"timestamp":"2026-02-05T08:07:30.207114Z","level":"info","event":"Pushing xcom","ti":"RuntimeTaskInstance(id=UUID('019c2cd2-30ca-75aa-a375-d604ce68974a'), task_id='transform_fact_driver_standings', dag_id='f1_etl_pipeline_silver', run_id='manual__2026-02-05T08:01:37+00:00', try_number=1, dag_version_id=UUID('019c23fb-91df-7f16-83e9-4bd5f07abd13'), map_index=-1, hostname='edf52e7dba2b', context_carrier={}, task=<Task(PythonOperator): transform_fact_driver_standings>, bundle_instance=LocalDagBundle(name=dags-folder), max_tries=1, start_date=datetime.datetime(2026, 2, 5, 8, 7, 13, 773909, tzinfo=datetime.timezone.utc), end_date=None, state=<TaskInstanceState.RUNNING: 'running'>, is_mapped=False, rendered_map_index=None)","logger":"task","filename":"task_runner.py","lineno":1450}
+{"timestamp":"2026-02-05T08:07:30.249796Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2026-02-05T08:07:30.250898Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2026-02-05T08:07:30.251274Z","level":"info","event":"Task operator:<Task(PythonOperator): transform_fact_driver_standings>","logger":"task.stdout"}

@@ -1,0 +1,112 @@
+{"timestamp":"2026-02-16T12:50:12.501840Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-02-16T12:50:12.504199Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/api_constructorStandings_bronze.to_silver.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-02-16T12:50:13.996147Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-16T12:50:13.997079Z","level":"info","event":"F1 CONSTRUCTOR STANDINGS BACKFILL: ERGAST API -> SILVER","logger":"task.stdout"}
+{"timestamp":"2026-02-16T12:50:13.997691Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-16T12:50:13.998420Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T12:50:13.999004Z","level":"info","event":"[STEP 1] Scraping API...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T12:50:13.999593Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T12:50:14.000397Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-16T12:50:14.001142Z","level":"info","event":"SCRAPING CONSTRUCTOR STANDINGS FROM ERGAST API: 2024-2025","logger":"task.stdout"}
+{"timestamp":"2026-02-16T12:50:14.001898Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-16T12:50:14.002361Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T12:50:14.002943Z","level":"info","event":"Fetching constructor standings for 2024...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T12:50:35.446926Z","level":"info","event":"10 standings found for 2024","logger":"task.stdout"}
+{"timestamp":"2026-02-16T12:50:35.447518Z","level":"info","event":"Fetching constructor standings for 2025...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T12:50:56.598708Z","level":"info","event":"10 standings found for 2025","logger":"task.stdout"}
+{"timestamp":"2026-02-16T12:50:56.604212Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T12:50:56.604701Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-16T12:50:56.605119Z","level":"info","event":"SCRAPING COMPLETE","logger":"task.stdout"}
+{"timestamp":"2026-02-16T12:50:56.605677Z","level":"info","event":"Total records: 20","logger":"task.stdout"}
+{"timestamp":"2026-02-16T12:50:56.606205Z","level":"info","event":"Years covered: 2024-2025","logger":"task.stdout"}
+{"timestamp":"2026-02-16T12:50:56.606594Z","level":"info","event":"Unique races: 2","logger":"task.stdout"}
+{"timestamp":"2026-02-16T12:50:56.607185Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-16T12:50:56.607762Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T12:50:56.608421Z","level":"info","event":"API scraping complete: 20 standing records","logger":"task.stdout"}
+{"timestamp":"2026-02-16T12:50:56.608979Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T12:50:56.609550Z","level":"info","event":"[STEP 2] Transforming to Silver schema...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T12:50:56.610029Z","level":"info","event":"Transforming API data to Silver schema...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T12:50:56.610552Z","level":"info","event":"Sorted by year + round + position","logger":"task.stdout"}
+{"timestamp":"2026-02-16T12:50:56.610954Z","level":"info","event":"Generated cs_id: 10000001 - 10000020","logger":"task.stdout"}
+{"timestamp":"2026-02-16T12:50:56.615490Z","level":"info","event":"Transformed 20 standings to Silver schema","logger":"task.stdout"}
+{"timestamp":"2026-02-16T12:50:56.616166Z","level":"info","event":"Source: api","logger":"task.stdout"}
+{"timestamp":"2026-02-16T12:50:56.616821Z","level":"info","event":"cs_id range: 10000001 - 10000020","logger":"task.stdout"}
+{"timestamp":"2026-02-16T12:50:56.617334Z","level":"info","event":"Transformation complete: 20 standings","logger":"task.stdout"}
+{"timestamp":"2026-02-16T12:50:56.617806Z","level":"info","event":"cs_id range: 10000001 - 10000020","logger":"task.stdout"}
+{"timestamp":"2026-02-16T12:50:56.618259Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T12:50:56.618841Z","level":"info","event":"[STEP 3] Loading dimensions for FK resolution...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T12:50:56.651497Z","level":"info","event":" Downloaded dimensions/dim_constructor/dim_constructor.parquet (21 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T12:50:56.662638Z","level":"info","event":" Downloaded dimensions/dim_race/dim_race.parquet (280 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T12:50:56.672713Z","level":"info","event":" Downloaded dimensions/dim_time/dim_time.parquet (6940 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T12:50:56.676142Z","level":"info","event":"Loaded dimensions:","logger":"task.stdout"}
+{"timestamp":"2026-02-16T12:50:56.676648Z","level":"info","event":"  - dim_constructor: 21 constructors","logger":"task.stdout"}
+{"timestamp":"2026-02-16T12:50:56.677217Z","level":"info","event":"  - dim_race: 280 races","logger":"task.stdout"}
+{"timestamp":"2026-02-16T12:50:56.677643Z","level":"info","event":"  - dim_time: 6,940 dates","logger":"task.stdout"}
+{"timestamp":"2026-02-16T12:50:56.678037Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T12:50:56.678407Z","level":"info","event":"[STEP 4] Resolving foreign keys...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T12:50:56.705611Z","level":"info","event":"Created lookup dictionaries:","logger":"task.stdout"}
+{"timestamp":"2026-02-16T12:50:56.706316Z","level":"info","event":"  - constructor_ref -> constructor_key: 21 entries","logger":"task.stdout"}
+{"timestamp":"2026-02-16T12:50:56.706876Z","level":"info","event":"  - race_year+race_round -> race_key: 280 entries","logger":"task.stdout"}
+{"timestamp":"2026-02-16T12:50:56.707781Z","level":"info","event":"  - race_date -> time_key: 6940 entries","logger":"task.stdout"}
+{"timestamp":"2026-02-16T12:50:56.737008Z","level":"info","event":"All FKs resolved successfully","logger":"task.stdout"}
+{"timestamp":"2026-02-16T12:50:56.737455Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T12:50:56.737818Z","level":"info","event":"[STEP 5] Loading existing Silver data...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T12:50:56.743644Z","level":"info","event":" Downloaded facts/fact_constructor_standings/fact_constructor_standings.parquet (2398 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T12:50:56.744158Z","level":"info","event":"Loaded 2,398 existing standings from Silver","logger":"task.stdout"}
+{"timestamp":"2026-02-16T12:50:56.744830Z","level":"info","event":"Existing sources: {'f1_data.csv': 2398}","logger":"task.stdout"}
+{"timestamp":"2026-02-16T12:50:56.745251Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T12:50:56.745673Z","level":"info","event":"[STEP 6] Merging API data with existing Silver...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T12:50:56.746073Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T12:50:56.746491Z","level":"info","event":"  Merge Configuration:","logger":"task.stdout"}
+{"timestamp":"2026-02-16T12:50:56.746920Z","level":"info","event":"Existing standings: 2,398","logger":"task.stdout"}
+{"timestamp":"2026-02-16T12:50:56.747351Z","level":"info","event":"New API standings: 20","logger":"task.stdout"}
+{"timestamp":"2026-02-16T12:50:56.747764Z","level":"info","event":"Merge key: cs_id (PRIMARY natural key)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T12:50:56.748360Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T12:50:56.748914Z","level":"info","event":"  Current max cs_key: 2398","logger":"task.stdout"}
+{"timestamp":"2026-02-16T12:50:56.749425Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T12:50:56.749974Z","level":"info","event":"  Processing 20 API standings:","logger":"task.stdout"}
+{"timestamp":"2026-02-16T12:50:56.750566Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T12:50:56.751992Z","level":"info","event":"ADD: cs_id=10000001 (new standing from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T12:50:56.761293Z","level":"info","event":"ADD: cs_id=10000002 (new standing from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T12:50:56.766784Z","level":"info","event":"ADD: cs_id=10000003 (new standing from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T12:50:56.773483Z","level":"info","event":"ADD: cs_id=10000004 (new standing from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T12:50:56.779390Z","level":"info","event":"ADD: cs_id=10000005 (new standing from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T12:50:56.782974Z","level":"info","event":"ADD: cs_id=10000006 (new standing from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T12:50:56.785822Z","level":"info","event":"ADD: cs_id=10000007 (new standing from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T12:50:56.788516Z","level":"info","event":"ADD: cs_id=10000008 (new standing from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T12:50:56.791402Z","level":"info","event":"ADD: cs_id=10000009 (new standing from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T12:50:56.794416Z","level":"info","event":"ADD: cs_id=10000010 (new standing from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T12:50:56.797121Z","level":"info","event":"ADD: cs_id=10000011 (new standing from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T12:50:56.799825Z","level":"info","event":"ADD: cs_id=10000012 (new standing from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T12:50:56.802548Z","level":"info","event":"ADD: cs_id=10000013 (new standing from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T12:50:56.805229Z","level":"info","event":"ADD: cs_id=10000014 (new standing from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T12:50:56.808884Z","level":"info","event":"ADD: cs_id=10000015 (new standing from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T12:50:56.813638Z","level":"info","event":"ADD: cs_id=10000016 (new standing from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T12:50:56.818028Z","level":"info","event":"ADD: cs_id=10000017 (new standing from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T12:50:56.822418Z","level":"info","event":"ADD: cs_id=10000018 (new standing from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T12:50:56.827858Z","level":"info","event":"ADD: cs_id=10000019 (new standing from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T12:50:56.832558Z","level":"info","event":"ADD: cs_id=10000020 (new standing from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T12:50:56.841035Z","level":"info","event":"Merge complete: 2,418 total standings","logger":"task.stdout"}
+{"timestamp":"2026-02-16T12:50:56.841790Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T12:50:56.842707Z","level":"info","event":"[STEP 7] Writing to Silver layer...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T12:50:56.896415Z","level":"info","event":"Uploaded facts/fact_constructor_standings/fact_constructor_standings.parquet (2418 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T12:50:56.897016Z","level":"info","event":"Written to: s3://f1-silver/facts/fact_constructor_standings/fact_constructor_standings.parquet","logger":"task.stdout"}
+{"timestamp":"2026-02-16T12:50:56.897423Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T12:50:56.897795Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-16T12:50:56.898152Z","level":"info","event":"BACKFILL SUMMARY","logger":"task.stdout"}
+{"timestamp":"2026-02-16T12:50:56.898544Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-16T12:50:56.898917Z","level":"info","event":"  Existing standings in Silver: 2,398","logger":"task.stdout"}
+{"timestamp":"2026-02-16T12:50:56.899277Z","level":"info","event":"  API standings scraped: 20","logger":"task.stdout"}
+{"timestamp":"2026-02-16T12:50:56.899612Z","level":"info","event":"  Final standing count: 2,418","logger":"task.stdout"}
+{"timestamp":"2026-02-16T12:50:56.899940Z","level":"info","event":"  New standings added: 20","logger":"task.stdout"}
+{"timestamp":"2026-02-16T12:50:56.902332Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T12:50:56.903354Z","level":"info","event":"  Final source breakdown:","logger":"task.stdout"}
+{"timestamp":"2026-02-16T12:50:56.903848Z","level":"info","event":"    f1_data.csv    : 2,398","logger":"task.stdout"}
+{"timestamp":"2026-02-16T12:50:56.904298Z","level":"info","event":"    api            : 20","logger":"task.stdout"}
+{"timestamp":"2026-02-16T12:50:56.905976Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T12:50:56.906507Z","level":"info","event":"  cs_id ranges:","logger":"task.stdout"}
+{"timestamp":"2026-02-16T12:50:56.907034Z","level":"info","event":"    f1_data.csv    : 24777 - 28572","logger":"task.stdout"}
+{"timestamp":"2026-02-16T12:50:56.907644Z","level":"info","event":"    api            : 10000001 - 10000020","logger":"task.stdout"}
+{"timestamp":"2026-02-16T12:50:56.908136Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-16T12:50:56.930200Z","level":"info","event":"Done. Returned value was: {'existing_count': 2398, 'api_scraped': 20, 'final_count': 2418, 'new_standings_added': 20}","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":216}
+{"timestamp":"2026-02-16T12:50:56.930655Z","level":"info","event":"Pushing xcom","ti":"RuntimeTaskInstance(id=UUID('019c6680-4fa7-7520-b1df-c3468485ed46'), task_id='backfill_fact_constructor_standings', dag_id='api_constructorstandings_bronze_to_silver', run_id='manual__2026-02-16T12:50:10.394299+00:00', try_number=1, dag_version_id=UUID('019c667c-3e40-713d-bb9b-a4e5e9b84113'), map_index=-1, hostname='9ffd7d06cb04', context_carrier={}, task=<Task(PythonOperator): backfill_fact_constructor_standings>, bundle_instance=LocalDagBundle(name=dags-folder), max_tries=2, start_date=datetime.datetime(2026, 2, 16, 12, 50, 12, 403113, tzinfo=datetime.timezone.utc), end_date=None, state=<TaskInstanceState.RUNNING: 'running'>, is_mapped=False, rendered_map_index=None)","logger":"task","filename":"task_runner.py","lineno":1450}

@@ -1,0 +1,41 @@
+{"timestamp":"2026-02-26T19:12:36.754865Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-02-26T19:12:36.760187Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/api_constructorStandings_bronze.to_silver.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-02-26T19:12:46.471575Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-26T19:12:46.472897Z","level":"info","event":"F1 CONSTRUCTOR STANDINGS BACKFILL: ERGAST API -> SILVER","logger":"task.stdout"}
+{"timestamp":"2026-02-26T19:12:46.473566Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-26T19:12:46.477354Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-26T19:12:46.478617Z","level":"info","event":"[STEP 1] Scraping API...","logger":"task.stdout"}
+{"timestamp":"2026-02-26T19:12:46.481003Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-26T19:12:46.481860Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-26T19:12:46.487128Z","level":"info","event":"SCRAPING CONSTRUCTOR STANDINGS FROM ERGAST API: 2024-2025","logger":"task.stdout"}
+{"timestamp":"2026-02-26T19:12:46.491126Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-26T19:12:46.494068Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-26T19:12:46.496284Z","level":"info","event":"Fetching constructor standings for 2024...","logger":"task.stdout"}
+{"timestamp":"2026-02-26T19:13:09.912824Z","level":"info","event":"10 standings found for 2024","logger":"task.stdout"}
+{"timestamp":"2026-02-26T19:13:09.914125Z","level":"info","event":"Fetching constructor standings for 2025...","logger":"task.stdout"}
+{"timestamp":"2026-02-26T19:13:31.791671Z","level":"info","event":"10 standings found for 2025","logger":"task.stdout"}
+{"timestamp":"2026-02-26T19:13:31.800242Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-26T19:13:31.801653Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-26T19:13:31.804761Z","level":"info","event":"SCRAPING COMPLETE","logger":"task.stdout"}
+{"timestamp":"2026-02-26T19:13:31.812638Z","level":"info","event":"Total records: 20","logger":"task.stdout"}
+{"timestamp":"2026-02-26T19:13:31.815058Z","level":"info","event":"Years covered: 2024-2025","logger":"task.stdout"}
+{"timestamp":"2026-02-26T19:13:31.878052Z","level":"info","event":"Unique races: 2","logger":"task.stdout"}
+{"timestamp":"2026-02-26T19:13:31.885537Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-26T19:13:31.887421Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-26T19:13:31.894044Z","level":"info","event":"API scraping complete: 20 standing records","logger":"task.stdout"}
+{"timestamp":"2026-02-26T19:13:31.895688Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-26T19:13:31.896823Z","level":"info","event":"[STEP 2] Transforming to Silver schema...","logger":"task.stdout"}
+{"timestamp":"2026-02-26T19:13:31.898455Z","level":"info","event":"Transforming API data to Silver schema...","logger":"task.stdout"}
+{"timestamp":"2026-02-26T19:13:31.902091Z","level":"info","event":"Sorted by year + round + position","logger":"task.stdout"}
+{"timestamp":"2026-02-26T19:13:31.909051Z","level":"info","event":"Generated cs_id: 10000001 - 10000020","logger":"task.stdout"}
+{"timestamp":"2026-02-26T19:13:31.932469Z","level":"info","event":"Transformed 20 standings to Silver schema","logger":"task.stdout"}
+{"timestamp":"2026-02-26T19:13:31.933700Z","level":"info","event":"Source: api","logger":"task.stdout"}
+{"timestamp":"2026-02-26T19:13:31.936797Z","level":"info","event":"cs_id range: 10000001 - 10000020","logger":"task.stdout"}
+{"timestamp":"2026-02-26T19:13:31.938066Z","level":"info","event":"Transformation complete: 20 standings","logger":"task.stdout"}
+{"timestamp":"2026-02-26T19:13:31.939166Z","level":"info","event":"cs_id range: 10000001 - 10000020","logger":"task.stdout"}
+{"timestamp":"2026-02-26T19:13:31.940483Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-26T19:13:31.943643Z","level":"info","event":"[STEP 3] Loading dimensions for FK resolution...","logger":"task.stdout"}
+{"timestamp":"2026-02-26T19:13:32.008667Z","level":"info","event":"Error reading dimensions/dim_constructor/dim_constructor.parquet: S3 operation failed; code: NoSuchKey, message: The specified key does not exist., resource: /f1-silver/dimensions/dim_constructor/dim_constructor.parquet, request_id: 1897E1C4614F362B, host_id: dd9025bab4ad464b049177c95eb6ebf374d3b3fd1af9251148b658df7ac2e3e8, bucket_name: f1-silver, object_name: dimensions/dim_constructor/dim_constructor.parquet","logger":"task.stdout"}
+{"timestamp":"2026-02-26T19:13:32.014855Z","level":"info","event":"ERROR: Cannot load dimensions - FK resolution impossible!","logger":"task.stdout"}
+{"timestamp":"2026-02-26T19:13:32.019446Z","level":"info","event":"Details: S3 operation failed; code: NoSuchKey, message: The specified key does not exist., resource: /f1-silver/dimensions/dim_constructor/dim_constructor.parquet, request_id: 1897E1C4614F362B, host_id: dd9025bab4ad464b049177c95eb6ebf374d3b3fd1af9251148b658df7ac2e3e8, bucket_name: f1-silver, object_name: dimensions/dim_constructor/dim_constructor.parquet","logger":"task.stdout"}
+{"timestamp":"2026-02-26T19:13:32.001388Z","level":"error","event":"Task failed with exception","logger":"task","filename":"task_runner.py","lineno":1078,"error_detail":[{"exc_type":"RuntimeError","exc_value":"All dimensions must exist before loading constructor standings","exc_notes":[],"syntax_error":null,"is_cause":false,"frames":[{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/task_runner.py","lineno":1004,"name":"run"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/task_runner.py","lineno":1405,"name":"_execute_task"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/bases/operator.py","lineno":417,"name":"wrapper"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/standard/operators/python.py","lineno":214,"name":"execute"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/standard/operators/python.py","lineno":237,"name":"execute_callable"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/callback_runner.py","lineno":82,"name":"run"},{"filename":"/opt/airflow/dags/api_constructorStandings_bronze.to_silver.py","lineno":292,"name":"backfill_fact_constructor_standings"}],"is_group":false,"exceptions":[]},{"exc_type":"S3Error","exc_value":"S3 operation failed; code: NoSuchKey, message: The specified key does not exist., resource: /f1-silver/dimensions/dim_constructor/dim_constructor.parquet, request_id: 1897E1C4614F362B, host_id: dd9025bab4ad464b049177c95eb6ebf374d3b3fd1af9251148b658df7ac2e3e8, bucket_name: f1-silver, object_name: dimensions/dim_constructor/dim_constructor.parquet","exc_notes":[],"syntax_error":null,"is_cause":true,"frames":[{"filename":"/opt/airflow/dags/api_constructorStandings_bronze.to_silver.py","lineno":271,"name":"backfill_fact_constructor_standings"},{"filename":"/opt/airflow/dags/utils/s3_helper.py","lineno":43,"name":"read_parquet"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/minio/api.py","lineno":1244,"name":"get_object"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/minio/api.py","lineno":440,"name":"_execute"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/minio/api.py","lineno":423,"name":"_url_open"}],"is_group":false,"exceptions":[]}]}

@@ -1,0 +1,24 @@
+{"timestamp":"2026-02-26T20:14:54.208792Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-02-26T20:14:54.215648Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/master_pipeline.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-02-26T20:14:54.311826Z","level":"warning","event":"The `airflow.operators.trigger_dagrun.TriggerDagRunOperator` attribute is deprecated. Please use `'airflow.providers.standard.operators.trigger_dagrun.TriggerDagRunOperator'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/dags/master_pipeline.py","lineno":34,"logger":"py.warnings"}
+{"timestamp":"2026-02-26T20:14:54.312208Z","level":"warning","event":"The `airflow.operators.python.PythonOperator` attribute is deprecated. Please use `'airflow.providers.standard.operators.python.PythonOperator'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/dags/master_pipeline.py","lineno":35,"logger":"py.warnings"}
+{"timestamp":"2026-02-26T20:14:54.501415Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-26T20:14:54.502965Z","level":"info","event":"================================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-26T20:14:54.505820Z","level":"info","event":"F1 ETL MASTER PIPELINE COMPLETED SUCCESSFULLY!","logger":"task.stdout"}
+{"timestamp":"2026-02-26T20:14:54.506870Z","level":"info","event":"================================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-26T20:14:54.507915Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-26T20:14:54.510517Z","level":"info","event":"All data loaded:","logger":"task.stdout"}
+{"timestamp":"2026-02-26T20:14:54.513352Z","level":"info","event":"   Silver Layer: Bronze CSV + API data in MinIO S3","logger":"task.stdout"}
+{"timestamp":"2026-02-26T20:14:54.514826Z","level":"info","event":"   Gold Layer: PostgreSQL with proper data types and constraints","logger":"task.stdout"}
+{"timestamp":"2026-02-26T20:14:54.516418Z","level":"info","event":"   Dimensions: driver, constructor, circuit, race, time","logger":"task.stdout"}
+{"timestamp":"2026-02-26T20:14:54.518228Z","level":"info","event":"   Facts: race_results, laps, pitstops, driver_standings, constructor_standings","logger":"task.stdout"}
+{"timestamp":"2026-02-26T20:14:54.519519Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-26T20:14:54.522501Z","level":"info","event":"Data Summary:","logger":"task.stdout"}
+{"timestamp":"2026-02-26T20:14:54.523422Z","level":"info","event":"  - Total Dimensions loaded","logger":"task.stdout"}
+{"timestamp":"2026-02-26T20:14:54.524207Z","level":"info","event":"  - Total Facts loaded (CSV + API)","logger":"task.stdout"}
+{"timestamp":"2026-02-26T20:14:54.525030Z","level":"info","event":"  - All surrogate keys generated","logger":"task.stdout"}
+{"timestamp":"2026-02-26T20:14:54.525753Z","level":"info","event":"  - All foreign keys resolved","logger":"task.stdout"}
+{"timestamp":"2026-02-26T20:14:54.526558Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-26T20:14:54.527815Z","level":"info","event":"================================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-26T20:14:54.528705Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-26T20:14:54.503585Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":216}

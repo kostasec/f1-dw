@@ -1,0 +1,58 @@
+{"timestamp":"2026-02-16T11:11:01.679368Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-02-16T11:11:01.816624Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/weekly_streaming_pipeline.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-02-16T11:11:12.274498Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:12.302742Z","level":"info","event":"[PRODUCER] Starting dim_constructor production...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:12.337978Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:12.403661Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:12.429130Z","level":"info","event":"PRODUCING CONSTRUCTORS FOR 2026 → Kafka Topic: dim-constructor","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:12.431580Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:12.437054Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:12.438214Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:12.439517Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:12.445812Z","level":"info","event":"SCRAPING CONSTRUCTORS FROM API: 2026-2026","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:12.447327Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:12.448590Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:12.449982Z","level":"info","event":"Fetching constructors for 2026...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:12.046578Z","level":"info","event":"<BrokerConnection client_id=f1-streaming-pipeline, node_id=bootstrap-0 host=kafka:29092 <connecting> [IPv4 ('172.18.0.4', 29092)]>: connecting to kafka:29092 [('172.18.0.4', 29092) IPv4]","logger":"kafka.conn","filename":"conn.py","lineno":395}
+{"timestamp":"2026-02-16T11:11:12.082965Z","level":"info","event":"<BrokerConnection client_id=f1-streaming-pipeline, node_id=bootstrap-0 host=kafka:29092 <checking_api_versions_recv> [IPv4 ('172.18.0.4', 29092)]>: Broker version identified as 2.6","logger":"kafka.conn","filename":"conn.py","lineno":615}
+{"timestamp":"2026-02-16T11:11:12.104945Z","level":"info","event":"<BrokerConnection client_id=f1-streaming-pipeline, node_id=bootstrap-0 host=kafka:29092 <connected> [IPv4 ('172.18.0.4', 29092)]>: Connection complete.","logger":"kafka.conn","filename":"conn.py","lineno":456}
+{"timestamp":"2026-02-16T11:11:36.037133Z","level":"info","event":"11 constructors found","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:36.096654Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:36.097915Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:36.108840Z","level":"info","event":"SCRAPING COMPLETE","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:36.110569Z","level":"info","event":"Total records: 11","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:36.115925Z","level":"info","event":"Unique constructors (by constructorId): 11","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:36.123383Z","level":"info","event":"Years covered: 2026-2026","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:36.131558Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:36.133021Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:36.133865Z","level":"info","event":"Transforming API data to Silver schema...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:36.145433Z","level":"info","event":"Deduplication: 11 records → 11 unique constructors","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:36.147989Z","level":"info","event":"Sorted by constructorId (alphabetically) for stable constructor_id generation","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:36.198131Z","level":"info","event":"Generated constructor_id: 10001 - 10011","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:36.230250Z","level":"info","event":"Transformed 11 constructors to Silver schema","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:36.245899Z","level":"info","event":"Source: api","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:36.247020Z","level":"info","event":"constructor_id range: 10001 - 10011","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:36.260247Z","level":"info","event":"Scraped 11 constructors for 2026","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:36.301063Z","level":"info","event":"<BrokerConnection client_id=f1-streaming-pipeline, node_id=1 host=kafka:29092 <connecting> [IPv4 ('172.18.0.4', 29092)]>: connecting to kafka:29092 [('172.18.0.4', 29092) IPv4]","logger":"kafka.conn","filename":"conn.py","lineno":395}
+{"timestamp":"2026-02-16T11:11:36.322049Z","level":"info","event":"<BrokerConnection client_id=f1-streaming-pipeline, node_id=1 host=kafka:29092 <connected> [IPv4 ('172.18.0.4', 29092)]>: Connection complete.","logger":"kafka.conn","filename":"conn.py","lineno":456}
+{"timestamp":"2026-02-16T11:11:36.323816Z","level":"info","event":"<BrokerConnection client_id=f1-streaming-pipeline, node_id=bootstrap-0 host=kafka:29092 <connected> [IPv4 ('172.18.0.4', 29092)]>: Closing connection. ","logger":"kafka.conn","filename":"conn.py","lineno":936}
+{"timestamp":"2026-02-16T11:11:36.410301Z","level":"info","event":" Sent to dim-constructor | Key: alpine | Partition: 0","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:36.447421Z","level":"info","event":" Sent to dim-constructor | Key: aston_martin | Partition: 0","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:36.480970Z","level":"info","event":" Sent to dim-constructor | Key: audi | Partition: 0","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:36.511602Z","level":"info","event":" Sent to dim-constructor | Key: cadillac | Partition: 0","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:36.544838Z","level":"info","event":" Sent to dim-constructor | Key: ferrari | Partition: 0","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:36.628509Z","level":"info","event":" Sent to dim-constructor | Key: haas | Partition: 0","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:36.656201Z","level":"info","event":" Sent to dim-constructor | Key: mclaren | Partition: 0","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:36.668164Z","level":"info","event":" Sent to dim-constructor | Key: mercedes | Partition: 0","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:36.695708Z","level":"info","event":" Sent to dim-constructor | Key: rb | Partition: 0","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:36.714564Z","level":"info","event":" Sent to dim-constructor | Key: red_bull | Partition: 0","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:36.760392Z","level":"info","event":" Sent to dim-constructor | Key: williams | Partition: 0","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:36.765537Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:36.776217Z","level":"info","event":"📊 Batch Stats for dim-constructor:","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:36.777938Z","level":"info","event":"    Sent: 11","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:36.788098Z","level":"info","event":"   ❌ Failed: 0","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:36.759268Z","level":"info","event":"<KafkaProducer client_id=f1-streaming-pipeline transactional_id=None>: Closing the Kafka producer with 9223372036.0 secs timeout.","logger":"kafka.producer.kafka","filename":"kafka.py","lineno":630}
+{"timestamp":"2026-02-16T11:11:36.762376Z","level":"info","event":"<BrokerConnection client_id=f1-streaming-pipeline, node_id=1 host=kafka:29092 <connected> [IPv4 ('172.18.0.4', 29092)]>: Closing connection. ","logger":"kafka.conn","filename":"conn.py","lineno":936}
+{"timestamp":"2026-02-16T11:11:37.089498Z","level":"info","event":"[PRODUCER] Completed: {'sent': 11, 'failed': 0}","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:37.107458Z","level":"info","event":"Done. Returned value was: {'sent': 11, 'failed': 0}","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":216}
+{"timestamp":"2026-02-16T11:11:37.112848Z","level":"info","event":"Pushing xcom","ti":"RuntimeTaskInstance(id=UUID('019c6625-570c-7902-9a54-4ea05dff7d6b'), task_id='produce_dim_constructor', dag_id='weekly_streaming_f1_etl', run_id='manual__2026-02-16T11:10:47+00:00', try_number=1, dag_version_id=UUID('019c61bd-e638-74f5-b658-bbd5e8d757b9'), map_index=-1, hostname='8ca1c3cee112', context_carrier={}, task=<Task(PythonOperator): produce_dim_constructor>, bundle_instance=LocalDagBundle(name=dags-folder), max_tries=2, start_date=datetime.datetime(2026, 2, 16, 11, 11, 0, 655767, tzinfo=datetime.timezone.utc), end_date=None, state=<TaskInstanceState.RUNNING: 'running'>, is_mapped=False, rendered_map_index=None)","logger":"task","filename":"task_runner.py","lineno":1450}

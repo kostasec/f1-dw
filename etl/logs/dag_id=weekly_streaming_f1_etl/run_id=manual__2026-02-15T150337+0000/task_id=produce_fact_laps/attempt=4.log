@@ -1,0 +1,83 @@
+{"timestamp":"2026-02-15T15:46:36.637248Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-02-15T15:46:36.640236Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/weekly_streaming_pipeline.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-02-15T15:46:38.390707Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-15T15:46:38.391568Z","level":"info","event":"[PRODUCER] Starting fact_laps production...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T15:46:38.393795Z","level":"info","event":"<BrokerConnection client_id=f1-streaming-pipeline, node_id=bootstrap-0 host=kafka:29092 <connecting> [IPv4 ('172.18.0.4', 29092)]>: connecting to kafka:29092 [('172.18.0.4', 29092) IPv4]","logger":"kafka.conn","filename":"conn.py","lineno":395}
+{"timestamp":"2026-02-15T15:46:38.398335Z","level":"info","event":"<BrokerConnection client_id=f1-streaming-pipeline, node_id=bootstrap-0 host=kafka:29092 <checking_api_versions_recv> [IPv4 ('172.18.0.4', 29092)]>: Broker version identified as 2.6","logger":"kafka.conn","filename":"conn.py","lineno":615}
+{"timestamp":"2026-02-15T15:46:38.400264Z","level":"info","event":"<BrokerConnection client_id=f1-streaming-pipeline, node_id=bootstrap-0 host=kafka:29092 <connected> [IPv4 ('172.18.0.4', 29092)]>: Connection complete.","logger":"kafka.conn","filename":"conn.py","lineno":456}
+{"timestamp":"2026-02-15T15:46:38.403515Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-15T15:46:38.404680Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-15T15:46:38.405501Z","level":"info","event":"PRODUCING LAPS FOR 2026 → Kafka Topic: fact-laps","logger":"task.stdout"}
+{"timestamp":"2026-02-15T15:46:38.405959Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-15T15:46:38.406383Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-15T15:46:38.406942Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-15T15:46:38.407415Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-15T15:46:38.407870Z","level":"info","event":"SCRAPING LAP TIMES FROM ERGAST API: 2026-2026","logger":"task.stdout"}
+{"timestamp":"2026-02-15T15:46:38.408269Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-15T15:46:38.408808Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-15T15:46:38.409194Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-15T15:46:38.409785Z","level":"info","event":"Scraping laps for 2026...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T15:47:01.392612Z","level":"info","event":"  Found 24 rounds in 2026","logger":"task.stdout"}
+{"timestamp":"2026-02-15T15:47:01.393503Z","level":"info","event":"  Fetching laps for 2026 Round 1...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T15:47:22.229259Z","level":"info","event":"  No data for 2026 Round 1","logger":"task.stdout"}
+{"timestamp":"2026-02-15T15:47:22.230558Z","level":"info","event":"  Fetching laps for 2026 Round 2...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T15:47:45.177526Z","level":"info","event":"  No data for 2026 Round 2","logger":"task.stdout"}
+{"timestamp":"2026-02-15T15:47:45.178040Z","level":"info","event":"  Fetching laps for 2026 Round 3...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T15:48:06.121611Z","level":"info","event":"  No data for 2026 Round 3","logger":"task.stdout"}
+{"timestamp":"2026-02-15T15:48:06.122154Z","level":"info","event":"  Fetching laps for 2026 Round 4...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T15:48:29.188643Z","level":"info","event":"  No data for 2026 Round 4","logger":"task.stdout"}
+{"timestamp":"2026-02-15T15:48:29.189439Z","level":"info","event":"  Fetching laps for 2026 Round 5...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T15:48:52.611423Z","level":"info","event":"  No data for 2026 Round 5","logger":"task.stdout"}
+{"timestamp":"2026-02-15T15:48:52.612105Z","level":"info","event":"  Fetching laps for 2026 Round 6...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T15:49:15.083832Z","level":"info","event":"  No data for 2026 Round 6","logger":"task.stdout"}
+{"timestamp":"2026-02-15T15:49:15.084499Z","level":"info","event":"  Fetching laps for 2026 Round 7...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T15:49:35.499431Z","level":"info","event":"  No data for 2026 Round 7","logger":"task.stdout"}
+{"timestamp":"2026-02-15T15:49:35.499856Z","level":"info","event":"  Fetching laps for 2026 Round 8...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T15:49:59.036880Z","level":"info","event":"  No data for 2026 Round 8","logger":"task.stdout"}
+{"timestamp":"2026-02-15T15:49:59.038785Z","level":"info","event":"  Fetching laps for 2026 Round 9...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T15:50:22.854371Z","level":"info","event":"  No data for 2026 Round 9","logger":"task.stdout"}
+{"timestamp":"2026-02-15T15:50:22.854901Z","level":"info","event":"  Fetching laps for 2026 Round 10...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T15:50:47.132904Z","level":"info","event":"  No data for 2026 Round 10","logger":"task.stdout"}
+{"timestamp":"2026-02-15T15:50:47.133564Z","level":"info","event":"  Fetching laps for 2026 Round 11...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T15:51:08.872301Z","level":"info","event":"  No data for 2026 Round 11","logger":"task.stdout"}
+{"timestamp":"2026-02-15T15:51:08.872963Z","level":"info","event":"  Fetching laps for 2026 Round 12...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T15:51:32.091456Z","level":"info","event":"  No data for 2026 Round 12","logger":"task.stdout"}
+{"timestamp":"2026-02-15T15:51:32.092048Z","level":"info","event":"  Fetching laps for 2026 Round 13...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T15:51:38.415737Z","level":"info","event":"<BrokerConnection client_id=f1-streaming-pipeline, node_id=1 host=kafka:29092 <connecting> [IPv4 ('172.18.0.4', 29092)]>: connecting to kafka:29092 [('172.18.0.4', 29092) IPv4]","logger":"kafka.conn","filename":"conn.py","lineno":395}
+{"timestamp":"2026-02-15T15:51:38.416328Z","level":"info","event":"<BrokerConnection client_id=f1-streaming-pipeline, node_id=1 host=kafka:29092 <connected> [IPv4 ('172.18.0.4', 29092)]>: Connection complete.","logger":"kafka.conn","filename":"conn.py","lineno":456}
+{"timestamp":"2026-02-15T15:51:38.416554Z","level":"info","event":"<BrokerConnection client_id=f1-streaming-pipeline, node_id=bootstrap-0 host=kafka:29092 <connected> [IPv4 ('172.18.0.4', 29092)]>: Closing connection. ","logger":"kafka.conn","filename":"conn.py","lineno":936}
+{"timestamp":"2026-02-15T15:51:55.528697Z","level":"info","event":"  No data for 2026 Round 13","logger":"task.stdout"}
+{"timestamp":"2026-02-15T15:51:55.529335Z","level":"info","event":"  Fetching laps for 2026 Round 14...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T15:52:19.144767Z","level":"info","event":"  No data for 2026 Round 14","logger":"task.stdout"}
+{"timestamp":"2026-02-15T15:52:19.145238Z","level":"info","event":"  Fetching laps for 2026 Round 15...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T15:52:41.594443Z","level":"info","event":"  No data for 2026 Round 15","logger":"task.stdout"}
+{"timestamp":"2026-02-15T15:52:41.595173Z","level":"info","event":"  Fetching laps for 2026 Round 16...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T15:53:06.092551Z","level":"info","event":"  No data for 2026 Round 16","logger":"task.stdout"}
+{"timestamp":"2026-02-15T15:53:06.093226Z","level":"info","event":"  Fetching laps for 2026 Round 17...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T15:53:30.184598Z","level":"info","event":"  No data for 2026 Round 17","logger":"task.stdout"}
+{"timestamp":"2026-02-15T15:53:30.185262Z","level":"info","event":"  Fetching laps for 2026 Round 18...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T15:53:51.776946Z","level":"info","event":"  No data for 2026 Round 18","logger":"task.stdout"}
+{"timestamp":"2026-02-15T15:53:51.777554Z","level":"info","event":"  Fetching laps for 2026 Round 19...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T15:54:15.457267Z","level":"info","event":"  No data for 2026 Round 19","logger":"task.stdout"}
+{"timestamp":"2026-02-15T15:54:15.457817Z","level":"info","event":"  Fetching laps for 2026 Round 20...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T15:54:38.286187Z","level":"info","event":"  No data for 2026 Round 20","logger":"task.stdout"}
+{"timestamp":"2026-02-15T15:54:38.286874Z","level":"info","event":"  Fetching laps for 2026 Round 21...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T15:55:00.570326Z","level":"info","event":"  No data for 2026 Round 21","logger":"task.stdout"}
+{"timestamp":"2026-02-15T15:55:00.571017Z","level":"info","event":"  Fetching laps for 2026 Round 22...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T15:55:21.566093Z","level":"info","event":"  No data for 2026 Round 22","logger":"task.stdout"}
+{"timestamp":"2026-02-15T15:55:21.566668Z","level":"info","event":"  Fetching laps for 2026 Round 23...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T15:55:44.827761Z","level":"info","event":"  No data for 2026 Round 23","logger":"task.stdout"}
+{"timestamp":"2026-02-15T15:55:44.830580Z","level":"info","event":"  Fetching laps for 2026 Round 24...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T15:56:09.080476Z","level":"info","event":"  No data for 2026 Round 24","logger":"task.stdout"}
+{"timestamp":"2026-02-15T15:56:09.081202Z","level":"info","event":"Total laps for 2026: 0","logger":"task.stdout"}
+{"timestamp":"2026-02-15T15:56:09.083866Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-15T15:56:09.084554Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-15T15:56:09.085157Z","level":"info","event":"SCRAPING COMPLETE","logger":"task.stdout"}
+{"timestamp":"2026-02-15T15:56:09.085717Z","level":"info","event":"Total records: 0","logger":"task.stdout"}
+{"timestamp":"2026-02-15T15:56:09.086247Z","level":"info","event":"Years covered: 2026-2026","logger":"task.stdout"}
+{"timestamp":"2026-02-15T15:56:09.086794Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-15T15:56:09.087306Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-15T15:56:09.087736Z","level":"info","event":"Transforming API data to Silver schema...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T15:56:09.088288Z","level":"info","event":"No data found - returning empty DataFrame with schema: ['driver_ref', 'race_year', 'race_round', 'lap', 'lap_position', 'lap_minutes', 'lap_milliseconds', 'year', 'source', 'created_at']","logger":"task.stdout"}
+{"timestamp":"2026-02-15T15:56:09.086269Z","level":"error","event":"Task failed with exception","logger":"task","filename":"task_runner.py","lineno":1078,"error_detail":[{"exc_type":"ValueError","exc_value":"The truth value of a DataFrame is ambiguous. Use a.empty, a.bool(), a.item(), a.any() or a.all().","exc_notes":[],"syntax_error":null,"is_cause":false,"frames":[{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/task_runner.py","lineno":1004,"name":"run"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/task_runner.py","lineno":1405,"name":"_execute_task"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/bases/operator.py","lineno":417,"name":"wrapper"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/standard/operators/python.py","lineno":214,"name":"execute"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/standard/operators/python.py","lineno":237,"name":"execute_callable"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/callback_runner.py","lineno":82,"name":"run"},{"filename":"/opt/airflow/dags/weekly_streaming_pipeline.py","lineno":116,"name":"produce_laps"},{"filename":"/opt/airflow/dags/streaming/kafka_producers.py","lineno":377,"name":"produce_current_year"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/pandas/core/generic.py","lineno":1519,"name":"__nonzero__"}],"is_group":false,"exceptions":[]}]}
+{"timestamp":"2026-02-15T15:56:09.092250Z","level":"error","event":"--- Logging error ---","logger":"task.stderr"}

@@ -1,0 +1,141 @@
+{"timestamp":"2026-02-16T14:10:55.854076Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-02-16T14:10:55.856748Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/api_races_bronze_to_silver.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-02-16T14:11:00.661130Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:00.665525Z","level":"info","event":"F1 RACE BACKFILL: ERGAST API -> SILVER","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:00.668530Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:00.683658Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:00.684223Z","level":"info","event":"[STEP 1] Scraping API...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:00.684974Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:00.685642Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:00.686228Z","level":"info","event":"SCRAPING RACES FROM ERGAST API: 2024-2025","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:00.686676Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:00.687224Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:00.687753Z","level":"info","event":"Fetching races for 2024...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:23.308297Z","level":"info","event":"24 races found","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:23.308998Z","level":"info","event":"Fetching races for 2025...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:43.828478Z","level":"info","event":"24 races found","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:43.852461Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:43.853947Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:43.854518Z","level":"info","event":"SCRAPING COMPLETE","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:43.855072Z","level":"info","event":"Total records: 48","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:43.856565Z","level":"info","event":"Years covered: 2024-2025","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:43.857469Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:43.858149Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:43.858615Z","level":"info","event":"API scraping complete: 48 race records","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:43.859318Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:43.859900Z","level":"info","event":"[STEP 2] Transforming to Silver schema...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:43.860335Z","level":"info","event":"Transforming API data to Silver schema...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:43.898448Z","level":"info","event":"Sorted by season + round for stable race_id generation","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:43.903753Z","level":"info","event":"  Generated race_id: 10001 - 10048","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:43.991596Z","level":"warning","event":"Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.","category":"UserWarning","filename":"/opt/airflow/dags/scraper/race.py","lineno":172,"logger":"py.warnings"}
+{"timestamp":"2026-02-16T14:11:44.000742Z","level":"warning","event":"Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.","category":"UserWarning","filename":"/opt/airflow/dags/scraper/race.py","lineno":172,"logger":"py.warnings"}
+{"timestamp":"2026-02-16T14:11:44.009923Z","level":"warning","event":"Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.","category":"UserWarning","filename":"/opt/airflow/dags/scraper/race.py","lineno":172,"logger":"py.warnings"}
+{"timestamp":"2026-02-16T14:11:44.016113Z","level":"warning","event":"Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.","category":"UserWarning","filename":"/opt/airflow/dags/scraper/race.py","lineno":172,"logger":"py.warnings"}
+{"timestamp":"2026-02-16T14:11:44.023962Z","level":"warning","event":"Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.","category":"UserWarning","filename":"/opt/airflow/dags/scraper/race.py","lineno":172,"logger":"py.warnings"}
+{"timestamp":"2026-02-16T14:11:44.031275Z","level":"warning","event":"Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.","category":"UserWarning","filename":"/opt/airflow/dags/scraper/race.py","lineno":172,"logger":"py.warnings"}
+{"timestamp":"2026-02-16T14:11:44.046493Z","level":"info","event":"Transformed 48 races to Silver schema","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:44.047700Z","level":"info","event":"Source: api","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:44.048566Z","level":"info","event":"race_id range: 10001 - 10048","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:44.049454Z","level":"info","event":"Transformation complete: 48 unique races","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:44.050130Z","level":"info","event":"race_id range: 10001 - 10048","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:44.050831Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:44.051452Z","level":"info","event":"[STEP 3] Loading dim_circuit for FK resolution...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:44.112375Z","level":"info","event":" Downloaded dimensions/dim_circuit/dim_circuit.parquet (34 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:44.113111Z","level":"info","event":"Loaded 34 circuits from Silver","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:44.113882Z","level":"info","event":"Created circuit_ref -> circuit_key lookup (34 entries)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:44.114531Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:44.115149Z","level":"info","event":"[STEP 4] Resolving circuit_key FK...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:44.116160Z","level":"info","event":"WARNING: 2 races have unresolved circuit_ref!","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:44.116672Z","level":"info","event":"Unresolved circuit_ref values:","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:44.128317Z","level":"info","event":"['vegas']","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:44.130255Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:44.130738Z","level":"info","event":"[STEP 5] Loading existing Silver data...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:44.142410Z","level":"info","event":" Downloaded dimensions/dim_race/dim_race.parquet (232 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:44.143021Z","level":"info","event":"Loaded 232 existing races from Silver","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:44.144936Z","level":"info","event":"Existing sources: {'f1_data.csv': 232}","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:44.146944Z","level":"info","event":"CSV race_id range: 860 - 1110","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:44.147462Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:44.147928Z","level":"info","event":"[STEP 6] Merging API data with existing Silver...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:44.148313Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:44.148705Z","level":"info","event":"  Merge Configuration:","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:44.149242Z","level":"info","event":"Existing races: 232","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:44.149775Z","level":"info","event":"New API races: 48","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:44.150131Z","level":"info","event":"Merge key: race_year + race_round (COMPOSITE natural key)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:44.150433Z","level":"info","event":"CSV priority: YES (skip API for CSV races)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:44.150718Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:44.151049Z","level":"info","event":"  Current max race_key: 232","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:44.151458Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:44.151926Z","level":"info","event":"  Processing 48 API races:","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:44.152381Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:44.153366Z","level":"info","event":"ADD: 2024-R1 Bahrain Grand Prix     (new race from API, race_id=10001)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:44.162075Z","level":"info","event":"ADD: 2024-R10 Spanish Grand Prix    (new race from API, race_id=10002)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:44.167363Z","level":"info","event":"ADD: 2024-R11 Austrian Grand Prix   (new race from API, race_id=10003)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:44.175662Z","level":"info","event":"ADD: 2024-R12 British Grand Prix    (new race from API, race_id=10004)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:44.182143Z","level":"info","event":"ADD: 2024-R13 Hungarian Grand Prix  (new race from API, race_id=10005)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:44.187894Z","level":"info","event":"ADD: 2024-R14 Belgian Grand Prix    (new race from API, race_id=10006)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:44.194471Z","level":"info","event":"ADD: 2024-R15 Dutch Grand Prix      (new race from API, race_id=10007)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:44.198873Z","level":"info","event":"ADD: 2024-R16 Italian Grand Prix    (new race from API, race_id=10008)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:44.203778Z","level":"info","event":"ADD: 2024-R17 Azerbaijan Grand Prix (new race from API, race_id=10009)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:44.212961Z","level":"info","event":"ADD: 2024-R18 Singapore Grand Prix  (new race from API, race_id=10010)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:44.221784Z","level":"info","event":"ADD: 2024-R19 United States Grand Prix (new race from API, race_id=10011)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:44.228694Z","level":"info","event":"ADD: 2024-R2 Saudi Arabian Grand Prix (new race from API, race_id=10012)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:44.236881Z","level":"info","event":"ADD: 2024-R20 Mexico City Grand Prix (new race from API, race_id=10013)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:44.246604Z","level":"info","event":"ADD: 2024-R21 São Paulo Grand Prix  (new race from API, race_id=10014)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:44.264630Z","level":"info","event":"ADD: 2024-R22 Las Vegas Grand Prix  (new race from API, race_id=10015)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:44.278301Z","level":"info","event":"ADD: 2024-R23 Qatar Grand Prix      (new race from API, race_id=10016)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:44.286560Z","level":"info","event":"ADD: 2024-R24 Abu Dhabi Grand Prix  (new race from API, race_id=10017)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:44.296376Z","level":"info","event":"ADD: 2024-R3 Australian Grand Prix  (new race from API, race_id=10018)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:44.305606Z","level":"info","event":"ADD: 2024-R4 Japanese Grand Prix    (new race from API, race_id=10019)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:44.312286Z","level":"info","event":"ADD: 2024-R5 Chinese Grand Prix     (new race from API, race_id=10020)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:44.322491Z","level":"info","event":"ADD: 2024-R6 Miami Grand Prix       (new race from API, race_id=10021)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:44.330979Z","level":"info","event":"ADD: 2024-R7 Emilia Romagna Grand Prix (new race from API, race_id=10022)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:44.341735Z","level":"info","event":"ADD: 2024-R8 Monaco Grand Prix      (new race from API, race_id=10023)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:44.350540Z","level":"info","event":"ADD: 2024-R9 Canadian Grand Prix    (new race from API, race_id=10024)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:44.357990Z","level":"info","event":"ADD: 2025-R1 Australian Grand Prix  (new race from API, race_id=10025)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:44.366528Z","level":"info","event":"ADD: 2025-R10 Canadian Grand Prix   (new race from API, race_id=10026)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:44.375269Z","level":"info","event":"ADD: 2025-R11 Austrian Grand Prix   (new race from API, race_id=10027)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:44.388838Z","level":"info","event":"ADD: 2025-R12 British Grand Prix    (new race from API, race_id=10028)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:44.398853Z","level":"info","event":"ADD: 2025-R13 Belgian Grand Prix    (new race from API, race_id=10029)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:44.409324Z","level":"info","event":"ADD: 2025-R14 Hungarian Grand Prix  (new race from API, race_id=10030)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:44.416636Z","level":"info","event":"ADD: 2025-R15 Dutch Grand Prix      (new race from API, race_id=10031)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:44.428848Z","level":"info","event":"ADD: 2025-R16 Italian Grand Prix    (new race from API, race_id=10032)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:44.440916Z","level":"info","event":"ADD: 2025-R17 Azerbaijan Grand Prix (new race from API, race_id=10033)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:44.452668Z","level":"info","event":"ADD: 2025-R18 Singapore Grand Prix  (new race from API, race_id=10034)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:44.464413Z","level":"info","event":"ADD: 2025-R19 United States Grand Prix (new race from API, race_id=10035)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:44.480085Z","level":"info","event":"ADD: 2025-R2 Chinese Grand Prix     (new race from API, race_id=10036)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:44.485224Z","level":"info","event":"ADD: 2025-R20 Mexico City Grand Prix (new race from API, race_id=10037)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:44.499520Z","level":"info","event":"ADD: 2025-R21 São Paulo Grand Prix  (new race from API, race_id=10038)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:44.509710Z","level":"info","event":"ADD: 2025-R22 Las Vegas Grand Prix  (new race from API, race_id=10039)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:44.527294Z","level":"info","event":"ADD: 2025-R23 Qatar Grand Prix      (new race from API, race_id=10040)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:44.541607Z","level":"info","event":"ADD: 2025-R24 Abu Dhabi Grand Prix  (new race from API, race_id=10041)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:44.550214Z","level":"info","event":"ADD: 2025-R3 Japanese Grand Prix    (new race from API, race_id=10042)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:44.562595Z","level":"info","event":"ADD: 2025-R4 Bahrain Grand Prix     (new race from API, race_id=10043)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:44.571343Z","level":"info","event":"ADD: 2025-R5 Saudi Arabian Grand Prix (new race from API, race_id=10044)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:44.580680Z","level":"info","event":"ADD: 2025-R6 Miami Grand Prix       (new race from API, race_id=10045)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:44.589184Z","level":"info","event":"ADD: 2025-R7 Emilia Romagna Grand Prix (new race from API, race_id=10046)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:44.598608Z","level":"info","event":"ADD: 2025-R8 Monaco Grand Prix      (new race from API, race_id=10047)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:44.606079Z","level":"info","event":"ADD: 2025-R9 Spanish Grand Prix     (new race from API, race_id=10048)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:44.615658Z","level":"info","event":"Merge complete: 280 total races","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:44.616343Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:44.617029Z","level":"info","event":"[STEP 7] Writing to Silver layer...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:44.672983Z","level":"info","event":"Uploaded dimensions/dim_race/dim_race.parquet (280 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:44.677007Z","level":"info","event":"Written to: s3://f1-silver/dimensions/dim_race/dim_race.parquet","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:44.678654Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:44.679777Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:44.680486Z","level":"info","event":"BACKFILL SUMMARY","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:44.684686Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:44.685463Z","level":"info","event":"  Existing races in Silver: 232","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:44.686459Z","level":"info","event":"  API races scraped: 48","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:44.688108Z","level":"info","event":"  Final race count: 280","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:44.689026Z","level":"info","event":"  New races added: 48","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:44.689781Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:44.690506Z","level":"info","event":"  Final source breakdown:","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:44.691217Z","level":"info","event":"    f1_data.csv    : 232","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:44.692666Z","level":"info","event":"    api            : 48","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:44.695357Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:44.696157Z","level":"info","event":"  race_id ranges:","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:44.697565Z","level":"info","event":"    f1_data.csv    : 860 - 1110","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:44.698639Z","level":"info","event":"    api            : 10001 - 10048","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:44.699387Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-16T14:11:44.745195Z","level":"info","event":"Done. Returned value was: {'existing_count': 232, 'api_scraped': 48, 'final_count': 280, 'new_races_added': 48}","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":216}
+{"timestamp":"2026-02-16T14:11:44.745827Z","level":"info","event":"Pushing xcom","ti":"RuntimeTaskInstance(id=UUID('019c66ca-3a05-7a91-afc0-80ffb0e268cf'), task_id='backfill_dim_race', dag_id='api_races_bronze_to_silver', run_id='manual__2026-02-16T14:10:53.993669+00:00', try_number=1, dag_version_id=UUID('019c667c-a472-7ff0-8e21-19e06a040bcf'), map_index=-1, hostname='9ffd7d06cb04', context_carrier={}, task=<Task(PythonOperator): backfill_dim_race>, bundle_instance=LocalDagBundle(name=dags-folder), max_tries=2, start_date=datetime.datetime(2026, 2, 16, 14, 10, 55, 713588, tzinfo=datetime.timezone.utc), end_date=None, state=<TaskInstanceState.RUNNING: 'running'>, is_mapped=False, rendered_map_index=None)","logger":"task","filename":"task_runner.py","lineno":1450}

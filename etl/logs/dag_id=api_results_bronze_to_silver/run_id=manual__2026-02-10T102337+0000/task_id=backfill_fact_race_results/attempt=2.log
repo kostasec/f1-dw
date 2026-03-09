@@ -1,0 +1,341 @@
+{"timestamp":"2026-02-10T10:25:52.937695Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-02-10T10:25:52.938902Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/api_etl/api_results_bronze_to_silver.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-02-10T10:25:53.357502Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:25:53.358187Z","level":"info","event":"F1 RACE RESULTS BACKFILL: ERGAST API -> SILVER","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:25:53.358513Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:25:53.358876Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:25:53.359156Z","level":"info","event":"[STEP 1] Scraping API...","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:25:53.359482Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:25:53.359731Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:25:53.360018Z","level":"info","event":"SCRAPING RACE RESULTS FROM ERGAST API: 2011-2012","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:25:53.360300Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:25:53.360598Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:25:53.360910Z","level":"info","event":"Fetching race results for 2011...","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:16.419240Z","level":"info","event":"100 results found across 5 races","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:16.419598Z","level":"info","event":"Fetching race results for 2012...","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:37.723341Z","level":"info","event":"100 results found across 5 races","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:37.724421Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:37.724828Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:37.725264Z","level":"info","event":"SCRAPING COMPLETE","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:37.725625Z","level":"info","event":"Total records: 200","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:37.725998Z","level":"info","event":"Years covered: 2011-2012","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:37.726368Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:37.727466Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:37.728290Z","level":"info","event":"API scraping complete: 200 result records","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:37.728737Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:37.729171Z","level":"info","event":"[STEP 2] Transforming to Silver schema...","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:37.729540Z","level":"info","event":"Transforming API data to Silver schema...","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:37.735374Z","level":"info","event":"Sorted by year + round + position for stable result_id generation","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:37.735921Z","level":"info","event":"Generated result_id: 10000001 - 10000200","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:37.746418Z","level":"info","event":"Transformed 200 results to Silver schema","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:37.746957Z","level":"info","event":"Source: api","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:37.747409Z","level":"info","event":"result_id range: 10000001 - 10000200","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:37.747787Z","level":"info","event":"Transformation complete: 200 results","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:37.748168Z","level":"info","event":"result_id range: 10000001 - 10000200","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:37.748475Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:37.748726Z","level":"info","event":"[STEP 3] Loading dimensions for FK resolution...","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:37.896174Z","level":"info","event":" Downloaded dimensions/dim_driver/dim_driver.parquet (89 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:37.900170Z","level":"info","event":" Downloaded dimensions/dim_constructor/dim_constructor.parquet (23 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:37.905634Z","level":"info","event":" Downloaded dimensions/dim_race/dim_race.parquet (310 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:37.911968Z","level":"info","event":" Downloaded dimensions/dim_time/dim_time.parquet (6940 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:37.912658Z","level":"info","event":"Loaded dimensions:","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:37.912944Z","level":"info","event":"  - dim_driver: 89 drivers","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:37.913277Z","level":"info","event":"  - dim_constructor: 23 constructors","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:37.913635Z","level":"info","event":"  - dim_race: 310 races","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:37.913856Z","level":"info","event":"  - dim_time: 6,940 dates","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:37.914118Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:37.914433Z","level":"info","event":"[STEP 4] Resolving foreign keys...","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:37.923981Z","level":"info","event":"Created lookup dictionaries:","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:37.924270Z","level":"info","event":"  - driver_ref -> driver_key: 89 entries","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:37.924494Z","level":"info","event":"  - constructor_ref -> constructor_key: 23 entries","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:37.924678Z","level":"info","event":"  - race_year+race_round -> race_key: 310 entries","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:37.924907Z","level":"info","event":"  - race_date -> time_key: 6940 entries","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:37.942538Z","level":"info","event":"WARNING: 100 results have unresolved time_key!","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:37.943863Z","level":"info","event":"All FKs resolved successfully","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:37.946268Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:37.946627Z","level":"info","event":"[STEP 5] Loading existing Silver data...","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:37.950669Z","level":"info","event":" Downloaded facts/fact_race_results/year=2011/data.parquet (30 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:37.956276Z","level":"info","event":" Downloaded facts/fact_race_results/year=2012/data.parquet (477 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:37.957412Z","level":"warning","event":"The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.","category":"FutureWarning","filename":"/opt/airflow/dags/api_etl/api_results_bronze_to_silver.py","lineno":400,"logger":"py.warnings"}
+{"timestamp":"2026-02-10T10:26:37.958291Z","level":"info","event":"Loaded 507 existing results from Silver","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:37.959353Z","level":"info","event":"Existing sources: {'f1_data.csv': 447, 'api': 60}","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:37.959596Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:37.959858Z","level":"info","event":"[STEP 6] Merging API data with existing Silver...","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:37.961785Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:37.962439Z","level":"info","event":"  Merge Configuration:","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:37.962810Z","level":"info","event":"Existing results: 507","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:37.963068Z","level":"info","event":"New API results: 200","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:37.963321Z","level":"info","event":"Merge key: result_id (PRIMARY natural key)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:37.963577Z","level":"info","event":"CSV priority: YES (skip API for CSV results)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:37.963934Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:37.964201Z","level":"info","event":"  Current max result_key: 4562","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:37.964415Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:37.964640Z","level":"info","event":"  Processing 200 API results:","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:37.964873Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:37.965178Z","level":"info","event":"SKIP: result_id=10000001 (duplicate, no change)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:37.965382Z","level":"info","event":"SKIP: result_id=10000002 (duplicate, no change)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:37.965599Z","level":"info","event":"SKIP: result_id=10000003 (duplicate, no change)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:37.966259Z","level":"info","event":"SKIP: result_id=10000004 (duplicate, no change)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:37.966886Z","level":"info","event":"SKIP: result_id=10000005 (duplicate, no change)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:37.967526Z","level":"info","event":"SKIP: result_id=10000006 (duplicate, no change)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:37.968181Z","level":"info","event":"SKIP: result_id=10000007 (duplicate, no change)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:37.968814Z","level":"info","event":"SKIP: result_id=10000008 (duplicate, no change)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:37.969378Z","level":"info","event":"SKIP: result_id=10000009 (duplicate, no change)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:37.970076Z","level":"info","event":"SKIP: result_id=10000010 (duplicate, no change)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:37.970658Z","level":"info","event":"SKIP: result_id=10000011 (duplicate, no change)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:37.971242Z","level":"info","event":"SKIP: result_id=10000012 (duplicate, no change)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:37.971869Z","level":"info","event":"SKIP: result_id=10000013 (duplicate, no change)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:37.972445Z","level":"info","event":"SKIP: result_id=10000014 (duplicate, no change)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:37.973031Z","level":"info","event":"SKIP: result_id=10000015 (duplicate, no change)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:37.973592Z","level":"info","event":"SKIP: result_id=10000016 (duplicate, no change)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:37.974147Z","level":"info","event":"SKIP: result_id=10000017 (duplicate, no change)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:37.974697Z","level":"info","event":"SKIP: result_id=10000018 (duplicate, no change)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:37.975252Z","level":"info","event":"SKIP: result_id=10000019 (duplicate, no change)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:37.975800Z","level":"info","event":"SKIP: result_id=10000020 (duplicate, no change)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:37.976349Z","level":"info","event":"SKIP: result_id=10000021 (duplicate, no change)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:37.977116Z","level":"info","event":"SKIP: result_id=10000022 (duplicate, no change)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:37.978871Z","level":"info","event":"SKIP: result_id=10000023 (duplicate, no change)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:37.979662Z","level":"info","event":"SKIP: result_id=10000024 (duplicate, no change)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:37.980262Z","level":"info","event":"SKIP: result_id=10000025 (duplicate, no change)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:37.980829Z","level":"info","event":"SKIP: result_id=10000026 (duplicate, no change)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:37.981416Z","level":"info","event":"SKIP: result_id=10000027 (duplicate, no change)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:37.981976Z","level":"info","event":"SKIP: result_id=10000028 (duplicate, no change)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:37.982520Z","level":"info","event":"SKIP: result_id=10000029 (duplicate, no change)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:37.983134Z","level":"info","event":"SKIP: result_id=10000030 (duplicate, no change)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:37.983602Z","level":"info","event":"UPDATE: result_id=10000031 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:37.988353Z","level":"info","event":"UPDATE: result_id=10000032 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:37.992343Z","level":"info","event":"UPDATE: result_id=10000033 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:37.997424Z","level":"info","event":"UPDATE: result_id=10000034 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.001296Z","level":"info","event":"UPDATE: result_id=10000035 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.005494Z","level":"info","event":"UPDATE: result_id=10000036 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.009313Z","level":"info","event":"UPDATE: result_id=10000037 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.014218Z","level":"info","event":"UPDATE: result_id=10000038 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.018341Z","level":"info","event":"UPDATE: result_id=10000039 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.022184Z","level":"info","event":"UPDATE: result_id=10000040 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.025932Z","level":"info","event":"UPDATE: result_id=10000041 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.030468Z","level":"info","event":"UPDATE: result_id=10000042 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.034355Z","level":"info","event":"UPDATE: result_id=10000043 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.038376Z","level":"info","event":"UPDATE: result_id=10000044 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.042367Z","level":"info","event":"UPDATE: result_id=10000045 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.047802Z","level":"info","event":"UPDATE: result_id=10000046 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.051897Z","level":"info","event":"UPDATE: result_id=10000047 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.055842Z","level":"info","event":"UPDATE: result_id=10000048 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.059612Z","level":"info","event":"UPDATE: result_id=10000049 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.065307Z","level":"info","event":"UPDATE: result_id=10000050 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.069127Z","level":"info","event":"UPDATE: result_id=10000051 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.072835Z","level":"info","event":"UPDATE: result_id=10000052 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.076661Z","level":"info","event":"UPDATE: result_id=10000053 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.082187Z","level":"info","event":"UPDATE: result_id=10000054 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.087103Z","level":"info","event":"UPDATE: result_id=10000055 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.091405Z","level":"info","event":"UPDATE: result_id=10000056 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.096547Z","level":"info","event":"UPDATE: result_id=10000057 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.101565Z","level":"info","event":"UPDATE: result_id=10000058 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.107120Z","level":"info","event":"UPDATE: result_id=10000059 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.112303Z","level":"info","event":"UPDATE: result_id=10000060 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.116286Z","level":"info","event":"ADD: result_id=10000061 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.118105Z","level":"warning","event":"The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.","category":"FutureWarning","filename":"/opt/airflow/dags/api_etl/api_results_bronze_to_silver.py","lineno":129,"logger":"py.warnings"}
+{"timestamp":"2026-02-10T10:26:38.120635Z","level":"info","event":"ADD: result_id=10000062 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.122324Z","level":"warning","event":"The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.","category":"FutureWarning","filename":"/opt/airflow/dags/api_etl/api_results_bronze_to_silver.py","lineno":129,"logger":"py.warnings"}
+{"timestamp":"2026-02-10T10:26:38.123327Z","level":"info","event":"ADD: result_id=10000063 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.124873Z","level":"warning","event":"The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.","category":"FutureWarning","filename":"/opt/airflow/dags/api_etl/api_results_bronze_to_silver.py","lineno":129,"logger":"py.warnings"}
+{"timestamp":"2026-02-10T10:26:38.126069Z","level":"info","event":"ADD: result_id=10000064 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.127910Z","level":"warning","event":"The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.","category":"FutureWarning","filename":"/opt/airflow/dags/api_etl/api_results_bronze_to_silver.py","lineno":129,"logger":"py.warnings"}
+{"timestamp":"2026-02-10T10:26:38.129375Z","level":"info","event":"ADD: result_id=10000065 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.130931Z","level":"warning","event":"The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.","category":"FutureWarning","filename":"/opt/airflow/dags/api_etl/api_results_bronze_to_silver.py","lineno":129,"logger":"py.warnings"}
+{"timestamp":"2026-02-10T10:26:38.131928Z","level":"info","event":"ADD: result_id=10000066 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.133635Z","level":"warning","event":"The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.","category":"FutureWarning","filename":"/opt/airflow/dags/api_etl/api_results_bronze_to_silver.py","lineno":129,"logger":"py.warnings"}
+{"timestamp":"2026-02-10T10:26:38.134762Z","level":"info","event":"ADD: result_id=10000067 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.136529Z","level":"warning","event":"The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.","category":"FutureWarning","filename":"/opt/airflow/dags/api_etl/api_results_bronze_to_silver.py","lineno":129,"logger":"py.warnings"}
+{"timestamp":"2026-02-10T10:26:38.137587Z","level":"info","event":"ADD: result_id=10000068 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.139335Z","level":"warning","event":"The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.","category":"FutureWarning","filename":"/opt/airflow/dags/api_etl/api_results_bronze_to_silver.py","lineno":129,"logger":"py.warnings"}
+{"timestamp":"2026-02-10T10:26:38.140369Z","level":"info","event":"ADD: result_id=10000069 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.141755Z","level":"warning","event":"The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.","category":"FutureWarning","filename":"/opt/airflow/dags/api_etl/api_results_bronze_to_silver.py","lineno":129,"logger":"py.warnings"}
+{"timestamp":"2026-02-10T10:26:38.142756Z","level":"info","event":"ADD: result_id=10000070 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.145937Z","level":"warning","event":"The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.","category":"FutureWarning","filename":"/opt/airflow/dags/api_etl/api_results_bronze_to_silver.py","lineno":129,"logger":"py.warnings"}
+{"timestamp":"2026-02-10T10:26:38.147005Z","level":"info","event":"ADD: result_id=10000071 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.148730Z","level":"warning","event":"The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.","category":"FutureWarning","filename":"/opt/airflow/dags/api_etl/api_results_bronze_to_silver.py","lineno":129,"logger":"py.warnings"}
+{"timestamp":"2026-02-10T10:26:38.149676Z","level":"info","event":"ADD: result_id=10000072 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.151018Z","level":"warning","event":"The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.","category":"FutureWarning","filename":"/opt/airflow/dags/api_etl/api_results_bronze_to_silver.py","lineno":129,"logger":"py.warnings"}
+{"timestamp":"2026-02-10T10:26:38.151803Z","level":"info","event":"ADD: result_id=10000073 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.153115Z","level":"warning","event":"The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.","category":"FutureWarning","filename":"/opt/airflow/dags/api_etl/api_results_bronze_to_silver.py","lineno":129,"logger":"py.warnings"}
+{"timestamp":"2026-02-10T10:26:38.154372Z","level":"info","event":"ADD: result_id=10000074 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.155420Z","level":"warning","event":"The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.","category":"FutureWarning","filename":"/opt/airflow/dags/api_etl/api_results_bronze_to_silver.py","lineno":129,"logger":"py.warnings"}
+{"timestamp":"2026-02-10T10:26:38.156275Z","level":"info","event":"ADD: result_id=10000075 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.157708Z","level":"warning","event":"The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.","category":"FutureWarning","filename":"/opt/airflow/dags/api_etl/api_results_bronze_to_silver.py","lineno":129,"logger":"py.warnings"}
+{"timestamp":"2026-02-10T10:26:38.158835Z","level":"info","event":"ADD: result_id=10000076 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.161745Z","level":"warning","event":"The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.","category":"FutureWarning","filename":"/opt/airflow/dags/api_etl/api_results_bronze_to_silver.py","lineno":129,"logger":"py.warnings"}
+{"timestamp":"2026-02-10T10:26:38.163319Z","level":"info","event":"ADD: result_id=10000077 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.164815Z","level":"warning","event":"The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.","category":"FutureWarning","filename":"/opt/airflow/dags/api_etl/api_results_bronze_to_silver.py","lineno":129,"logger":"py.warnings"}
+{"timestamp":"2026-02-10T10:26:38.165645Z","level":"info","event":"ADD: result_id=10000078 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.166944Z","level":"warning","event":"The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.","category":"FutureWarning","filename":"/opt/airflow/dags/api_etl/api_results_bronze_to_silver.py","lineno":129,"logger":"py.warnings"}
+{"timestamp":"2026-02-10T10:26:38.167598Z","level":"info","event":"ADD: result_id=10000079 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.168784Z","level":"warning","event":"The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.","category":"FutureWarning","filename":"/opt/airflow/dags/api_etl/api_results_bronze_to_silver.py","lineno":129,"logger":"py.warnings"}
+{"timestamp":"2026-02-10T10:26:38.169476Z","level":"info","event":"ADD: result_id=10000080 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.170700Z","level":"warning","event":"The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.","category":"FutureWarning","filename":"/opt/airflow/dags/api_etl/api_results_bronze_to_silver.py","lineno":129,"logger":"py.warnings"}
+{"timestamp":"2026-02-10T10:26:38.171425Z","level":"info","event":"ADD: result_id=10000081 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.172566Z","level":"warning","event":"The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.","category":"FutureWarning","filename":"/opt/airflow/dags/api_etl/api_results_bronze_to_silver.py","lineno":129,"logger":"py.warnings"}
+{"timestamp":"2026-02-10T10:26:38.173268Z","level":"info","event":"ADD: result_id=10000082 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.174383Z","level":"warning","event":"The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.","category":"FutureWarning","filename":"/opt/airflow/dags/api_etl/api_results_bronze_to_silver.py","lineno":129,"logger":"py.warnings"}
+{"timestamp":"2026-02-10T10:26:38.175023Z","level":"info","event":"ADD: result_id=10000083 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.176308Z","level":"warning","event":"The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.","category":"FutureWarning","filename":"/opt/airflow/dags/api_etl/api_results_bronze_to_silver.py","lineno":129,"logger":"py.warnings"}
+{"timestamp":"2026-02-10T10:26:38.179263Z","level":"info","event":"ADD: result_id=10000084 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.180684Z","level":"warning","event":"The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.","category":"FutureWarning","filename":"/opt/airflow/dags/api_etl/api_results_bronze_to_silver.py","lineno":129,"logger":"py.warnings"}
+{"timestamp":"2026-02-10T10:26:38.181489Z","level":"info","event":"ADD: result_id=10000085 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.182703Z","level":"warning","event":"The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.","category":"FutureWarning","filename":"/opt/airflow/dags/api_etl/api_results_bronze_to_silver.py","lineno":129,"logger":"py.warnings"}
+{"timestamp":"2026-02-10T10:26:38.183459Z","level":"info","event":"ADD: result_id=10000086 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.184662Z","level":"warning","event":"The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.","category":"FutureWarning","filename":"/opt/airflow/dags/api_etl/api_results_bronze_to_silver.py","lineno":129,"logger":"py.warnings"}
+{"timestamp":"2026-02-10T10:26:38.185619Z","level":"info","event":"ADD: result_id=10000087 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.186886Z","level":"warning","event":"The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.","category":"FutureWarning","filename":"/opt/airflow/dags/api_etl/api_results_bronze_to_silver.py","lineno":129,"logger":"py.warnings"}
+{"timestamp":"2026-02-10T10:26:38.187687Z","level":"info","event":"ADD: result_id=10000088 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.188900Z","level":"warning","event":"The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.","category":"FutureWarning","filename":"/opt/airflow/dags/api_etl/api_results_bronze_to_silver.py","lineno":129,"logger":"py.warnings"}
+{"timestamp":"2026-02-10T10:26:38.189662Z","level":"info","event":"ADD: result_id=10000089 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.190852Z","level":"warning","event":"The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.","category":"FutureWarning","filename":"/opt/airflow/dags/api_etl/api_results_bronze_to_silver.py","lineno":129,"logger":"py.warnings"}
+{"timestamp":"2026-02-10T10:26:38.191591Z","level":"info","event":"ADD: result_id=10000090 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.192794Z","level":"warning","event":"The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.","category":"FutureWarning","filename":"/opt/airflow/dags/api_etl/api_results_bronze_to_silver.py","lineno":129,"logger":"py.warnings"}
+{"timestamp":"2026-02-10T10:26:38.194864Z","level":"info","event":"ADD: result_id=10000091 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.196320Z","level":"warning","event":"The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.","category":"FutureWarning","filename":"/opt/airflow/dags/api_etl/api_results_bronze_to_silver.py","lineno":129,"logger":"py.warnings"}
+{"timestamp":"2026-02-10T10:26:38.197143Z","level":"info","event":"ADD: result_id=10000092 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.198352Z","level":"warning","event":"The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.","category":"FutureWarning","filename":"/opt/airflow/dags/api_etl/api_results_bronze_to_silver.py","lineno":129,"logger":"py.warnings"}
+{"timestamp":"2026-02-10T10:26:38.199120Z","level":"info","event":"ADD: result_id=10000093 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.200318Z","level":"warning","event":"The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.","category":"FutureWarning","filename":"/opt/airflow/dags/api_etl/api_results_bronze_to_silver.py","lineno":129,"logger":"py.warnings"}
+{"timestamp":"2026-02-10T10:26:38.201111Z","level":"info","event":"ADD: result_id=10000094 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.202501Z","level":"warning","event":"The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.","category":"FutureWarning","filename":"/opt/airflow/dags/api_etl/api_results_bronze_to_silver.py","lineno":129,"logger":"py.warnings"}
+{"timestamp":"2026-02-10T10:26:38.203428Z","level":"info","event":"ADD: result_id=10000095 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.204651Z","level":"warning","event":"The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.","category":"FutureWarning","filename":"/opt/airflow/dags/api_etl/api_results_bronze_to_silver.py","lineno":129,"logger":"py.warnings"}
+{"timestamp":"2026-02-10T10:26:38.205359Z","level":"info","event":"ADD: result_id=10000096 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.206544Z","level":"warning","event":"The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.","category":"FutureWarning","filename":"/opt/airflow/dags/api_etl/api_results_bronze_to_silver.py","lineno":129,"logger":"py.warnings"}
+{"timestamp":"2026-02-10T10:26:38.207233Z","level":"info","event":"ADD: result_id=10000097 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.208408Z","level":"warning","event":"The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.","category":"FutureWarning","filename":"/opt/airflow/dags/api_etl/api_results_bronze_to_silver.py","lineno":129,"logger":"py.warnings"}
+{"timestamp":"2026-02-10T10:26:38.209119Z","level":"info","event":"ADD: result_id=10000098 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.211699Z","level":"warning","event":"The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.","category":"FutureWarning","filename":"/opt/airflow/dags/api_etl/api_results_bronze_to_silver.py","lineno":129,"logger":"py.warnings"}
+{"timestamp":"2026-02-10T10:26:38.212546Z","level":"info","event":"ADD: result_id=10000099 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.213839Z","level":"warning","event":"The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.","category":"FutureWarning","filename":"/opt/airflow/dags/api_etl/api_results_bronze_to_silver.py","lineno":129,"logger":"py.warnings"}
+{"timestamp":"2026-02-10T10:26:38.214608Z","level":"info","event":"ADD: result_id=10000100 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.215724Z","level":"warning","event":"The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.","category":"FutureWarning","filename":"/opt/airflow/dags/api_etl/api_results_bronze_to_silver.py","lineno":129,"logger":"py.warnings"}
+{"timestamp":"2026-02-10T10:26:38.216472Z","level":"info","event":"ADD: result_id=10000101 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.218207Z","level":"info","event":"ADD: result_id=10000102 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.219840Z","level":"info","event":"ADD: result_id=10000103 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.221481Z","level":"info","event":"ADD: result_id=10000104 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.223144Z","level":"info","event":"ADD: result_id=10000105 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.224916Z","level":"info","event":"ADD: result_id=10000106 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.228684Z","level":"info","event":"ADD: result_id=10000107 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.231170Z","level":"info","event":"ADD: result_id=10000108 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.233347Z","level":"info","event":"ADD: result_id=10000109 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.235518Z","level":"info","event":"ADD: result_id=10000110 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.237126Z","level":"info","event":"ADD: result_id=10000111 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.238684Z","level":"info","event":"ADD: result_id=10000112 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.240242Z","level":"info","event":"ADD: result_id=10000113 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.241922Z","level":"info","event":"ADD: result_id=10000114 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.243854Z","level":"info","event":"ADD: result_id=10000115 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.246412Z","level":"info","event":"ADD: result_id=10000116 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.248163Z","level":"info","event":"ADD: result_id=10000117 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.249862Z","level":"info","event":"ADD: result_id=10000118 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.252404Z","level":"info","event":"ADD: result_id=10000119 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.254153Z","level":"info","event":"ADD: result_id=10000120 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.255819Z","level":"info","event":"ADD: result_id=10000121 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.257720Z","level":"info","event":"ADD: result_id=10000122 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.259623Z","level":"info","event":"ADD: result_id=10000123 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.262479Z","level":"info","event":"ADD: result_id=10000124 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.264266Z","level":"info","event":"ADD: result_id=10000125 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.265913Z","level":"info","event":"ADD: result_id=10000126 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.267498Z","level":"info","event":"ADD: result_id=10000127 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.269163Z","level":"info","event":"ADD: result_id=10000128 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.270779Z","level":"info","event":"ADD: result_id=10000129 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.272405Z","level":"info","event":"ADD: result_id=10000130 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.274209Z","level":"info","event":"ADD: result_id=10000131 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.275900Z","level":"info","event":"ADD: result_id=10000132 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.278211Z","level":"info","event":"ADD: result_id=10000133 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.280026Z","level":"info","event":"ADD: result_id=10000134 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.281711Z","level":"info","event":"ADD: result_id=10000135 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.283405Z","level":"info","event":"ADD: result_id=10000136 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.285011Z","level":"info","event":"ADD: result_id=10000137 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.286565Z","level":"info","event":"ADD: result_id=10000138 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.288212Z","level":"info","event":"ADD: result_id=10000139 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.290320Z","level":"info","event":"ADD: result_id=10000140 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.292124Z","level":"info","event":"ADD: result_id=10000141 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.295504Z","level":"info","event":"ADD: result_id=10000142 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.297512Z","level":"info","event":"ADD: result_id=10000143 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.299279Z","level":"info","event":"ADD: result_id=10000144 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.301010Z","level":"info","event":"ADD: result_id=10000145 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.302709Z","level":"info","event":"ADD: result_id=10000146 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.304384Z","level":"info","event":"ADD: result_id=10000147 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.305969Z","level":"info","event":"ADD: result_id=10000148 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.307716Z","level":"info","event":"ADD: result_id=10000149 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.309334Z","level":"info","event":"ADD: result_id=10000150 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.311386Z","level":"info","event":"ADD: result_id=10000151 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.313360Z","level":"info","event":"ADD: result_id=10000152 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.315268Z","level":"info","event":"ADD: result_id=10000153 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.316934Z","level":"info","event":"ADD: result_id=10000154 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.318561Z","level":"info","event":"ADD: result_id=10000155 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.320215Z","level":"info","event":"ADD: result_id=10000156 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.321961Z","level":"info","event":"ADD: result_id=10000157 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.323680Z","level":"info","event":"ADD: result_id=10000158 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.325315Z","level":"info","event":"ADD: result_id=10000159 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.327929Z","level":"info","event":"ADD: result_id=10000160 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.330573Z","level":"info","event":"ADD: result_id=10000161 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.332380Z","level":"info","event":"ADD: result_id=10000162 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.334102Z","level":"info","event":"ADD: result_id=10000163 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.335662Z","level":"info","event":"ADD: result_id=10000164 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.337387Z","level":"info","event":"ADD: result_id=10000165 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.339165Z","level":"info","event":"ADD: result_id=10000166 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.340852Z","level":"info","event":"ADD: result_id=10000167 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.342508Z","level":"info","event":"ADD: result_id=10000168 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.345062Z","level":"info","event":"ADD: result_id=10000169 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.347192Z","level":"info","event":"ADD: result_id=10000170 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.348923Z","level":"info","event":"ADD: result_id=10000171 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.350490Z","level":"info","event":"ADD: result_id=10000172 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.352142Z","level":"info","event":"ADD: result_id=10000173 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.353747Z","level":"info","event":"ADD: result_id=10000174 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.356102Z","level":"info","event":"ADD: result_id=10000175 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.357801Z","level":"info","event":"ADD: result_id=10000176 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.359353Z","level":"info","event":"ADD: result_id=10000177 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.361195Z","level":"info","event":"ADD: result_id=10000178 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.363072Z","level":"info","event":"ADD: result_id=10000179 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.364693Z","level":"info","event":"ADD: result_id=10000180 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.366406Z","level":"info","event":"ADD: result_id=10000181 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.370112Z","level":"info","event":"ADD: result_id=10000182 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.373927Z","level":"info","event":"ADD: result_id=10000183 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.379044Z","level":"info","event":"ADD: result_id=10000184 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.379606Z","level":"info","event":"ADD: result_id=10000185 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.381383Z","level":"info","event":"ADD: result_id=10000186 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.383846Z","level":"info","event":"ADD: result_id=10000187 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.386906Z","level":"info","event":"ADD: result_id=10000188 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.389444Z","level":"info","event":"ADD: result_id=10000189 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.390844Z","level":"info","event":"ADD: result_id=10000190 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.392796Z","level":"info","event":"ADD: result_id=10000191 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.394638Z","level":"info","event":"ADD: result_id=10000192 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.396682Z","level":"info","event":"ADD: result_id=10000193 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.398677Z","level":"info","event":"ADD: result_id=10000194 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.401106Z","level":"info","event":"ADD: result_id=10000195 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.403130Z","level":"info","event":"ADD: result_id=10000196 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.404959Z","level":"info","event":"ADD: result_id=10000197 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.406753Z","level":"info","event":"ADD: result_id=10000198 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.408736Z","level":"info","event":"ADD: result_id=10000199 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.411211Z","level":"info","event":"ADD: result_id=10000200 (new result from API)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.414460Z","level":"info","event":"Merge complete: 647 total results","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.414876Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.415196Z","level":"info","event":"[STEP 7] Writing to Silver layer (partitioned by year)...","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.436539Z","level":"info","event":" Uploaded facts/fact_race_results/year=2011/data.parquet (100 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.436983Z","level":"info","event":"  Year 2011: 100 results written","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.450143Z","level":"info","event":" Uploaded facts/fact_race_results/year=2012/data.parquet (547 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.450603Z","level":"info","event":"  Year 2012: 547 results written","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.450890Z","level":"info","event":"Written to: s3://f1-silver/facts/fact_race_results/year=*/data.parquet","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.451188Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.451448Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.451712Z","level":"info","event":"BACKFILL SUMMARY","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.452009Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.452252Z","level":"info","event":"  Existing results in Silver: 507","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.452441Z","level":"info","event":"  API results scraped: 200","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.452658Z","level":"info","event":"  Final result count: 647","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.453006Z","level":"info","event":"  New results added: 140","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.453284Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.453503Z","level":"info","event":"  Final source breakdown:","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.453716Z","level":"info","event":"    f1_data.csv    : 447","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.453948Z","level":"info","event":"    api            : 200","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.454189Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.454426Z","level":"info","event":"  result_id ranges:","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.454638Z","level":"info","event":"    f1_data.csv    : 21232 - 21707","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.454821Z","level":"info","event":"    api            : 10000001 - 10000200","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.455014Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:26:38.470161Z","level":"info","event":"Done. Returned value was: {'existing_count': 507, 'api_scraped': 200, 'final_count': 647, 'new_results_added': 140}","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":216}
+{"timestamp":"2026-02-10T10:26:38.470536Z","level":"info","event":"Pushing xcom","ti":"RuntimeTaskInstance(id=UUID('019c4716-06b6-7073-b170-166f6719e07b'), task_id='backfill_fact_race_results', dag_id='api_results_bronze_to_silver', run_id='manual__2026-02-10T10:23:37+00:00', try_number=2, dag_version_id=UUID('019c42c6-8d55-7f13-bb81-df8f7476c7cb'), map_index=-1, hostname='209a8186c0d6', context_carrier={}, task=<Task(PythonOperator): backfill_fact_race_results>, bundle_instance=LocalDagBundle(name=dags-folder), max_tries=3, start_date=datetime.datetime(2026, 2, 10, 10, 25, 52, 900966, tzinfo=datetime.timezone.utc), end_date=None, state=<TaskInstanceState.RUNNING: 'running'>, is_mapped=False, rendered_map_index=None)","logger":"task","filename":"task_runner.py","lineno":1450}

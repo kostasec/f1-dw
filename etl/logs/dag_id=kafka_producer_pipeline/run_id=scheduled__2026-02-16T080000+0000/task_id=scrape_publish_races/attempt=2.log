@@ -1,0 +1,37 @@
+{"timestamp":"2026-02-16T18:57:27.066265Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-02-16T18:57:27.073425Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/kafka_producer_pipeline.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-02-16T18:57:29.819296Z","level":"warning","event":"The `airflow.operators.trigger_dagrun.TriggerDagRunOperator` attribute is deprecated. Please use `'airflow.providers.standard.operators.trigger_dagrun.TriggerDagRunOperator'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/dags/kafka_producer_pipeline.py","lineno":35,"logger":"py.warnings"}
+{"timestamp":"2026-02-16T18:57:29.921659Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-16T18:57:29.922539Z","level":"info","event":"PRODUCER: dim_race  (2026+)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T18:57:29.923101Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-16T18:57:29.924933Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T18:57:29.925821Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-16T18:57:29.926536Z","level":"info","event":"SCRAPING RACES FROM ERGAST API: 2026-2026","logger":"task.stdout"}
+{"timestamp":"2026-02-16T18:57:29.927204Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-16T18:57:29.930165Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T18:57:29.931165Z","level":"info","event":"Fetching races for 2026...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T18:57:52.013658Z","level":"info","event":"24 races found","logger":"task.stdout"}
+{"timestamp":"2026-02-16T18:57:52.015714Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T18:57:52.016425Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-16T18:57:52.016881Z","level":"info","event":"SCRAPING COMPLETE","logger":"task.stdout"}
+{"timestamp":"2026-02-16T18:57:52.017411Z","level":"info","event":"Total records: 24","logger":"task.stdout"}
+{"timestamp":"2026-02-16T18:57:52.017915Z","level":"info","event":"Years covered: 2026-2026","logger":"task.stdout"}
+{"timestamp":"2026-02-16T18:57:52.018487Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-16T18:57:52.018971Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T18:57:52.019411Z","level":"info","event":"Transforming API data to Silver schema...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T18:57:52.036568Z","level":"info","event":"Sorted by season + round for stable race_id generation","logger":"task.stdout"}
+{"timestamp":"2026-02-16T18:57:52.039589Z","level":"info","event":"  Generated race_id: 10001 - 10024","logger":"task.stdout"}
+{"timestamp":"2026-02-16T18:57:52.065637Z","level":"warning","event":"Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.","category":"UserWarning","filename":"/opt/airflow/dags/scraper/race.py","lineno":172,"logger":"py.warnings"}
+{"timestamp":"2026-02-16T18:57:52.073771Z","level":"warning","event":"Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.","category":"UserWarning","filename":"/opt/airflow/dags/scraper/race.py","lineno":172,"logger":"py.warnings"}
+{"timestamp":"2026-02-16T18:57:52.081215Z","level":"warning","event":"Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.","category":"UserWarning","filename":"/opt/airflow/dags/scraper/race.py","lineno":172,"logger":"py.warnings"}
+{"timestamp":"2026-02-16T18:57:52.085721Z","level":"warning","event":"Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.","category":"UserWarning","filename":"/opt/airflow/dags/scraper/race.py","lineno":172,"logger":"py.warnings"}
+{"timestamp":"2026-02-16T18:57:52.088662Z","level":"warning","event":"Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.","category":"UserWarning","filename":"/opt/airflow/dags/scraper/race.py","lineno":172,"logger":"py.warnings"}
+{"timestamp":"2026-02-16T18:57:52.091639Z","level":"warning","event":"Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.","category":"UserWarning","filename":"/opt/airflow/dags/scraper/race.py","lineno":172,"logger":"py.warnings"}
+{"timestamp":"2026-02-16T18:57:52.096089Z","level":"info","event":"Transformed 24 races to Silver schema","logger":"task.stdout"}
+{"timestamp":"2026-02-16T18:57:52.096562Z","level":"info","event":"Source: api","logger":"task.stdout"}
+{"timestamp":"2026-02-16T18:57:52.096921Z","level":"info","event":"race_id range: 10001 - 10024","logger":"task.stdout"}
+{"timestamp":"2026-02-16T18:57:52.143501Z","level":"info","event":" Downloaded dimensions/dim_race/dim_race.parquet (256 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T18:57:52.153106Z","level":"info","event":" Downloaded dimensions/dim_circuit/dim_circuit.parquet (78 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T18:57:52.160203Z","level":"info","event":"  No new races found this week","logger":"task.stdout"}
+{"timestamp":"2026-02-16T18:57:52.184428Z","level":"info","event":"Done. Returned value was: {'new_count': 0}","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":216}
+{"timestamp":"2026-02-16T18:57:52.184906Z","level":"info","event":"Pushing xcom","ti":"RuntimeTaskInstance(id=UUID('019c67cb-f4b2-755a-a9b8-507fdebd5d10'), task_id='scrape_publish_races', dag_id='kafka_producer_pipeline', run_id='scheduled__2026-02-16T08:00:00+00:00', try_number=2, dag_version_id=UUID('019c67ca-8f5c-7e42-9c4f-003df19b8153'), map_index=-1, hostname='9ffd7d06cb04', context_carrier={}, task=<Task(PythonOperator): scrape_publish_races>, bundle_instance=LocalDagBundle(name=dags-folder), max_tries=2, start_date=datetime.datetime(2026, 2, 16, 18, 57, 26, 781603, tzinfo=datetime.timezone.utc), end_date=None, state=<TaskInstanceState.RUNNING: 'running'>, is_mapped=False, rendered_map_index=None)","logger":"task","filename":"task_runner.py","lineno":1450}

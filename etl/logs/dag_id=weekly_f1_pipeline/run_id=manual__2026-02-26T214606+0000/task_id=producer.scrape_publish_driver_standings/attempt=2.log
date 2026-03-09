@@ -1,0 +1,26 @@
+{"timestamp":"2026-02-26T22:05:40.926886Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-02-26T22:05:40.948095Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/weekly_f1_pipeline.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-02-26T22:05:53.113969Z","level":"warning","event":"The `airflow.utils.task_group.TaskGroup` attribute is deprecated. Please use `'airflow.sdk.TaskGroup'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/dags/weekly_f1_pipeline.py","lineno":36,"logger":"py.warnings"}
+{"timestamp":"2026-02-26T22:05:53.124921Z","level":"warning","event":"The `airflow.operators.trigger_dagrun.TriggerDagRunOperator` attribute is deprecated. Please use `'airflow.providers.standard.operators.trigger_dagrun.TriggerDagRunOperator'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/dags/kafka_producer_pipeline.py","lineno":35,"logger":"py.warnings"}
+{"timestamp":"2026-02-26T22:05:54.284719Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-26T22:05:54.288695Z","level":"info","event":"PRODUCER: fact_driver_standings  (2026+)","logger":"task.stdout"}
+{"timestamp":"2026-02-26T22:05:54.292701Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-26T22:05:54.313492Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-26T22:05:54.315641Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-26T22:05:54.318299Z","level":"info","event":"SCRAPING DRIVER STANDINGS FROM ERGAST API: 2026-2026","logger":"task.stdout"}
+{"timestamp":"2026-02-26T22:05:54.323197Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-26T22:05:54.346662Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-26T22:05:54.347819Z","level":"info","event":"Fetching driver standings for 2026...","logger":"task.stdout"}
+{"timestamp":"2026-02-26T22:06:16.197036Z","level":"info","event":"0 standings found for 2026","logger":"task.stdout"}
+{"timestamp":"2026-02-26T22:06:16.224977Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-26T22:06:16.225972Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-26T22:06:16.226886Z","level":"info","event":"SCRAPING COMPLETE","logger":"task.stdout"}
+{"timestamp":"2026-02-26T22:06:16.232726Z","level":"info","event":"Total records: 0","logger":"task.stdout"}
+{"timestamp":"2026-02-26T22:06:16.236649Z","level":"info","event":"Years covered: 2026-2026","logger":"task.stdout"}
+{"timestamp":"2026-02-26T22:06:16.256671Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-26T22:06:16.260688Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-26T22:06:16.261538Z","level":"info","event":"Transforming API data to Silver schema...","logger":"task.stdout"}
+{"timestamp":"2026-02-26T22:06:16.262187Z","level":"info","event":"No data found - returning empty DataFrame with schema: ['ds_id', 'driver_ref', 'constructor_ref', 'race_year', 'race_round', 'ds_position', 'ds_points', 'ds_wins', 'year', 'source', 'created_at']","logger":"task.stdout"}
+{"timestamp":"2026-02-26T22:06:16.263160Z","level":"info","event":"  No driver standings data found","logger":"task.stdout"}
+{"timestamp":"2026-02-26T22:06:16.344895Z","level":"info","event":"Done. Returned value was: {'new_count': 0}","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":216}
+{"timestamp":"2026-02-26T22:06:16.345821Z","level":"info","event":"Pushing xcom","ti":"RuntimeTaskInstance(id=UUID('019c9bfb-736b-76e1-91fc-df07ae4f17ba'), task_id='producer.scrape_publish_driver_standings', dag_id='weekly_f1_pipeline', run_id='manual__2026-02-26T21:46:06+00:00', try_number=2, dag_version_id=UUID('019c9b22-04c8-7f8f-ba9f-baa49cc3678d'), map_index=-1, hostname='fe5351013118', context_carrier={}, task=<Task(PythonOperator): producer.scrape_publish_driver_standings>, bundle_instance=LocalDagBundle(name=dags-folder), max_tries=3, start_date=datetime.datetime(2026, 2, 26, 22, 5, 40, 381257, tzinfo=datetime.timezone.utc), end_date=None, state=<TaskInstanceState.RUNNING: 'running'>, is_mapped=False, rendered_map_index=None)","logger":"task","filename":"task_runner.py","lineno":1450}

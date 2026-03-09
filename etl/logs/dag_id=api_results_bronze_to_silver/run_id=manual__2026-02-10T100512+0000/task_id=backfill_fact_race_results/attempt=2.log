@@ -1,0 +1,32 @@
+{"timestamp":"2026-02-10T10:15:51.443758Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-02-10T10:15:51.445343Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/api_etl/api_results_bronze_to_silver.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-02-10T10:15:51.950085Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:15:51.950599Z","level":"info","event":"F1 RACE RESULTS BACKFILL: ERGAST API -> SILVER","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:15:51.950829Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:15:51.951071Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:15:51.951256Z","level":"info","event":"[STEP 1] Scraping API...","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:15:51.951436Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:15:51.951610Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:15:51.951776Z","level":"info","event":"SCRAPING RACE RESULTS FROM ERGAST API: 2011-2012","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:15:51.951963Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:15:51.952127Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:15:51.952297Z","level":"info","event":"Fetching race results for 2011...","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:16:14.310494Z","level":"info","event":"100 results found across 5 races","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:16:14.311117Z","level":"info","event":"Fetching race results for 2012...","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:16:38.492643Z","level":"info","event":"100 results found across 5 races","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:16:38.495809Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:16:38.496168Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:16:38.496495Z","level":"info","event":"SCRAPING COMPLETE","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:16:38.496841Z","level":"info","event":"Total records: 200","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:16:38.497233Z","level":"info","event":"Years covered: 2011-2012","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:16:38.497611Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:16:38.497978Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:16:38.498328Z","level":"info","event":"API scraping complete: 200 result records","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:16:38.498644Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:16:38.498995Z","level":"info","event":"[STEP 2] Transforming to Silver schema...","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:16:38.499331Z","level":"info","event":"Transforming API data to Silver schema...","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:16:38.512036Z","level":"info","event":"Sorted by year + round + position for stable result_id generation","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:16:38.520375Z","level":"info","event":"Transformed 200 results to Silver schema","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:16:38.520838Z","level":"info","event":"Source: api","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:16:38.521226Z","level":"info","event":"Transformation complete: 200 results","logger":"task.stdout"}
+{"timestamp":"2026-02-10T10:16:38.520506Z","level":"error","event":"Task failed with exception","logger":"task","filename":"task_runner.py","lineno":1078,"error_detail":[{"exc_type":"KeyError","exc_value":"'result_id'","exc_notes":[],"syntax_error":null,"is_cause":false,"frames":[{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/task_runner.py","lineno":1004,"name":"run"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/task_runner.py","lineno":1405,"name":"_execute_task"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/bases/operator.py","lineno":417,"name":"wrapper"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/standard/operators/python.py","lineno":214,"name":"execute"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/standard/operators/python.py","lineno":237,"name":"execute_callable"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/callback_runner.py","lineno":82,"name":"run"},{"filename":"/opt/airflow/dags/api_etl/api_results_bronze_to_silver.py","lineno":280,"name":"backfill_fact_race_results"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/pandas/core/frame.py","lineno":3893,"name":"__getitem__"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/pandas/core/indexes/base.py","lineno":3798,"name":"get_loc"}],"is_group":false,"exceptions":[]},{"exc_type":"KeyError","exc_value":"'result_id'","exc_notes":[],"syntax_error":null,"is_cause":true,"frames":[{"filename":"/home/airflow/.local/lib/python3.12/site-packages/pandas/core/indexes/base.py","lineno":3791,"name":"get_loc"},{"filename":"/opt/airflow/index.pyx","lineno":152,"name":"pandas._libs.index.IndexEngine.get_loc"},{"filename":"/opt/airflow/index.pyx","lineno":181,"name":"pandas._libs.index.IndexEngine.get_loc"},{"filename":"/opt/airflow/pandas/_libs/hashtable_class_helper.pxi","lineno":7080,"name":"pandas._libs.hashtable.PyObjectHashTable.get_item"},{"filename":"/opt/airflow/pandas/_libs/hashtable_class_helper.pxi","lineno":7088,"name":"pandas._libs.hashtable.PyObjectHashTable.get_item"}],"is_group":false,"exceptions":[]}]}

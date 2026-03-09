@@ -1,0 +1,69 @@
+{"timestamp":"2026-02-16T11:27:05.511232Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-02-16T11:27:05.517776Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/weekly_streaming_pipeline.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-02-16T11:27:09.398387Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:27:09.399532Z","level":"info","event":"[PRODUCER] Starting dim_driver production...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:27:09.411676Z","level":"info","event":"<BrokerConnection client_id=f1-streaming-pipeline, node_id=bootstrap-0 host=kafka:29092 <connecting> [IPv4 ('172.18.0.4', 29092)]>: connecting to kafka:29092 [('172.18.0.4', 29092) IPv4]","logger":"kafka.conn","filename":"conn.py","lineno":395}
+{"timestamp":"2026-02-16T11:27:09.439216Z","level":"info","event":"<BrokerConnection client_id=f1-streaming-pipeline, node_id=bootstrap-0 host=kafka:29092 <checking_api_versions_recv> [IPv4 ('172.18.0.4', 29092)]>: Broker version identified as 2.6","logger":"kafka.conn","filename":"conn.py","lineno":615}
+{"timestamp":"2026-02-16T11:27:09.445030Z","level":"info","event":"<BrokerConnection client_id=f1-streaming-pipeline, node_id=bootstrap-0 host=kafka:29092 <connected> [IPv4 ('172.18.0.4', 29092)]>: Connection complete.","logger":"kafka.conn","filename":"conn.py","lineno":456}
+{"timestamp":"2026-02-16T11:27:09.466000Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:27:09.468033Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:27:09.468689Z","level":"info","event":"PRODUCING DRIVERS FOR 2026 → Kafka Topic: dim-driver","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:27:09.470268Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:27:09.471280Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:27:09.473117Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:27:09.474496Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:27:09.476149Z","level":"info","event":"SCRAPING DRIVERS FROM ERGAST API: 2026-2026","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:27:09.481343Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:27:09.482267Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:27:09.483203Z","level":"info","event":"Fetching drivers for 2026...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:27:31.516001Z","level":"info","event":"22 drivers found","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:27:31.517319Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:27:31.517880Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:27:31.518380Z","level":"info","event":"SCRAPING COMPLETE","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:27:31.518917Z","level":"info","event":"Total records: 22","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:27:31.519524Z","level":"info","event":"Unique drivers (by driverId): 22","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:27:31.519999Z","level":"info","event":"Years covered: 2026-2026","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:27:31.520460Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:27:31.520940Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:27:31.521347Z","level":"info","event":"Transforming API data to Silver schema...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:27:31.521936Z","level":"info","event":"Deduplication: 22 records → 22 unique drivers","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:27:31.522899Z","level":"info","event":"Sorted by driverId (alphabetically) for stable driver_id generation","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:27:31.523577Z","level":"info","event":"  Generated driver_id: 10001 - 10022","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:27:31.535044Z","level":"info","event":"Transformed 22 drivers to Silver schema","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:27:31.535663Z","level":"info","event":"Source: api","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:27:31.536241Z","level":"info","event":"driver_id range: 10001 - 10022","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:27:31.537728Z","level":"info","event":"Scraped 22 drivers for 2026","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:27:31.539785Z","level":"info","event":"<BrokerConnection client_id=f1-streaming-pipeline, node_id=1 host=kafka:29092 <connecting> [IPv4 ('172.18.0.4', 29092)]>: connecting to kafka:29092 [('172.18.0.4', 29092) IPv4]","logger":"kafka.conn","filename":"conn.py","lineno":395}
+{"timestamp":"2026-02-16T11:27:31.540560Z","level":"info","event":"<BrokerConnection client_id=f1-streaming-pipeline, node_id=1 host=kafka:29092 <connected> [IPv4 ('172.18.0.4', 29092)]>: Connection complete.","logger":"kafka.conn","filename":"conn.py","lineno":456}
+{"timestamp":"2026-02-16T11:27:31.540792Z","level":"info","event":"<BrokerConnection client_id=f1-streaming-pipeline, node_id=bootstrap-0 host=kafka:29092 <connected> [IPv4 ('172.18.0.4', 29092)]>: Closing connection. ","logger":"kafka.conn","filename":"conn.py","lineno":936}
+{"timestamp":"2026-02-16T11:27:31.547792Z","level":"info","event":" Sent to dim-driver | Key: albon | Partition: 0","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:27:31.551371Z","level":"info","event":" Sent to dim-driver | Key: alonso | Partition: 0","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:27:31.554335Z","level":"info","event":" Sent to dim-driver | Key: antonelli | Partition: 0","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:27:31.557522Z","level":"info","event":" Sent to dim-driver | Key: bearman | Partition: 0","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:27:31.560763Z","level":"info","event":" Sent to dim-driver | Key: bortoleto | Partition: 0","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:27:31.563647Z","level":"info","event":" Sent to dim-driver | Key: bottas | Partition: 0","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:27:31.566620Z","level":"info","event":" Sent to dim-driver | Key: colapinto | Partition: 0","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:27:31.569798Z","level":"info","event":" Sent to dim-driver | Key: gasly | Partition: 0","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:27:31.572887Z","level":"info","event":" Sent to dim-driver | Key: hadjar | Partition: 0","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:27:31.576874Z","level":"info","event":" Sent to dim-driver | Key: hamilton | Partition: 0","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:27:31.579839Z","level":"info","event":" Sent to dim-driver | Key: hulkenberg | Partition: 0","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:27:31.583131Z","level":"info","event":" Sent to dim-driver | Key: lawson | Partition: 0","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:27:31.586572Z","level":"info","event":" Sent to dim-driver | Key: leclerc | Partition: 0","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:27:31.591467Z","level":"info","event":" Sent to dim-driver | Key: lindblad | Partition: 0","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:27:31.595593Z","level":"info","event":" Sent to dim-driver | Key: max_verstappen | Partition: 0","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:27:31.599370Z","level":"info","event":" Sent to dim-driver | Key: norris | Partition: 0","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:27:31.602974Z","level":"info","event":" Sent to dim-driver | Key: ocon | Partition: 0","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:27:31.606716Z","level":"info","event":" Sent to dim-driver | Key: perez | Partition: 0","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:27:31.610801Z","level":"info","event":" Sent to dim-driver | Key: piastri | Partition: 0","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:27:31.614344Z","level":"info","event":" Sent to dim-driver | Key: russell | Partition: 0","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:27:31.617591Z","level":"info","event":" Sent to dim-driver | Key: sainz | Partition: 0","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:27:31.622944Z","level":"info","event":" Sent to dim-driver | Key: stroll | Partition: 0","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:27:31.623660Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:27:31.624214Z","level":"info","event":"📊 Batch Stats for dim-driver:","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:27:31.624865Z","level":"info","event":"    Sent: 22","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:27:31.625462Z","level":"info","event":"   ❌ Failed: 0","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:27:31.620667Z","level":"info","event":"<KafkaProducer client_id=f1-streaming-pipeline transactional_id=None>: Closing the Kafka producer with 9223372036.0 secs timeout.","logger":"kafka.producer.kafka","filename":"kafka.py","lineno":630}
+{"timestamp":"2026-02-16T11:27:31.621288Z","level":"info","event":"<BrokerConnection client_id=f1-streaming-pipeline, node_id=1 host=kafka:29092 <connected> [IPv4 ('172.18.0.4', 29092)]>: Closing connection. ","logger":"kafka.conn","filename":"conn.py","lineno":936}
+{"timestamp":"2026-02-16T11:27:31.698838Z","level":"info","event":"[PRODUCER] Completed: {'sent': 22, 'failed': 0}","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:27:31.701370Z","level":"info","event":"Done. Returned value was: {'sent': 22, 'failed': 0}","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":216}
+{"timestamp":"2026-02-16T11:27:31.702008Z","level":"info","event":"Pushing xcom","ti":"RuntimeTaskInstance(id=UUID('019c6634-2e1e-7c7b-b3bf-450b212b8166'), task_id='produce_dim_driver', dag_id='weekly_streaming_f1_etl', run_id='manual__2026-02-16T11:27:00+00:00', try_number=1, dag_version_id=UUID('019c61bd-e638-74f5-b658-bbd5e8d757b9'), map_index=-1, hostname='8ca1c3cee112', context_carrier={}, task=<Task(PythonOperator): produce_dim_driver>, bundle_instance=LocalDagBundle(name=dags-folder), max_tries=2, start_date=datetime.datetime(2026, 2, 16, 11, 27, 5, 220136, tzinfo=datetime.timezone.utc), end_date=None, state=<TaskInstanceState.RUNNING: 'running'>, is_mapped=False, rendered_map_index=None)","logger":"task","filename":"task_runner.py","lineno":1450}

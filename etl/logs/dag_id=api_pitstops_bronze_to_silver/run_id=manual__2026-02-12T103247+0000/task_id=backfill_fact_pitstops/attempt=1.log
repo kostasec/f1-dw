@@ -1,0 +1,25 @@
+{"timestamp":"2026-02-12T10:32:49.008828Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-02-12T10:32:49.010335Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/api_etl/api_pitstops_bronze_to_silver.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-02-12T10:32:49.483597Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-12T10:32:49.484312Z","level":"info","event":"F1 PIT STOPS BACKFILL: ERGAST API -> SILVER","logger":"task.stdout"}
+{"timestamp":"2026-02-12T10:32:49.484721Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-12T10:32:49.485189Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-12T10:32:49.485595Z","level":"info","event":"[STEP 1] Scraping API...","logger":"task.stdout"}
+{"timestamp":"2026-02-12T10:32:49.485976Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-12T10:32:49.486342Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-12T10:32:49.486708Z","level":"info","event":"SCRAPING PIT STOPS FROM ERGAST API: 2024-2024","logger":"task.stdout"}
+{"timestamp":"2026-02-12T10:32:49.487070Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-12T10:32:49.487465Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-12T10:32:49.487852Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-12T10:32:49.488242Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-12T10:32:49.488623Z","level":"info","event":"SCRAPING PIT STOPS FOR 2024","logger":"task.stdout"}
+{"timestamp":"2026-02-12T10:32:49.488977Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-12T10:32:49.489331Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-12T10:32:49.489679Z","level":"info","event":"Fetching pit stops for 2024 Round 1...","logger":"task.stdout"}
+{"timestamp":"2026-02-12T10:32:50.760759Z","level":"info","event":"Rate limit hit! Waiting 34s before retry 1/6...","logger":"task.stdout"}
+{"timestamp":"2026-02-12T10:33:25.159698Z","level":"info","event":"Rate limit hit! Waiting 64s before retry 2/6...","logger":"task.stdout"}
+{"timestamp":"2026-02-12T10:34:29.576989Z","level":"info","event":"Rate limit hit! Waiting 91s before retry 3/6...","logger":"task.stdout"}
+{"timestamp":"2026-02-12T10:36:00.958811Z","level":"info","event":"Rate limit hit! Waiting 123s before retry 4/6...","logger":"task.stdout"}
+{"timestamp":"2026-02-12T10:38:04.591828Z","level":"info","event":"Rate limit hit! Waiting 151s before retry 5/6...","logger":"task.stdout"}
+{"timestamp":"2026-02-12T10:38:34.691854Z","level":"error","event":"Server indicated the task shouldn't be running anymore. Terminating process","detail":{"detail":{"reason":"not_running","message":"TI is no longer in the running state and task should terminate","current_state":"failed"}},"logger":"task"}
+{"timestamp":"2026-02-12T10:38:39.711603Z","level":"error","event":"Task killed!","logger":"task"}

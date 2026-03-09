@@ -1,0 +1,89 @@
+{"timestamp":"2026-02-14T23:00:41.295427Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-02-14T23:00:41.302239Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/api_etl/api_constructors_bronze_to_silver.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-02-14T23:00:45.323415Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-14T23:00:45.329852Z","level":"info","event":"F1 CONSTRUCTOR BACKFILL: ERGAST API → SILVER","logger":"task.stdout"}
+{"timestamp":"2026-02-14T23:00:45.330897Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-14T23:00:45.333270Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-14T23:00:45.334690Z","level":"info","event":"[STEP 1] Scraping API...","logger":"task.stdout"}
+{"timestamp":"2026-02-14T23:00:45.335621Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-14T23:00:45.336541Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-14T23:00:45.337607Z","level":"info","event":"SCRAPING CONSTRUCTORS FROM API: 2024-2025","logger":"task.stdout"}
+{"timestamp":"2026-02-14T23:00:45.338545Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-14T23:00:45.339459Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-14T23:00:45.340360Z","level":"info","event":"Fetching constructors for 2024...","logger":"task.stdout"}
+{"timestamp":"2026-02-14T23:01:09.911710Z","level":"info","event":"10 constructors found","logger":"task.stdout"}
+{"timestamp":"2026-02-14T23:01:09.912514Z","level":"info","event":"Fetching constructors for 2025...","logger":"task.stdout"}
+{"timestamp":"2026-02-14T23:01:33.454717Z","level":"info","event":"10 constructors found","logger":"task.stdout"}
+{"timestamp":"2026-02-14T23:01:33.512976Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-14T23:01:33.538286Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-14T23:01:33.556576Z","level":"info","event":"SCRAPING COMPLETE","logger":"task.stdout"}
+{"timestamp":"2026-02-14T23:01:33.558251Z","level":"info","event":"Total records: 20","logger":"task.stdout"}
+{"timestamp":"2026-02-14T23:01:33.571627Z","level":"info","event":"Unique constructors (by constructorId): 10","logger":"task.stdout"}
+{"timestamp":"2026-02-14T23:01:33.573106Z","level":"info","event":"Years covered: 2024-2025","logger":"task.stdout"}
+{"timestamp":"2026-02-14T23:01:33.578673Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-14T23:01:33.583811Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-14T23:01:33.584899Z","level":"info","event":"API scraping complete: 20 constructor records","logger":"task.stdout"}
+{"timestamp":"2026-02-14T23:01:33.586823Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-14T23:01:33.590015Z","level":"info","event":"[STEP 2] Transforming to Silver schema...","logger":"task.stdout"}
+{"timestamp":"2026-02-14T23:01:33.593934Z","level":"info","event":"Transforming API data to Silver schema...","logger":"task.stdout"}
+{"timestamp":"2026-02-14T23:01:33.607213Z","level":"info","event":"Deduplication: 20 records → 10 unique constructors","logger":"task.stdout"}
+{"timestamp":"2026-02-14T23:01:33.610830Z","level":"info","event":"Sorted by constructorId (alphabetically) for stable constructor_id generation","logger":"task.stdout"}
+{"timestamp":"2026-02-14T23:01:33.625691Z","level":"info","event":"Generated constructor_id: 10001 - 10010","logger":"task.stdout"}
+{"timestamp":"2026-02-14T23:01:33.627102Z","level":"info","event":"Transformed 10 constructors to Silver schema","logger":"task.stdout"}
+{"timestamp":"2026-02-14T23:01:33.637590Z","level":"info","event":"Source: api","logger":"task.stdout"}
+{"timestamp":"2026-02-14T23:01:33.638860Z","level":"info","event":"constructor_id range: 10001 - 10010","logger":"task.stdout"}
+{"timestamp":"2026-02-14T23:01:33.640114Z","level":"info","event":"Transformation complete: 10 unique constructors","logger":"task.stdout"}
+{"timestamp":"2026-02-14T23:01:33.641678Z","level":"info","event":"constructor_id range: 10001 - 10010","logger":"task.stdout"}
+{"timestamp":"2026-02-14T23:01:33.643506Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-14T23:01:33.644849Z","level":"info","event":"[STEP 3] Loading existing Silver data...","logger":"task.stdout"}
+{"timestamp":"2026-02-14T23:01:33.749812Z","level":"info","event":" Downloaded dimensions/dim_constructor/dim_constructor.parquet (20 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-14T23:01:33.757784Z","level":"info","event":"Loaded 20 existing constructors from Silver","logger":"task.stdout"}
+{"timestamp":"2026-02-14T23:01:33.765780Z","level":"info","event":"Existing sources: {'f1_data.csv': 20}","logger":"task.stdout"}
+{"timestamp":"2026-02-14T23:01:33.769794Z","level":"info","event":"CSV constructor_id range: 1 - 214","logger":"task.stdout"}
+{"timestamp":"2026-02-14T23:01:33.770794Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-14T23:01:33.778355Z","level":"info","event":"[STEP 4] Merging API data with existing Silver...","logger":"task.stdout"}
+{"timestamp":"2026-02-14T23:01:33.784147Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-14T23:01:33.785573Z","level":"info","event":"  Merge Configuration:","logger":"task.stdout"}
+{"timestamp":"2026-02-14T23:01:33.789897Z","level":"info","event":"Existing constructors: 20","logger":"task.stdout"}
+{"timestamp":"2026-02-14T23:01:33.791766Z","level":"info","event":"New API constructors: 10","logger":"task.stdout"}
+{"timestamp":"2026-02-14T23:01:33.793017Z","level":"info","event":"Merge key: constructor_ref (PRIMARY natural key)","logger":"task.stdout"}
+{"timestamp":"2026-02-14T23:01:33.798444Z","level":"info","event":"CSV priority: YES (skip API for CSV constructors)","logger":"task.stdout"}
+{"timestamp":"2026-02-14T23:01:33.799560Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-14T23:01:33.801457Z","level":"info","event":"  Current max constructor_key: 20","logger":"task.stdout"}
+{"timestamp":"2026-02-14T23:01:33.802780Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-14T23:01:33.804205Z","level":"info","event":"  Processing 10 API constructors:","logger":"task.stdout"}
+{"timestamp":"2026-02-14T23:01:33.805956Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-14T23:01:33.814583Z","level":"info","event":"SKIP: alpine               (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-14T23:01:33.816113Z","level":"info","event":"SKIP: aston_martin         (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-14T23:01:33.818173Z","level":"info","event":"SKIP: ferrari              (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-14T23:01:33.822754Z","level":"info","event":"SKIP: haas                 (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-14T23:01:33.827786Z","level":"info","event":"SKIP: mclaren              (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-14T23:01:33.828893Z","level":"info","event":"SKIP: mercedes             (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-14T23:01:33.830897Z","level":"info","event":"ADD: rb                   (new constructor from API, constructor_id=10007)","logger":"task.stdout"}
+{"timestamp":"2026-02-14T23:01:33.860512Z","level":"info","event":"SKIP: red_bull             (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-14T23:01:33.864623Z","level":"info","event":"SKIP: sauber               (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-14T23:01:33.873414Z","level":"info","event":"SKIP: williams             (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-14T23:01:33.876903Z","level":"info","event":"Merge complete: 21 total constructors","logger":"task.stdout"}
+{"timestamp":"2026-02-14T23:01:33.880739Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-14T23:01:33.883707Z","level":"info","event":"[STEP 5] Writing to Silver layer...","logger":"task.stdout"}
+{"timestamp":"2026-02-14T23:01:33.954385Z","level":"info","event":"Uploaded dimensions/dim_constructor/dim_constructor.parquet (21 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-14T23:01:33.955548Z","level":"info","event":"Written to: s3://f1-silver/dimensions/dim_constructor/dim_constructor.parquet","logger":"task.stdout"}
+{"timestamp":"2026-02-14T23:01:33.956799Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-14T23:01:33.972516Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-14T23:01:33.973664Z","level":"info","event":"BACKFILL SUMMARY","logger":"task.stdout"}
+{"timestamp":"2026-02-14T23:01:33.974894Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-14T23:01:33.975925Z","level":"info","event":"  Existing constructors in Silver: 20","logger":"task.stdout"}
+{"timestamp":"2026-02-14T23:01:33.978154Z","level":"info","event":"  API constructors scraped: 10","logger":"task.stdout"}
+{"timestamp":"2026-02-14T23:01:33.979654Z","level":"info","event":"  Final constructor count: 21","logger":"task.stdout"}
+{"timestamp":"2026-02-14T23:01:33.993576Z","level":"info","event":"  New constructors added: 1","logger":"task.stdout"}
+{"timestamp":"2026-02-14T23:01:34.002119Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-14T23:01:34.005666Z","level":"info","event":"  Final source breakdown:","logger":"task.stdout"}
+{"timestamp":"2026-02-14T23:01:34.009592Z","level":"info","event":"    f1_data.csv    : 20","logger":"task.stdout"}
+{"timestamp":"2026-02-14T23:01:34.010654Z","level":"info","event":"    api            : 1","logger":"task.stdout"}
+{"timestamp":"2026-02-14T23:01:34.024003Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-14T23:01:34.024978Z","level":"info","event":"  constructor_id ranges:","logger":"task.stdout"}
+{"timestamp":"2026-02-14T23:01:34.026372Z","level":"info","event":"    f1_data.csv    : 1 - 214","logger":"task.stdout"}
+{"timestamp":"2026-02-14T23:01:34.027320Z","level":"info","event":"    api            : 10007 - 10007","logger":"task.stdout"}
+{"timestamp":"2026-02-14T23:01:34.028392Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-14T23:01:34.119395Z","level":"info","event":"Done. Returned value was: {'existing_count': 20, 'api_scraped': 10, 'final_count': 21, 'new_constructors_added': 1}","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":216}
+{"timestamp":"2026-02-14T23:01:34.121962Z","level":"info","event":"Pushing xcom","ti":"RuntimeTaskInstance(id=UUID('019c5e62-8226-735e-acf3-6d9757dbaa9a'), task_id='backfill_dim_constructor', dag_id='api_constructors_bronze_to_silver', run_id='manual__2026-02-14T23:00:37.915415+00:00', try_number=1, dag_version_id=UUID('019c5e3a-c13f-7263-bd49-b796d6128203'), map_index=-1, hostname='887f8f7c54e8', context_carrier={}, task=<Task(PythonOperator): backfill_dim_constructor>, bundle_instance=LocalDagBundle(name=dags-folder), max_tries=2, start_date=datetime.datetime(2026, 2, 14, 23, 0, 40, 796937, tzinfo=datetime.timezone.utc), end_date=None, state=<TaskInstanceState.RUNNING: 'running'>, is_mapped=False, rendered_map_index=None)","logger":"task","filename":"task_runner.py","lineno":1450}

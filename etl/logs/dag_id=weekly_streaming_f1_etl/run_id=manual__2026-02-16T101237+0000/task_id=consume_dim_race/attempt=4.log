@@ -1,0 +1,517 @@
+{"timestamp":"2026-02-16T10:40:50.671829Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-02-16T10:40:50.686958Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/weekly_streaming_pipeline.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-02-16T10:40:57.257083Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:57.259035Z","level":"info","event":"[CONSUMER] Starting dim_race consumption...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:57.273171Z","level":"info","event":"<BrokerConnection client_id=kafka-python-2.2.0, node_id=bootstrap-0 host=kafka:29092 <connecting> [IPv4 ('172.18.0.4', 29092)]>: connecting to kafka:29092 [('172.18.0.4', 29092) IPv4]","logger":"kafka.conn","filename":"conn.py","lineno":395}
+{"timestamp":"2026-02-16T10:40:57.290816Z","level":"info","event":"<BrokerConnection client_id=kafka-python-2.2.0, node_id=bootstrap-0 host=kafka:29092 <checking_api_versions_recv> [IPv4 ('172.18.0.4', 29092)]>: Broker version identified as 2.6","logger":"kafka.conn","filename":"conn.py","lineno":615}
+{"timestamp":"2026-02-16T10:40:57.294988Z","level":"info","event":"<BrokerConnection client_id=kafka-python-2.2.0, node_id=bootstrap-0 host=kafka:29092 <connected> [IPv4 ('172.18.0.4', 29092)]>: Connection complete.","logger":"kafka.conn","filename":"conn.py","lineno":456}
+{"timestamp":"2026-02-16T10:40:57.301363Z","level":"info","event":"Updating subscribed topics to: ('dim-race',)","logger":"kafka.consumer.subscription_state","filename":"subscription_state.py","lineno":177}
+{"timestamp":"2026-02-16T10:40:57.303081Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:57.304121Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:57.305038Z","level":"info","event":"CONSUMING: dim-race → dimensions/dim_race/dim_race.parquet","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:57.305858Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:57.306733Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:57.418703Z","level":"info","event":" Downloaded dimensions/dim_race/dim_race.parquet (280 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:57.419852Z","level":"info","event":" Loaded 280 existing records from Silver","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:57.420656Z","level":"info","event":"  Loading lookup table: dim_circuit","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:57.439073Z","level":"info","event":" Downloaded dimensions/dim_circuit/dim_circuit.parquet (35 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:57.440495Z","level":"info","event":"Loaded 35 mappings","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:57.449196Z","level":"info","event":"<BrokerConnection client_id=kafka-python-2.2.0, node_id=1 host=kafka:29092 <connecting> [IPv4 ('172.18.0.4', 29092)]>: connecting to kafka:29092 [('172.18.0.4', 29092) IPv4]","logger":"kafka.conn","filename":"conn.py","lineno":395}
+{"timestamp":"2026-02-16T10:40:57.451396Z","level":"info","event":"<BrokerConnection client_id=kafka-python-2.2.0, node_id=1 host=kafka:29092 <connected> [IPv4 ('172.18.0.4', 29092)]>: Connection complete.","logger":"kafka.conn","filename":"conn.py","lineno":456}
+{"timestamp":"2026-02-16T10:40:57.452010Z","level":"info","event":"<BrokerConnection client_id=kafka-python-2.2.0, node_id=bootstrap-0 host=kafka:29092 <connected> [IPv4 ('172.18.0.4', 29092)]>: Closing connection. ","logger":"kafka.conn","filename":"conn.py","lineno":936}
+{"timestamp":"2026-02-16T10:40:57.556426Z","level":"info","event":"Coordinator for group/f1-silver-consumers is BrokerMetadata(nodeId='coordinator-1', host='kafka', port=29092, rack=None)","logger":"kafka.cluster","filename":"cluster.py","lineno":398}
+{"timestamp":"2026-02-16T10:40:57.557020Z","level":"info","event":"Discovered coordinator coordinator-1 for group f1-silver-consumers","logger":"kafka.coordinator","filename":"base.py","lineno":745}
+{"timestamp":"2026-02-16T10:40:57.557573Z","level":"info","event":"Starting new heartbeat thread","logger":"kafka.coordinator","filename":"base.py","lineno":796}
+{"timestamp":"2026-02-16T10:40:57.559688Z","level":"info","event":"Revoking previously assigned partitions set() for group f1-silver-consumers","logger":"kafka.coordinator.consumer","filename":"consumer.py","lineno":357}
+{"timestamp":"2026-02-16T10:40:57.565203Z","level":"info","event":"<BrokerConnection client_id=kafka-python-2.2.0, node_id=coordinator-1 host=kafka:29092 <connecting> [IPv4 ('172.18.0.4', 29092)]>: connecting to kafka:29092 [('172.18.0.4', 29092) IPv4]","logger":"kafka.conn","filename":"conn.py","lineno":395}
+{"timestamp":"2026-02-16T10:40:57.566849Z","level":"info","event":"<BrokerConnection client_id=kafka-python-2.2.0, node_id=coordinator-1 host=kafka:29092 <connected> [IPv4 ('172.18.0.4', 29092)]>: Connection complete.","logger":"kafka.conn","filename":"conn.py","lineno":456}
+{"timestamp":"2026-02-16T10:40:57.669474Z","level":"info","event":"(Re-)joining group f1-silver-consumers","logger":"kafka.coordinator","filename":"base.py","lineno":500}
+{"timestamp":"2026-02-16T10:40:57.675265Z","level":"info","event":"(Re-)joining group f1-silver-consumers","logger":"kafka.coordinator","filename":"base.py","lineno":500}
+{"timestamp":"2026-02-16T10:40:57.690527Z","level":"info","event":"Elected group leader -- performing partition assignments using range","logger":"kafka.coordinator","filename":"base.py","lineno":563}
+{"timestamp":"2026-02-16T10:40:57.705698Z","level":"info","event":"Successfully joined group f1-silver-consumers with generation 1","logger":"kafka.coordinator","filename":"base.py","lineno":390}
+{"timestamp":"2026-02-16T10:40:57.706663Z","level":"info","event":"Updated partition assignment: [TopicPartition(topic='dim-race', partition=0)]","logger":"kafka.consumer.subscription_state","filename":"subscription_state.py","lineno":246}
+{"timestamp":"2026-02-16T10:40:57.707202Z","level":"info","event":"Setting newly assigned partitions {TopicPartition(topic='dim-race', partition=0)} for group f1-silver-consumers","logger":"kafka.coordinator.consumer","filename":"consumer.py","lineno":248}
+{"timestamp":"2026-02-16T10:40:57.718864Z","level":"info","event":"Resetting offset for partition TopicPartition(topic='dim-race', partition=0) to offset 0.","logger":"kafka.consumer.fetcher","filename":"fetcher.py","lineno":407}
+{"timestamp":"2026-02-16T10:40:57.957003Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:57.958128Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:57.964951Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:57.965896Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:57.966787Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:57.967572Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:57.968566Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:57.969454Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:57.970190Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:57.970926Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:57.971928Z","level":"info","event":"📥 Consumed 10 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:57.972995Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:57.973731Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:57.974466Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:57.975162Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:57.978831Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:57.984122Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:57.986186Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:57.987252Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:57.989714Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:57.992482Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:57.995529Z","level":"info","event":"📥 Consumed 20 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:57.997999Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.000547Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.009190Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.011791Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.012758Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.014410Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.015269Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.016244Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.017113Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.017958Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.019262Z","level":"info","event":"📥 Consumed 30 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.020168Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.021091Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.022033Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.022893Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.023742Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.024620Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.025584Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.027085Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.028124Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.029124Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.030039Z","level":"info","event":"📥 Consumed 40 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.030971Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.031827Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.032659Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.033777Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.034623Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.035450Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.036314Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.037120Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.037948Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.038816Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.039708Z","level":"info","event":"📥 Consumed 50 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.040565Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.041478Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.042303Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.043362Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.045759Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.046776Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.047643Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.048511Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.049449Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.050553Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.051445Z","level":"info","event":"📥 Consumed 60 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.052349Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.053297Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.057324Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.058189Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.059008Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.059972Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.061736Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.062640Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.063490Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.064350Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.065330Z","level":"info","event":"📥 Consumed 70 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.066154Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.067031Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.067947Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.069138Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.070040Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.070962Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.071817Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.072694Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.073821Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.074666Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.075519Z","level":"info","event":"📥 Consumed 80 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.076396Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.077358Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.078639Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.085517Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.086457Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.087421Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.088377Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.089799Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.093162Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.094442Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.098851Z","level":"info","event":"📥 Consumed 90 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.100061Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.102670Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.103829Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.107056Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.110415Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.114875Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.115923Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.116898Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.117867Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.119184Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.120968Z","level":"info","event":"📥 Consumed 100 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.125002Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.125932Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.129071Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.134156Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.135125Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.135880Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.136674Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.140953Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.141960Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.142800Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.143547Z","level":"info","event":"📥 Consumed 110 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.144751Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.145956Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.147746Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.149011Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.152953Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.153982Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.155553Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.156568Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.157426Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.158196Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.158980Z","level":"info","event":"📥 Consumed 120 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.159712Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.164975Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.166349Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.167219Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.168108Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.168995Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.169834Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.170605Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.171425Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.172288Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.173645Z","level":"info","event":"📥 Consumed 130 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.174686Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.176018Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.179289Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.181074Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.182494Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.184945Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.185944Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.186882Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.187911Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.189011Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.189988Z","level":"info","event":"📥 Consumed 140 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.191010Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.191940Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.193095Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.194353Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.195764Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.197083Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.198151Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.199186Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.200980Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.203554Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.204558Z","level":"info","event":"📥 Consumed 150 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.206211Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.207323Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.208022Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.213187Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.214241Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.215292Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.216315Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.217191Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.218067Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.219078Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.219907Z","level":"info","event":"📥 Consumed 160 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.220649Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.221565Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.222824Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.223964Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.224894Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.229117Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.231202Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.233018Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.234910Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.235903Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.236870Z","level":"info","event":"📥 Consumed 170 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.237690Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.239583Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.240573Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.241973Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.244056Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.246298Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.249399Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.250509Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.251498Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.252428Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.253231Z","level":"info","event":"📥 Consumed 180 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.254055Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.254902Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.255630Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.256378Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.257075Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.257881Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.259003Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.261856Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.262974Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.264187Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.265606Z","level":"info","event":"📥 Consumed 190 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.266461Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.267303Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.268215Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.269078Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.269855Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.270814Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.271796Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.272512Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.273449Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.274331Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.275178Z","level":"info","event":"📥 Consumed 200 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.275976Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.278241Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.279702Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.281045Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.282691Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.283873Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.284772Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.285764Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.286623Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.287460Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.288610Z","level":"info","event":"📥 Consumed 210 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.289608Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.290811Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.291860Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.292742Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.293691Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:40:58.294740Z","level":"info","event":"    ⚠️  Missing natural key: circuit_references","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:02.996442Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:03.004961Z","level":"info","event":"📊 Processing 216 new records from Kafka","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:03.007171Z","level":"info","event":"    Columns in new data: ['circuit_ref', 'race_name', 'race_year', 'race_round', 'race_date', 'race_time', 'fp1_date', 'fp1_time', 'fp2_date', 'fp2_time', 'fp3_date', 'fp3_time', 'qualification_date', 'qualification_time', 'sprint_date', 'sprint_time', 'race_url', 'race_id', 'source', 'created_at', 'year_round', 'circuit_key']","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:03.083105Z","level":"info","event":"    ⚠️  Creating year_round in existing data from race_year + race_round","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:03.084909Z","level":"info","event":"➕ Added: year_round=2026_01 (race_key=281)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:03.089207Z","level":"info","event":"➕ Added: year_round=2026_10 (race_key=282)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:03.038244Z","level":"warning","event":"The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.","category":"FutureWarning","filename":"/opt/airflow/dags/streaming/kafka_consumers.py","lineno":243,"logger":"py.warnings"}
+{"timestamp":"2026-02-16T10:41:03.069673Z","level":"warning","event":"The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.","category":"FutureWarning","filename":"/opt/airflow/dags/streaming/kafka_consumers.py","lineno":243,"logger":"py.warnings"}
+{"timestamp":"2026-02-16T10:41:03.102839Z","level":"info","event":"➕ Added: year_round=2026_11 (race_key=283)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:03.090979Z","level":"warning","event":"The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.","category":"FutureWarning","filename":"/opt/airflow/dags/streaming/kafka_consumers.py","lineno":243,"logger":"py.warnings"}
+{"timestamp":"2026-02-16T10:41:03.116081Z","level":"warning","event":"The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.","category":"FutureWarning","filename":"/opt/airflow/dags/streaming/kafka_consumers.py","lineno":243,"logger":"py.warnings"}
+{"timestamp":"2026-02-16T10:41:03.130096Z","level":"info","event":"➕ Added: year_round=2026_12 (race_key=284)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:03.146257Z","level":"warning","event":"The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.","category":"FutureWarning","filename":"/opt/airflow/dags/streaming/kafka_consumers.py","lineno":243,"logger":"py.warnings"}
+{"timestamp":"2026-02-16T10:41:03.153099Z","level":"info","event":"➕ Added: year_round=2026_13 (race_key=285)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:03.164283Z","level":"warning","event":"The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.","category":"FutureWarning","filename":"/opt/airflow/dags/streaming/kafka_consumers.py","lineno":243,"logger":"py.warnings"}
+{"timestamp":"2026-02-16T10:41:03.173054Z","level":"info","event":"➕ Added: year_round=2026_14 (race_key=286)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:03.187269Z","level":"warning","event":"The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.","category":"FutureWarning","filename":"/opt/airflow/dags/streaming/kafka_consumers.py","lineno":243,"logger":"py.warnings"}
+{"timestamp":"2026-02-16T10:41:03.192500Z","level":"info","event":"➕ Added: year_round=2026_15 (race_key=287)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:03.207511Z","level":"warning","event":"The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.","category":"FutureWarning","filename":"/opt/airflow/dags/streaming/kafka_consumers.py","lineno":243,"logger":"py.warnings"}
+{"timestamp":"2026-02-16T10:41:03.213192Z","level":"info","event":"➕ Added: year_round=2026_16 (race_key=288)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:03.227296Z","level":"warning","event":"The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.","category":"FutureWarning","filename":"/opt/airflow/dags/streaming/kafka_consumers.py","lineno":243,"logger":"py.warnings"}
+{"timestamp":"2026-02-16T10:41:03.231318Z","level":"info","event":"➕ Added: year_round=2026_17 (race_key=289)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:03.243777Z","level":"warning","event":"The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.","category":"FutureWarning","filename":"/opt/airflow/dags/streaming/kafka_consumers.py","lineno":243,"logger":"py.warnings"}
+{"timestamp":"2026-02-16T10:41:03.263523Z","level":"info","event":"➕ Added: year_round=2026_18 (race_key=290)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:03.263175Z","level":"warning","event":"The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.","category":"FutureWarning","filename":"/opt/airflow/dags/streaming/kafka_consumers.py","lineno":243,"logger":"py.warnings"}
+{"timestamp":"2026-02-16T10:41:03.272442Z","level":"info","event":"➕ Added: year_round=2026_19 (race_key=291)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:03.292075Z","level":"warning","event":"The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.","category":"FutureWarning","filename":"/opt/airflow/dags/streaming/kafka_consumers.py","lineno":243,"logger":"py.warnings"}
+{"timestamp":"2026-02-16T10:41:03.296999Z","level":"info","event":"➕ Added: year_round=2026_02 (race_key=292)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:03.316144Z","level":"warning","event":"The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.","category":"FutureWarning","filename":"/opt/airflow/dags/streaming/kafka_consumers.py","lineno":243,"logger":"py.warnings"}
+{"timestamp":"2026-02-16T10:41:03.330558Z","level":"info","event":"➕ Added: year_round=2026_20 (race_key=293)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:03.351776Z","level":"warning","event":"The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.","category":"FutureWarning","filename":"/opt/airflow/dags/streaming/kafka_consumers.py","lineno":243,"logger":"py.warnings"}
+{"timestamp":"2026-02-16T10:41:03.361770Z","level":"info","event":"➕ Added: year_round=2026_21 (race_key=294)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:03.390394Z","level":"warning","event":"The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.","category":"FutureWarning","filename":"/opt/airflow/dags/streaming/kafka_consumers.py","lineno":243,"logger":"py.warnings"}
+{"timestamp":"2026-02-16T10:41:03.399978Z","level":"info","event":"➕ Added: year_round=2026_22 (race_key=295)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:03.413036Z","level":"warning","event":"The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.","category":"FutureWarning","filename":"/opt/airflow/dags/streaming/kafka_consumers.py","lineno":243,"logger":"py.warnings"}
+{"timestamp":"2026-02-16T10:41:03.424298Z","level":"info","event":"➕ Added: year_round=2026_23 (race_key=296)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:03.439483Z","level":"warning","event":"The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.","category":"FutureWarning","filename":"/opt/airflow/dags/streaming/kafka_consumers.py","lineno":243,"logger":"py.warnings"}
+{"timestamp":"2026-02-16T10:41:03.448605Z","level":"info","event":"➕ Added: year_round=2026_24 (race_key=297)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:03.461830Z","level":"warning","event":"The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.","category":"FutureWarning","filename":"/opt/airflow/dags/streaming/kafka_consumers.py","lineno":243,"logger":"py.warnings"}
+{"timestamp":"2026-02-16T10:41:03.472027Z","level":"info","event":"➕ Added: year_round=2026_03 (race_key=298)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:03.482971Z","level":"warning","event":"The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.","category":"FutureWarning","filename":"/opt/airflow/dags/streaming/kafka_consumers.py","lineno":243,"logger":"py.warnings"}
+{"timestamp":"2026-02-16T10:41:03.488669Z","level":"info","event":"➕ Added: year_round=2026_04 (race_key=299)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:03.499044Z","level":"warning","event":"The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.","category":"FutureWarning","filename":"/opt/airflow/dags/streaming/kafka_consumers.py","lineno":243,"logger":"py.warnings"}
+{"timestamp":"2026-02-16T10:41:03.505665Z","level":"info","event":"➕ Added: year_round=2026_05 (race_key=300)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:03.513749Z","level":"warning","event":"The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.","category":"FutureWarning","filename":"/opt/airflow/dags/streaming/kafka_consumers.py","lineno":243,"logger":"py.warnings"}
+{"timestamp":"2026-02-16T10:41:03.522572Z","level":"info","event":"➕ Added: year_round=2026_06 (race_key=301)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:03.539033Z","level":"warning","event":"The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.","category":"FutureWarning","filename":"/opt/airflow/dags/streaming/kafka_consumers.py","lineno":243,"logger":"py.warnings"}
+{"timestamp":"2026-02-16T10:41:03.544389Z","level":"info","event":"➕ Added: year_round=2026_07 (race_key=302)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:03.556527Z","level":"warning","event":"The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.","category":"FutureWarning","filename":"/opt/airflow/dags/streaming/kafka_consumers.py","lineno":243,"logger":"py.warnings"}
+{"timestamp":"2026-02-16T10:41:03.561242Z","level":"info","event":"➕ Added: year_round=2026_08 (race_key=303)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:03.570407Z","level":"warning","event":"The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.","category":"FutureWarning","filename":"/opt/airflow/dags/streaming/kafka_consumers.py","lineno":243,"logger":"py.warnings"}
+{"timestamp":"2026-02-16T10:41:03.574868Z","level":"info","event":"➕ Added: year_round=2026_09 (race_key=304)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:03.599519Z","level":"info","event":"🔄 Updated: year_round=2026_01","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:03.638777Z","level":"info","event":"🔄 Updated: year_round=2026_10","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:03.660762Z","level":"info","event":"🔄 Updated: year_round=2026_11","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:03.696423Z","level":"info","event":"🔄 Updated: year_round=2026_12","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:03.727187Z","level":"info","event":"🔄 Updated: year_round=2026_13","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:03.786284Z","level":"info","event":"🔄 Updated: year_round=2026_14","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:03.894182Z","level":"info","event":"🔄 Updated: year_round=2026_15","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:03.940605Z","level":"info","event":"🔄 Updated: year_round=2026_16","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:03.977142Z","level":"info","event":"🔄 Updated: year_round=2026_17","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:04.025026Z","level":"info","event":"🔄 Updated: year_round=2026_18","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:04.069021Z","level":"info","event":"🔄 Updated: year_round=2026_19","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:04.104014Z","level":"info","event":"🔄 Updated: year_round=2026_02","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:04.137718Z","level":"info","event":"🔄 Updated: year_round=2026_20","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:04.188329Z","level":"info","event":"🔄 Updated: year_round=2026_21","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:04.217904Z","level":"info","event":"🔄 Updated: year_round=2026_22","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:04.282360Z","level":"info","event":"🔄 Updated: year_round=2026_23","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:04.328652Z","level":"info","event":"🔄 Updated: year_round=2026_24","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:04.353999Z","level":"info","event":"🔄 Updated: year_round=2026_03","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:04.402436Z","level":"info","event":"🔄 Updated: year_round=2026_04","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:04.439376Z","level":"info","event":"🔄 Updated: year_round=2026_05","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:04.478887Z","level":"info","event":"🔄 Updated: year_round=2026_06","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:04.507141Z","level":"info","event":"🔄 Updated: year_round=2026_07","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:04.539502Z","level":"info","event":"🔄 Updated: year_round=2026_08","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:04.572967Z","level":"info","event":"🔄 Updated: year_round=2026_09","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:04.595368Z","level":"info","event":"🔄 Updated: year_round=2026_01","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:04.622461Z","level":"info","event":"🔄 Updated: year_round=2026_10","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:04.655165Z","level":"info","event":"🔄 Updated: year_round=2026_11","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:04.676853Z","level":"info","event":"🔄 Updated: year_round=2026_12","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:04.702588Z","level":"info","event":"🔄 Updated: year_round=2026_13","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:04.720544Z","level":"info","event":"🔄 Updated: year_round=2026_14","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:04.741525Z","level":"info","event":"🔄 Updated: year_round=2026_15","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:04.766504Z","level":"info","event":"🔄 Updated: year_round=2026_16","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:04.795095Z","level":"info","event":"🔄 Updated: year_round=2026_17","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:04.822812Z","level":"info","event":"🔄 Updated: year_round=2026_18","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:04.857150Z","level":"info","event":"🔄 Updated: year_round=2026_19","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:04.881010Z","level":"info","event":"🔄 Updated: year_round=2026_02","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:04.911401Z","level":"info","event":"🔄 Updated: year_round=2026_20","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:04.940018Z","level":"info","event":"🔄 Updated: year_round=2026_21","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:04.977074Z","level":"info","event":"🔄 Updated: year_round=2026_22","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:04.996875Z","level":"info","event":"🔄 Updated: year_round=2026_23","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:05.040712Z","level":"info","event":"🔄 Updated: year_round=2026_24","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:05.063428Z","level":"info","event":"🔄 Updated: year_round=2026_03","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:05.090141Z","level":"info","event":"🔄 Updated: year_round=2026_04","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:05.110070Z","level":"info","event":"🔄 Updated: year_round=2026_05","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:05.131337Z","level":"info","event":"🔄 Updated: year_round=2026_06","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:05.165004Z","level":"info","event":"🔄 Updated: year_round=2026_07","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:05.205843Z","level":"info","event":"🔄 Updated: year_round=2026_08","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:05.293036Z","level":"info","event":"🔄 Updated: year_round=2026_09","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:05.331665Z","level":"info","event":"🔄 Updated: year_round=2026_01","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:05.361970Z","level":"info","event":"🔄 Updated: year_round=2026_10","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:05.366852Z","level":"info","event":"🔄 Updated: year_round=2026_11","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:05.413882Z","level":"info","event":"🔄 Updated: year_round=2026_12","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:05.459327Z","level":"info","event":"🔄 Updated: year_round=2026_13","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:05.465037Z","level":"info","event":"🔄 Updated: year_round=2026_14","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:05.466825Z","level":"info","event":"🔄 Updated: year_round=2026_15","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:05.488574Z","level":"info","event":"🔄 Updated: year_round=2026_16","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:05.513830Z","level":"info","event":"🔄 Updated: year_round=2026_17","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:05.548976Z","level":"info","event":"🔄 Updated: year_round=2026_18","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:05.578445Z","level":"info","event":"🔄 Updated: year_round=2026_19","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:05.604989Z","level":"info","event":"🔄 Updated: year_round=2026_02","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:05.627821Z","level":"info","event":"🔄 Updated: year_round=2026_20","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:05.651631Z","level":"info","event":"🔄 Updated: year_round=2026_21","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:05.675302Z","level":"info","event":"🔄 Updated: year_round=2026_22","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:05.707760Z","level":"info","event":"🔄 Updated: year_round=2026_23","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:05.738850Z","level":"info","event":"🔄 Updated: year_round=2026_24","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:05.764769Z","level":"info","event":"🔄 Updated: year_round=2026_03","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:05.802860Z","level":"info","event":"🔄 Updated: year_round=2026_04","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:05.843250Z","level":"info","event":"🔄 Updated: year_round=2026_05","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:05.876268Z","level":"info","event":"🔄 Updated: year_round=2026_06","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:05.913096Z","level":"info","event":"🔄 Updated: year_round=2026_07","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:05.953076Z","level":"info","event":"🔄 Updated: year_round=2026_08","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:05.982380Z","level":"info","event":"🔄 Updated: year_round=2026_09","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:06.013531Z","level":"info","event":"🔄 Updated: year_round=2026_01","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:06.053673Z","level":"info","event":"🔄 Updated: year_round=2026_10","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:06.081537Z","level":"info","event":"🔄 Updated: year_round=2026_11","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:06.095451Z","level":"info","event":"🔄 Updated: year_round=2026_12","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:06.137771Z","level":"info","event":"🔄 Updated: year_round=2026_13","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:06.157879Z","level":"info","event":"🔄 Updated: year_round=2026_14","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:06.185956Z","level":"info","event":"🔄 Updated: year_round=2026_15","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:06.218939Z","level":"info","event":"🔄 Updated: year_round=2026_16","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:06.259156Z","level":"info","event":"🔄 Updated: year_round=2026_17","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:06.306209Z","level":"info","event":"🔄 Updated: year_round=2026_18","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:06.348657Z","level":"info","event":"🔄 Updated: year_round=2026_19","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:06.400664Z","level":"info","event":"🔄 Updated: year_round=2026_02","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:06.446847Z","level":"info","event":"🔄 Updated: year_round=2026_20","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:06.489625Z","level":"info","event":"🔄 Updated: year_round=2026_21","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:06.539031Z","level":"info","event":"🔄 Updated: year_round=2026_22","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:06.592935Z","level":"info","event":"🔄 Updated: year_round=2026_23","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:06.662700Z","level":"info","event":"🔄 Updated: year_round=2026_24","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:06.710877Z","level":"info","event":"🔄 Updated: year_round=2026_03","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:06.786242Z","level":"info","event":"🔄 Updated: year_round=2026_04","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:06.815357Z","level":"info","event":"🔄 Updated: year_round=2026_05","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:06.902920Z","level":"info","event":"🔄 Updated: year_round=2026_06","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:06.933636Z","level":"info","event":"🔄 Updated: year_round=2026_07","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:06.958023Z","level":"info","event":"🔄 Updated: year_round=2026_08","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:07.009728Z","level":"info","event":"🔄 Updated: year_round=2026_09","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:07.044766Z","level":"info","event":"🔄 Updated: year_round=2026_01","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:07.097869Z","level":"info","event":"🔄 Updated: year_round=2026_10","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:07.165021Z","level":"info","event":"🔄 Updated: year_round=2026_11","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:07.202619Z","level":"info","event":"🔄 Updated: year_round=2026_12","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:07.253086Z","level":"info","event":"🔄 Updated: year_round=2026_13","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:07.359870Z","level":"info","event":"🔄 Updated: year_round=2026_14","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:07.395862Z","level":"info","event":"🔄 Updated: year_round=2026_15","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:07.505258Z","level":"info","event":"🔄 Updated: year_round=2026_16","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:07.557590Z","level":"info","event":"🔄 Updated: year_round=2026_17","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:07.625317Z","level":"info","event":"🔄 Updated: year_round=2026_18","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:07.671040Z","level":"info","event":"🔄 Updated: year_round=2026_19","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:07.725123Z","level":"info","event":"🔄 Updated: year_round=2026_02","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:07.786792Z","level":"info","event":"🔄 Updated: year_round=2026_20","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:07.858460Z","level":"info","event":"🔄 Updated: year_round=2026_21","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:08.013541Z","level":"info","event":"🔄 Updated: year_round=2026_22","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:08.234802Z","level":"info","event":"🔄 Updated: year_round=2026_23","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:08.238530Z","level":"info","event":"🔄 Updated: year_round=2026_24","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:08.273122Z","level":"info","event":"🔄 Updated: year_round=2026_03","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:08.306658Z","level":"info","event":"🔄 Updated: year_round=2026_04","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:08.345898Z","level":"info","event":"🔄 Updated: year_round=2026_05","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:08.373190Z","level":"info","event":"🔄 Updated: year_round=2026_06","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:08.396026Z","level":"info","event":"🔄 Updated: year_round=2026_07","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:08.433059Z","level":"info","event":"🔄 Updated: year_round=2026_08","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:08.488727Z","level":"info","event":"🔄 Updated: year_round=2026_09","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:08.562670Z","level":"info","event":"🔄 Updated: year_round=2026_01","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:08.618511Z","level":"info","event":"🔄 Updated: year_round=2026_10","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:08.683275Z","level":"info","event":"🔄 Updated: year_round=2026_11","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:08.742722Z","level":"info","event":"🔄 Updated: year_round=2026_12","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:08.795682Z","level":"info","event":"🔄 Updated: year_round=2026_13","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:08.866476Z","level":"info","event":"🔄 Updated: year_round=2026_14","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:08.896677Z","level":"info","event":"🔄 Updated: year_round=2026_15","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:08.955454Z","level":"info","event":"🔄 Updated: year_round=2026_16","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:09.011342Z","level":"info","event":"🔄 Updated: year_round=2026_17","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:09.064481Z","level":"info","event":"🔄 Updated: year_round=2026_18","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:09.096746Z","level":"info","event":"🔄 Updated: year_round=2026_19","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:09.130691Z","level":"info","event":"🔄 Updated: year_round=2026_02","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:09.157613Z","level":"info","event":"🔄 Updated: year_round=2026_20","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:09.201005Z","level":"info","event":"🔄 Updated: year_round=2026_21","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:09.235969Z","level":"info","event":"🔄 Updated: year_round=2026_22","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:09.265721Z","level":"info","event":"🔄 Updated: year_round=2026_23","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:09.297485Z","level":"info","event":"🔄 Updated: year_round=2026_24","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:09.329041Z","level":"info","event":"🔄 Updated: year_round=2026_03","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:09.347677Z","level":"info","event":"🔄 Updated: year_round=2026_04","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:09.379393Z","level":"info","event":"🔄 Updated: year_round=2026_05","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:09.399497Z","level":"info","event":"🔄 Updated: year_round=2026_06","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:09.420982Z","level":"info","event":"🔄 Updated: year_round=2026_07","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:09.433918Z","level":"info","event":"🔄 Updated: year_round=2026_08","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:09.456984Z","level":"info","event":"🔄 Updated: year_round=2026_09","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:09.481017Z","level":"info","event":"🔄 Updated: year_round=2026_01","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:09.501654Z","level":"info","event":"🔄 Updated: year_round=2026_10","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:09.519039Z","level":"info","event":"🔄 Updated: year_round=2026_11","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:09.536392Z","level":"info","event":"🔄 Updated: year_round=2026_12","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:09.559756Z","level":"info","event":"🔄 Updated: year_round=2026_13","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:09.584494Z","level":"info","event":"🔄 Updated: year_round=2026_14","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:09.604927Z","level":"info","event":"🔄 Updated: year_round=2026_15","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:09.624379Z","level":"info","event":"🔄 Updated: year_round=2026_16","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:09.657215Z","level":"info","event":"🔄 Updated: year_round=2026_17","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:09.684037Z","level":"info","event":"🔄 Updated: year_round=2026_18","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:09.714867Z","level":"info","event":"🔄 Updated: year_round=2026_19","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:09.735768Z","level":"info","event":"🔄 Updated: year_round=2026_02","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:09.752125Z","level":"info","event":"🔄 Updated: year_round=2026_20","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:09.773184Z","level":"info","event":"🔄 Updated: year_round=2026_21","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:09.800182Z","level":"info","event":"🔄 Updated: year_round=2026_22","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:09.832305Z","level":"info","event":"🔄 Updated: year_round=2026_23","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:09.851081Z","level":"info","event":"🔄 Updated: year_round=2026_24","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:09.869008Z","level":"info","event":"🔄 Updated: year_round=2026_03","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:09.889929Z","level":"info","event":"🔄 Updated: year_round=2026_04","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:09.915829Z","level":"info","event":"🔄 Updated: year_round=2026_05","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:09.933302Z","level":"info","event":"🔄 Updated: year_round=2026_06","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:09.953535Z","level":"info","event":"🔄 Updated: year_round=2026_07","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:09.973125Z","level":"info","event":"🔄 Updated: year_round=2026_08","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:09.996225Z","level":"info","event":"🔄 Updated: year_round=2026_09","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:10.016211Z","level":"info","event":"🔄 Updated: year_round=2026_01","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:10.038925Z","level":"info","event":"🔄 Updated: year_round=2026_10","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:10.084695Z","level":"info","event":"🔄 Updated: year_round=2026_11","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:10.119006Z","level":"info","event":"🔄 Updated: year_round=2026_12","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:10.169197Z","level":"info","event":"🔄 Updated: year_round=2026_13","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:10.204263Z","level":"info","event":"🔄 Updated: year_round=2026_14","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:10.238545Z","level":"info","event":"🔄 Updated: year_round=2026_15","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:10.277386Z","level":"info","event":"🔄 Updated: year_round=2026_16","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:10.310870Z","level":"info","event":"🔄 Updated: year_round=2026_17","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:10.348921Z","level":"info","event":"🔄 Updated: year_round=2026_18","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:10.380068Z","level":"info","event":"🔄 Updated: year_round=2026_19","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:10.405121Z","level":"info","event":"🔄 Updated: year_round=2026_02","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:10.464062Z","level":"info","event":"🔄 Updated: year_round=2026_20","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:10.535447Z","level":"info","event":"🔄 Updated: year_round=2026_21","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:10.558088Z","level":"info","event":"🔄 Updated: year_round=2026_22","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:10.581161Z","level":"info","event":"🔄 Updated: year_round=2026_23","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:10.630029Z","level":"info","event":"🔄 Updated: year_round=2026_24","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:10.663777Z","level":"info","event":"🔄 Updated: year_round=2026_03","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:10.701286Z","level":"info","event":"🔄 Updated: year_round=2026_04","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:10.739125Z","level":"info","event":"🔄 Updated: year_round=2026_05","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:10.776970Z","level":"info","event":"🔄 Updated: year_round=2026_06","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:10.809240Z","level":"info","event":"🔄 Updated: year_round=2026_07","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:10.845372Z","level":"info","event":"🔄 Updated: year_round=2026_08","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:10.889524Z","level":"info","event":"🔄 Updated: year_round=2026_09","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:10.913056Z","level":"info","event":"Error uploading dimensions/dim_race/dim_race.parquet: (\"object of type <class 'str'> cannot be converted to int\", 'Conversion failed for column race_date with type object')","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:41:10.907038Z","level":"error","event":"Task failed with exception","logger":"task","filename":"task_runner.py","lineno":1078,"error_detail":[{"exc_type":"ArrowTypeError","exc_value":"(\"object of type <class 'str'> cannot be converted to int\", 'Conversion failed for column race_date with type object')","exc_notes":[],"syntax_error":null,"is_cause":false,"frames":[{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/task_runner.py","lineno":1004,"name":"run"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/task_runner.py","lineno":1405,"name":"_execute_task"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/bases/operator.py","lineno":417,"name":"wrapper"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/standard/operators/python.py","lineno":214,"name":"execute"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/standard/operators/python.py","lineno":237,"name":"execute_callable"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/callback_runner.py","lineno":82,"name":"run"},{"filename":"/opt/airflow/dags/weekly_streaming_pipeline.py","lineno":190,"name":"consume_races"},{"filename":"/opt/airflow/dags/streaming/kafka_consumers.py","lineno":293,"name":"consume"},{"filename":"/opt/airflow/dags/streaming/kafka_consumers.py","lineno":174,"name":"consume_and_merge"},{"filename":"/opt/airflow/dags/utils/s3_helper.py","lineno":22,"name":"upload_parquet"},{"filename":"/opt/airflow/pyarrow/table.pxi","lineno":4751,"name":"pyarrow.lib.Table.from_pandas"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/pyarrow/pandas_compat.py","lineno":625,"name":"dataframe_to_arrays"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/pyarrow/pandas_compat.py","lineno":612,"name":"convert_column"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/pyarrow/pandas_compat.py","lineno":606,"name":"convert_column"},{"filename":"/opt/airflow/pyarrow/array.pxi","lineno":360,"name":"pyarrow.lib.array"},{"filename":"/opt/airflow/pyarrow/array.pxi","lineno":87,"name":"pyarrow.lib._ndarray_to_array"},{"filename":"/opt/airflow/pyarrow/error.pxi","lineno":92,"name":"pyarrow.lib.check_status"}],"is_group":false,"exceptions":[]}]}

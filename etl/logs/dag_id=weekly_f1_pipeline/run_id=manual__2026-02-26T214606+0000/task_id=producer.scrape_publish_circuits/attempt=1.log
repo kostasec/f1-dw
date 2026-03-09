@@ -1,0 +1,31 @@
+{"timestamp":"2026-02-26T21:46:11.462513Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-02-26T21:46:11.471769Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/weekly_f1_pipeline.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-02-26T21:46:23.123723Z","level":"warning","event":"The `airflow.utils.task_group.TaskGroup` attribute is deprecated. Please use `'airflow.sdk.TaskGroup'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/dags/weekly_f1_pipeline.py","lineno":36,"logger":"py.warnings"}
+{"timestamp":"2026-02-26T21:46:23.124163Z","level":"warning","event":"The `airflow.operators.trigger_dagrun.TriggerDagRunOperator` attribute is deprecated. Please use `'airflow.providers.standard.operators.trigger_dagrun.TriggerDagRunOperator'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/dags/kafka_producer_pipeline.py","lineno":35,"logger":"py.warnings"}
+{"timestamp":"2026-02-26T21:46:23.384210Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-26T21:46:23.406142Z","level":"info","event":"PRODUCER: dim_circuit  (new venues)","logger":"task.stdout"}
+{"timestamp":"2026-02-26T21:46:23.421565Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-26T21:46:23.429615Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-26T21:46:23.430428Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-26T21:46:23.434055Z","level":"info","event":"SCRAPING ALL CIRCUITS FROM API","logger":"task.stdout"}
+{"timestamp":"2026-02-26T21:46:23.435142Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-26T21:46:23.438688Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-26T21:46:23.449475Z","level":"info","event":"Fetching circuits (offset=0, limit=100)...","logger":"task.stdout"}
+{"timestamp":"2026-02-26T21:46:45.644293Z","level":"info","event":"Fetched 78 circuits (total so far: 78/78)","logger":"task.stdout"}
+{"timestamp":"2026-02-26T21:46:45.650872Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-26T21:46:45.658107Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-26T21:46:45.659369Z","level":"info","event":"SCRAPING COMPLETE","logger":"task.stdout"}
+{"timestamp":"2026-02-26T21:46:45.665990Z","level":"info","event":"Total records: 78","logger":"task.stdout"}
+{"timestamp":"2026-02-26T21:46:45.666942Z","level":"info","event":"Unique circuits (by circuitId): 78","logger":"task.stdout"}
+{"timestamp":"2026-02-26T21:46:45.667837Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-26T21:46:45.668867Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-26T21:46:45.673612Z","level":"info","event":"Transforming API data to Silver schema...","logger":"task.stdout"}
+{"timestamp":"2026-02-26T21:46:45.676210Z","level":"info","event":"Deduplication: 78 records → 78 unique circuits","logger":"task.stdout"}
+{"timestamp":"2026-02-26T21:46:45.680168Z","level":"info","event":"Sorted by circuitId for stable circuit_id generation","logger":"task.stdout"}
+{"timestamp":"2026-02-26T21:46:45.702143Z","level":"info","event":"Transformed 78 circuits to Silver schema","logger":"task.stdout"}
+{"timestamp":"2026-02-26T21:46:45.709083Z","level":"info","event":"Source: api","logger":"task.stdout"}
+{"timestamp":"2026-02-26T21:46:45.710515Z","level":"info","event":"circuit_id range: 10001 - 10078","logger":"task.stdout"}
+{"timestamp":"2026-02-26T21:46:45.829854Z","level":"info","event":" Downloaded dimensions/dim_circuit/dim_circuit.parquet (78 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-26T21:46:45.851861Z","level":"info","event":"  No new circuits found","logger":"task.stdout"}
+{"timestamp":"2026-02-26T21:46:46.067085Z","level":"info","event":"Done. Returned value was: {'new_count': 0}","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":216}
+{"timestamp":"2026-02-26T21:46:46.068692Z","level":"info","event":"Pushing xcom","ti":"RuntimeTaskInstance(id=UUID('019c9bea-96f5-74b3-8ffa-a0ccec800a5f'), task_id='producer.scrape_publish_circuits', dag_id='weekly_f1_pipeline', run_id='manual__2026-02-26T21:46:06+00:00', try_number=1, dag_version_id=UUID('019c9b22-04c8-7f8f-ba9f-baa49cc3678d'), map_index=-1, hostname='fe5351013118', context_carrier={}, task=<Task(PythonOperator): producer.scrape_publish_circuits>, bundle_instance=LocalDagBundle(name=dags-folder), max_tries=2, start_date=datetime.datetime(2026, 2, 26, 21, 46, 10, 298182, tzinfo=datetime.timezone.utc), end_date=None, state=<TaskInstanceState.RUNNING: 'running'>, is_mapped=False, rendered_map_index=None)","logger":"task","filename":"task_runner.py","lineno":1450}

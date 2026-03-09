@@ -1,0 +1,43 @@
+{"timestamp":"2026-02-26T21:46:11.428433Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-02-26T21:46:11.441400Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/weekly_f1_pipeline.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-02-26T21:46:23.611694Z","level":"warning","event":"The `airflow.utils.task_group.TaskGroup` attribute is deprecated. Please use `'airflow.sdk.TaskGroup'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/dags/weekly_f1_pipeline.py","lineno":36,"logger":"py.warnings"}
+{"timestamp":"2026-02-26T21:46:23.612143Z","level":"warning","event":"The `airflow.operators.trigger_dagrun.TriggerDagRunOperator` attribute is deprecated. Please use `'airflow.providers.standard.operators.trigger_dagrun.TriggerDagRunOperator'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/dags/kafka_producer_pipeline.py","lineno":35,"logger":"py.warnings"}
+{"timestamp":"2026-02-26T21:46:24.216399Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-26T21:46:24.220035Z","level":"info","event":"PRODUCER: dim_driver  (2026+)","logger":"task.stdout"}
+{"timestamp":"2026-02-26T21:46:24.221684Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-26T21:46:24.229146Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-26T21:46:24.230292Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-26T21:46:24.231334Z","level":"info","event":"SCRAPING DRIVERS FROM ERGAST API: 2026-2026","logger":"task.stdout"}
+{"timestamp":"2026-02-26T21:46:24.232291Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-26T21:46:24.242331Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-26T21:46:24.243833Z","level":"info","event":"Fetching drivers for 2026...","logger":"task.stdout"}
+{"timestamp":"2026-02-26T21:46:48.323015Z","level":"info","event":"22 drivers found","logger":"task.stdout"}
+{"timestamp":"2026-02-26T21:46:48.328144Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-26T21:46:48.334077Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-26T21:46:48.337299Z","level":"info","event":"SCRAPING COMPLETE","logger":"task.stdout"}
+{"timestamp":"2026-02-26T21:46:48.338080Z","level":"info","event":"Total records: 22","logger":"task.stdout"}
+{"timestamp":"2026-02-26T21:46:48.342221Z","level":"info","event":"Unique drivers (by driverId): 22","logger":"task.stdout"}
+{"timestamp":"2026-02-26T21:46:48.343023Z","level":"info","event":"Years covered: 2026-2026","logger":"task.stdout"}
+{"timestamp":"2026-02-26T21:46:48.346274Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-26T21:46:48.347530Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-26T21:46:48.351345Z","level":"info","event":"Transforming API data to Silver schema...","logger":"task.stdout"}
+{"timestamp":"2026-02-26T21:46:48.352146Z","level":"info","event":"Deduplication: 22 records → 22 unique drivers","logger":"task.stdout"}
+{"timestamp":"2026-02-26T21:46:48.353238Z","level":"info","event":"Sorted by driverId (alphabetically) for stable driver_id generation","logger":"task.stdout"}
+{"timestamp":"2026-02-26T21:46:48.371894Z","level":"info","event":"  Generated driver_id: 10001 - 10022","logger":"task.stdout"}
+{"timestamp":"2026-02-26T21:46:48.500886Z","level":"info","event":"Transformed 22 drivers to Silver schema","logger":"task.stdout"}
+{"timestamp":"2026-02-26T21:46:48.501689Z","level":"info","event":"Source: api","logger":"task.stdout"}
+{"timestamp":"2026-02-26T21:46:48.506027Z","level":"info","event":"driver_id range: 10001 - 10022","logger":"task.stdout"}
+{"timestamp":"2026-02-26T21:46:48.696659Z","level":"info","event":" Downloaded dimensions/dim_driver/dim_driver.parquet (81 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-26T21:46:48.770213Z","level":"warning","event":"The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.","category":"FutureWarning","filename":"/opt/airflow/dags/kafka_producer_pipeline.py","lineno":181,"logger":"py.warnings"}
+{"timestamp":"2026-02-26T21:46:48.835672Z","level":"info","event":"Uploaded dimensions/dim_driver/dim_driver.parquet (82 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-26T21:46:48.836622Z","level":"info","event":"  Silver updated: 82 total drivers","logger":"task.stdout"}
+{"timestamp":"2026-02-26T21:46:48.850938Z","level":"info","event":"<BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:29092 <connecting> [IPv4 ('172.18.0.3', 29092)]>: connecting to kafka:29092 [('172.18.0.3', 29092) IPv4]","logger":"kafka.conn","filename":"conn.py","lineno":395}
+{"timestamp":"2026-02-26T21:46:48.866878Z","level":"info","event":"<BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:29092 <checking_api_versions_recv> [IPv4 ('172.18.0.3', 29092)]>: Broker version identified as 2.6","logger":"kafka.conn","filename":"conn.py","lineno":615}
+{"timestamp":"2026-02-26T21:46:48.870058Z","level":"info","event":"<BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:29092 <connected> [IPv4 ('172.18.0.3', 29092)]>: Connection complete.","logger":"kafka.conn","filename":"conn.py","lineno":456}
+{"timestamp":"2026-02-26T21:46:48.985745Z","level":"info","event":"<BrokerConnection client_id=kafka-python-producer-1, node_id=1 host=kafka:29092 <connecting> [IPv4 ('172.18.0.3', 29092)]>: connecting to kafka:29092 [('172.18.0.3', 29092) IPv4]","logger":"kafka.conn","filename":"conn.py","lineno":395}
+{"timestamp":"2026-02-26T21:46:48.987454Z","level":"info","event":"<BrokerConnection client_id=kafka-python-producer-1, node_id=1 host=kafka:29092 <connected> [IPv4 ('172.18.0.3', 29092)]>: Connection complete.","logger":"kafka.conn","filename":"conn.py","lineno":456}
+{"timestamp":"2026-02-26T21:46:48.987813Z","level":"info","event":"<BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:29092 <connected> [IPv4 ('172.18.0.3', 29092)]>: Closing connection. ","logger":"kafka.conn","filename":"conn.py","lineno":936}
+{"timestamp":"2026-02-26T21:46:49.012878Z","level":"info","event":"  Published 1 new drivers to topic 'f1.dim.drivers'","logger":"task.stdout"}
+{"timestamp":"2026-02-26T21:46:49.003897Z","level":"info","event":"<BrokerConnection client_id=kafka-python-producer-1, node_id=1 host=kafka:29092 <connected> [IPv4 ('172.18.0.3', 29092)]>: Closing connection. ","logger":"kafka.conn","filename":"conn.py","lineno":936}
+{"timestamp":"2026-02-26T21:46:49.089196Z","level":"info","event":"Done. Returned value was: {'new_count': 1}","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":216}
+{"timestamp":"2026-02-26T21:46:49.090092Z","level":"info","event":"Pushing xcom","ti":"RuntimeTaskInstance(id=UUID('019c9bea-96f3-7e88-98f9-7425b9eb79d3'), task_id='producer.scrape_publish_drivers', dag_id='weekly_f1_pipeline', run_id='manual__2026-02-26T21:46:06+00:00', try_number=1, dag_version_id=UUID('019c9b22-04c8-7f8f-ba9f-baa49cc3678d'), map_index=-1, hostname='fe5351013118', context_carrier={}, task=<Task(PythonOperator): producer.scrape_publish_drivers>, bundle_instance=LocalDagBundle(name=dags-folder), max_tries=2, start_date=datetime.datetime(2026, 2, 26, 21, 46, 10, 202279, tzinfo=datetime.timezone.utc), end_date=None, state=<TaskInstanceState.RUNNING: 'running'>, is_mapped=False, rendered_map_index=None)","logger":"task","filename":"task_runner.py","lineno":1450}

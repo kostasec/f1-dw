@@ -1,0 +1,24 @@
+{"timestamp":"2026-02-14T22:56:09.873350Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-02-14T22:56:09.875815Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/csv_bronze_to_silver.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-02-14T22:56:11.888056Z","level":"info","event":"============================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-14T22:56:11.889680Z","level":"info","event":"EXTRACT: Reading Bronze CSV and uploading to MinIO","logger":"task.stdout"}
+{"timestamp":"2026-02-14T22:56:11.890747Z","level":"info","event":"============================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-14T22:56:11.891832Z","level":"info","event":"STEP 1: Reading CSV with low_memory=False...","logger":"task.stdout"}
+{"timestamp":"2026-02-14T22:57:04.061049Z","level":"info","event":"STEP 2: Loaded 518,417 rows from CSV","logger":"task.stdout"}
+{"timestamp":"2026-02-14T22:57:04.062322Z","level":"info","event":"STEP 3: Cleaning data types...","logger":"task.stdout"}
+{"timestamp":"2026-02-14T22:57:06.252170Z","level":"info","event":"  Fixed 'alt' column: float64","logger":"task.stdout"}
+{"timestamp":"2026-02-14T22:57:11.077248Z","level":"info","event":"  Converted position to numeric","logger":"task.stdout"}
+{"timestamp":"2026-02-14T22:57:12.259687Z","level":"info","event":"  Converted positionText to numeric","logger":"task.stdout"}
+{"timestamp":"2026-02-14T22:57:15.483707Z","level":"info","event":"  Converted milliseconds to numeric","logger":"task.stdout"}
+{"timestamp":"2026-02-14T22:57:16.925441Z","level":"info","event":"  Converted fastestLap to numeric","logger":"task.stdout"}
+{"timestamp":"2026-02-14T22:57:23.965228Z","level":"info","event":"  Converted fastestLapSpeed to numeric","logger":"task.stdout"}
+{"timestamp":"2026-02-14T22:58:06.642508Z","level":"info","event":"  Converted number_drivers to numeric","logger":"task.stdout"}
+{"timestamp":"2026-02-14T22:58:29.986783Z","level":"info","event":"  Converted duration to numeric","logger":"task.stdout"}
+{"timestamp":"2026-02-14T22:58:32.193992Z","level":"info","event":"STEP 4: Initializing MinIO and creating buckets if needed...","logger":"task.stdout"}
+{"timestamp":"2026-02-14T22:58:32.213460Z","level":"info","event":"  Bucket f1-bronze already exists","logger":"task.stdout"}
+{"timestamp":"2026-02-14T22:58:32.234537Z","level":"info","event":"  Bucket f1-silver already exists","logger":"task.stdout"}
+{"timestamp":"2026-02-14T22:58:32.235468Z","level":"info","event":"STEP 5: Uploading to MinIO...","logger":"task.stdout"}
+{"timestamp":"2026-02-14T22:58:43.238139Z","level":"info","event":"Uploaded raw_data/f1_data.parquet (518417 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-14T22:58:43.332484Z","level":"info","event":"STEP 6: Upload complete!","logger":"task.stdout"}
+{"timestamp":"2026-02-14T22:58:43.921665Z","level":"info","event":"Done. Returned value was: 518417","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":216}
+{"timestamp":"2026-02-14T22:58:43.923274Z","level":"info","event":"Pushing xcom","ti":"RuntimeTaskInstance(id=UUID('019c5e5e-5ba5-7107-85a1-3e1c87913c45'), task_id='extract_bronze', dag_id='csv_bronze_to_silver', run_id='manual__2026-02-14T22:56:06.677742+00:00', try_number=1, dag_version_id=UUID('019c5e3a-b3ff-7da6-aa0a-f0e5d22fad78'), map_index=-1, hostname='887f8f7c54e8', context_carrier={}, task=<Task(PythonOperator): extract_bronze>, bundle_instance=LocalDagBundle(name=dags-folder), max_tries=1, start_date=datetime.datetime(2026, 2, 14, 22, 56, 9, 772383, tzinfo=datetime.timezone.utc), end_date=None, state=<TaskInstanceState.RUNNING: 'running'>, is_mapped=False, rendered_map_index=None)","logger":"task","filename":"task_runner.py","lineno":1450}

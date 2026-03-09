@@ -1,0 +1,15 @@
+{"timestamp":"2026-02-04T12:23:31.852219Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-02-04T12:23:31.854030Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/f1_etl_silver_to_gold.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-02-04T12:23:32.058341Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2026-02-04T12:23:32.059431Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2026-02-04T12:23:32.059684Z","level":"info","event":"Current task name:transform_gold_dim_race","logger":"task.stdout"}
+{"timestamp":"2026-02-04T12:23:32.059966Z","level":"info","event":"Dag name:f1_etl_silver_to_gold","logger":"task.stdout"}
+{"timestamp":"2026-02-04T12:23:32.061035Z","level":"info","event":"TRANSFORM: dim_race -> Gold PostgreSQL","logger":"task.stdout"}
+{"timestamp":"2026-02-04T12:23:32.094584Z","level":"info","event":" Downloaded dimensions/dim_race/dim_race.parquet (232 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-04T12:23:32.122725Z","level":"info","event":"Transformed 232 races","logger":"task.stdout"}
+{"timestamp":"2026-02-04T12:23:32.253755Z","level":"info","event":"Loaded 232 races to PostgreSQL","logger":"task.stdout"}
+{"timestamp":"2026-02-04T12:23:32.255964Z","level":"info","event":"Done. Returned value was: 232","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":216}
+{"timestamp":"2026-02-04T12:23:32.256439Z","level":"info","event":"Pushing xcom","ti":"RuntimeTaskInstance(id=UUID('019c289b-912a-7a1e-9171-8b46a9cbc3fc'), task_id='transform_gold_dim_race', dag_id='f1_etl_silver_to_gold', run_id='manual__2026-02-04T12:23:28+00:00', try_number=1, dag_version_id=UUID('019c2890-f69e-76c7-979c-ba13f662757b'), map_index=-1, hostname='85b967703fe5', context_carrier={}, task=<Task(PythonOperator): transform_gold_dim_race>, bundle_instance=LocalDagBundle(name=dags-folder), max_tries=1, start_date=datetime.datetime(2026, 2, 4, 12, 23, 31, 295512, tzinfo=datetime.timezone.utc), end_date=None, state=<TaskInstanceState.RUNNING: 'running'>, is_mapped=False, rendered_map_index=None)","logger":"task","filename":"task_runner.py","lineno":1450}
+{"timestamp":"2026-02-04T12:23:32.306689Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2026-02-04T12:23:32.310163Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2026-02-04T12:23:32.311177Z","level":"info","event":"Task operator:<Task(PythonOperator): transform_gold_dim_race>","logger":"task.stdout"}

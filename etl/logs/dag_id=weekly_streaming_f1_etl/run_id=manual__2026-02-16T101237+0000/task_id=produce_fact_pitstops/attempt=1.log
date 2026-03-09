@@ -1,0 +1,46 @@
+{"timestamp":"2026-02-16T10:14:05.967468Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-02-16T10:14:05.981052Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/weekly_streaming_pipeline.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-02-16T10:14:13.425711Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:14:13.427006Z","level":"info","event":"[PRODUCER] Starting fact_pitstops production...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:14:13.430625Z","level":"info","event":"<BrokerConnection client_id=f1-streaming-pipeline, node_id=bootstrap-0 host=kafka:29092 <connecting> [IPv4 ('172.18.0.4', 29092)]>: connecting to kafka:29092 [('172.18.0.4', 29092) IPv4]","logger":"kafka.conn","filename":"conn.py","lineno":395}
+{"timestamp":"2026-02-16T10:14:13.440108Z","level":"info","event":"<BrokerConnection client_id=f1-streaming-pipeline, node_id=bootstrap-0 host=kafka:29092 <checking_api_versions_recv> [IPv4 ('172.18.0.4', 29092)]>: Broker version identified as 2.6","logger":"kafka.conn","filename":"conn.py","lineno":615}
+{"timestamp":"2026-02-16T10:14:13.442239Z","level":"info","event":"<BrokerConnection client_id=f1-streaming-pipeline, node_id=bootstrap-0 host=kafka:29092 <connected> [IPv4 ('172.18.0.4', 29092)]>: Connection complete.","logger":"kafka.conn","filename":"conn.py","lineno":456}
+{"timestamp":"2026-02-16T10:14:13.446579Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:14:13.447875Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:14:13.449076Z","level":"info","event":"PRODUCING PITSTOPS FOR 2026 → Kafka Topic: fact-pitstops","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:14:13.449890Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:14:13.450623Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:14:13.451316Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:14:13.452111Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:14:13.452849Z","level":"info","event":"SCRAPING PIT STOPS FROM ERGAST API: 2026-2026","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:14:13.453506Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:14:13.454192Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:14:13.454990Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:14:13.459488Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:14:13.460353Z","level":"info","event":"SCRAPING PIT STOPS FOR 2026","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:14:13.461151Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:14:13.461740Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:14:13.462352Z","level":"info","event":"Fetching pit stops for 2026 Round 1...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:14:16.676288Z","level":"info","event":"  No data for 2026 Round 1","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:14:16.677166Z","level":"info","event":"Fetching pit stops for 2026 Round 2...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:14:20.049025Z","level":"info","event":"  No data for 2026 Round 2","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:14:20.049984Z","level":"info","event":"Fetching pit stops for 2026 Round 3...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:14:24.855820Z","level":"info","event":"  No data for 2026 Round 3","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:14:25.053014Z","level":"info","event":"  Stopping: 3 consecutive empty rounds detected","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:14:25.054211Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:14:25.055419Z","level":"info","event":"Total pit stops for 2026: 0","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:14:25.056485Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:14:25.057617Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:14:25.058449Z","level":"info","event":"SCRAPING COMPLETE","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:14:25.059518Z","level":"info","event":"Total pit stops: 0","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:14:25.060631Z","level":"info","event":"Years covered: 2026-2026","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:14:25.061715Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:14:25.062860Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:14:25.064055Z","level":"info","event":"Transforming API data to Silver schema...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:14:25.065613Z","level":"info","event":"No data found - returning empty DataFrame with schema: ['driver_ref', 'race_year', 'race_round', 'stop_number', 'lap', 'pit_time', 'duration_seconds', 'year', 'source', 'created_at']","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:14:25.066598Z","level":"info","event":"⚠️  No pitstop records found for 2026","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:14:24.872219Z","level":"info","event":"<KafkaProducer client_id=f1-streaming-pipeline transactional_id=None>: Closing the Kafka producer with 9223372036.0 secs timeout.","logger":"kafka.producer.kafka","filename":"kafka.py","lineno":630}
+{"timestamp":"2026-02-16T10:14:24.874294Z","level":"info","event":"<BrokerConnection client_id=f1-streaming-pipeline, node_id=bootstrap-0 host=kafka:29092 <connected> [IPv4 ('172.18.0.4', 29092)]>: Closing connection. ","logger":"kafka.conn","filename":"conn.py","lineno":936}
+{"timestamp":"2026-02-16T10:14:25.143446Z","level":"info","event":"[PRODUCER] Completed: {'sent': 0, 'failed': 0}","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:14:25.151372Z","level":"info","event":"Done. Returned value was: {'sent': 0, 'failed': 0}","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":216}
+{"timestamp":"2026-02-16T10:14:25.153389Z","level":"info","event":"Pushing xcom","ti":"RuntimeTaskInstance(id=UUID('019c65f0-169c-7c27-9d1f-fc6ce341d5de'), task_id='produce_fact_pitstops', dag_id='weekly_streaming_f1_etl', run_id='manual__2026-02-16T10:12:37+00:00', try_number=1, dag_version_id=UUID('019c61bd-e638-74f5-b658-bbd5e8d757b9'), map_index=-1, hostname='8ca1c3cee112', context_carrier={}, task=<Task(PythonOperator): produce_fact_pitstops>, bundle_instance=LocalDagBundle(name=dags-folder), max_tries=2, start_date=datetime.datetime(2026, 2, 16, 10, 14, 5, 244361, tzinfo=datetime.timezone.utc), end_date=None, state=<TaskInstanceState.RUNNING: 'running'>, is_mapped=False, rendered_map_index=None)","logger":"task","filename":"task_runner.py","lineno":1450}

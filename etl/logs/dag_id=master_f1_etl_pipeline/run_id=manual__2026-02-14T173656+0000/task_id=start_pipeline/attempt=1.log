@@ -1,0 +1,27 @@
+{"timestamp":"2026-02-14T17:37:16.599907Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-02-14T17:37:16.606170Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/master_pipeline.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-02-14T17:37:16.695785Z","level":"warning","event":"The `airflow.operators.trigger_dagrun.TriggerDagRunOperator` attribute is deprecated. Please use `'airflow.providers.standard.operators.trigger_dagrun.TriggerDagRunOperator'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/dags/master_pipeline.py","lineno":34,"logger":"py.warnings"}
+{"timestamp":"2026-02-14T17:37:16.696195Z","level":"warning","event":"The `airflow.operators.python.PythonOperator` attribute is deprecated. Please use `'airflow.providers.standard.operators.python.PythonOperator'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/dags/master_pipeline.py","lineno":35,"logger":"py.warnings"}
+{"timestamp":"2026-02-14T17:37:16.834014Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-14T17:37:16.834692Z","level":"info","event":"================================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-14T17:37:16.835256Z","level":"info","event":"F1 ETL MASTER PIPELINE STARTED","logger":"task.stdout"}
+{"timestamp":"2026-02-14T17:37:16.835742Z","level":"info","event":"================================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-14T17:37:16.836178Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-14T17:37:16.836601Z","level":"info","event":"Pipeline Flow:","logger":"task.stdout"}
+{"timestamp":"2026-02-14T17:37:16.837124Z","level":"info","event":"  1. CSV → Silver (Dimensions + Facts)","logger":"task.stdout"}
+{"timestamp":"2026-02-14T17:37:16.837564Z","level":"info","event":"  2-5. API Dimensions → Silver (PARALLEL)","logger":"task.stdout"}
+{"timestamp":"2026-02-14T17:37:16.837988Z","level":"info","event":"     ├─ Constructors","logger":"task.stdout"}
+{"timestamp":"2026-02-14T17:37:16.838400Z","level":"info","event":"     ├─ Drivers","logger":"task.stdout"}
+{"timestamp":"2026-02-14T17:37:16.838827Z","level":"info","event":"     ├─ Circuits","logger":"task.stdout"}
+{"timestamp":"2026-02-14T17:37:16.839554Z","level":"info","event":"     └─ Races","logger":"task.stdout"}
+{"timestamp":"2026-02-14T17:37:16.840441Z","level":"info","event":"  6-10. API Facts → Silver (PARALLEL)","logger":"task.stdout"}
+{"timestamp":"2026-02-14T17:37:16.841457Z","level":"info","event":"      ├─ Results","logger":"task.stdout"}
+{"timestamp":"2026-02-14T17:37:16.842268Z","level":"info","event":"      ├─ Laps","logger":"task.stdout"}
+{"timestamp":"2026-02-14T17:37:16.843194Z","level":"info","event":"      ├─ Pitstops","logger":"task.stdout"}
+{"timestamp":"2026-02-14T17:37:16.843860Z","level":"info","event":"      ├─ Driver Standings","logger":"task.stdout"}
+{"timestamp":"2026-02-14T17:37:16.844597Z","level":"info","event":"      └─ Constructor Standings","logger":"task.stdout"}
+{"timestamp":"2026-02-14T17:37:16.845255Z","level":"info","event":"  11. Silver → Gold (PostgreSQL)","logger":"task.stdout"}
+{"timestamp":"2026-02-14T17:37:16.845933Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-14T17:37:16.846596Z","level":"info","event":"================================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-14T17:37:16.847193Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-14T17:37:16.834097Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":216}

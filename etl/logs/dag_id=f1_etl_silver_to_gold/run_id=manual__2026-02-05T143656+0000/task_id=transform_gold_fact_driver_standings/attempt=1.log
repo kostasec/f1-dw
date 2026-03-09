@@ -1,0 +1,16 @@
+{"timestamp":"2026-02-05T14:37:03.685266Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-02-05T14:37:03.686537Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/f1_etl_silver_to_gold.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-02-05T14:37:03.918288Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2026-02-05T14:37:03.918746Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2026-02-05T14:37:03.918982Z","level":"info","event":"Current task name:transform_gold_fact_driver_standings","logger":"task.stdout"}
+{"timestamp":"2026-02-05T14:37:03.919178Z","level":"info","event":"Dag name:f1_etl_silver_to_gold","logger":"task.stdout"}
+{"timestamp":"2026-02-05T14:37:03.919369Z","level":"info","event":"TRANSFORM: fact_driver_standings -> Gold PostgreSQL","logger":"task.stdout"}
+{"timestamp":"2026-02-05T14:37:03.986258Z","level":"info","event":" Downloaded facts/fact_driver_standings/fact_driver_standings.parquet (4502 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-05T14:37:03.988295Z","level":"info","event":"Transformed 4502 driver standings","logger":"task.stdout"}
+{"timestamp":"2026-02-05T14:37:03.990199Z","level":"info","event":"Loaded 4502 driver standings","logger":"task.stdout"}
+{"timestamp":"2026-02-05T14:37:05.790355Z","level":"info","event":"Loaded 4502 driver standings to PostgreSQL","logger":"task.stdout"}
+{"timestamp":"2026-02-05T14:37:05.790318Z","level":"info","event":"Done. Returned value was: 4502","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":216}
+{"timestamp":"2026-02-05T14:37:05.790565Z","level":"info","event":"Pushing xcom","ti":"RuntimeTaskInstance(id=UUID('019c2e3c-1e21-791d-b6f5-f243254a72fc'), task_id='transform_gold_fact_driver_standings', dag_id='f1_etl_silver_to_gold', run_id='manual__2026-02-05T14:36:56+00:00', try_number=1, dag_version_id=UUID('019c2890-f69e-76c7-979c-ba13f662757b'), map_index=-1, hostname='75a141cc4b31', context_carrier={}, task=<Task(PythonOperator): transform_gold_fact_driver_standings>, bundle_instance=LocalDagBundle(name=dags-folder), max_tries=1, start_date=datetime.datetime(2026, 2, 5, 14, 37, 3, 191626, tzinfo=datetime.timezone.utc), end_date=None, state=<TaskInstanceState.RUNNING: 'running'>, is_mapped=False, rendered_map_index=None)","logger":"task","filename":"task_runner.py","lineno":1450}
+{"timestamp":"2026-02-05T14:37:05.830833Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2026-02-05T14:37:05.831192Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2026-02-05T14:37:05.831419Z","level":"info","event":"Task operator:<Task(PythonOperator): transform_gold_fact_driver_standings>","logger":"task.stdout"}

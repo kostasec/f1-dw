@@ -1,0 +1,15 @@
+{"timestamp":"2026-02-02T16:01:50.962557Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-02-02T16:01:50.964957Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/f1_etl_pipeline_silver.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-02-02T16:01:51.227552Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2026-02-02T16:01:51.231003Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2026-02-02T16:01:51.231732Z","level":"info","event":"Current task name:transform_dim_driver","logger":"task.stdout"}
+{"timestamp":"2026-02-02T16:01:51.232537Z","level":"info","event":"Dag name:f1_etl_pipeline_silver","logger":"task.stdout"}
+{"timestamp":"2026-02-02T16:01:51.237173Z","level":"info","event":"TRANSFORM: dim_driver → Silver (Parquet with surrogate key)","logger":"task.stdout"}
+{"timestamp":"2026-02-02T16:02:04.316921Z","level":"warning","event":"Columns (7,8,13,14,17,42,45,63) have mixed types. Specify dtype option on import or set low_memory=False.","category":"DtypeWarning","filename":"/opt/airflow/dags/f1_etl_pipeline_silver.py","lineno":45,"logger":"py.warnings"}
+{"timestamp":"2026-02-02T16:02:11.526977Z","level":"info","event":"Generated 65 drivers with surrogate keys (1-65)","logger":"task.stdout"}
+{"timestamp":"2026-02-02T16:02:12.484499Z","level":"info","event":" Uploaded dimensions/dim_driver/dim_driver.parquet (65 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-02T16:02:12.620852Z","level":"info","event":"Done. Returned value was: 65","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":216}
+{"timestamp":"2026-02-02T16:02:12.622331Z","level":"info","event":"Pushing xcom","ti":"RuntimeTaskInstance(id=UUID('019c1f16-74ea-73f3-b03c-42a3ec352efb'), task_id='transform_dim_driver', dag_id='f1_etl_pipeline_silver', run_id='manual__2026-02-02T16:01:30+00:00', try_number=1, dag_version_id=UUID('019c1efd-d036-729b-a5a0-85b1752ac394'), map_index=-1, hostname='6e5ca63c70ee', context_carrier={}, task=<Task(PythonOperator): transform_dim_driver>, bundle_instance=LocalDagBundle(name=dags-folder), max_tries=1, start_date=datetime.datetime(2026, 2, 2, 16, 1, 50, 446977, tzinfo=datetime.timezone.utc), end_date=None, state=<TaskInstanceState.RUNNING: 'running'>, is_mapped=False, rendered_map_index=None)","logger":"task","filename":"task_runner.py","lineno":1450}
+{"timestamp":"2026-02-02T16:02:13.030007Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2026-02-02T16:02:13.030272Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2026-02-02T16:02:13.030515Z","level":"info","event":"Task operator:<Task(PythonOperator): transform_dim_driver>","logger":"task.stdout"}

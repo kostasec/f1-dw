@@ -1,0 +1,147 @@
+{"timestamp":"2026-02-16T09:52:41.514111Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-02-16T09:52:41.565814Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/weekly_streaming_pipeline.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-02-16T09:52:50.767115Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T09:52:50.771449Z","level":"info","event":"[CONSUMER] Starting dim_circuit consumption...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T09:52:50.770007Z","level":"info","event":"<BrokerConnection client_id=kafka-python-2.2.0, node_id=bootstrap-0 host=kafka:29092 <connecting> [IPv4 ('172.18.0.6', 29092)]>: connecting to kafka:29092 [('172.18.0.6', 29092) IPv4]","logger":"kafka.conn","filename":"conn.py","lineno":395}
+{"timestamp":"2026-02-16T09:52:50.787707Z","level":"info","event":"<BrokerConnection client_id=kafka-python-2.2.0, node_id=bootstrap-0 host=kafka:29092 <checking_api_versions_recv> [IPv4 ('172.18.0.6', 29092)]>: Broker version identified as 2.6","logger":"kafka.conn","filename":"conn.py","lineno":615}
+{"timestamp":"2026-02-16T09:52:50.791588Z","level":"info","event":"<BrokerConnection client_id=kafka-python-2.2.0, node_id=bootstrap-0 host=kafka:29092 <connected> [IPv4 ('172.18.0.6', 29092)]>: Connection complete.","logger":"kafka.conn","filename":"conn.py","lineno":456}
+{"timestamp":"2026-02-16T09:52:50.797586Z","level":"info","event":"Updating subscribed topics to: ('dim-circuit',)","logger":"kafka.consumer.subscription_state","filename":"subscription_state.py","lineno":177}
+{"timestamp":"2026-02-16T09:52:50.802656Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T09:52:50.803527Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-16T09:52:50.807921Z","level":"info","event":"CONSUMING: dim-circuit → dimensions/dim_circuit/dim_circuit.parquet","logger":"task.stdout"}
+{"timestamp":"2026-02-16T09:52:50.808983Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-16T09:52:50.810037Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T09:52:50.912567Z","level":"info","event":" Downloaded dimensions/dim_circuit/dim_circuit.parquet (35 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T09:52:50.913445Z","level":"info","event":" Loaded 35 existing records from Silver","logger":"task.stdout"}
+{"timestamp":"2026-02-16T09:52:50.923235Z","level":"info","event":"<BrokerConnection client_id=kafka-python-2.2.0, node_id=1 host=kafka:29092 <connecting> [IPv4 ('172.18.0.6', 29092)]>: connecting to kafka:29092 [('172.18.0.6', 29092) IPv4]","logger":"kafka.conn","filename":"conn.py","lineno":395}
+{"timestamp":"2026-02-16T09:52:50.924831Z","level":"info","event":"<BrokerConnection client_id=kafka-python-2.2.0, node_id=1 host=kafka:29092 <connected> [IPv4 ('172.18.0.6', 29092)]>: Connection complete.","logger":"kafka.conn","filename":"conn.py","lineno":456}
+{"timestamp":"2026-02-16T09:52:50.925501Z","level":"info","event":"<BrokerConnection client_id=kafka-python-2.2.0, node_id=bootstrap-0 host=kafka:29092 <connected> [IPv4 ('172.18.0.6', 29092)]>: Closing connection. ","logger":"kafka.conn","filename":"conn.py","lineno":936}
+{"timestamp":"2026-02-16T09:52:51.034856Z","level":"info","event":"Coordinator for group/f1-silver-consumers is BrokerMetadata(nodeId='coordinator-1', host='kafka', port=29092, rack=None)","logger":"kafka.cluster","filename":"cluster.py","lineno":398}
+{"timestamp":"2026-02-16T09:52:51.035519Z","level":"info","event":"Discovered coordinator coordinator-1 for group f1-silver-consumers","logger":"kafka.coordinator","filename":"base.py","lineno":745}
+{"timestamp":"2026-02-16T09:52:51.036345Z","level":"info","event":"Starting new heartbeat thread","logger":"kafka.coordinator","filename":"base.py","lineno":796}
+{"timestamp":"2026-02-16T09:52:51.040089Z","level":"info","event":"Revoking previously assigned partitions set() for group f1-silver-consumers","logger":"kafka.coordinator.consumer","filename":"consumer.py","lineno":357}
+{"timestamp":"2026-02-16T09:52:51.042983Z","level":"info","event":"<BrokerConnection client_id=kafka-python-2.2.0, node_id=coordinator-1 host=kafka:29092 <connecting> [IPv4 ('172.18.0.6', 29092)]>: connecting to kafka:29092 [('172.18.0.6', 29092) IPv4]","logger":"kafka.conn","filename":"conn.py","lineno":395}
+{"timestamp":"2026-02-16T09:52:51.044376Z","level":"info","event":"<BrokerConnection client_id=kafka-python-2.2.0, node_id=coordinator-1 host=kafka:29092 <connected> [IPv4 ('172.18.0.6', 29092)]>: Connection complete.","logger":"kafka.conn","filename":"conn.py","lineno":456}
+{"timestamp":"2026-02-16T09:52:51.153815Z","level":"info","event":"(Re-)joining group f1-silver-consumers","logger":"kafka.coordinator","filename":"base.py","lineno":500}
+{"timestamp":"2026-02-16T09:52:51.190638Z","level":"info","event":"(Re-)joining group f1-silver-consumers","logger":"kafka.coordinator","filename":"base.py","lineno":500}
+{"timestamp":"2026-02-16T09:52:53.675865Z","level":"info","event":"Successfully joined group f1-silver-consumers with generation 4","logger":"kafka.coordinator","filename":"base.py","lineno":390}
+{"timestamp":"2026-02-16T09:52:53.676944Z","level":"info","event":"Updated partition assignment: []","logger":"kafka.consumer.subscription_state","filename":"subscription_state.py","lineno":246}
+{"timestamp":"2026-02-16T09:52:53.677475Z","level":"info","event":"Setting newly assigned partitions set() for group f1-silver-consumers","logger":"kafka.coordinator.consumer","filename":"consumer.py","lineno":248}
+{"timestamp":"2026-02-16T09:52:55.916161Z","level":"info","event":"⚠️  No new messages to process","logger":"task.stdout"}
+{"timestamp":"2026-02-16T09:52:55.916952Z","level":"info","event":"Stopping heartbeat thread","logger":"kafka.coordinator","filename":"base.py","lineno":810}
+{"timestamp":"2026-02-16T09:52:58.923355Z","level":"warning","event":"Heartbeat thread did not fully terminate during close","logger":"kafka.coordinator","filename":"base.py","lineno":1013}
+{"timestamp":"2026-02-16T09:52:58.923979Z","level":"info","event":"Leaving consumer group (f1-silver-consumers).","logger":"kafka.coordinator","filename":"base.py","lineno":841}
+{"timestamp":"2026-02-16T09:52:59.002803Z","level":"info","event":"<BrokerConnection client_id=kafka-python-2.2.0, node_id=1 host=kafka:29092 <connected> [IPv4 ('172.18.0.6', 29092)]>: Closing connection. ","logger":"kafka.conn","filename":"conn.py","lineno":936}
+{"timestamp":"2026-02-16T09:52:59.019420Z","level":"info","event":"<BrokerConnection client_id=kafka-python-2.2.0, node_id=coordinator-1 host=kafka:29092 <connected> [IPv4 ('172.18.0.6', 29092)]>: Closing connection. ","logger":"kafka.conn","filename":"conn.py","lineno":936}
+{"timestamp":"2026-02-16T09:52:59.331190Z","level":"info","event":"[CONSUMER] Completed: {'consumed': 0, 'new': 0, 'updated': 0, 'skipped': 0}","logger":"task.stdout"}
+{"timestamp":"2026-02-16T09:52:59.325694Z","level":"info","event":"Done. Returned value was: {'consumed': 0, 'new': 0, 'updated': 0, 'skipped': 0}","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":216}
+{"timestamp":"2026-02-16T09:52:59.326550Z","level":"info","event":"Pushing xcom","ti":"RuntimeTaskInstance(id=UUID('019c65dc-0c31-7b1f-a425-722b69b136f4'), task_id='consume_dim_circuit', dag_id='weekly_streaming_f1_etl', run_id='scheduled__2026-02-16T03:00:00+00:00', try_number=1, dag_version_id=UUID('019c61bd-e638-74f5-b658-bbd5e8d757b9'), map_index=-1, hostname='eaafa8aeb24e', context_carrier={}, task=<Task(PythonOperator): consume_dim_circuit>, bundle_instance=LocalDagBundle(name=dags-folder), max_tries=2, start_date=datetime.datetime(2026, 2, 16, 9, 52, 40, 665956, tzinfo=datetime.timezone.utc), end_date=None, state=<TaskInstanceState.RUNNING: 'running'>, is_mapped=False, rendered_map_index=None)","logger":"task","filename":"task_runner.py","lineno":1450}
+{"timestamp":"2026-02-16T11:35:52.561449Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-02-16T11:35:52.564157Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/weekly_streaming_pipeline.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-02-16T11:35:55.044063Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:35:55.044841Z","level":"info","event":"[CONSUMER] Starting dim_circuit consumption...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:35:55.048651Z","level":"info","event":"<BrokerConnection client_id=kafka-python-2.2.0, node_id=bootstrap-0 host=kafka:29092 <connecting> [IPv4 ('172.18.0.4', 29092)]>: connecting to kafka:29092 [('172.18.0.4', 29092) IPv4]","logger":"kafka.conn","filename":"conn.py","lineno":395}
+{"timestamp":"2026-02-16T11:35:55.055061Z","level":"info","event":"<BrokerConnection client_id=kafka-python-2.2.0, node_id=bootstrap-0 host=kafka:29092 <checking_api_versions_recv> [IPv4 ('172.18.0.4', 29092)]>: Broker version identified as 2.6","logger":"kafka.conn","filename":"conn.py","lineno":615}
+{"timestamp":"2026-02-16T11:35:55.058316Z","level":"info","event":"<BrokerConnection client_id=kafka-python-2.2.0, node_id=bootstrap-0 host=kafka:29092 <connected> [IPv4 ('172.18.0.4', 29092)]>: Connection complete.","logger":"kafka.conn","filename":"conn.py","lineno":456}
+{"timestamp":"2026-02-16T11:35:55.061350Z","level":"info","event":"Updating subscribed topics to: ('dim-circuit',)","logger":"kafka.consumer.subscription_state","filename":"subscription_state.py","lineno":177}
+{"timestamp":"2026-02-16T11:35:55.063492Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:35:55.064281Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:35:55.064957Z","level":"info","event":"CONSUMING: dim-circuit → dimensions/dim_circuit/dim_circuit.parquet","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:35:55.065565Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:35:55.066109Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:35:55.131388Z","level":"info","event":" Downloaded dimensions/dim_circuit/dim_circuit.parquet (36 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:35:55.132187Z","level":"info","event":" Loaded 36 existing records from Silver","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:35:55.135719Z","level":"info","event":"<BrokerConnection client_id=kafka-python-2.2.0, node_id=1 host=kafka:29092 <connecting> [IPv4 ('172.18.0.4', 29092)]>: connecting to kafka:29092 [('172.18.0.4', 29092) IPv4]","logger":"kafka.conn","filename":"conn.py","lineno":395}
+{"timestamp":"2026-02-16T11:35:55.137004Z","level":"info","event":"<BrokerConnection client_id=kafka-python-2.2.0, node_id=1 host=kafka:29092 <connected> [IPv4 ('172.18.0.4', 29092)]>: Connection complete.","logger":"kafka.conn","filename":"conn.py","lineno":456}
+{"timestamp":"2026-02-16T11:35:55.137476Z","level":"info","event":"<BrokerConnection client_id=kafka-python-2.2.0, node_id=bootstrap-0 host=kafka:29092 <connected> [IPv4 ('172.18.0.4', 29092)]>: Closing connection. ","logger":"kafka.conn","filename":"conn.py","lineno":936}
+{"timestamp":"2026-02-16T11:35:55.240812Z","level":"info","event":"Coordinator for group/f1-silver-consumers is BrokerMetadata(nodeId='coordinator-1', host='kafka', port=29092, rack=None)","logger":"kafka.cluster","filename":"cluster.py","lineno":398}
+{"timestamp":"2026-02-16T11:35:55.241333Z","level":"info","event":"Discovered coordinator coordinator-1 for group f1-silver-consumers","logger":"kafka.coordinator","filename":"base.py","lineno":745}
+{"timestamp":"2026-02-16T11:35:55.241790Z","level":"info","event":"Starting new heartbeat thread","logger":"kafka.coordinator","filename":"base.py","lineno":796}
+{"timestamp":"2026-02-16T11:35:55.243244Z","level":"info","event":"Revoking previously assigned partitions set() for group f1-silver-consumers","logger":"kafka.coordinator.consumer","filename":"consumer.py","lineno":357}
+{"timestamp":"2026-02-16T11:35:55.245107Z","level":"info","event":"<BrokerConnection client_id=kafka-python-2.2.0, node_id=coordinator-1 host=kafka:29092 <connecting> [IPv4 ('172.18.0.4', 29092)]>: connecting to kafka:29092 [('172.18.0.4', 29092) IPv4]","logger":"kafka.conn","filename":"conn.py","lineno":395}
+{"timestamp":"2026-02-16T11:35:55.245983Z","level":"info","event":"<BrokerConnection client_id=kafka-python-2.2.0, node_id=coordinator-1 host=kafka:29092 <connected> [IPv4 ('172.18.0.4', 29092)]>: Connection complete.","logger":"kafka.conn","filename":"conn.py","lineno":456}
+{"timestamp":"2026-02-16T11:35:55.348244Z","level":"info","event":"(Re-)joining group f1-silver-consumers","logger":"kafka.coordinator","filename":"base.py","lineno":500}
+{"timestamp":"2026-02-16T11:35:55.351690Z","level":"info","event":"(Re-)joining group f1-silver-consumers","logger":"kafka.coordinator","filename":"base.py","lineno":500}
+{"timestamp":"2026-02-16T11:35:56.613546Z","level":"info","event":"Successfully joined group f1-silver-consumers with generation 38","logger":"kafka.coordinator","filename":"base.py","lineno":390}
+{"timestamp":"2026-02-16T11:35:56.613997Z","level":"info","event":"Updated partition assignment: []","logger":"kafka.consumer.subscription_state","filename":"subscription_state.py","lineno":246}
+{"timestamp":"2026-02-16T11:35:56.614246Z","level":"info","event":"Setting newly assigned partitions set() for group f1-silver-consumers","logger":"kafka.coordinator.consumer","filename":"consumer.py","lineno":248}
+{"timestamp":"2026-02-16T11:35:59.627280Z","level":"warning","event":"Heartbeat failed for group f1-silver-consumers because it is rebalancing","logger":"kafka.coordinator","filename":"base.py","lineno":898}
+{"timestamp":"2026-02-16T11:35:59.628117Z","level":"info","event":"Revoking previously assigned partitions set() for group f1-silver-consumers","logger":"kafka.coordinator.consumer","filename":"consumer.py","lineno":357}
+{"timestamp":"2026-02-16T11:35:59.628375Z","level":"info","event":"(Re-)joining group f1-silver-consumers","logger":"kafka.coordinator","filename":"base.py","lineno":500}
+{"timestamp":"2026-02-16T11:35:59.645507Z","level":"info","event":"Successfully joined group f1-silver-consumers with generation 39","logger":"kafka.coordinator","filename":"base.py","lineno":390}
+{"timestamp":"2026-02-16T11:35:59.646315Z","level":"info","event":"Updated partition assignment: [TopicPartition(topic='dim-circuit', partition=0)]","logger":"kafka.consumer.subscription_state","filename":"subscription_state.py","lineno":246}
+{"timestamp":"2026-02-16T11:35:59.646689Z","level":"info","event":"Setting newly assigned partitions {TopicPartition(topic='dim-circuit', partition=0)} for group f1-silver-consumers","logger":"kafka.coordinator.consumer","filename":"consumer.py","lineno":248}
+{"timestamp":"2026-02-16T11:35:59.721074Z","level":"info","event":"Consumed 10 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:35:59.721552Z","level":"info","event":"Consumed 20 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:35:59.721971Z","level":"info","event":"Consumed 30 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:35:59.722308Z","level":"info","event":"Consumed 40 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.684259Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.684818Z","level":"info","event":" Processing 48 new records from Kafka","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.710926Z","level":"info","event":"    Columns in new data: ['circuit_references', 'circuit_name', 'circuit_city', 'circuit_country', 'circuit_latitude', 'circuit_longtitude', 'circuit_altitude', 'circuit_url', 'circuit_id', 'source', 'created_at']","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.711446Z","level":"info","event":" Updated: circuit_references=albert_park","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.712044Z","level":"info","event":" Updated: circuit_references=americas","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.712530Z","level":"info","event":" Updated: circuit_references=bahrain","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.713099Z","level":"info","event":" Updated: circuit_references=baku","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.715861Z","level":"info","event":" Updated: circuit_references=catalunya","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.719474Z","level":"info","event":" Updated: circuit_references=hungaroring","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.720251Z","level":"info","event":" Updated: circuit_references=interlagos","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.720806Z","level":"info","event":" Updated: circuit_references=jeddah","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.723548Z","level":"info","event":" Updated: circuit_references=losail","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.726892Z","level":"info","event":" Updated: circuit_references=madring","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.735428Z","level":"info","event":" Updated: circuit_references=marina_bay","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.737155Z","level":"info","event":" Updated: circuit_references=miami","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.741772Z","level":"info","event":" Updated: circuit_references=monaco","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.746039Z","level":"info","event":" Updated: circuit_references=monza","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.750822Z","level":"info","event":" Updated: circuit_references=red_bull_ring","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.754995Z","level":"info","event":" Updated: circuit_references=rodriguez","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.759455Z","level":"info","event":" Updated: circuit_references=shanghai","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.763482Z","level":"info","event":" Updated: circuit_references=silverstone","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.770071Z","level":"info","event":" Updated: circuit_references=spa","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.775131Z","level":"info","event":" Updated: circuit_references=suzuka","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.778650Z","level":"info","event":" Updated: circuit_references=vegas","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.783432Z","level":"info","event":" Updated: circuit_references=villeneuve","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.791473Z","level":"info","event":" Updated: circuit_references=yas_marina","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.794566Z","level":"info","event":" Updated: circuit_references=zandvoort","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.799396Z","level":"info","event":" Updated: circuit_references=albert_park","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.803468Z","level":"info","event":" Updated: circuit_references=americas","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.808532Z","level":"info","event":" Updated: circuit_references=bahrain","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.821362Z","level":"info","event":" Updated: circuit_references=baku","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.826431Z","level":"info","event":" Updated: circuit_references=catalunya","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.832081Z","level":"info","event":" Updated: circuit_references=hungaroring","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.837788Z","level":"info","event":" Updated: circuit_references=interlagos","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.843370Z","level":"info","event":" Updated: circuit_references=jeddah","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.848388Z","level":"info","event":" Updated: circuit_references=losail","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.853374Z","level":"info","event":" Updated: circuit_references=madring","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.859048Z","level":"info","event":" Updated: circuit_references=marina_bay","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.864917Z","level":"info","event":" Updated: circuit_references=miami","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.870701Z","level":"info","event":" Updated: circuit_references=monaco","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.876421Z","level":"info","event":" Updated: circuit_references=monza","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.887449Z","level":"info","event":" Updated: circuit_references=red_bull_ring","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.889757Z","level":"info","event":" Updated: circuit_references=rodriguez","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.899206Z","level":"info","event":" Updated: circuit_references=shanghai","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.905016Z","level":"info","event":" Updated: circuit_references=silverstone","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.912438Z","level":"info","event":" Updated: circuit_references=spa","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.917414Z","level":"info","event":" Updated: circuit_references=suzuka","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.922544Z","level":"info","event":" Updated: circuit_references=vegas","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.927614Z","level":"info","event":" Updated: circuit_references=villeneuve","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.931679Z","level":"info","event":" Updated: circuit_references=yas_marina","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.935166Z","level":"info","event":" Updated: circuit_references=zandvoort","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.965115Z","level":"info","event":"Uploaded dimensions/dim_circuit/dim_circuit.parquet (36 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.965868Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.966487Z","level":"info","event":"Written to Silver: dimensions/dim_circuit/dim_circuit.parquet","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.968587Z","level":"info","event":"Kafka offset committed successfully","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.968645Z","level":"info","event":"Stopping heartbeat thread","logger":"kafka.coordinator","filename":"base.py","lineno":810}
+{"timestamp":"2026-02-16T11:36:07.969317Z","level":"warning","event":"Heartbeat thread did not fully terminate during close","logger":"kafka.coordinator","filename":"base.py","lineno":1013}
+{"timestamp":"2026-02-16T11:36:07.969564Z","level":"info","event":"Leaving consumer group (f1-silver-consumers).","logger":"kafka.coordinator","filename":"base.py","lineno":841}
+{"timestamp":"2026-02-16T11:36:07.971257Z","level":"info","event":"<BrokerConnection client_id=kafka-python-2.2.0, node_id=1 host=kafka:29092 <connected> [IPv4 ('172.18.0.4', 29092)]>: Closing connection. ","logger":"kafka.conn","filename":"conn.py","lineno":936}
+{"timestamp":"2026-02-16T11:36:07.971737Z","level":"info","event":"<BrokerConnection client_id=kafka-python-2.2.0, node_id=coordinator-1 host=kafka:29092 <connected> [IPv4 ('172.18.0.4', 29092)]>: Closing connection. ","logger":"kafka.conn","filename":"conn.py","lineno":936}
+{"timestamp":"2026-02-16T11:36:07.972628Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:07.973021Z","level":"info","event":" Consumer Stats:","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:07.973432Z","level":"info","event":"    Consumed: 48","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:07.973708Z","level":"info","event":"    New: 0","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:07.973958Z","level":"info","event":"    Updated: 48","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:07.974197Z","level":"info","event":"    Skipped: 0","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:07.974453Z","level":"info","event":"    Final count: 36","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:07.990142Z","level":"info","event":"[CONSUMER] Completed: {'consumed': 48, 'new': 0, 'updated': 48, 'skipped': 0}","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:07.990411Z","level":"info","event":"Done. Returned value was: {'consumed': 48, 'new': 0, 'updated': 48, 'skipped': 0}","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":216}
+{"timestamp":"2026-02-16T11:36:07.990728Z","level":"info","event":"Pushing xcom","ti":"RuntimeTaskInstance(id=UUID('019c663b-cae2-7509-a301-00eae147e01e'), task_id='consume_dim_circuit', dag_id='weekly_streaming_f1_etl', run_id='scheduled__2026-02-16T03:00:00+00:00', try_number=1, dag_version_id=UUID('019c663b-c7a8-7abc-a3fe-4ba651367d8d'), map_index=-1, hostname='8ca1c3cee112', context_carrier={}, task=<Task(PythonOperator): consume_dim_circuit>, bundle_instance=LocalDagBundle(name=dags-folder), max_tries=2, start_date=datetime.datetime(2026, 2, 16, 11, 35, 52, 439355, tzinfo=datetime.timezone.utc), end_date=None, state=<TaskInstanceState.RUNNING: 'running'>, is_mapped=False, rendered_map_index=None)","logger":"task","filename":"task_runner.py","lineno":1450}

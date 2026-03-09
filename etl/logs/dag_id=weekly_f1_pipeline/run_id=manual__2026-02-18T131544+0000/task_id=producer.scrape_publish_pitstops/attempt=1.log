@@ -1,0 +1,38 @@
+{"timestamp":"2026-02-18T13:16:37.733264Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-02-18T13:16:37.748873Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/weekly_f1_pipeline.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-02-18T13:16:39.216241Z","level":"warning","event":"The `airflow.utils.task_group.TaskGroup` attribute is deprecated. Please use `'airflow.sdk.TaskGroup'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/dags/weekly_f1_pipeline.py","lineno":36,"logger":"py.warnings"}
+{"timestamp":"2026-02-18T13:16:39.217463Z","level":"warning","event":"The `airflow.operators.trigger_dagrun.TriggerDagRunOperator` attribute is deprecated. Please use `'airflow.providers.standard.operators.trigger_dagrun.TriggerDagRunOperator'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/dags/kafka_producer_pipeline.py","lineno":35,"logger":"py.warnings"}
+{"timestamp":"2026-02-18T13:16:39.249218Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-18T13:16:39.249519Z","level":"info","event":"PRODUCER: fact_pitstops  (2026+)","logger":"task.stdout"}
+{"timestamp":"2026-02-18T13:16:39.249758Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-18T13:16:39.250002Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-18T13:16:39.250226Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-18T13:16:39.250456Z","level":"info","event":"SCRAPING PIT STOPS FROM ERGAST API: 2026-2026","logger":"task.stdout"}
+{"timestamp":"2026-02-18T13:16:39.250674Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-18T13:16:39.250905Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-18T13:16:39.251284Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-18T13:16:39.251522Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-18T13:16:39.251798Z","level":"info","event":"SCRAPING PIT STOPS FOR 2026","logger":"task.stdout"}
+{"timestamp":"2026-02-18T13:16:39.252070Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-18T13:16:39.252433Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-18T13:16:39.252652Z","level":"info","event":"Fetching pit stops for 2026 Round 1...","logger":"task.stdout"}
+{"timestamp":"2026-02-18T13:16:43.215981Z","level":"info","event":"  No data for 2026 Round 1","logger":"task.stdout"}
+{"timestamp":"2026-02-18T13:16:43.216315Z","level":"info","event":"Fetching pit stops for 2026 Round 2...","logger":"task.stdout"}
+{"timestamp":"2026-02-18T13:16:47.122865Z","level":"info","event":"  No data for 2026 Round 2","logger":"task.stdout"}
+{"timestamp":"2026-02-18T13:16:47.123715Z","level":"info","event":"Fetching pit stops for 2026 Round 3...","logger":"task.stdout"}
+{"timestamp":"2026-02-18T13:16:52.260923Z","level":"info","event":"  No data for 2026 Round 3","logger":"task.stdout"}
+{"timestamp":"2026-02-18T13:16:52.261673Z","level":"info","event":"  Stopping: 3 consecutive empty rounds detected","logger":"task.stdout"}
+{"timestamp":"2026-02-18T13:16:52.262246Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-18T13:16:52.262803Z","level":"info","event":"Total pit stops for 2026: 0","logger":"task.stdout"}
+{"timestamp":"2026-02-18T13:16:52.263320Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-18T13:16:52.263714Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-18T13:16:52.264187Z","level":"info","event":"SCRAPING COMPLETE","logger":"task.stdout"}
+{"timestamp":"2026-02-18T13:16:52.264573Z","level":"info","event":"Total pit stops: 0","logger":"task.stdout"}
+{"timestamp":"2026-02-18T13:16:52.264963Z","level":"info","event":"Years covered: 2026-2026","logger":"task.stdout"}
+{"timestamp":"2026-02-18T13:16:52.265343Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-18T13:16:52.265686Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-18T13:16:52.266062Z","level":"info","event":"Transforming API data to Silver schema...","logger":"task.stdout"}
+{"timestamp":"2026-02-18T13:16:52.266397Z","level":"info","event":"No data found - returning empty DataFrame with schema: ['driver_ref', 'race_year', 'race_round', 'stop_number', 'lap', 'pit_time', 'duration_seconds', 'year', 'source', 'created_at']","logger":"task.stdout"}
+{"timestamp":"2026-02-18T13:16:52.266769Z","level":"info","event":"  No pitstop data found","logger":"task.stdout"}
+{"timestamp":"2026-02-18T13:16:52.278714Z","level":"info","event":"Done. Returned value was: {'new_count': 0}","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":216}
+{"timestamp":"2026-02-18T13:16:52.279065Z","level":"info","event":"Pushing xcom","ti":"RuntimeTaskInstance(id=UUID('019c70e4-72a8-7ab9-8d9b-24beba407b7c'), task_id='producer.scrape_publish_pitstops', dag_id='weekly_f1_pipeline', run_id='manual__2026-02-18T13:15:44+00:00', try_number=1, dag_version_id=UUID('019c6ff5-b028-7014-b590-52b338429d0a'), map_index=-1, hostname='e4702b2ecf8f', context_carrier={}, task=<Task(PythonOperator): producer.scrape_publish_pitstops>, bundle_instance=LocalDagBundle(name=dags-folder), max_tries=2, start_date=datetime.datetime(2026, 2, 18, 13, 16, 37, 550379, tzinfo=datetime.timezone.utc), end_date=None, state=<TaskInstanceState.RUNNING: 'running'>, is_mapped=False, rendered_map_index=None)","logger":"task","filename":"task_runner.py","lineno":1450}

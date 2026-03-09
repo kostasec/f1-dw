@@ -1,0 +1,41 @@
+{"timestamp":"2026-02-26T18:09:21.484985Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-02-26T18:09:21.510886Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/kafka_producer_pipeline.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-02-26T18:09:42.214490Z","level":"warning","event":"The `airflow.operators.trigger_dagrun.TriggerDagRunOperator` attribute is deprecated. Please use `'airflow.providers.standard.operators.trigger_dagrun.TriggerDagRunOperator'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/dags/kafka_producer_pipeline.py","lineno":35,"logger":"py.warnings"}
+{"timestamp":"2026-02-26T18:09:42.604103Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-26T18:09:42.606188Z","level":"info","event":"PRODUCER: dim_circuit  (new venues)","logger":"task.stdout"}
+{"timestamp":"2026-02-26T18:09:42.609233Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-26T18:09:42.611452Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-26T18:09:42.615561Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-26T18:09:42.619425Z","level":"info","event":"SCRAPING ALL CIRCUITS FROM API","logger":"task.stdout"}
+{"timestamp":"2026-02-26T18:09:42.620149Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-26T18:09:42.623903Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-26T18:09:42.643431Z","level":"info","event":"Fetching circuits (offset=0, limit=100)...","logger":"task.stdout"}
+{"timestamp":"2026-02-26T18:10:04.880851Z","level":"info","event":"Fetched 78 circuits (total so far: 78/78)","logger":"task.stdout"}
+{"timestamp":"2026-02-26T18:10:04.898136Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-26T18:10:04.899169Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-26T18:10:04.900738Z","level":"info","event":"SCRAPING COMPLETE","logger":"task.stdout"}
+{"timestamp":"2026-02-26T18:10:04.901522Z","level":"info","event":"Total records: 78","logger":"task.stdout"}
+{"timestamp":"2026-02-26T18:10:04.911198Z","level":"info","event":"Unique circuits (by circuitId): 78","logger":"task.stdout"}
+{"timestamp":"2026-02-26T18:10:04.916015Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-26T18:10:04.916782Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-26T18:10:04.917662Z","level":"info","event":"Transforming API data to Silver schema...","logger":"task.stdout"}
+{"timestamp":"2026-02-26T18:10:04.919473Z","level":"info","event":"Deduplication: 78 records → 78 unique circuits","logger":"task.stdout"}
+{"timestamp":"2026-02-26T18:10:04.926739Z","level":"info","event":"Sorted by circuitId for stable circuit_id generation","logger":"task.stdout"}
+{"timestamp":"2026-02-26T18:10:04.954947Z","level":"info","event":"Transformed 78 circuits to Silver schema","logger":"task.stdout"}
+{"timestamp":"2026-02-26T18:10:04.956186Z","level":"info","event":"Source: api","logger":"task.stdout"}
+{"timestamp":"2026-02-26T18:10:04.957240Z","level":"info","event":"circuit_id range: 10001 - 10078","logger":"task.stdout"}
+{"timestamp":"2026-02-26T18:10:05.398791Z","level":"info","event":" Downloaded dimensions/dim_circuit/dim_circuit.parquet (34 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-26T18:10:05.477025Z","level":"warning","event":"The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.","category":"FutureWarning","filename":"/opt/airflow/dags/kafka_producer_pipeline.py","lineno":286,"logger":"py.warnings"}
+{"timestamp":"2026-02-26T18:10:05.583611Z","level":"info","event":"Uploaded dimensions/dim_circuit/dim_circuit.parquet (78 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-26T18:10:05.584565Z","level":"info","event":"  Silver updated: 78 total circuits","logger":"task.stdout"}
+{"timestamp":"2026-02-26T18:10:05.607384Z","level":"info","event":"<BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:29092 <connecting> [IPv4 ('172.18.0.3', 29092)]>: connecting to kafka:29092 [('172.18.0.3', 29092) IPv4]","logger":"kafka.conn","filename":"conn.py","lineno":395}
+{"timestamp":"2026-02-26T18:10:05.675503Z","level":"info","event":"<BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:29092 <checking_api_versions_recv> [IPv4 ('172.18.0.3', 29092)]>: Broker version identified as 2.6","logger":"kafka.conn","filename":"conn.py","lineno":615}
+{"timestamp":"2026-02-26T18:10:05.676570Z","level":"info","event":"<BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:29092 <connected> [IPv4 ('172.18.0.3', 29092)]>: Connection complete.","logger":"kafka.conn","filename":"conn.py","lineno":456}
+{"timestamp":"2026-02-26T18:10:05.808156Z","level":"info","event":"<BrokerConnection client_id=kafka-python-producer-1, node_id=1 host=kafka:29092 <connecting> [IPv4 ('172.18.0.3', 29092)]>: connecting to kafka:29092 [('172.18.0.3', 29092) IPv4]","logger":"kafka.conn","filename":"conn.py","lineno":395}
+{"timestamp":"2026-02-26T18:10:05.812548Z","level":"info","event":"<BrokerConnection client_id=kafka-python-producer-1, node_id=1 host=kafka:29092 <connected> [IPv4 ('172.18.0.3', 29092)]>: Connection complete.","logger":"kafka.conn","filename":"conn.py","lineno":456}
+{"timestamp":"2026-02-26T18:10:05.813076Z","level":"info","event":"<BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:29092 <connected> [IPv4 ('172.18.0.3', 29092)]>: Closing connection. ","logger":"kafka.conn","filename":"conn.py","lineno":936}
+{"timestamp":"2026-02-26T18:10:07.052338Z","level":"warning","event":"<Sender client_id=kafka-python-producer-1 transactional_id=None>: Got error produce response on topic-partition TopicPartition(topic='f1.dim.circuits', partition=0), retrying (inf attempts left). Error: <class 'kafka.errors.NotLeaderForPartitionError'>","logger":"kafka.producer.sender","filename":"sender.py","lineno":470}
+{"timestamp":"2026-02-26T18:10:08.271476Z","level":"info","event":"  Published 44 new circuits to topic 'f1.dim.circuits'","logger":"task.stdout"}
+{"timestamp":"2026-02-26T18:10:08.281916Z","level":"info","event":"<BrokerConnection client_id=kafka-python-producer-1, node_id=1 host=kafka:29092 <connected> [IPv4 ('172.18.0.3', 29092)]>: Closing connection. ","logger":"kafka.conn","filename":"conn.py","lineno":936}
+{"timestamp":"2026-02-26T18:10:08.568885Z","level":"info","event":"Done. Returned value was: {'new_count': 44}","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":216}
+{"timestamp":"2026-02-26T18:10:08.569701Z","level":"info","event":"Pushing xcom","ti":"RuntimeTaskInstance(id=UUID('019c9b20-6a85-7ab3-821c-e4db7d09e796'), task_id='scrape_publish_circuits', dag_id='kafka_producer_pipeline', run_id='scheduled__2026-02-23T08:00:00+00:00', try_number=1, dag_version_id=UUID('019c68fe-b787-7308-9d34-f0ae7dd32a19'), map_index=-1, hostname='fe5351013118', context_carrier={}, task=<Task(PythonOperator): scrape_publish_circuits>, bundle_instance=LocalDagBundle(name=dags-folder), max_tries=2, start_date=datetime.datetime(2026, 2, 26, 18, 8, 59, 914223, tzinfo=datetime.timezone.utc), end_date=None, state=<TaskInstanceState.RUNNING: 'running'>, is_mapped=False, rendered_map_index=None)","logger":"task","filename":"task_runner.py","lineno":1450}

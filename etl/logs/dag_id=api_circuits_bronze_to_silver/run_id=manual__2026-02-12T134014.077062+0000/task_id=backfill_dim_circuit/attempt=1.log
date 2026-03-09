@@ -1,0 +1,103 @@
+{"timestamp":"2026-02-12T13:40:15.877420Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-02-12T13:40:15.883731Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/api_etl/api_circuits_bronze_to_silver.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-02-12T13:40:17.443933Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-12T13:40:17.444531Z","level":"info","event":"F1 CIRCUIT BACKFILL: ERGAST API → SILVER","logger":"task.stdout"}
+{"timestamp":"2026-02-12T13:40:17.444876Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-12T13:40:17.449826Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-12T13:40:17.450134Z","level":"info","event":"[STEP 1] Scraping API...","logger":"task.stdout"}
+{"timestamp":"2026-02-12T13:40:17.450428Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-12T13:40:17.450674Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-12T13:40:17.450912Z","level":"info","event":"SCRAPING CIRCUITS FROM API: 2024-2025","logger":"task.stdout"}
+{"timestamp":"2026-02-12T13:40:17.451162Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-12T13:40:17.451414Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-12T13:40:17.451701Z","level":"info","event":"Fetching circuits for 2024...","logger":"task.stdout"}
+{"timestamp":"2026-02-12T13:40:41.282946Z","level":"info","event":"24 circuits found","logger":"task.stdout"}
+{"timestamp":"2026-02-12T13:40:41.283757Z","level":"info","event":"Fetching circuits for 2025...","logger":"task.stdout"}
+{"timestamp":"2026-02-12T13:41:03.281912Z","level":"info","event":"24 circuits found","logger":"task.stdout"}
+{"timestamp":"2026-02-12T13:41:03.287804Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-12T13:41:03.288249Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-12T13:41:03.288546Z","level":"info","event":"SCRAPING COMPLETE","logger":"task.stdout"}
+{"timestamp":"2026-02-12T13:41:03.288803Z","level":"info","event":"Total records: 48","logger":"task.stdout"}
+{"timestamp":"2026-02-12T13:41:03.289163Z","level":"info","event":"Unique constructors (by circuitId): 24","logger":"task.stdout"}
+{"timestamp":"2026-02-12T13:41:03.289395Z","level":"info","event":"Years covered: 2024-2025","logger":"task.stdout"}
+{"timestamp":"2026-02-12T13:41:03.289640Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-12T13:41:03.289925Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-12T13:41:03.290209Z","level":"info","event":"API scraping complete: 48 circuit records","logger":"task.stdout"}
+{"timestamp":"2026-02-12T13:41:03.290454Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-12T13:41:03.290669Z","level":"info","event":"[STEP 2] Transforming to Silver schema...","logger":"task.stdout"}
+{"timestamp":"2026-02-12T13:41:03.290922Z","level":"info","event":"Transforming API data to Silver schema...","logger":"task.stdout"}
+{"timestamp":"2026-02-12T13:41:03.291985Z","level":"info","event":"Deduplication: 48 records → 24 unique constructors","logger":"task.stdout"}
+{"timestamp":"2026-02-12T13:41:03.293505Z","level":"info","event":"Sorted by circuitId for stable circuit_id generation","logger":"task.stdout"}
+{"timestamp":"2026-02-12T13:41:03.301509Z","level":"info","event":"Transformed 24 circuits to Silver schema","logger":"task.stdout"}
+{"timestamp":"2026-02-12T13:41:03.301858Z","level":"info","event":"Source: api","logger":"task.stdout"}
+{"timestamp":"2026-02-12T13:41:03.302065Z","level":"info","event":"circuit_id range: 10001 - 10024","logger":"task.stdout"}
+{"timestamp":"2026-02-12T13:41:03.302307Z","level":"info","event":"Transformation complete: 24 unique constructors","logger":"task.stdout"}
+{"timestamp":"2026-02-12T13:41:03.302562Z","level":"info","event":"circuit_id range: 10001 - 10024","logger":"task.stdout"}
+{"timestamp":"2026-02-12T13:41:03.302757Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-12T13:41:03.302949Z","level":"info","event":"[STEP 3] Loading existing Silver data...","logger":"task.stdout"}
+{"timestamp":"2026-02-12T13:41:03.350791Z","level":"info","event":" Downloaded dimensions/dim_circuit/dim_circuit.parquet (34 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T13:41:03.351154Z","level":"info","event":"Loaded 34 existing circuits from Silver","logger":"task.stdout"}
+{"timestamp":"2026-02-12T13:41:03.352157Z","level":"info","event":"Existing sources: {'f1_data.csv': 34}","logger":"task.stdout"}
+{"timestamp":"2026-02-12T13:41:03.352653Z","level":"info","event":"CSV circuit_id range: 1 - 79","logger":"task.stdout"}
+{"timestamp":"2026-02-12T13:41:03.352963Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-12T13:41:03.353251Z","level":"info","event":"[STEP 4] Merging API data with existing Silver...","logger":"task.stdout"}
+{"timestamp":"2026-02-12T13:41:03.353507Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-12T13:41:03.353793Z","level":"info","event":"  Merge Configuration:","logger":"task.stdout"}
+{"timestamp":"2026-02-12T13:41:03.354051Z","level":"info","event":"Existing constructors: 34","logger":"task.stdout"}
+{"timestamp":"2026-02-12T13:41:03.354302Z","level":"info","event":"New API constructors: 24","logger":"task.stdout"}
+{"timestamp":"2026-02-12T13:41:03.354587Z","level":"info","event":"Merge key: constructor_ref (PRIMARY natural key)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T13:41:03.354824Z","level":"info","event":"CSV priority: YES (skip API for CSV constructors)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T13:41:03.355107Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-12T13:41:03.355369Z","level":"info","event":"  Current max circuit_key: 34","logger":"task.stdout"}
+{"timestamp":"2026-02-12T13:41:03.355588Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-12T13:41:03.355807Z","level":"info","event":"  Processing 24 API constructors:","logger":"task.stdout"}
+{"timestamp":"2026-02-12T13:41:03.356024Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-12T13:41:03.356277Z","level":"info","event":"SKIP: albert_park          (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T13:41:03.356538Z","level":"info","event":"SKIP: americas             (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T13:41:03.356782Z","level":"info","event":"SKIP: bahrain              (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T13:41:03.357306Z","level":"info","event":"SKIP: baku                 (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T13:41:03.357855Z","level":"info","event":"SKIP: catalunya            (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T13:41:03.358387Z","level":"info","event":"SKIP: hungaroring          (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T13:41:03.358919Z","level":"info","event":"SKIP: imola                (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T13:41:03.359510Z","level":"info","event":"SKIP: interlagos           (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T13:41:03.360034Z","level":"info","event":"SKIP: jeddah               (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T13:41:03.360614Z","level":"info","event":"SKIP: losail               (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T13:41:03.361132Z","level":"info","event":"SKIP: marina_bay           (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T13:41:03.361705Z","level":"info","event":"SKIP: miami                (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T13:41:03.362223Z","level":"info","event":"SKIP: monaco               (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T13:41:03.362855Z","level":"info","event":"SKIP: monza                (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T13:41:03.363392Z","level":"info","event":"SKIP: red_bull_ring        (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T13:41:03.363915Z","level":"info","event":"SKIP: rodriguez            (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T13:41:03.364485Z","level":"info","event":"SKIP: shanghai             (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T13:41:03.365024Z","level":"info","event":"SKIP: silverstone          (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T13:41:03.365548Z","level":"info","event":"SKIP: spa                  (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T13:41:03.366217Z","level":"info","event":"SKIP: suzuka               (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T13:41:03.366515Z","level":"info","event":"ADD: vegas                (new circuit from API, circuit_id10021)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T13:41:03.373350Z","level":"warning","event":"The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.","category":"FutureWarning","filename":"/opt/airflow/dags/api_etl/api_circuits_bronze_to_silver.py","lineno":95,"logger":"py.warnings"}
+{"timestamp":"2026-02-12T13:41:03.374485Z","level":"info","event":"SKIP: villeneuve           (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T13:41:03.374990Z","level":"info","event":"SKIP: yas_marina           (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T13:41:03.375480Z","level":"info","event":"SKIP: zandvoort            (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T13:41:03.375838Z","level":"info","event":"Merge complete: 35 total constructors","logger":"task.stdout"}
+{"timestamp":"2026-02-12T13:41:03.376135Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-12T13:41:03.376419Z","level":"info","event":"[STEP 5] Writing to Silver layer...","logger":"task.stdout"}
+{"timestamp":"2026-02-12T13:41:03.387396Z","level":"info","event":" Uploaded dimensions/dim_circuit/dim_circuit.parquet (35 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T13:41:03.387796Z","level":"info","event":"Written to: s3://f1-silver/dimensions/dim_circuit/dim_circuit.parquet","logger":"task.stdout"}
+{"timestamp":"2026-02-12T13:41:03.388110Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-12T13:41:03.388424Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-12T13:41:03.388744Z","level":"info","event":"BACKFILL SUMMARY","logger":"task.stdout"}
+{"timestamp":"2026-02-12T13:41:03.389048Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-12T13:41:03.389356Z","level":"info","event":"  Existing circuits in Silver: 34","logger":"task.stdout"}
+{"timestamp":"2026-02-12T13:41:03.389688Z","level":"info","event":"  API circuits scraped: 24","logger":"task.stdout"}
+{"timestamp":"2026-02-12T13:41:03.390035Z","level":"info","event":"  Final constructor count: 35","logger":"task.stdout"}
+{"timestamp":"2026-02-12T13:41:03.390330Z","level":"info","event":"  New constructors added: 1","logger":"task.stdout"}
+{"timestamp":"2026-02-12T13:41:03.390626Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-12T13:41:03.390854Z","level":"info","event":"  Final source breakdown:","logger":"task.stdout"}
+{"timestamp":"2026-02-12T13:41:03.391065Z","level":"info","event":"    f1_data.csv    : 34","logger":"task.stdout"}
+{"timestamp":"2026-02-12T13:41:03.391274Z","level":"info","event":"    api            : 1","logger":"task.stdout"}
+{"timestamp":"2026-02-12T13:41:03.391481Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-12T13:41:03.391698Z","level":"info","event":"  circuit_id ranges:","logger":"task.stdout"}
+{"timestamp":"2026-02-12T13:41:03.391905Z","level":"info","event":"f1_data.csv    : 1 - 79","logger":"task.stdout"}
+{"timestamp":"2026-02-12T13:41:03.392156Z","level":"info","event":"api            : 10021 - 10021","logger":"task.stdout"}
+{"timestamp":"2026-02-12T13:41:03.392390Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-12T13:41:03.405707Z","level":"info","event":"Done. Returned value was: {'existing_count': 34, 'api_scraped': 24, 'final_count': 35, 'new_circuits_added': 1}","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":216}
+{"timestamp":"2026-02-12T13:41:03.406851Z","level":"info","event":"Pushing xcom","ti":"RuntimeTaskInstance(id=UUID('019c5214-b477-7afe-a67a-b12acf2ca105'), task_id='backfill_dim_circuit', dag_id='api_circuits_bronze_to_silver', run_id='manual__2026-02-12T13:40:14.077062+00:00', try_number=1, dag_version_id=UUID('019c4cbd-edab-747e-bce6-3e306cbba436'), map_index=-1, hostname='6dc0edc1fac9', context_carrier={}, task=<Task(PythonOperator): backfill_dim_circuit>, bundle_instance=LocalDagBundle(name=dags-folder), max_tries=2, start_date=datetime.datetime(2026, 2, 12, 13, 40, 15, 253110, tzinfo=datetime.timezone.utc), end_date=None, state=<TaskInstanceState.RUNNING: 'running'>, is_mapped=False, rendered_map_index=None)","logger":"task","filename":"task_runner.py","lineno":1450}

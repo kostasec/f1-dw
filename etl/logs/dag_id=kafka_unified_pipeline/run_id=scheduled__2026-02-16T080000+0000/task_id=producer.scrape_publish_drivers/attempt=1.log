@@ -1,0 +1,33 @@
+{"timestamp":"2026-02-17T10:49:03.244904Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-02-17T10:49:03.257602Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/kafka_unified_pipeline.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-02-17T10:49:06.066852Z","level":"warning","event":"The `airflow.utils.task_group.TaskGroup` attribute is deprecated. Please use `'airflow.sdk.TaskGroup'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/dags/kafka_unified_pipeline.py","lineno":36,"logger":"py.warnings"}
+{"timestamp":"2026-02-17T10:49:06.067206Z","level":"warning","event":"The `airflow.operators.trigger_dagrun.TriggerDagRunOperator` attribute is deprecated. Please use `'airflow.providers.standard.operators.trigger_dagrun.TriggerDagRunOperator'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/dags/kafka_producer_pipeline.py","lineno":35,"logger":"py.warnings"}
+{"timestamp":"2026-02-17T10:49:06.182351Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-17T10:49:06.183002Z","level":"info","event":"PRODUCER: dim_driver  (2026+)","logger":"task.stdout"}
+{"timestamp":"2026-02-17T10:49:06.183491Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-17T10:49:06.184828Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-17T10:49:06.190226Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-17T10:49:06.190808Z","level":"info","event":"SCRAPING DRIVERS FROM ERGAST API: 2026-2026","logger":"task.stdout"}
+{"timestamp":"2026-02-17T10:49:06.191292Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-17T10:49:06.191769Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-17T10:49:06.192304Z","level":"info","event":"Fetching drivers for 2026...","logger":"task.stdout"}
+{"timestamp":"2026-02-17T10:49:27.366615Z","level":"info","event":"22 drivers found","logger":"task.stdout"}
+{"timestamp":"2026-02-17T10:49:27.376280Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-17T10:49:27.378207Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-17T10:49:27.379727Z","level":"info","event":"SCRAPING COMPLETE","logger":"task.stdout"}
+{"timestamp":"2026-02-17T10:49:27.380599Z","level":"info","event":"Total records: 22","logger":"task.stdout"}
+{"timestamp":"2026-02-17T10:49:27.398253Z","level":"info","event":"Unique drivers (by driverId): 22","logger":"task.stdout"}
+{"timestamp":"2026-02-17T10:49:27.398973Z","level":"info","event":"Years covered: 2026-2026","logger":"task.stdout"}
+{"timestamp":"2026-02-17T10:49:27.399517Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-17T10:49:27.401485Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-17T10:49:27.402128Z","level":"info","event":"Transforming API data to Silver schema...","logger":"task.stdout"}
+{"timestamp":"2026-02-17T10:49:27.402967Z","level":"info","event":"Deduplication: 22 records → 22 unique drivers","logger":"task.stdout"}
+{"timestamp":"2026-02-17T10:49:27.407673Z","level":"info","event":"Sorted by driverId (alphabetically) for stable driver_id generation","logger":"task.stdout"}
+{"timestamp":"2026-02-17T10:49:27.420863Z","level":"info","event":"  Generated driver_id: 10001 - 10022","logger":"task.stdout"}
+{"timestamp":"2026-02-17T10:49:27.464742Z","level":"info","event":"Transformed 22 drivers to Silver schema","logger":"task.stdout"}
+{"timestamp":"2026-02-17T10:49:27.470278Z","level":"info","event":"Source: api","logger":"task.stdout"}
+{"timestamp":"2026-02-17T10:49:27.470947Z","level":"info","event":"driver_id range: 10001 - 10022","logger":"task.stdout"}
+{"timestamp":"2026-02-17T10:49:28.216379Z","level":"info","event":" Downloaded dimensions/dim_driver/dim_driver.parquet (72 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-17T10:49:28.249863Z","level":"info","event":"  No new drivers found this week","logger":"task.stdout"}
+{"timestamp":"2026-02-17T10:49:28.977992Z","level":"info","event":"Done. Returned value was: {'new_count': 0}","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":216}
+{"timestamp":"2026-02-17T10:49:28.984216Z","level":"info","event":"Pushing xcom","ti":"RuntimeTaskInstance(id=UUID('019c6b37-a751-73dd-82fd-58818fb1aefa'), task_id='producer.scrape_publish_drivers', dag_id='kafka_unified_pipeline', run_id='scheduled__2026-02-16T08:00:00+00:00', try_number=1, dag_version_id=UUID('019c6b37-a502-789c-bd91-33ab180ff33b'), map_index=-1, hostname='9ffd7d06cb04', context_carrier={}, task=<Task(PythonOperator): producer.scrape_publish_drivers>, bundle_instance=LocalDagBundle(name=dags-folder), max_tries=2, start_date=datetime.datetime(2026, 2, 17, 10, 48, 57, 25099, tzinfo=datetime.timezone.utc), end_date=None, state=<TaskInstanceState.RUNNING: 'running'>, is_mapped=False, rendered_map_index=None)","logger":"task","filename":"task_runner.py","lineno":1450}

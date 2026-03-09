@@ -1,0 +1,25 @@
+{"timestamp":"2026-02-16T21:26:34.710971Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-02-16T21:26:34.715330Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/kafka_producer_pipeline.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-02-16T21:26:38.232328Z","level":"warning","event":"The `airflow.operators.trigger_dagrun.TriggerDagRunOperator` attribute is deprecated. Please use `'airflow.providers.standard.operators.trigger_dagrun.TriggerDagRunOperator'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/dags/kafka_producer_pipeline.py","lineno":35,"logger":"py.warnings"}
+{"timestamp":"2026-02-16T21:26:38.413839Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-16T21:26:38.420586Z","level":"info","event":"PRODUCER: fact_race_results  (2026+)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T21:26:38.423612Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-16T21:26:38.427313Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T21:26:38.429653Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-16T21:26:38.431408Z","level":"info","event":"SCRAPING RACE RESULTS FROM ERGAST API: 2026-2026","logger":"task.stdout"}
+{"timestamp":"2026-02-16T21:26:38.432157Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-16T21:26:38.432906Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T21:26:38.436145Z","level":"info","event":"Fetching race results for 2026...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T21:27:01.640422Z","level":"info","event":"0 results found across 0 races","logger":"task.stdout"}
+{"timestamp":"2026-02-16T21:27:01.645171Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T21:27:01.645832Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-16T21:27:01.646528Z","level":"info","event":"SCRAPING COMPLETE","logger":"task.stdout"}
+{"timestamp":"2026-02-16T21:27:01.647230Z","level":"info","event":"Total records: 0","logger":"task.stdout"}
+{"timestamp":"2026-02-16T21:27:01.648109Z","level":"info","event":"Years covered: 2026-2026","logger":"task.stdout"}
+{"timestamp":"2026-02-16T21:27:01.648866Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-16T21:27:01.649368Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T21:27:01.649780Z","level":"info","event":"Transforming API data to Silver schema...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T21:27:01.650348Z","level":"info","event":"No data found - returning empty DataFrame with schema: ['result_id', 'driver_ref', 'constructor_ref', 'race_year', 'race_round', 'driver_number', 'grid', 'position', 'position_text', 'position_order', 'points', 'number_of_laps', 'race_duration_hours', 'race_duration_milliseconds', 'fastest_lap', 'rank', 'fastest_lap_minutes', 'fastest_lap_speed', 'status', 'year', 'source', 'created_at']","logger":"task.stdout"}
+{"timestamp":"2026-02-16T21:27:01.651433Z","level":"info","event":"  No results data found","logger":"task.stdout"}
+{"timestamp":"2026-02-16T21:27:01.682176Z","level":"info","event":"Done. Returned value was: {'new_count': 0}","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":216}
+{"timestamp":"2026-02-16T21:27:01.683023Z","level":"info","event":"Pushing xcom","ti":"RuntimeTaskInstance(id=UUID('019c6858-3a47-7296-b403-8e6a22a68a70'), task_id='scrape_publish_results', dag_id='kafka_producer_pipeline', run_id='manual__2026-02-16T21:25:37+00:00', try_number=1, dag_version_id=UUID('019c6853-1109-7cd6-a276-8561d0e6b26e'), map_index=-1, hostname='9ffd7d06cb04', context_carrier={}, task=<Task(PythonOperator): scrape_publish_results>, bundle_instance=LocalDagBundle(name=dags-folder), max_tries=2, start_date=datetime.datetime(2026, 2, 16, 21, 26, 34, 352809, tzinfo=datetime.timezone.utc), end_date=None, state=<TaskInstanceState.RUNNING: 'running'>, is_mapped=False, rendered_map_index=None)","logger":"task","filename":"task_runner.py","lineno":1450}

@@ -1,0 +1,35 @@
+{"timestamp":"2026-02-15T00:04:51.352985Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-02-15T00:04:51.371225Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/csv_bronze_to_silver.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-02-15T00:04:57.858913Z","level":"info","event":"TRANSFORM: fact_race_results → Silver (Parquet with surrogate keys)","logger":"task.stdout"}
+{"timestamp":"2026-02-15T00:05:15.261288Z","level":"info","event":" Downloaded raw_data/f1_data.parquet (518417 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-15T00:05:15.434904Z","level":"info","event":" Downloaded dimensions/dim_driver/dim_driver.parquet (65 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-15T00:05:15.513102Z","level":"info","event":" Downloaded dimensions/dim_constructor/dim_constructor.parquet (20 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-15T00:05:15.606264Z","level":"info","event":" Downloaded dimensions/dim_race/dim_race.parquet (232 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-15T00:05:15.958955Z","level":"info","event":" Downloaded dimensions/dim_time/dim_time.parquet (6940 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-15T00:05:20.054676Z","level":"info","event":"Transformed 4,502 race results with surrogate keys","logger":"task.stdout"}
+{"timestamp":"2026-02-15T00:05:20.134742Z","level":"info","event":"Uploaded facts/fact_race_results/year=2012/data.parquet (447 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-15T00:05:20.139026Z","level":"info","event":"Year 2012: 447 rows","logger":"task.stdout"}
+{"timestamp":"2026-02-15T00:05:20.182639Z","level":"info","event":"Uploaded facts/fact_race_results/year=2013/data.parquet (401 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-15T00:05:20.183549Z","level":"info","event":"Year 2013: 401 rows","logger":"task.stdout"}
+{"timestamp":"2026-02-15T00:05:20.283969Z","level":"info","event":"Uploaded facts/fact_race_results/year=2014/data.parquet (378 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-15T00:05:20.285160Z","level":"info","event":"Year 2014: 378 rows","logger":"task.stdout"}
+{"timestamp":"2026-02-15T00:05:20.363747Z","level":"info","event":"Uploaded facts/fact_race_results/year=2015/data.parquet (347 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-15T00:05:20.366741Z","level":"info","event":"Year 2015: 347 rows","logger":"task.stdout"}
+{"timestamp":"2026-02-15T00:05:20.466694Z","level":"info","event":"Uploaded facts/fact_race_results/year=2016/data.parquet (431 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-15T00:05:20.467858Z","level":"info","event":"Year 2016: 431 rows","logger":"task.stdout"}
+{"timestamp":"2026-02-15T00:05:20.516414Z","level":"info","event":"Uploaded facts/fact_race_results/year=2017/data.parquet (357 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-15T00:05:20.517373Z","level":"info","event":"Year 2017: 357 rows","logger":"task.stdout"}
+{"timestamp":"2026-02-15T00:05:20.567739Z","level":"info","event":"Uploaded facts/fact_race_results/year=2018/data.parquet (382 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-15T00:05:20.568914Z","level":"info","event":"Year 2018: 382 rows","logger":"task.stdout"}
+{"timestamp":"2026-02-15T00:05:20.634501Z","level":"info","event":"Uploaded facts/fact_race_results/year=2019/data.parquet (409 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-15T00:05:20.639002Z","level":"info","event":"Year 2019: 409 rows","logger":"task.stdout"}
+{"timestamp":"2026-02-15T00:05:20.694643Z","level":"info","event":"Uploaded facts/fact_race_results/year=2020/data.parquet (313 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-15T00:05:20.695427Z","level":"info","event":"Year 2020: 313 rows","logger":"task.stdout"}
+{"timestamp":"2026-02-15T00:05:20.743884Z","level":"info","event":"Uploaded facts/fact_race_results/year=2021/data.parquet (397 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-15T00:05:20.744857Z","level":"info","event":"Year 2021: 397 rows","logger":"task.stdout"}
+{"timestamp":"2026-02-15T00:05:20.853666Z","level":"info","event":"Uploaded facts/fact_race_results/year=2022/data.parquet (410 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-15T00:05:20.855321Z","level":"info","event":"Year 2022: 410 rows","logger":"task.stdout"}
+{"timestamp":"2026-02-15T00:05:20.990382Z","level":"info","event":"Uploaded facts/fact_race_results/year=2023/data.parquet (230 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-15T00:05:20.991395Z","level":"info","event":"Year 2023: 230 rows","logger":"task.stdout"}
+{"timestamp":"2026-02-15T00:05:21.598654Z","level":"info","event":"Done. Returned value was: 4502","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":216}
+{"timestamp":"2026-02-15T00:05:21.599515Z","level":"info","event":"Pushing xcom","ti":"RuntimeTaskInstance(id=UUID('019c5e9b-46a7-7f8d-97c2-10157a069ead'), task_id='transform_fact_race_results', dag_id='csv_bronze_to_silver', run_id='manual__2026-02-15T00:02:39.553096+00:00', try_number=1, dag_version_id=UUID('019c5e3a-b3ff-7da6-aa0a-f0e5d22fad78'), map_index=-1, hostname='e328d6f6311a', context_carrier={}, task=<Task(PythonOperator): transform_fact_race_results>, bundle_instance=LocalDagBundle(name=dags-folder), max_tries=1, start_date=datetime.datetime(2026, 2, 15, 0, 4, 50, 878058, tzinfo=datetime.timezone.utc), end_date=None, state=<TaskInstanceState.RUNNING: 'running'>, is_mapped=False, rendered_map_index=None)","logger":"task","filename":"task_runner.py","lineno":1450}

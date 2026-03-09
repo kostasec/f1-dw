@@ -1,0 +1,427 @@
+{"timestamp":"2026-02-09T12:55:58.642637Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-02-09T12:55:58.643580Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/api_etl/api_races_bronze_to_silver.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-02-09T12:55:58.846150Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2026-02-09T12:55:58.846664Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2026-02-09T12:55:58.846924Z","level":"info","event":"Current task name:backfill_dim_race","logger":"task.stdout"}
+{"timestamp":"2026-02-09T12:55:58.847146Z","level":"info","event":"Dag name:api_races_bronze_to_silver","logger":"task.stdout"}
+{"timestamp":"2026-02-09T12:55:58.848752Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-09T12:55:58.849115Z","level":"info","event":"F1 RACE BACKFILL: ERGAST API -> SILVER","logger":"task.stdout"}
+{"timestamp":"2026-02-09T12:55:58.849356Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-09T12:55:58.849850Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-09T12:55:58.850248Z","level":"info","event":"[STEP 1] Scraping API...","logger":"task.stdout"}
+{"timestamp":"2026-02-09T12:55:58.850506Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-09T12:55:58.850733Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-09T12:55:58.850959Z","level":"info","event":"SCRAPING RACES FROM ERGAST API: 2011-2025","logger":"task.stdout"}
+{"timestamp":"2026-02-09T12:55:58.851202Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-09T12:55:58.851405Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-09T12:55:58.851597Z","level":"info","event":"Fetching races for 2011...","logger":"task.stdout"}
+{"timestamp":"2026-02-09T12:56:01.855370Z","level":"info","event":"Rate limit hit! Waiting 32s before retry 1/6...","logger":"task.stdout"}
+{"timestamp":"2026-02-09T12:56:34.395822Z","level":"info","event":"Rate limit hit! Waiting 61s before retry 2/6...","logger":"task.stdout"}
+{"timestamp":"2026-02-09T12:57:56.820944Z","level":"info","event":"19 races found","logger":"task.stdout"}
+{"timestamp":"2026-02-09T12:57:56.821423Z","level":"info","event":"Fetching races for 2012...","logger":"task.stdout"}
+{"timestamp":"2026-02-09T12:58:19.724299Z","level":"info","event":"20 races found","logger":"task.stdout"}
+{"timestamp":"2026-02-09T12:58:19.724655Z","level":"info","event":"Fetching races for 2013...","logger":"task.stdout"}
+{"timestamp":"2026-02-09T12:58:41.196876Z","level":"info","event":"19 races found","logger":"task.stdout"}
+{"timestamp":"2026-02-09T12:58:41.197256Z","level":"info","event":"Fetching races for 2014...","logger":"task.stdout"}
+{"timestamp":"2026-02-09T12:59:03.834855Z","level":"info","event":"19 races found","logger":"task.stdout"}
+{"timestamp":"2026-02-09T12:59:03.835363Z","level":"info","event":"Fetching races for 2015...","logger":"task.stdout"}
+{"timestamp":"2026-02-09T12:59:26.742207Z","level":"info","event":"19 races found","logger":"task.stdout"}
+{"timestamp":"2026-02-09T12:59:26.742605Z","level":"info","event":"Fetching races for 2016...","logger":"task.stdout"}
+{"timestamp":"2026-02-09T12:59:47.651678Z","level":"info","event":"21 races found","logger":"task.stdout"}
+{"timestamp":"2026-02-09T12:59:47.652065Z","level":"info","event":"Fetching races for 2017...","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:00:08.200257Z","level":"info","event":"20 races found","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:00:08.200615Z","level":"info","event":"Fetching races for 2018...","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:00:31.160751Z","level":"info","event":"21 races found","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:00:31.161371Z","level":"info","event":"Fetching races for 2019...","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:00:53.350962Z","level":"info","event":"21 races found","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:00:53.354192Z","level":"info","event":"Fetching races for 2020...","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:01:16.022627Z","level":"info","event":"17 races found","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:01:16.027538Z","level":"info","event":"Fetching races for 2021...","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:01:38.405642Z","level":"info","event":"22 races found","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:01:38.405993Z","level":"info","event":"Fetching races for 2022...","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:02:02.116290Z","level":"info","event":"22 races found","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:02:02.116774Z","level":"info","event":"Fetching races for 2023...","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:02:24.623961Z","level":"info","event":"22 races found","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:02:24.624326Z","level":"info","event":"Fetching races for 2024...","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:02:47.022585Z","level":"info","event":"24 races found","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:02:47.022976Z","level":"info","event":"Fetching races for 2025...","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.355755Z","level":"info","event":"24 races found","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.372130Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.379817Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.384732Z","level":"info","event":"SCRAPING COMPLETE","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.385895Z","level":"info","event":"Total records: 310","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.386722Z","level":"info","event":"Years covered: 2011-2025","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.387043Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.387303Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.387617Z","level":"info","event":"API scraping complete: 310 race records","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.388215Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.388484Z","level":"info","event":"[STEP 2] Transforming to Silver schema...","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.388750Z","level":"info","event":"Transforming API data to Silver schema...","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.468466Z","level":"info","event":"Sorted by season + round for stable race_id generation","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.470069Z","level":"info","event":"  Generated race_id: 10001 - 10310","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.487427Z","level":"info","event":"Transformed 310 races to Silver schema","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.487737Z","level":"info","event":"Source: api","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.487950Z","level":"info","event":"race_id range: 10001 - 10310","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.488194Z","level":"info","event":"Transformation complete: 310 unique races","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.488376Z","level":"info","event":"race_id range: 10001 - 10310","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.488601Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.488806Z","level":"info","event":"[STEP 3] Loading dim_circuit for FK resolution...","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.519783Z","level":"info","event":" Downloaded dimensions/dim_circuit/dim_circuit.parquet (35 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.521592Z","level":"info","event":"Loaded 35 circuits from Silver","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.522064Z","level":"info","event":"Created circuit_ref -> circuit_key lookup (35 entries)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.522351Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.522585Z","level":"info","event":"[STEP 4] Resolving circuit_key FK...","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.523417Z","level":"info","event":"All 310 races resolved successfully","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.524442Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.524880Z","level":"info","event":"[STEP 5] Loading existing Silver data...","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.527822Z","level":"info","event":" Downloaded dimensions/dim_race/dim_race.parquet (232 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.528505Z","level":"info","event":"Loaded 232 existing races from Silver","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.528788Z","level":"info","event":"Existing sources: {'f1_data.csv': 232}","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.529001Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.529278Z","level":"info","event":"[STEP 6] Merging API data with existing Silver...","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.529569Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.529811Z","level":"info","event":"  Merge Configuration:","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.529992Z","level":"info","event":"Existing races: 232","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.530162Z","level":"info","event":"New API races: 310","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.530327Z","level":"info","event":"Merge key: race_year + race_round (COMPOSITE natural key)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.530493Z","level":"info","event":"CSV priority: YES (skip API for CSV races)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.530655Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.530817Z","level":"info","event":"  Current max race_key: 232","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.530979Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.531149Z","level":"info","event":"  Processing 310 API races:","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.531321Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.531546Z","level":"info","event":"ADD: 2011-R1 Australian Grand Prix  (new race from API, race_id=10001)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.532756Z","level":"info","event":"ADD: 2011-R10 German Grand Prix     (new race from API, race_id=10002)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.535251Z","level":"info","event":"ADD: 2011-R11 Hungarian Grand Prix  (new race from API, race_id=10003)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.537589Z","level":"info","event":"ADD: 2011-R12 Belgian Grand Prix    (new race from API, race_id=10004)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.540228Z","level":"info","event":"ADD: 2011-R13 Italian Grand Prix    (new race from API, race_id=10005)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.542506Z","level":"info","event":"ADD: 2011-R14 Singapore Grand Prix  (new race from API, race_id=10006)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.544823Z","level":"info","event":"ADD: 2011-R15 Japanese Grand Prix   (new race from API, race_id=10007)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.547040Z","level":"info","event":"ADD: 2011-R16 Korean Grand Prix     (new race from API, race_id=10008)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.550349Z","level":"info","event":"ADD: 2011-R17 Indian Grand Prix     (new race from API, race_id=10009)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.552840Z","level":"info","event":"ADD: 2011-R18 Abu Dhabi Grand Prix  (new race from API, race_id=10010)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.555317Z","level":"info","event":"ADD: 2011-R19 Brazilian Grand Prix  (new race from API, race_id=10011)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.557717Z","level":"info","event":"ADD: 2011-R2 Malaysian Grand Prix   (new race from API, race_id=10012)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.560194Z","level":"info","event":"ADD: 2011-R3 Chinese Grand Prix     (new race from API, race_id=10013)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.562665Z","level":"info","event":"ADD: 2011-R4 Turkish Grand Prix     (new race from API, race_id=10014)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.565243Z","level":"info","event":"ADD: 2011-R5 Spanish Grand Prix     (new race from API, race_id=10015)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.569354Z","level":"info","event":"ADD: 2011-R6 Monaco Grand Prix      (new race from API, race_id=10016)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.571901Z","level":"info","event":"ADD: 2011-R7 Canadian Grand Prix    (new race from API, race_id=10017)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.574321Z","level":"info","event":"ADD: 2011-R8 European Grand Prix    (new race from API, race_id=10018)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.576854Z","level":"info","event":"ADD: 2011-R9 British Grand Prix     (new race from API, race_id=10019)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.580047Z","level":"info","event":"UPDATE: 2012-R1 Australian Grand Prix  (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.585286Z","level":"info","event":"UPDATE: 2012-R10 German Grand Prix     (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.590657Z","level":"info","event":"UPDATE: 2012-R11 Hungarian Grand Prix  (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.595790Z","level":"info","event":"UPDATE: 2012-R12 Belgian Grand Prix    (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.606465Z","level":"info","event":"UPDATE: 2012-R13 Italian Grand Prix    (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.610344Z","level":"info","event":"UPDATE: 2012-R14 Singapore Grand Prix  (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.613940Z","level":"info","event":"UPDATE: 2012-R15 Japanese Grand Prix   (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.618407Z","level":"info","event":"UPDATE: 2012-R16 Korean Grand Prix     (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.622119Z","level":"info","event":"UPDATE: 2012-R17 Indian Grand Prix     (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.625567Z","level":"info","event":"UPDATE: 2012-R18 Abu Dhabi Grand Prix  (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.629417Z","level":"info","event":"UPDATE: 2012-R19 United States Grand Prix (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.633239Z","level":"info","event":"UPDATE: 2012-R2 Malaysian Grand Prix   (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.636923Z","level":"info","event":"UPDATE: 2012-R20 Brazilian Grand Prix  (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.640396Z","level":"info","event":"UPDATE: 2012-R3 Chinese Grand Prix     (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.645008Z","level":"info","event":"UPDATE: 2012-R4 Bahrain Grand Prix     (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.648514Z","level":"info","event":"UPDATE: 2012-R5 Spanish Grand Prix     (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.652759Z","level":"info","event":"UPDATE: 2012-R6 Monaco Grand Prix      (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.656513Z","level":"info","event":"UPDATE: 2012-R7 Canadian Grand Prix    (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.660278Z","level":"info","event":"UPDATE: 2012-R8 European Grand Prix    (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.663757Z","level":"info","event":"UPDATE: 2012-R9 British Grand Prix     (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.667833Z","level":"info","event":"UPDATE: 2013-R1 Australian Grand Prix  (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.671462Z","level":"info","event":"UPDATE: 2013-R10 Hungarian Grand Prix  (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.675040Z","level":"info","event":"UPDATE: 2013-R11 Belgian Grand Prix    (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.678369Z","level":"info","event":"UPDATE: 2013-R12 Italian Grand Prix    (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.681832Z","level":"info","event":"UPDATE: 2013-R13 Singapore Grand Prix  (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.685858Z","level":"info","event":"UPDATE: 2013-R14 Korean Grand Prix     (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.689482Z","level":"info","event":"UPDATE: 2013-R15 Japanese Grand Prix   (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.693088Z","level":"info","event":"UPDATE: 2013-R16 Indian Grand Prix     (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.696455Z","level":"info","event":"UPDATE: 2013-R17 Abu Dhabi Grand Prix  (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.700054Z","level":"info","event":"UPDATE: 2013-R18 United States Grand Prix (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.703515Z","level":"info","event":"UPDATE: 2013-R19 Brazilian Grand Prix  (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.706963Z","level":"info","event":"UPDATE: 2013-R2 Malaysian Grand Prix   (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.710669Z","level":"info","event":"UPDATE: 2013-R3 Chinese Grand Prix     (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.714069Z","level":"info","event":"UPDATE: 2013-R4 Bahrain Grand Prix     (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.717682Z","level":"info","event":"UPDATE: 2013-R5 Spanish Grand Prix     (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.721356Z","level":"info","event":"UPDATE: 2013-R6 Monaco Grand Prix      (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.724808Z","level":"info","event":"UPDATE: 2013-R7 Canadian Grand Prix    (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.728527Z","level":"info","event":"UPDATE: 2013-R8 British Grand Prix     (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.732658Z","level":"info","event":"UPDATE: 2013-R9 German Grand Prix      (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.736513Z","level":"info","event":"UPDATE: 2014-R1 Australian Grand Prix  (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.740201Z","level":"info","event":"UPDATE: 2014-R10 German Grand Prix     (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.743943Z","level":"info","event":"UPDATE: 2014-R11 Hungarian Grand Prix  (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.747410Z","level":"info","event":"UPDATE: 2014-R12 Belgian Grand Prix    (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.751391Z","level":"info","event":"UPDATE: 2014-R13 Italian Grand Prix    (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.754803Z","level":"info","event":"UPDATE: 2014-R14 Singapore Grand Prix  (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.758201Z","level":"info","event":"UPDATE: 2014-R15 Japanese Grand Prix   (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.761572Z","level":"info","event":"UPDATE: 2014-R16 Russian Grand Prix    (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.765081Z","level":"info","event":"UPDATE: 2014-R17 United States Grand Prix (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.768789Z","level":"info","event":"UPDATE: 2014-R18 Brazilian Grand Prix  (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.772489Z","level":"info","event":"UPDATE: 2014-R19 Abu Dhabi Grand Prix  (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.775914Z","level":"info","event":"UPDATE: 2014-R2 Malaysian Grand Prix   (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.779534Z","level":"info","event":"UPDATE: 2014-R3 Bahrain Grand Prix     (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.783293Z","level":"info","event":"UPDATE: 2014-R4 Chinese Grand Prix     (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.787187Z","level":"info","event":"UPDATE: 2014-R5 Spanish Grand Prix     (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.791214Z","level":"info","event":"UPDATE: 2014-R6 Monaco Grand Prix      (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.794849Z","level":"info","event":"UPDATE: 2014-R7 Canadian Grand Prix    (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.798570Z","level":"info","event":"UPDATE: 2014-R8 Austrian Grand Prix    (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.802500Z","level":"info","event":"UPDATE: 2014-R9 British Grand Prix     (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.805997Z","level":"info","event":"UPDATE: 2015-R1 Australian Grand Prix  (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.809444Z","level":"info","event":"UPDATE: 2015-R10 Hungarian Grand Prix  (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.813864Z","level":"info","event":"UPDATE: 2015-R11 Belgian Grand Prix    (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.817823Z","level":"info","event":"UPDATE: 2015-R12 Italian Grand Prix    (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.821604Z","level":"info","event":"UPDATE: 2015-R13 Singapore Grand Prix  (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.825374Z","level":"info","event":"UPDATE: 2015-R14 Japanese Grand Prix   (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.829378Z","level":"info","event":"UPDATE: 2015-R15 Russian Grand Prix    (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.833709Z","level":"info","event":"UPDATE: 2015-R16 United States Grand Prix (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.837316Z","level":"info","event":"UPDATE: 2015-R17 Mexican Grand Prix    (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.840997Z","level":"info","event":"UPDATE: 2015-R18 Brazilian Grand Prix  (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.844971Z","level":"info","event":"UPDATE: 2015-R19 Abu Dhabi Grand Prix  (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.848451Z","level":"info","event":"UPDATE: 2015-R2 Malaysian Grand Prix   (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.853082Z","level":"info","event":"UPDATE: 2015-R3 Chinese Grand Prix     (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.858046Z","level":"info","event":"UPDATE: 2015-R4 Bahrain Grand Prix     (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.862045Z","level":"info","event":"UPDATE: 2015-R5 Spanish Grand Prix     (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.866628Z","level":"info","event":"UPDATE: 2015-R6 Monaco Grand Prix      (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.870778Z","level":"info","event":"UPDATE: 2015-R7 Canadian Grand Prix    (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.875030Z","level":"info","event":"UPDATE: 2015-R8 Austrian Grand Prix    (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.878874Z","level":"info","event":"UPDATE: 2015-R9 British Grand Prix     (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.882737Z","level":"info","event":"UPDATE: 2016-R1 Australian Grand Prix  (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.887005Z","level":"info","event":"UPDATE: 2016-R10 British Grand Prix    (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.890837Z","level":"info","event":"UPDATE: 2016-R11 Hungarian Grand Prix  (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.894931Z","level":"info","event":"UPDATE: 2016-R12 German Grand Prix     (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.898671Z","level":"info","event":"UPDATE: 2016-R13 Belgian Grand Prix    (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.903337Z","level":"info","event":"UPDATE: 2016-R14 Italian Grand Prix    (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.906853Z","level":"info","event":"UPDATE: 2016-R15 Singapore Grand Prix  (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.910287Z","level":"info","event":"UPDATE: 2016-R16 Malaysian Grand Prix  (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.913895Z","level":"info","event":"UPDATE: 2016-R17 Japanese Grand Prix   (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.920675Z","level":"info","event":"UPDATE: 2016-R18 United States Grand Prix (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.924282Z","level":"info","event":"UPDATE: 2016-R19 Mexican Grand Prix    (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.927670Z","level":"info","event":"UPDATE: 2016-R2 Bahrain Grand Prix     (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.931309Z","level":"info","event":"UPDATE: 2016-R20 Brazilian Grand Prix  (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.938303Z","level":"info","event":"UPDATE: 2016-R21 Abu Dhabi Grand Prix  (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.941859Z","level":"info","event":"UPDATE: 2016-R3 Chinese Grand Prix     (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.945258Z","level":"info","event":"UPDATE: 2016-R4 Russian Grand Prix     (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.948651Z","level":"info","event":"UPDATE: 2016-R5 Spanish Grand Prix     (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.956741Z","level":"info","event":"UPDATE: 2016-R6 Monaco Grand Prix      (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.960753Z","level":"info","event":"UPDATE: 2016-R7 Canadian Grand Prix    (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.964382Z","level":"info","event":"UPDATE: 2016-R8 European Grand Prix    (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.971258Z","level":"info","event":"UPDATE: 2016-R9 Austrian Grand Prix    (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.974658Z","level":"info","event":"UPDATE: 2017-R1 Australian Grand Prix  (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.978116Z","level":"info","event":"UPDATE: 2017-R10 British Grand Prix    (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.981700Z","level":"info","event":"UPDATE: 2017-R11 Hungarian Grand Prix  (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.986277Z","level":"info","event":"UPDATE: 2017-R12 Belgian Grand Prix    (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.989967Z","level":"info","event":"UPDATE: 2017-R13 Italian Grand Prix    (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.993411Z","level":"info","event":"UPDATE: 2017-R14 Singapore Grand Prix  (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:08.997186Z","level":"info","event":"UPDATE: 2017-R15 Malaysian Grand Prix  (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.001524Z","level":"info","event":"UPDATE: 2017-R16 Japanese Grand Prix   (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.005559Z","level":"info","event":"UPDATE: 2017-R17 United States Grand Prix (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.009332Z","level":"info","event":"UPDATE: 2017-R18 Mexican Grand Prix    (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.013121Z","level":"info","event":"UPDATE: 2017-R19 Brazilian Grand Prix  (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.017409Z","level":"info","event":"UPDATE: 2017-R2 Chinese Grand Prix     (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.021159Z","level":"info","event":"UPDATE: 2017-R20 Abu Dhabi Grand Prix  (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.024505Z","level":"info","event":"UPDATE: 2017-R3 Bahrain Grand Prix     (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.028152Z","level":"info","event":"UPDATE: 2017-R4 Russian Grand Prix     (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.032140Z","level":"info","event":"UPDATE: 2017-R5 Spanish Grand Prix     (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.037673Z","level":"info","event":"UPDATE: 2017-R6 Monaco Grand Prix      (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.041106Z","level":"info","event":"UPDATE: 2017-R7 Canadian Grand Prix    (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.044457Z","level":"info","event":"UPDATE: 2017-R8 Azerbaijan Grand Prix  (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.047975Z","level":"info","event":"UPDATE: 2017-R9 Austrian Grand Prix    (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.053132Z","level":"info","event":"UPDATE: 2018-R1 Australian Grand Prix  (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.056510Z","level":"info","event":"UPDATE: 2018-R10 British Grand Prix    (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.059830Z","level":"info","event":"UPDATE: 2018-R11 German Grand Prix     (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.063169Z","level":"info","event":"UPDATE: 2018-R12 Hungarian Grand Prix  (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.068187Z","level":"info","event":"UPDATE: 2018-R13 Belgian Grand Prix    (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.072026Z","level":"info","event":"UPDATE: 2018-R14 Italian Grand Prix    (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.075462Z","level":"info","event":"UPDATE: 2018-R15 Singapore Grand Prix  (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.079173Z","level":"info","event":"UPDATE: 2018-R16 Russian Grand Prix    (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.084555Z","level":"info","event":"UPDATE: 2018-R17 Japanese Grand Prix   (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.089136Z","level":"info","event":"UPDATE: 2018-R18 United States Grand Prix (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.092601Z","level":"info","event":"UPDATE: 2018-R19 Mexican Grand Prix    (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.096460Z","level":"info","event":"UPDATE: 2018-R2 Bahrain Grand Prix     (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.101523Z","level":"info","event":"UPDATE: 2018-R20 Brazilian Grand Prix  (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.105160Z","level":"info","event":"UPDATE: 2018-R21 Abu Dhabi Grand Prix  (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.108547Z","level":"info","event":"UPDATE: 2018-R3 Chinese Grand Prix     (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.112035Z","level":"info","event":"UPDATE: 2018-R4 Azerbaijan Grand Prix  (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.116155Z","level":"info","event":"UPDATE: 2018-R5 Spanish Grand Prix     (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.125905Z","level":"info","event":"UPDATE: 2018-R6 Monaco Grand Prix      (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.129455Z","level":"info","event":"UPDATE: 2018-R7 Canadian Grand Prix    (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.133580Z","level":"info","event":"UPDATE: 2018-R8 French Grand Prix      (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.137472Z","level":"info","event":"UPDATE: 2018-R9 Austrian Grand Prix    (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.141535Z","level":"info","event":"UPDATE: 2019-R1 Australian Grand Prix  (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.144941Z","level":"info","event":"UPDATE: 2019-R10 British Grand Prix    (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.148531Z","level":"info","event":"UPDATE: 2019-R11 German Grand Prix     (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.152989Z","level":"info","event":"UPDATE: 2019-R12 Hungarian Grand Prix  (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.157334Z","level":"info","event":"UPDATE: 2019-R13 Belgian Grand Prix    (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.161123Z","level":"info","event":"UPDATE: 2019-R14 Italian Grand Prix    (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.164898Z","level":"info","event":"UPDATE: 2019-R15 Singapore Grand Prix  (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.168796Z","level":"info","event":"UPDATE: 2019-R16 Russian Grand Prix    (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.172384Z","level":"info","event":"UPDATE: 2019-R17 Japanese Grand Prix   (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.175825Z","level":"info","event":"UPDATE: 2019-R18 Mexican Grand Prix    (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.179490Z","level":"info","event":"UPDATE: 2019-R19 United States Grand Prix (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.183346Z","level":"info","event":"UPDATE: 2019-R2 Bahrain Grand Prix     (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.187319Z","level":"info","event":"UPDATE: 2019-R20 Brazilian Grand Prix  (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.191058Z","level":"info","event":"UPDATE: 2019-R21 Abu Dhabi Grand Prix  (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.194627Z","level":"info","event":"UPDATE: 2019-R3 Chinese Grand Prix     (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.198020Z","level":"info","event":"UPDATE: 2019-R4 Azerbaijan Grand Prix  (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.203017Z","level":"info","event":"UPDATE: 2019-R5 Spanish Grand Prix     (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.206500Z","level":"info","event":"UPDATE: 2019-R6 Monaco Grand Prix      (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.209935Z","level":"info","event":"UPDATE: 2019-R7 Canadian Grand Prix    (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.213471Z","level":"info","event":"UPDATE: 2019-R8 French Grand Prix      (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.219668Z","level":"info","event":"UPDATE: 2019-R9 Austrian Grand Prix    (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.223077Z","level":"info","event":"UPDATE: 2020-R1 Austrian Grand Prix    (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.226386Z","level":"info","event":"UPDATE: 2020-R10 Russian Grand Prix    (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.230048Z","level":"info","event":"UPDATE: 2020-R11 Eifel Grand Prix      (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.235252Z","level":"info","event":"UPDATE: 2020-R12 Portuguese Grand Prix (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.238965Z","level":"info","event":"UPDATE: 2020-R13 Emilia Romagna Grand Prix (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.242511Z","level":"info","event":"UPDATE: 2020-R14 Turkish Grand Prix    (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.246007Z","level":"info","event":"UPDATE: 2020-R15 Bahrain Grand Prix    (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.250733Z","level":"info","event":"UPDATE: 2020-R16 Sakhir Grand Prix     (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.254303Z","level":"info","event":"UPDATE: 2020-R17 Abu Dhabi Grand Prix  (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.257753Z","level":"info","event":"UPDATE: 2020-R2 Styrian Grand Prix     (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.261254Z","level":"info","event":"UPDATE: 2020-R3 Hungarian Grand Prix   (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.264695Z","level":"info","event":"UPDATE: 2020-R4 British Grand Prix     (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.268666Z","level":"info","event":"UPDATE: 2020-R5 70th Anniversary Grand Prix (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.272361Z","level":"info","event":"UPDATE: 2020-R6 Spanish Grand Prix     (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.275901Z","level":"info","event":"UPDATE: 2020-R7 Belgian Grand Prix     (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.279574Z","level":"info","event":"UPDATE: 2020-R8 Italian Grand Prix     (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.283639Z","level":"info","event":"UPDATE: 2020-R9 Tuscan Grand Prix      (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.287370Z","level":"info","event":"UPDATE: 2021-R1 Bahrain Grand Prix     (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.291053Z","level":"info","event":"UPDATE: 2021-R10 British Grand Prix    (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.295147Z","level":"info","event":"UPDATE: 2021-R11 Hungarian Grand Prix  (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.298115Z","level":"info","event":"ADD: 2021-R12 Belgian Grand Prix    (new race from API, race_id=10200)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.301350Z","level":"info","event":"UPDATE: 2021-R13 Dutch Grand Prix      (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.304871Z","level":"info","event":"UPDATE: 2021-R14 Italian Grand Prix    (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.308375Z","level":"info","event":"UPDATE: 2021-R15 Russian Grand Prix    (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.312034Z","level":"info","event":"UPDATE: 2021-R16 Turkish Grand Prix    (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.315601Z","level":"info","event":"UPDATE: 2021-R17 United States Grand Prix (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.319570Z","level":"info","event":"UPDATE: 2021-R18 Mexico City Grand Prix (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.322965Z","level":"info","event":"UPDATE: 2021-R19 São Paulo Grand Prix  (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.326703Z","level":"info","event":"UPDATE: 2021-R2 Emilia Romagna Grand Prix (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.330248Z","level":"info","event":"UPDATE: 2021-R20 Qatar Grand Prix      (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.334126Z","level":"info","event":"UPDATE: 2021-R21 Saudi Arabian Grand Prix (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.337563Z","level":"info","event":"UPDATE: 2021-R22 Abu Dhabi Grand Prix  (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.341167Z","level":"info","event":"UPDATE: 2021-R3 Portuguese Grand Prix  (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.344571Z","level":"info","event":"UPDATE: 2021-R4 Spanish Grand Prix     (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.347866Z","level":"info","event":"UPDATE: 2021-R5 Monaco Grand Prix      (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.351798Z","level":"info","event":"UPDATE: 2021-R6 Azerbaijan Grand Prix  (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.355201Z","level":"info","event":"UPDATE: 2021-R7 French Grand Prix      (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.359427Z","level":"info","event":"UPDATE: 2021-R8 Styrian Grand Prix     (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.362847Z","level":"info","event":"UPDATE: 2021-R9 Austrian Grand Prix    (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.369117Z","level":"info","event":"UPDATE: 2022-R1 Bahrain Grand Prix     (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.373716Z","level":"info","event":"UPDATE: 2022-R10 British Grand Prix    (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.377275Z","level":"info","event":"UPDATE: 2022-R11 Austrian Grand Prix   (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.380751Z","level":"info","event":"UPDATE: 2022-R12 French Grand Prix     (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.384946Z","level":"info","event":"UPDATE: 2022-R13 Hungarian Grand Prix  (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.388465Z","level":"info","event":"UPDATE: 2022-R14 Belgian Grand Prix    (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.392310Z","level":"info","event":"UPDATE: 2022-R15 Dutch Grand Prix      (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.396855Z","level":"info","event":"UPDATE: 2022-R16 Italian Grand Prix    (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.401250Z","level":"info","event":"UPDATE: 2022-R17 Singapore Grand Prix  (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.405173Z","level":"info","event":"UPDATE: 2022-R18 Japanese Grand Prix   (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.408997Z","level":"info","event":"UPDATE: 2022-R19 United States Grand Prix (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.412758Z","level":"info","event":"UPDATE: 2022-R2 Saudi Arabian Grand Prix (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.419104Z","level":"info","event":"UPDATE: 2022-R20 Mexico City Grand Prix (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.422846Z","level":"info","event":"UPDATE: 2022-R21 São Paulo Grand Prix  (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.426277Z","level":"info","event":"UPDATE: 2022-R22 Abu Dhabi Grand Prix  (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.429984Z","level":"info","event":"UPDATE: 2022-R3 Australian Grand Prix  (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.436929Z","level":"info","event":"UPDATE: 2022-R4 Emilia Romagna Grand Prix (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.439641Z","level":"info","event":"UPDATE: 2022-R5 Miami Grand Prix       (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.443195Z","level":"info","event":"UPDATE: 2022-R6 Spanish Grand Prix     (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.446539Z","level":"info","event":"UPDATE: 2022-R7 Monaco Grand Prix      (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.451197Z","level":"info","event":"UPDATE: 2022-R8 Azerbaijan Grand Prix  (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.454929Z","level":"info","event":"UPDATE: 2022-R9 Canadian Grand Prix    (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.458386Z","level":"info","event":"UPDATE: 2023-R1 Bahrain Grand Prix     (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.462055Z","level":"info","event":"UPDATE: 2023-R10 British Grand Prix    (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.465770Z","level":"info","event":"UPDATE: 2023-R11 Hungarian Grand Prix  (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.471649Z","level":"info","event":"UPDATE: 2023-R12 Belgian Grand Prix    (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.475283Z","level":"info","event":"ADD: 2023-R13 Dutch Grand Prix      (new race from API, race_id=10245)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.477581Z","level":"info","event":"ADD: 2023-R14 Italian Grand Prix    (new race from API, race_id=10246)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.479974Z","level":"info","event":"ADD: 2023-R15 Singapore Grand Prix  (new race from API, race_id=10247)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.482434Z","level":"info","event":"ADD: 2023-R16 Japanese Grand Prix   (new race from API, race_id=10248)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.485359Z","level":"info","event":"ADD: 2023-R17 Qatar Grand Prix      (new race from API, race_id=10249)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.487796Z","level":"info","event":"ADD: 2023-R18 United States Grand Prix (new race from API, race_id=10250)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.490520Z","level":"info","event":"ADD: 2023-R19 Mexico City Grand Prix (new race from API, race_id=10251)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.493351Z","level":"info","event":"UPDATE: 2023-R2 Saudi Arabian Grand Prix (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.496964Z","level":"info","event":"ADD: 2023-R20 São Paulo Grand Prix  (new race from API, race_id=10253)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.499168Z","level":"info","event":"ADD: 2023-R21 Las Vegas Grand Prix  (new race from API, race_id=10254)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.502120Z","level":"info","event":"ADD: 2023-R22 Abu Dhabi Grand Prix  (new race from API, race_id=10255)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.504933Z","level":"info","event":"UPDATE: 2023-R3 Australian Grand Prix  (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.508598Z","level":"info","event":"UPDATE: 2023-R4 Azerbaijan Grand Prix  (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.513039Z","level":"info","event":"UPDATE: 2023-R5 Miami Grand Prix       (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.516809Z","level":"info","event":"UPDATE: 2023-R6 Monaco Grand Prix      (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.520877Z","level":"info","event":"UPDATE: 2023-R7 Spanish Grand Prix     (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.524584Z","level":"info","event":"UPDATE: 2023-R8 Canadian Grand Prix    (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.528223Z","level":"info","event":"UPDATE: 2023-R9 Austrian Grand Prix    (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.531676Z","level":"info","event":"ADD: 2024-R1 Bahrain Grand Prix     (new race from API, race_id=10263)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.534867Z","level":"info","event":"ADD: 2024-R10 Spanish Grand Prix    (new race from API, race_id=10264)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.538025Z","level":"info","event":"ADD: 2024-R11 Austrian Grand Prix   (new race from API, race_id=10265)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.541652Z","level":"info","event":"ADD: 2024-R12 British Grand Prix    (new race from API, race_id=10266)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.543562Z","level":"info","event":"ADD: 2024-R13 Hungarian Grand Prix  (new race from API, race_id=10267)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.545937Z","level":"info","event":"ADD: 2024-R14 Belgian Grand Prix    (new race from API, race_id=10268)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.548322Z","level":"info","event":"ADD: 2024-R15 Dutch Grand Prix      (new race from API, race_id=10269)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.551123Z","level":"info","event":"ADD: 2024-R16 Italian Grand Prix    (new race from API, race_id=10270)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.553494Z","level":"info","event":"ADD: 2024-R17 Azerbaijan Grand Prix (new race from API, race_id=10271)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.555991Z","level":"info","event":"ADD: 2024-R18 Singapore Grand Prix  (new race from API, race_id=10272)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.558584Z","level":"info","event":"ADD: 2024-R19 United States Grand Prix (new race from API, race_id=10273)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.561323Z","level":"info","event":"ADD: 2024-R2 Saudi Arabian Grand Prix (new race from API, race_id=10274)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.563663Z","level":"info","event":"ADD: 2024-R20 Mexico City Grand Prix (new race from API, race_id=10275)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.566768Z","level":"info","event":"ADD: 2024-R21 São Paulo Grand Prix  (new race from API, race_id=10276)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.569858Z","level":"info","event":"ADD: 2024-R22 Las Vegas Grand Prix  (new race from API, race_id=10277)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.572201Z","level":"info","event":"ADD: 2024-R23 Qatar Grand Prix      (new race from API, race_id=10278)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.574957Z","level":"info","event":"ADD: 2024-R24 Abu Dhabi Grand Prix  (new race from API, race_id=10279)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.577785Z","level":"info","event":"ADD: 2024-R3 Australian Grand Prix  (new race from API, race_id=10280)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.580927Z","level":"info","event":"ADD: 2024-R4 Japanese Grand Prix    (new race from API, race_id=10281)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.585602Z","level":"info","event":"ADD: 2024-R5 Chinese Grand Prix     (new race from API, race_id=10282)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.588127Z","level":"info","event":"ADD: 2024-R6 Miami Grand Prix       (new race from API, race_id=10283)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.590365Z","level":"info","event":"ADD: 2024-R7 Emilia Romagna Grand Prix (new race from API, race_id=10284)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.592619Z","level":"info","event":"ADD: 2024-R8 Monaco Grand Prix      (new race from API, race_id=10285)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.594836Z","level":"info","event":"ADD: 2024-R9 Canadian Grand Prix    (new race from API, race_id=10286)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.597370Z","level":"info","event":"ADD: 2025-R1 Australian Grand Prix  (new race from API, race_id=10287)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.603227Z","level":"info","event":"ADD: 2025-R10 Canadian Grand Prix   (new race from API, race_id=10288)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.605780Z","level":"info","event":"ADD: 2025-R11 Austrian Grand Prix   (new race from API, race_id=10289)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.608208Z","level":"info","event":"ADD: 2025-R12 British Grand Prix    (new race from API, race_id=10290)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.611493Z","level":"info","event":"ADD: 2025-R13 Belgian Grand Prix    (new race from API, race_id=10291)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.612548Z","level":"info","event":"ADD: 2025-R14 Hungarian Grand Prix  (new race from API, race_id=10292)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.623828Z","level":"info","event":"ADD: 2025-R15 Dutch Grand Prix      (new race from API, race_id=10293)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.626099Z","level":"info","event":"ADD: 2025-R16 Italian Grand Prix    (new race from API, race_id=10294)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.628242Z","level":"info","event":"ADD: 2025-R17 Azerbaijan Grand Prix (new race from API, race_id=10295)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.630322Z","level":"info","event":"ADD: 2025-R18 Singapore Grand Prix  (new race from API, race_id=10296)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.633647Z","level":"info","event":"ADD: 2025-R19 United States Grand Prix (new race from API, race_id=10297)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.636583Z","level":"info","event":"ADD: 2025-R2 Chinese Grand Prix     (new race from API, race_id=10298)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.638700Z","level":"info","event":"ADD: 2025-R20 Mexico City Grand Prix (new race from API, race_id=10299)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.640879Z","level":"info","event":"ADD: 2025-R21 São Paulo Grand Prix  (new race from API, race_id=10300)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.643136Z","level":"info","event":"ADD: 2025-R22 Las Vegas Grand Prix  (new race from API, race_id=10301)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.645252Z","level":"info","event":"ADD: 2025-R23 Qatar Grand Prix      (new race from API, race_id=10302)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.647411Z","level":"info","event":"ADD: 2025-R24 Abu Dhabi Grand Prix  (new race from API, race_id=10303)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.650055Z","level":"info","event":"ADD: 2025-R3 Japanese Grand Prix    (new race from API, race_id=10304)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.652843Z","level":"info","event":"ADD: 2025-R4 Bahrain Grand Prix     (new race from API, race_id=10305)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.655534Z","level":"info","event":"ADD: 2025-R5 Saudi Arabian Grand Prix (new race from API, race_id=10306)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.657646Z","level":"info","event":"ADD: 2025-R6 Miami Grand Prix       (new race from API, race_id=10307)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.660260Z","level":"info","event":"ADD: 2025-R7 Emilia Romagna Grand Prix (new race from API, race_id=10308)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.662320Z","level":"info","event":"ADD: 2025-R8 Monaco Grand Prix      (new race from API, race_id=10309)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.664439Z","level":"info","event":"ADD: 2025-R9 Spanish Grand Prix     (new race from API, race_id=10310)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.666799Z","level":"info","event":"Merge complete: 310 total races","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.667574Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.667943Z","level":"info","event":"[STEP 7] Writing to Silver layer...","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.682271Z","level":"info","event":" Uploaded dimensions/dim_race/dim_race.parquet (310 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.684748Z","level":"info","event":"Written to: s3://f1-silver/dimensions/dim_race/dim_race.parquet","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.685047Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.685260Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.685461Z","level":"info","event":"BACKFILL SUMMARY","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.685620Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.685771Z","level":"info","event":"  Existing races in Silver: 232","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.685920Z","level":"info","event":"  API races scraped: 310","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.686069Z","level":"info","event":"  Final race count: 310","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.686215Z","level":"info","event":"  New races added: 78","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.686363Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.686509Z","level":"info","event":"  Final source breakdown:","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.686656Z","level":"info","event":"    api            : 310","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.686801Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.686946Z","level":"info","event":"  race_id ranges:","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.687090Z","level":"info","event":"    api            : 860 - 10310","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.687233Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.705152Z","level":"info","event":"Done. Returned value was: {'existing_count': 232, 'api_scraped': 310, 'final_count': 310, 'new_races_added': 78}","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":216}
+{"timestamp":"2026-02-09T13:03:09.705490Z","level":"info","event":"Pushing xcom","ti":"RuntimeTaskInstance(id=UUID('019c4279-1696-7387-a5cf-cc5da95fcfa3'), task_id='backfill_dim_race', dag_id='api_races_bronze_to_silver', run_id='manual__2026-02-09T12:55:56+00:00', try_number=1, dag_version_id=UUID('019c4253-324e-74af-88b8-6a876873e8a1'), map_index=-1, hostname='ced332f26f0a', context_carrier={}, task=<Task(PythonOperator): backfill_dim_race>, bundle_instance=LocalDagBundle(name=dags-folder), max_tries=2, start_date=datetime.datetime(2026, 2, 9, 12, 55, 58, 187346, tzinfo=datetime.timezone.utc), end_date=None, state=<TaskInstanceState.RUNNING: 'running'>, is_mapped=False, rendered_map_index=None)","logger":"task","filename":"task_runner.py","lineno":1450}
+{"timestamp":"2026-02-09T13:03:09.730161Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.730598Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2026-02-09T13:03:09.730924Z","level":"info","event":"Task operator:<Task(PythonOperator): backfill_dim_race>","logger":"task.stdout"}

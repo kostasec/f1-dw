@@ -1,0 +1,95 @@
+{"timestamp":"2026-02-18T08:00:06.482941Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-02-18T08:00:06.493239Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/api_results_bronze_to_silver.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-02-18T08:00:07.972726Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-18T08:00:07.973102Z","level":"info","event":"F1 RACE RESULTS BACKFILL: ERGAST API -> SILVER","logger":"task.stdout"}
+{"timestamp":"2026-02-18T08:00:07.973391Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-18T08:00:08.037270Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-18T08:00:08.038068Z","level":"info","event":"[STEP 1] Scraping API...","logger":"task.stdout"}
+{"timestamp":"2026-02-18T08:00:08.039953Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-18T08:00:08.040918Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-18T08:00:08.041216Z","level":"info","event":"SCRAPING RACE RESULTS FROM ERGAST API: 2024-2025","logger":"task.stdout"}
+{"timestamp":"2026-02-18T08:00:08.041405Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-18T08:00:08.041614Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-18T08:00:08.041945Z","level":"info","event":"Fetching race results for 2024...","logger":"task.stdout"}
+{"timestamp":"2026-02-18T08:00:30.604976Z","level":"info","event":"100 results found across 6 races","logger":"task.stdout"}
+{"timestamp":"2026-02-18T08:00:30.611902Z","level":"info","event":"Fetching race results for 2025...","logger":"task.stdout"}
+{"timestamp":"2026-02-18T08:00:52.375658Z","level":"info","event":"100 results found across 5 races","logger":"task.stdout"}
+{"timestamp":"2026-02-18T08:00:52.380253Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-18T08:00:52.380790Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-18T08:00:52.381207Z","level":"info","event":"SCRAPING COMPLETE","logger":"task.stdout"}
+{"timestamp":"2026-02-18T08:00:52.381599Z","level":"info","event":"Total records: 200","logger":"task.stdout"}
+{"timestamp":"2026-02-18T08:00:52.382026Z","level":"info","event":"Years covered: 2024-2025","logger":"task.stdout"}
+{"timestamp":"2026-02-18T08:00:52.382395Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-18T08:00:52.382679Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-18T08:00:52.383028Z","level":"info","event":"API scraping complete: 200 result records","logger":"task.stdout"}
+{"timestamp":"2026-02-18T08:00:52.383287Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-18T08:00:52.383603Z","level":"info","event":"[STEP 2] Transforming to Silver schema...","logger":"task.stdout"}
+{"timestamp":"2026-02-18T08:00:52.383893Z","level":"info","event":"Transforming API data to Silver schema...","logger":"task.stdout"}
+{"timestamp":"2026-02-18T08:00:52.402386Z","level":"info","event":"Sorted by year + round + position for stable result_id generation","logger":"task.stdout"}
+{"timestamp":"2026-02-18T08:00:52.403767Z","level":"info","event":"Generated result_id: 10000001 - 10000200","logger":"task.stdout"}
+{"timestamp":"2026-02-18T08:00:52.411415Z","level":"info","event":"Transformed 200 results to Silver schema","logger":"task.stdout"}
+{"timestamp":"2026-02-18T08:00:52.412335Z","level":"info","event":"Source: api","logger":"task.stdout"}
+{"timestamp":"2026-02-18T08:00:52.413094Z","level":"info","event":"result_id range: 10000001 - 10000200","logger":"task.stdout"}
+{"timestamp":"2026-02-18T08:00:52.413693Z","level":"info","event":"Transformation complete: 200 results","logger":"task.stdout"}
+{"timestamp":"2026-02-18T08:00:52.414119Z","level":"info","event":"result_id range: 10000001 - 10000200","logger":"task.stdout"}
+{"timestamp":"2026-02-18T08:00:52.414470Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-18T08:00:52.414813Z","level":"info","event":"[STEP 3] Loading dimensions for FK resolution...","logger":"task.stdout"}
+{"timestamp":"2026-02-18T08:00:52.455033Z","level":"info","event":" Downloaded dimensions/dim_driver/dim_driver.parquet (81 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-18T08:00:52.461895Z","level":"info","event":" Downloaded dimensions/dim_constructor/dim_constructor.parquet (21 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-18T08:00:52.467420Z","level":"info","event":" Downloaded dimensions/dim_race/dim_race.parquet (280 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-18T08:00:52.472756Z","level":"info","event":" Downloaded dimensions/dim_time/dim_time.parquet (6940 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-18T08:00:52.473171Z","level":"info","event":"Loaded dimensions:","logger":"task.stdout"}
+{"timestamp":"2026-02-18T08:00:52.478941Z","level":"info","event":"  - dim_driver: 81 drivers","logger":"task.stdout"}
+{"timestamp":"2026-02-18T08:00:52.479316Z","level":"info","event":"  - dim_constructor: 21 constructors","logger":"task.stdout"}
+{"timestamp":"2026-02-18T08:00:52.479618Z","level":"info","event":"  - dim_race: 280 races","logger":"task.stdout"}
+{"timestamp":"2026-02-18T08:00:52.479918Z","level":"info","event":"  - dim_time: 6,940 dates","logger":"task.stdout"}
+{"timestamp":"2026-02-18T08:00:52.480201Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-18T08:00:52.480479Z","level":"info","event":"[STEP 4] Resolving foreign keys...","logger":"task.stdout"}
+{"timestamp":"2026-02-18T08:00:52.483413Z","level":"info","event":"Created lookup dictionaries:","logger":"task.stdout"}
+{"timestamp":"2026-02-18T08:00:52.483701Z","level":"info","event":"  - driver_ref -> driver_key: 81 entries","logger":"task.stdout"}
+{"timestamp":"2026-02-18T08:00:52.483981Z","level":"info","event":"  - constructor_ref -> constructor_key: 21 entries","logger":"task.stdout"}
+{"timestamp":"2026-02-18T08:00:52.484250Z","level":"info","event":"  - race_year+race_round -> race_key: 280 entries","logger":"task.stdout"}
+{"timestamp":"2026-02-18T08:00:52.484677Z","level":"info","event":"  - race_date -> time_key: 6940 entries","logger":"task.stdout"}
+{"timestamp":"2026-02-18T08:00:52.504177Z","level":"info","event":"All FKs resolved successfully","logger":"task.stdout"}
+{"timestamp":"2026-02-18T08:00:52.505311Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-18T08:00:52.505717Z","level":"info","event":"[STEP 5] Loading existing Silver data...","logger":"task.stdout"}
+{"timestamp":"2026-02-18T08:00:52.508568Z","level":"info","event":"Error reading facts/fact_race_results/year=2024/data.parquet: S3 operation failed; code: NoSuchKey, message: The specified key does not exist., resource: /f1-silver/facts/fact_race_results/year=2024/data.parquet, request_id: 1895486AEC27493E, host_id: dd9025bab4ad464b049177c95eb6ebf374d3b3fd1af9251148b658df7ac2e3e8, bucket_name: f1-silver, object_name: facts/fact_race_results/year=2024/data.parquet","logger":"task.stdout"}
+{"timestamp":"2026-02-18T08:00:52.510764Z","level":"info","event":"Error reading facts/fact_race_results/year=2025/data.parquet: S3 operation failed; code: NoSuchKey, message: The specified key does not exist., resource: /f1-silver/facts/fact_race_results/year=2025/data.parquet, request_id: 1895486AEC5A27D0, host_id: dd9025bab4ad464b049177c95eb6ebf374d3b3fd1af9251148b658df7ac2e3e8, bucket_name: f1-silver, object_name: facts/fact_race_results/year=2025/data.parquet","logger":"task.stdout"}
+{"timestamp":"2026-02-18T08:00:52.511186Z","level":"info","event":"No existing Silver data found (first run)","logger":"task.stdout"}
+{"timestamp":"2026-02-18T08:00:52.511773Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-18T08:00:52.512118Z","level":"info","event":"[STEP 6] Merging API data with existing Silver...","logger":"task.stdout"}
+{"timestamp":"2026-02-18T08:00:52.512486Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-18T08:00:52.512789Z","level":"info","event":"  Merge Configuration:","logger":"task.stdout"}
+{"timestamp":"2026-02-18T08:00:52.513020Z","level":"info","event":"Existing results: 0","logger":"task.stdout"}
+{"timestamp":"2026-02-18T08:00:52.513390Z","level":"info","event":"New API results: 200","logger":"task.stdout"}
+{"timestamp":"2026-02-18T08:00:52.513716Z","level":"info","event":"Merge key: result_id (PRIMARY natural key)","logger":"task.stdout"}
+{"timestamp":"2026-02-18T08:00:52.514217Z","level":"info","event":"CSV priority: YES (skip API for CSV results)","logger":"task.stdout"}
+{"timestamp":"2026-02-18T08:00:52.514590Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-18T08:00:52.514946Z","level":"info","event":" FIRST RUN: No existing data, adding all API results","logger":"task.stdout"}
+{"timestamp":"2026-02-18T08:00:52.515240Z","level":"info","event":"Generated result_key: 1-200","logger":"task.stdout"}
+{"timestamp":"2026-02-18T08:00:52.515560Z","level":"info","event":"result_id already set: 10000001-10000200","logger":"task.stdout"}
+{"timestamp":"2026-02-18T08:00:52.515963Z","level":"info","event":"Merge complete: 200 total results","logger":"task.stdout"}
+{"timestamp":"2026-02-18T08:00:52.516222Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-18T08:00:52.516568Z","level":"info","event":"[STEP 7] Writing to Silver layer (partitioned by year)...","logger":"task.stdout"}
+{"timestamp":"2026-02-18T08:00:52.523919Z","level":"info","event":"Uploaded facts/fact_race_results/year=2024/data.parquet (100 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-18T08:00:52.524372Z","level":"info","event":"  Year 2024: 100 results written","logger":"task.stdout"}
+{"timestamp":"2026-02-18T08:00:52.532790Z","level":"info","event":"Uploaded facts/fact_race_results/year=2025/data.parquet (100 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-18T08:00:52.534008Z","level":"info","event":"  Year 2025: 100 results written","logger":"task.stdout"}
+{"timestamp":"2026-02-18T08:00:52.534413Z","level":"info","event":"Written to: s3://f1-silver/facts/fact_race_results/year=*/data.parquet","logger":"task.stdout"}
+{"timestamp":"2026-02-18T08:00:52.534731Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-18T08:00:52.534986Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-18T08:00:52.535212Z","level":"info","event":"BACKFILL SUMMARY","logger":"task.stdout"}
+{"timestamp":"2026-02-18T08:00:52.535451Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-18T08:00:52.535691Z","level":"info","event":"  Existing results in Silver: 0","logger":"task.stdout"}
+{"timestamp":"2026-02-18T08:00:52.535913Z","level":"info","event":"  API results scraped: 200","logger":"task.stdout"}
+{"timestamp":"2026-02-18T08:00:52.536164Z","level":"info","event":"  Final result count: 200","logger":"task.stdout"}
+{"timestamp":"2026-02-18T08:00:52.536406Z","level":"info","event":"  New results added: 200","logger":"task.stdout"}
+{"timestamp":"2026-02-18T08:00:52.536644Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-18T08:00:52.536877Z","level":"info","event":"  Final source breakdown:","logger":"task.stdout"}
+{"timestamp":"2026-02-18T08:00:52.537161Z","level":"info","event":"    api            : 200","logger":"task.stdout"}
+{"timestamp":"2026-02-18T08:00:52.537434Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-18T08:00:52.537699Z","level":"info","event":"  result_id ranges:","logger":"task.stdout"}
+{"timestamp":"2026-02-18T08:00:52.537982Z","level":"info","event":"    api            : 10000001 - 10000200","logger":"task.stdout"}
+{"timestamp":"2026-02-18T08:00:52.538219Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-18T08:00:52.552025Z","level":"info","event":"Done. Returned value was: {'existing_count': 0, 'api_scraped': 200, 'final_count': 200, 'new_results_added': 200}","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":216}
+{"timestamp":"2026-02-18T08:00:52.556189Z","level":"info","event":"Pushing xcom","ti":"RuntimeTaskInstance(id=UUID('019c6fc3-67d3-7c4d-b62d-09b4ad1f336a'), task_id='backfill_fact_race_results', dag_id='api_results_bronze_to_silver', run_id='manual__2026-02-18T08:00:02.674095+00:00', try_number=1, dag_version_id=UUID('019c6fbe-801d-7aa5-b55d-82a2c3891d6f'), map_index=-1, hostname='b5d082034b2b', context_carrier={}, task=<Task(PythonOperator): backfill_fact_race_results>, bundle_instance=LocalDagBundle(name=dags-folder), max_tries=2, start_date=datetime.datetime(2026, 2, 18, 8, 0, 6, 134973, tzinfo=datetime.timezone.utc), end_date=None, state=<TaskInstanceState.RUNNING: 'running'>, is_mapped=False, rendered_map_index=None)","logger":"task","filename":"task_runner.py","lineno":1450}

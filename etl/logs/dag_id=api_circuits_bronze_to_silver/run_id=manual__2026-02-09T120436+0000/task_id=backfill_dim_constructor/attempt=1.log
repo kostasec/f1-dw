@@ -1,0 +1,37 @@
+{"timestamp":"2026-02-09T12:04:38.427092Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-02-09T12:04:38.428177Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/api_etl/api_circuits_bronze_to_silver.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-02-09T12:04:38.604957Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2026-02-09T12:04:38.605495Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2026-02-09T12:04:38.605818Z","level":"info","event":"Current task name:backfill_dim_constructor","logger":"task.stdout"}
+{"timestamp":"2026-02-09T12:04:38.606075Z","level":"info","event":"Dag name:api_circuits_bronze_to_silver","logger":"task.stdout"}
+{"timestamp":"2026-02-09T12:04:38.607571Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-09T12:04:38.607955Z","level":"info","event":"F1 CIRCUIT BACKFILL: ERGAST API → SILVER","logger":"task.stdout"}
+{"timestamp":"2026-02-09T12:04:38.608217Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-09T12:04:38.608502Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-09T12:04:38.608756Z","level":"info","event":"[STEP 1] Scraping API...","logger":"task.stdout"}
+{"timestamp":"2026-02-09T12:04:38.608954Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-09T12:04:38.609151Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-09T12:04:38.609347Z","level":"info","event":"SCRAPING CIRCUITS FROM API: 2011-2025","logger":"task.stdout"}
+{"timestamp":"2026-02-09T12:04:38.609630Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-09T12:04:38.609849Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-09T12:04:38.610059Z","level":"info","event":"Fetching circuits for 2011...","logger":"task.stdout"}
+{"timestamp":"2026-02-09T12:04:53.122796Z","level":"info","event":"19 circuits found","logger":"task.stdout"}
+{"timestamp":"2026-02-09T12:04:53.123134Z","level":"info","event":"Fetching circuits for 2012...","logger":"task.stdout"}
+{"timestamp":"2026-02-09T12:05:07.006520Z","level":"info","event":"20 circuits found","logger":"task.stdout"}
+{"timestamp":"2026-02-09T12:05:07.007024Z","level":"info","event":"Fetching circuits for 2013...","logger":"task.stdout"}
+{"timestamp":"2026-02-09T12:05:07.274403Z","level":"info","event":"Rate limit hit! Waiting 21s before retry 1/6...","logger":"task.stdout"}
+{"timestamp":"2026-02-09T12:05:39.659805Z","level":"info","event":"19 circuits found","logger":"task.stdout"}
+{"timestamp":"2026-02-09T12:05:39.660382Z","level":"info","event":"Fetching circuits for 2014...","logger":"task.stdout"}
+{"timestamp":"2026-02-09T12:05:51.692536Z","level":"info","event":"19 circuits found","logger":"task.stdout"}
+{"timestamp":"2026-02-09T12:05:51.693034Z","level":"info","event":"Fetching circuits for 2015...","logger":"task.stdout"}
+{"timestamp":"2026-02-09T12:05:53.869238Z","level":"info","event":"Rate limit hit! Waiting 22s before retry 1/6...","logger":"task.stdout"}
+{"timestamp":"2026-02-09T12:06:16.005950Z","level":"info","event":"Rate limit hit! Waiting 41s before retry 2/6...","logger":"task.stdout"}
+{"timestamp":"2026-02-09T12:06:57.881545Z","level":"info","event":"Rate limit hit! Waiting 62s before retry 3/6...","logger":"task.stdout"}
+{"timestamp":"2026-02-09T12:08:00.559726Z","level":"info","event":"Rate limit hit! Waiting 84s before retry 4/6...","logger":"task.stdout"}
+{"timestamp":"2026-02-09T12:09:25.620949Z","level":"info","event":"Rate limit hit! Waiting 104s before retry 5/6...","logger":"task.stdout"}
+{"timestamp":"2026-02-09T12:11:10.113934Z","level":"info","event":"Rate limit hit! Waiting 120s before retry 6/6...","logger":"task.stdout"}
+{"timestamp":"2026-02-09T12:13:10.303341Z","level":"error","event":"Task failed with exception","logger":"task","filename":"task_runner.py","lineno":1078,"error_detail":[{"exc_type":"HTTPError","exc_value":"Failed after 6 retries: https://api.jolpi.ca/ergast/f1/2015/circuits.json","exc_notes":[],"syntax_error":null,"is_cause":false,"frames":[{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/task_runner.py","lineno":1004,"name":"run"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/task_runner.py","lineno":1405,"name":"_execute_task"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/bases/operator.py","lineno":417,"name":"wrapper"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/standard/operators/python.py","lineno":214,"name":"execute"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/standard/operators/python.py","lineno":237,"name":"execute_callable"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/callback_runner.py","lineno":82,"name":"run"},{"filename":"/opt/airflow/dags/api_etl/api_circuits_bronze_to_silver.py","lineno":168,"name":"backfill_dim_circuit"},{"filename":"/opt/airflow/dags/utils/scraper/circuit.py","lineno":74,"name":"scrape_circuits_range"},{"filename":"/opt/airflow/dags/utils/scraper/circuit.py","lineno":59,"name":"scrape_circuits_year"},{"filename":"/opt/airflow/dags/utils/scraper/circuit.py","lineno":53,"name":"_get"}],"is_group":false,"exceptions":[]}]}
+{"timestamp":"2026-02-09T12:13:10.338259Z","level":"info","event":"Task instance in failure state","logger":"task.stdout"}
+{"timestamp":"2026-02-09T12:13:10.338675Z","level":"info","event":"Task start","logger":"task.stdout"}
+{"timestamp":"2026-02-09T12:13:10.338954Z","level":"info","event":"Task:<Task(PythonOperator): backfill_dim_constructor>","logger":"task.stdout"}
+{"timestamp":"2026-02-09T12:13:10.339181Z","level":"info","event":"Failure caused by Failed after 6 retries: https://api.jolpi.ca/ergast/f1/2015/circuits.json","logger":"task.stdout"}

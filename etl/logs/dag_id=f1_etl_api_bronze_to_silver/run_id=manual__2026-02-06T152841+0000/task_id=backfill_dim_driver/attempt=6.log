@@ -1,0 +1,193 @@
+{"timestamp":"2026-02-06T15:57:26.618491Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-02-06T15:57:26.619863Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/f1_etl_api_bronze_to_silver.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-02-06T15:57:26.773148Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:26.773874Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:26.774244Z","level":"info","event":"Current task name:backfill_dim_driver","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:26.774575Z","level":"info","event":"Dag name:f1_etl_api_bronze_to_silver","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:26.775081Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:26.775407Z","level":"info","event":"F1 DRIVER BACKFILL: ERGAST API → SILVER","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:26.775701Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:26.776067Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:26.776388Z","level":"info","event":"[STEP 1] Scraping API...","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:26.776725Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:26.777044Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:26.777360Z","level":"info","event":"SCRAPING DRIVERS FROM ERGAST API: 2011-2025","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:26.777674Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:26.777988Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:26.778294Z","level":"info","event":"Fetching drivers for 2011...","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:27.503936Z","level":"info","event":"28 drivers found","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:27.504402Z","level":"info","event":"Fetching drivers for 2012...","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:28.082568Z","level":"info","event":"25 drivers found","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:28.083034Z","level":"info","event":"Fetching drivers for 2013...","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:28.492621Z","level":"info","event":"23 drivers found","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:28.493025Z","level":"info","event":"Fetching drivers for 2014...","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:29.084788Z","level":"info","event":"24 drivers found","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:29.085200Z","level":"info","event":"Fetching drivers for 2015...","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:29.492126Z","level":"info","event":"22 drivers found","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:29.492898Z","level":"info","event":"Fetching drivers for 2016...","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:29.900145Z","level":"info","event":"24 drivers found","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:29.901079Z","level":"info","event":"Fetching drivers for 2017...","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:30.356958Z","level":"info","event":"25 drivers found","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:30.357704Z","level":"info","event":"Fetching drivers for 2018...","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:30.764441Z","level":"info","event":"20 drivers found","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:30.764927Z","level":"info","event":"Fetching drivers for 2019...","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:31.168923Z","level":"info","event":"20 drivers found","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:31.169908Z","level":"info","event":"Fetching drivers for 2020...","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:31.576743Z","level":"info","event":"23 drivers found","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:31.577427Z","level":"info","event":"Fetching drivers for 2021...","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:32.158568Z","level":"info","event":"21 drivers found","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:32.159615Z","level":"info","event":"Fetching drivers for 2022...","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:32.568001Z","level":"info","event":"22 drivers found","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:32.568745Z","level":"info","event":"Fetching drivers for 2023...","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:33.148082Z","level":"info","event":"22 drivers found","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:33.149222Z","level":"info","event":"Fetching drivers for 2024...","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:33.555176Z","level":"info","event":"25 drivers found","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:33.555836Z","level":"info","event":"Fetching drivers for 2025...","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:33.962456Z","level":"info","event":"30 drivers found","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:33.964620Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:33.965075Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:33.965897Z","level":"info","event":"SCRAPING COMPLETE","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:33.966315Z","level":"info","event":"Total records: 354","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:33.967749Z","level":"info","event":"Unique drivers (by driverId): 89","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:33.968181Z","level":"info","event":"Years covered: 2011-2025","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:33.968485Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:33.968940Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:33.969427Z","level":"info","event":"API scraping complete: 354 driver records","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:33.969843Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:33.970226Z","level":"info","event":"[STEP 2] Transforming to Silver schema...","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:33.970544Z","level":"info","event":"Transforming API data to Silver schema...","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:33.970830Z","level":"info","event":"Deduplication: 354 records → 89 unique drivers","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:33.971121Z","level":"info","event":"Sorted by driverId (alphabetically) for stable driver_id generation","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:33.972418Z","level":"info","event":"  Generated driver_id: 10001 - 10089","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:33.980257Z","level":"info","event":"Transformed 89 drivers to Silver schema","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:33.980710Z","level":"info","event":"Source: ergast_api","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:33.980971Z","level":"info","event":"driver_id range: 10001 - 10089","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:33.981216Z","level":"info","event":"Transformation complete: 89 unique drivers","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:33.981558Z","level":"info","event":"driver_id range: 10001 - 10089","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:33.981862Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:33.982139Z","level":"info","event":"[STEP 3] Loading existing Silver data...","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.073861Z","level":"info","event":" Downloaded dimensions/dim_driver/dim_driver.parquet (65 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.074369Z","level":"info","event":"Loaded 65 existing drivers from Silver","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.074827Z","level":"info","event":"Existing sources: {'f1_data.csv': 65}","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.075239Z","level":"info","event":"CSV driver_id range: 1 - 858","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.075609Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.075982Z","level":"info","event":"[STEP 4] Merging API data with existing Silver...","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.076351Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.076723Z","level":"info","event":"  Merge Configuration:","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.077103Z","level":"info","event":"Existing drivers: 65","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.077473Z","level":"info","event":"New API drivers: 89","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.077818Z","level":"info","event":"Merge key: driver_ref (PRIMARY natural key)","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.078157Z","level":"info","event":"CSV priority: YES (skip API for CSV drivers)","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.078580Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.078954Z","level":"info","event":"  Current max driver_key: 65","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.079253Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.079535Z","level":"info","event":"  Processing 89 API drivers:","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.079761Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.080025Z","level":"info","event":"SKIP: aitken               (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.080302Z","level":"info","event":"SKIP: albon                (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.080496Z","level":"info","event":"ADD: alguersuari          (new driver from API, driver_id=10003)","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.080783Z","level":"warning","event":"The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.","category":"FutureWarning","filename":"/opt/airflow/dags/f1_etl_api_bronze_to_silver.py","lineno":313,"logger":"py.warnings"}
+{"timestamp":"2026-02-06T15:57:34.082208Z","level":"info","event":"SKIP: alonso               (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.082813Z","level":"info","event":"SKIP: ambrosio             (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.083182Z","level":"info","event":"ADD: antonelli            (new driver from API, driver_id=10006)","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.084659Z","level":"info","event":"ADD: arthur_leclerc       (new driver from API, driver_id=10007)","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.086194Z","level":"info","event":"ADD: arvid_lindblad       (new driver from API, driver_id=10008)","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.087652Z","level":"info","event":"ADD: ayumu_iwasa          (new driver from API, driver_id=10009)","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.089107Z","level":"info","event":"ADD: barrichello          (new driver from API, driver_id=10010)","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.090401Z","level":"info","event":"ADD: bearman              (new driver from API, driver_id=10011)","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.091617Z","level":"info","event":"ADD: bortoleto            (new driver from API, driver_id=10012)","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.093229Z","level":"info","event":"SKIP: bottas               (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.093706Z","level":"info","event":"SKIP: brendon_hartley      (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.094137Z","level":"info","event":"SKIP: bruno_senna          (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.094502Z","level":"info","event":"ADD: buemi                (new driver from API, driver_id=10016)","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.095784Z","level":"info","event":"SKIP: button               (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.096210Z","level":"info","event":"ADD: chandhok             (new driver from API, driver_id=10018)","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.097549Z","level":"info","event":"SKIP: chilton              (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.098000Z","level":"info","event":"ADD: cian_shields         (new driver from API, driver_id=10020)","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.099298Z","level":"info","event":"ADD: colapinto            (new driver from API, driver_id=10021)","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.101090Z","level":"info","event":"SKIP: de_vries             (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.101528Z","level":"info","event":"ADD: doohan               (new driver from API, driver_id=10023)","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.102764Z","level":"info","event":"SKIP: ericsson             (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.103257Z","level":"info","event":"SKIP: garde                (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.103696Z","level":"info","event":"SKIP: gasly                (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.104176Z","level":"info","event":"SKIP: giovinazzi           (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.104523Z","level":"info","event":"SKIP: glock                (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.104966Z","level":"info","event":"SKIP: grosjean             (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.105360Z","level":"info","event":"SKIP: gutierrez            (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.105681Z","level":"info","event":"ADD: hadjar               (new driver from API, driver_id=10031)","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.107062Z","level":"info","event":"SKIP: hamilton             (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.107477Z","level":"info","event":"SKIP: haryanto             (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.107800Z","level":"info","event":"ADD: heidfeld             (new driver from API, driver_id=10034)","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.109240Z","level":"info","event":"SKIP: hulkenberg           (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.109572Z","level":"info","event":"ADD: jak_crawford         (new driver from API, driver_id=10036)","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.111097Z","level":"info","event":"SKIP: jolyon_palmer        (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.111474Z","level":"info","event":"SKIP: jules_bianchi        (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.111880Z","level":"info","event":"SKIP: karthikeyan          (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.112304Z","level":"info","event":"SKIP: kevin_magnussen      (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.112730Z","level":"info","event":"SKIP: kobayashi            (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.113158Z","level":"info","event":"SKIP: kovalainen           (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.113561Z","level":"info","event":"SKIP: kubica               (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.114063Z","level":"info","event":"SKIP: kvyat                (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.114544Z","level":"info","event":"SKIP: latifi               (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.153232Z","level":"info","event":"ADD: lawson               (new driver from API, driver_id=10046)","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.170350Z","level":"info","event":"SKIP: leclerc              (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.170735Z","level":"info","event":"ADD: liuzzi               (new driver from API, driver_id=10048)","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.171007Z","level":"info","event":"ADD: lotterer             (new driver from API, driver_id=10049)","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.171243Z","level":"info","event":"ADD: luke_browning        (new driver from API, driver_id=10050)","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.171564Z","level":"info","event":"SKIP: maldonado            (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.171874Z","level":"info","event":"SKIP: massa                (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.172161Z","level":"info","event":"SKIP: max_verstappen       (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.172386Z","level":"info","event":"SKIP: mazepin              (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.172685Z","level":"info","event":"SKIP: merhi                (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.173077Z","level":"info","event":"SKIP: michael_schumacher   (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.173460Z","level":"info","event":"SKIP: mick_schumacher      (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.173812Z","level":"info","event":"SKIP: nasr                 (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.174196Z","level":"info","event":"SKIP: norris               (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.174487Z","level":"info","event":"SKIP: ocon                 (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.174765Z","level":"info","event":"ADD: patricio_o_ward      (new driver from API, driver_id=10061)","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.175071Z","level":"info","event":"ADD: paul_aron            (new driver from API, driver_id=10062)","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.175444Z","level":"info","event":"SKIP: perez                (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.175791Z","level":"info","event":"SKIP: petrov               (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.176115Z","level":"info","event":"SKIP: piastri              (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.176427Z","level":"info","event":"SKIP: pic                  (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.176704Z","level":"info","event":"SKIP: pietro_fittipaldi    (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.176907Z","level":"info","event":"SKIP: raikkonen            (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.177167Z","level":"info","event":"SKIP: resta                (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.177457Z","level":"info","event":"SKIP: ricciardo            (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.177676Z","level":"info","event":"SKIP: rosa                 (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.183941Z","level":"info","event":"SKIP: rosberg              (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.188767Z","level":"info","event":"SKIP: rossi                (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.189391Z","level":"info","event":"SKIP: russell              (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.189709Z","level":"info","event":"ADD: ryo_hirakawa         (new driver from API, driver_id=10075)","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.190027Z","level":"info","event":"SKIP: sainz                (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.190305Z","level":"info","event":"SKIP: sargeant             (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.190645Z","level":"info","event":"SKIP: sirotkin             (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.190923Z","level":"info","event":"SKIP: stevens              (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.191261Z","level":"info","event":"SKIP: stroll               (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.191540Z","level":"info","event":"SKIP: sutil                (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.191876Z","level":"info","event":"ADD: trulli               (new driver from API, driver_id=10082)","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.192154Z","level":"info","event":"SKIP: tsunoda              (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.192382Z","level":"info","event":"SKIP: vandoorne            (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.194552Z","level":"info","event":"SKIP: vergne               (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.194927Z","level":"info","event":"SKIP: vettel               (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.195214Z","level":"info","event":"SKIP: webber               (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.195478Z","level":"info","event":"SKIP: wehrlein             (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.195812Z","level":"info","event":"SKIP: zhou                 (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.196133Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.196464Z","level":"info","event":"  Merge Statistics:","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.196730Z","level":"info","event":"    ├─ Skipped (CSV priority): 65","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.197049Z","level":"info","event":"    ├─ Skipped (duplicate): 0","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.197563Z","level":"info","event":"    ├─ Updated (API refresh): 0","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.197824Z","level":"info","event":"    └─ Added (new): 24","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.198071Z","level":"info","event":"Merge complete: 89 total drivers","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.198302Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.198510Z","level":"info","event":"[STEP 5] Writing to Silver layer...","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.200985Z","level":"info","event":" Uploaded dimensions/dim_driver/dim_driver.parquet (89 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.201314Z","level":"info","event":"Written to: s3://f1-silver/dimensions/dim_driver/dim_driver.parquet","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.201530Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.201722Z","level":"info","event":"[STEP 6] Updating lineage table...","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.201102Z","level":"error","event":"Task failed with exception","logger":"task","filename":"task_runner.py","lineno":1078,"error_detail":[{"exc_type":"NameError","exc_value":"name 'update_lineage' is not defined","exc_notes":[],"syntax_error":null,"is_cause":false,"frames":[{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/task_runner.py","lineno":1004,"name":"run"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/task_runner.py","lineno":1405,"name":"_execute_task"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/bases/operator.py","lineno":417,"name":"wrapper"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/standard/operators/python.py","lineno":214,"name":"execute"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/standard/operators/python.py","lineno":237,"name":"execute_callable"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/callback_runner.py","lineno":82,"name":"run"},{"filename":"/opt/airflow/dags/f1_etl_api_bronze_to_silver.py","lineno":162,"name":"backfill_dim_driver"}],"is_group":false,"exceptions":[]}]}
+{"timestamp":"2026-02-06T15:57:34.217794Z","level":"info","event":"Task instance in failure state","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.218187Z","level":"info","event":"Task start","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.218450Z","level":"info","event":"Task:<Task(PythonOperator): backfill_dim_driver>","logger":"task.stdout"}
+{"timestamp":"2026-02-06T15:57:34.218807Z","level":"info","event":"Failure caused by name 'update_lineage' is not defined","logger":"task.stdout"}

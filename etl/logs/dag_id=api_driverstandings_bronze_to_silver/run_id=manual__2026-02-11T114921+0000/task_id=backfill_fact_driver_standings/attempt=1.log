@@ -1,0 +1,27 @@
+{"timestamp":"2026-02-11T11:49:23.254774Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-02-11T11:49:23.256388Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/api_etl/api_dstandings_bronze_to_silver.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-02-11T11:49:23.703662Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-11T11:49:23.704160Z","level":"info","event":"F1 DRIVER STANDINGS BACKFILL: ERGAST API -> SILVER","logger":"task.stdout"}
+{"timestamp":"2026-02-11T11:49:23.704466Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-11T11:49:23.704811Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-11T11:49:23.705100Z","level":"info","event":"[STEP 1] Scraping API...","logger":"task.stdout"}
+{"timestamp":"2026-02-11T11:49:23.705313Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-11T11:49:23.705533Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-11T11:49:23.705785Z","level":"info","event":"SCRAPING DRIVER STANDINGS FROM ERGAST API: 2025-2025","logger":"task.stdout"}
+{"timestamp":"2026-02-11T11:49:23.706030Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-11T11:49:23.706270Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-11T11:49:23.706506Z","level":"info","event":"Fetching driver standings for 2025...","logger":"task.stdout"}
+{"timestamp":"2026-02-11T11:49:45.218975Z","level":"info","event":"21 standings found for 2025","logger":"task.stdout"}
+{"timestamp":"2026-02-11T11:49:45.220995Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-11T11:49:45.221579Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-11T11:49:45.222015Z","level":"info","event":"SCRAPING COMPLETE","logger":"task.stdout"}
+{"timestamp":"2026-02-11T11:49:45.222418Z","level":"info","event":"Total records: 21","logger":"task.stdout"}
+{"timestamp":"2026-02-11T11:49:45.222818Z","level":"info","event":"Years covered: 2025-2025","logger":"task.stdout"}
+{"timestamp":"2026-02-11T11:49:45.223702Z","level":"info","event":"Unique races: 1","logger":"task.stdout"}
+{"timestamp":"2026-02-11T11:49:45.224128Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-11T11:49:45.224524Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-11T11:49:45.224925Z","level":"info","event":"API scraping complete: 21 standing records","logger":"task.stdout"}
+{"timestamp":"2026-02-11T11:49:45.225284Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-11T11:49:45.225687Z","level":"info","event":"[STEP 2] Transforming to Silver schema...","logger":"task.stdout"}
+{"timestamp":"2026-02-11T11:49:45.225969Z","level":"info","event":"Transforming API data to Silver schema...","logger":"task.stdout"}
+{"timestamp":"2026-02-11T11:49:45.223816Z","level":"error","event":"Task failed with exception","logger":"task","filename":"task_runner.py","lineno":1078,"error_detail":[{"exc_type":"ValueError","exc_value":"Length of ascending (3) != length of by (4)","exc_notes":[],"syntax_error":null,"is_cause":false,"frames":[{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/task_runner.py","lineno":1004,"name":"run"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/task_runner.py","lineno":1405,"name":"_execute_task"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/bases/operator.py","lineno":417,"name":"wrapper"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/standard/operators/python.py","lineno":214,"name":"execute"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/standard/operators/python.py","lineno":237,"name":"execute_callable"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/callback_runner.py","lineno":82,"name":"run"},{"filename":"/opt/airflow/dags/api_etl/api_dstandings_bronze_to_silver.py","lineno":248,"name":"backfill_fact_driver_standings"},{"filename":"/opt/airflow/dags/utils/scraper/driverStanding.py","lineno":113,"name":"transform_to_silver_schema"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/pandas/core/frame.py","lineno":6922,"name":"sort_values"}],"is_group":false,"exceptions":[]}]}

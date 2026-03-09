@@ -1,0 +1,412 @@
+{"timestamp":"2026-02-09T14:26:07.296086Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-02-09T14:26:07.297141Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/api_etl/api_races_bronze_to_silver.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-02-09T14:26:07.460296Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:26:07.461031Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:26:07.461475Z","level":"info","event":"Current task name:backfill_dim_race","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:26:07.461853Z","level":"info","event":"Dag name:api_races_bronze_to_silver","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:26:07.462426Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:26:07.462777Z","level":"info","event":"F1 RACE BACKFILL: ERGAST API -> SILVER","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:26:07.463124Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:26:07.463492Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:26:07.463824Z","level":"info","event":"[STEP 1] Scraping API...","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:26:07.464151Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:26:07.464467Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:26:07.464792Z","level":"info","event":"SCRAPING RACES FROM ERGAST API: 2011-2025","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:26:07.465116Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:26:07.465330Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:26:07.465549Z","level":"info","event":"Fetching races for 2011...","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:26:31.580924Z","level":"info","event":"19 races found","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:26:31.582536Z","level":"info","event":"Fetching races for 2012...","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:26:52.265291Z","level":"info","event":"20 races found","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:26:52.265747Z","level":"info","event":"Fetching races for 2013...","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:27:15.074778Z","level":"info","event":"19 races found","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:27:15.075098Z","level":"info","event":"Fetching races for 2014...","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:27:37.945205Z","level":"info","event":"19 races found","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:27:37.945871Z","level":"info","event":"Fetching races for 2015...","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:28:01.823894Z","level":"info","event":"19 races found","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:28:01.824445Z","level":"info","event":"Fetching races for 2016...","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:28:26.618686Z","level":"info","event":"21 races found","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:28:26.622863Z","level":"info","event":"Fetching races for 2017...","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:28:49.309242Z","level":"info","event":"20 races found","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:28:49.309673Z","level":"info","event":"Fetching races for 2018...","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:29:12.550353Z","level":"info","event":"21 races found","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:29:12.551010Z","level":"info","event":"Fetching races for 2019...","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:29:34.457135Z","level":"info","event":"21 races found","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:29:34.457599Z","level":"info","event":"Fetching races for 2020...","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:29:57.392421Z","level":"info","event":"17 races found","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:29:57.392797Z","level":"info","event":"Fetching races for 2021...","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:30:21.538359Z","level":"info","event":"22 races found","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:30:21.538664Z","level":"info","event":"Fetching races for 2022...","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:30:42.888435Z","level":"info","event":"22 races found","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:30:42.888851Z","level":"info","event":"Fetching races for 2023...","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:04.309278Z","level":"info","event":"22 races found","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:04.309967Z","level":"info","event":"Fetching races for 2024...","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:25.480776Z","level":"info","event":"24 races found","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:25.481188Z","level":"info","event":"Fetching races for 2025...","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.194018Z","level":"info","event":"24 races found","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.199534Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.199845Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.200050Z","level":"info","event":"SCRAPING COMPLETE","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.200271Z","level":"info","event":"Total records: 310","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.200483Z","level":"info","event":"Years covered: 2011-2025","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.200739Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.200983Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.201243Z","level":"info","event":"API scraping complete: 310 race records","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.201441Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.201639Z","level":"info","event":"[STEP 2] Transforming to Silver schema...","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.201863Z","level":"info","event":"Transforming API data to Silver schema...","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.220045Z","level":"info","event":"Sorted by season + round for stable race_id generation","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.221359Z","level":"info","event":"  Generated race_id: 10001 - 10310","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.248203Z","level":"info","event":"Transformed 310 races to Silver schema","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.254830Z","level":"info","event":"Source: api","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.255403Z","level":"info","event":"race_id range: 10001 - 10310","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.257467Z","level":"info","event":"Transformation complete: 310 unique races","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.258243Z","level":"info","event":"race_id range: 10001 - 10310","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.258690Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.258999Z","level":"info","event":"[STEP 3] Loading dim_circuit for FK resolution...","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.414072Z","level":"info","event":" Downloaded dimensions/dim_circuit/dim_circuit.parquet (34 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.421105Z","level":"info","event":"Loaded 34 circuits from Silver","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.422884Z","level":"info","event":"Created circuit_ref -> circuit_key lookup (34 entries)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.423213Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.423448Z","level":"info","event":"[STEP 4] Resolving circuit_key FK...","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.423656Z","level":"info","event":"WARNING: 3 races have unresolved circuit_ref!","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.427276Z","level":"info","event":"Unresolved circuit_ref values:","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.431755Z","level":"info","event":"['vegas']","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.432070Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.445440Z","level":"info","event":"[STEP 5] Loading existing Silver data...","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.447255Z","level":"info","event":" Downloaded dimensions/dim_race/dim_race.parquet (232 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.447594Z","level":"info","event":"Loaded 232 existing races from Silver","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.447868Z","level":"info","event":"Existing sources: {'f1_data.csv': 232}","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.448120Z","level":"info","event":"CSV race_id range: 860 - 1110","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.448370Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.448618Z","level":"info","event":"[STEP 6] Merging API data with existing Silver...","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.448884Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.449142Z","level":"info","event":"  Merge Configuration:","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.449389Z","level":"info","event":"Existing races: 232","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.449771Z","level":"info","event":"New API races: 310","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.450710Z","level":"info","event":"Merge key: race_year + race_round (COMPOSITE natural key)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.451809Z","level":"info","event":"CSV priority: YES (skip API for CSV races)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.452419Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.453214Z","level":"info","event":"  Current max race_key: 232","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.453833Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.454609Z","level":"info","event":"  Processing 310 API races:","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.455023Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.455366Z","level":"info","event":"ADD: 2011-R1 Australian Grand Prix  (new race from API, race_id=10001)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.455882Z","level":"info","event":"ADD: 2011-R10 German Grand Prix     (new race from API, race_id=10002)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.456356Z","level":"info","event":"ADD: 2011-R11 Hungarian Grand Prix  (new race from API, race_id=10003)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.457519Z","level":"info","event":"ADD: 2011-R12 Belgian Grand Prix    (new race from API, race_id=10004)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.460196Z","level":"info","event":"ADD: 2011-R13 Italian Grand Prix    (new race from API, race_id=10005)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.462465Z","level":"info","event":"ADD: 2011-R14 Singapore Grand Prix  (new race from API, race_id=10006)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.464843Z","level":"info","event":"ADD: 2011-R15 Japanese Grand Prix   (new race from API, race_id=10007)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.467343Z","level":"info","event":"ADD: 2011-R16 Korean Grand Prix     (new race from API, race_id=10008)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.469816Z","level":"info","event":"ADD: 2011-R17 Indian Grand Prix     (new race from API, race_id=10009)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.472189Z","level":"info","event":"ADD: 2011-R18 Abu Dhabi Grand Prix  (new race from API, race_id=10010)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.474460Z","level":"info","event":"ADD: 2011-R19 Brazilian Grand Prix  (new race from API, race_id=10011)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.476688Z","level":"info","event":"ADD: 2011-R2 Malaysian Grand Prix   (new race from API, race_id=10012)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.478854Z","level":"info","event":"ADD: 2011-R3 Chinese Grand Prix     (new race from API, race_id=10013)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.481047Z","level":"info","event":"ADD: 2011-R4 Turkish Grand Prix     (new race from API, race_id=10014)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.483140Z","level":"info","event":"ADD: 2011-R5 Spanish Grand Prix     (new race from API, race_id=10015)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.485543Z","level":"info","event":"ADD: 2011-R6 Monaco Grand Prix      (new race from API, race_id=10016)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.487790Z","level":"info","event":"ADD: 2011-R7 Canadian Grand Prix    (new race from API, race_id=10017)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.491467Z","level":"info","event":"ADD: 2011-R8 European Grand Prix    (new race from API, race_id=10018)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.492104Z","level":"info","event":"ADD: 2011-R9 British Grand Prix     (new race from API, race_id=10019)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.494534Z","level":"info","event":"SKIP: 2012-R1 Australian Grand Prix  (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.495374Z","level":"info","event":"SKIP: 2012-R10 German Grand Prix     (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.496128Z","level":"info","event":"SKIP: 2012-R11 Hungarian Grand Prix  (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.496793Z","level":"info","event":"SKIP: 2012-R12 Belgian Grand Prix    (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.497495Z","level":"info","event":"SKIP: 2012-R13 Italian Grand Prix    (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.498200Z","level":"info","event":"SKIP: 2012-R14 Singapore Grand Prix  (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.498869Z","level":"info","event":"SKIP: 2012-R15 Japanese Grand Prix   (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.499590Z","level":"info","event":"SKIP: 2012-R16 Korean Grand Prix     (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.500320Z","level":"info","event":"SKIP: 2012-R17 Indian Grand Prix     (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.501025Z","level":"info","event":"SKIP: 2012-R18 Abu Dhabi Grand Prix  (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.501734Z","level":"info","event":"SKIP: 2012-R19 United States Grand Prix (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.502440Z","level":"info","event":"SKIP: 2012-R2 Malaysian Grand Prix   (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.503227Z","level":"info","event":"SKIP: 2012-R20 Brazilian Grand Prix  (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.504011Z","level":"info","event":"SKIP: 2012-R3 Chinese Grand Prix     (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.505111Z","level":"info","event":"SKIP: 2012-R4 Bahrain Grand Prix     (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.505871Z","level":"info","event":"SKIP: 2012-R5 Spanish Grand Prix     (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.506601Z","level":"info","event":"SKIP: 2012-R6 Monaco Grand Prix      (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.507297Z","level":"info","event":"SKIP: 2012-R7 Canadian Grand Prix    (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.508024Z","level":"info","event":"SKIP: 2012-R8 European Grand Prix    (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.508783Z","level":"info","event":"SKIP: 2012-R9 British Grand Prix     (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.509489Z","level":"info","event":"SKIP: 2013-R1 Australian Grand Prix  (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.510213Z","level":"info","event":"SKIP: 2013-R10 Hungarian Grand Prix  (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.510933Z","level":"info","event":"SKIP: 2013-R11 Belgian Grand Prix    (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.511659Z","level":"info","event":"SKIP: 2013-R12 Italian Grand Prix    (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.512351Z","level":"info","event":"SKIP: 2013-R13 Singapore Grand Prix  (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.513099Z","level":"info","event":"SKIP: 2013-R14 Korean Grand Prix     (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.513839Z","level":"info","event":"SKIP: 2013-R15 Japanese Grand Prix   (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.514563Z","level":"info","event":"SKIP: 2013-R16 Indian Grand Prix     (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.515565Z","level":"info","event":"SKIP: 2013-R17 Abu Dhabi Grand Prix  (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.516371Z","level":"info","event":"SKIP: 2013-R18 United States Grand Prix (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.517122Z","level":"info","event":"SKIP: 2013-R19 Brazilian Grand Prix  (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.517903Z","level":"info","event":"SKIP: 2013-R2 Malaysian Grand Prix   (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.518623Z","level":"info","event":"SKIP: 2013-R3 Chinese Grand Prix     (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.519375Z","level":"info","event":"SKIP: 2013-R4 Bahrain Grand Prix     (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.520076Z","level":"info","event":"SKIP: 2013-R5 Spanish Grand Prix     (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.520887Z","level":"info","event":"SKIP: 2013-R6 Monaco Grand Prix      (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.521887Z","level":"info","event":"SKIP: 2013-R7 Canadian Grand Prix    (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.522615Z","level":"info","event":"SKIP: 2013-R8 British Grand Prix     (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.523384Z","level":"info","event":"SKIP: 2013-R9 German Grand Prix      (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.524152Z","level":"info","event":"SKIP: 2014-R1 Australian Grand Prix  (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.524979Z","level":"info","event":"SKIP: 2014-R10 German Grand Prix     (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.525789Z","level":"info","event":"SKIP: 2014-R11 Hungarian Grand Prix  (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.526519Z","level":"info","event":"SKIP: 2014-R12 Belgian Grand Prix    (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.527304Z","level":"info","event":"SKIP: 2014-R13 Italian Grand Prix    (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.528039Z","level":"info","event":"SKIP: 2014-R14 Singapore Grand Prix  (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.528862Z","level":"info","event":"SKIP: 2014-R15 Japanese Grand Prix   (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.529596Z","level":"info","event":"SKIP: 2014-R16 Russian Grand Prix    (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.530410Z","level":"info","event":"SKIP: 2014-R17 United States Grand Prix (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.531246Z","level":"info","event":"SKIP: 2014-R18 Brazilian Grand Prix  (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.532024Z","level":"info","event":"SKIP: 2014-R19 Abu Dhabi Grand Prix  (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.532771Z","level":"info","event":"SKIP: 2014-R2 Malaysian Grand Prix   (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.533520Z","level":"info","event":"SKIP: 2014-R3 Bahrain Grand Prix     (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.534333Z","level":"info","event":"SKIP: 2014-R4 Chinese Grand Prix     (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.535201Z","level":"info","event":"SKIP: 2014-R5 Spanish Grand Prix     (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.535997Z","level":"info","event":"SKIP: 2014-R6 Monaco Grand Prix      (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.536837Z","level":"info","event":"SKIP: 2014-R7 Canadian Grand Prix    (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.537636Z","level":"info","event":"SKIP: 2014-R8 Austrian Grand Prix    (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.538546Z","level":"info","event":"SKIP: 2014-R9 British Grand Prix     (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.539376Z","level":"info","event":"SKIP: 2015-R1 Australian Grand Prix  (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.540149Z","level":"info","event":"SKIP: 2015-R10 Hungarian Grand Prix  (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.540975Z","level":"info","event":"SKIP: 2015-R11 Belgian Grand Prix    (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.541718Z","level":"info","event":"SKIP: 2015-R12 Italian Grand Prix    (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.542465Z","level":"info","event":"SKIP: 2015-R13 Singapore Grand Prix  (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.543233Z","level":"info","event":"SKIP: 2015-R14 Japanese Grand Prix   (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.544155Z","level":"info","event":"SKIP: 2015-R15 Russian Grand Prix    (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.545130Z","level":"info","event":"SKIP: 2015-R16 United States Grand Prix (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.546159Z","level":"info","event":"SKIP: 2015-R17 Mexican Grand Prix    (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.546979Z","level":"info","event":"SKIP: 2015-R18 Brazilian Grand Prix  (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.547704Z","level":"info","event":"SKIP: 2015-R19 Abu Dhabi Grand Prix  (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.548404Z","level":"info","event":"SKIP: 2015-R2 Malaysian Grand Prix   (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.549112Z","level":"info","event":"SKIP: 2015-R3 Chinese Grand Prix     (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.549822Z","level":"info","event":"SKIP: 2015-R4 Bahrain Grand Prix     (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.550512Z","level":"info","event":"SKIP: 2015-R5 Spanish Grand Prix     (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.551271Z","level":"info","event":"SKIP: 2015-R6 Monaco Grand Prix      (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.551991Z","level":"info","event":"SKIP: 2015-R7 Canadian Grand Prix    (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.552669Z","level":"info","event":"SKIP: 2015-R8 Austrian Grand Prix    (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.553352Z","level":"info","event":"SKIP: 2015-R9 British Grand Prix     (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.554060Z","level":"info","event":"SKIP: 2016-R1 Australian Grand Prix  (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.554792Z","level":"info","event":"SKIP: 2016-R10 British Grand Prix    (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.555955Z","level":"info","event":"SKIP: 2016-R11 Hungarian Grand Prix  (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.557157Z","level":"info","event":"SKIP: 2016-R12 German Grand Prix     (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.557999Z","level":"info","event":"SKIP: 2016-R13 Belgian Grand Prix    (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.558834Z","level":"info","event":"SKIP: 2016-R14 Italian Grand Prix    (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.559678Z","level":"info","event":"SKIP: 2016-R15 Singapore Grand Prix  (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.560437Z","level":"info","event":"SKIP: 2016-R16 Malaysian Grand Prix  (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.561149Z","level":"info","event":"SKIP: 2016-R17 Japanese Grand Prix   (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.562019Z","level":"info","event":"SKIP: 2016-R18 United States Grand Prix (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.562710Z","level":"info","event":"SKIP: 2016-R19 Mexican Grand Prix    (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.563441Z","level":"info","event":"SKIP: 2016-R2 Bahrain Grand Prix     (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.564156Z","level":"info","event":"SKIP: 2016-R20 Brazilian Grand Prix  (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.564869Z","level":"info","event":"SKIP: 2016-R21 Abu Dhabi Grand Prix  (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.565706Z","level":"info","event":"SKIP: 2016-R3 Chinese Grand Prix     (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.566523Z","level":"info","event":"SKIP: 2016-R4 Russian Grand Prix     (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.567317Z","level":"info","event":"SKIP: 2016-R5 Spanish Grand Prix     (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.568110Z","level":"info","event":"SKIP: 2016-R6 Monaco Grand Prix      (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.568846Z","level":"info","event":"SKIP: 2016-R7 Canadian Grand Prix    (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.569670Z","level":"info","event":"SKIP: 2016-R8 European Grand Prix    (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.570464Z","level":"info","event":"SKIP: 2016-R9 Austrian Grand Prix    (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.571415Z","level":"info","event":"SKIP: 2017-R1 Australian Grand Prix  (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.572299Z","level":"info","event":"SKIP: 2017-R10 British Grand Prix    (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.573132Z","level":"info","event":"SKIP: 2017-R11 Hungarian Grand Prix  (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.573849Z","level":"info","event":"SKIP: 2017-R12 Belgian Grand Prix    (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.574626Z","level":"info","event":"SKIP: 2017-R13 Italian Grand Prix    (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.575558Z","level":"info","event":"SKIP: 2017-R14 Singapore Grand Prix  (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.576400Z","level":"info","event":"SKIP: 2017-R15 Malaysian Grand Prix  (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.577197Z","level":"info","event":"SKIP: 2017-R16 Japanese Grand Prix   (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.577938Z","level":"info","event":"SKIP: 2017-R17 United States Grand Prix (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.578668Z","level":"info","event":"SKIP: 2017-R18 Mexican Grand Prix    (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.579383Z","level":"info","event":"SKIP: 2017-R19 Brazilian Grand Prix  (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.580190Z","level":"info","event":"SKIP: 2017-R2 Chinese Grand Prix     (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.580922Z","level":"info","event":"SKIP: 2017-R20 Abu Dhabi Grand Prix  (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.581645Z","level":"info","event":"SKIP: 2017-R3 Bahrain Grand Prix     (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.582362Z","level":"info","event":"SKIP: 2017-R4 Russian Grand Prix     (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.583131Z","level":"info","event":"SKIP: 2017-R5 Spanish Grand Prix     (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.583930Z","level":"info","event":"SKIP: 2017-R6 Monaco Grand Prix      (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.584677Z","level":"info","event":"SKIP: 2017-R7 Canadian Grand Prix    (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.585551Z","level":"info","event":"SKIP: 2017-R8 Azerbaijan Grand Prix  (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.586362Z","level":"info","event":"SKIP: 2017-R9 Austrian Grand Prix    (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.587210Z","level":"info","event":"SKIP: 2018-R1 Australian Grand Prix  (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.588143Z","level":"info","event":"SKIP: 2018-R10 British Grand Prix    (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.589047Z","level":"info","event":"SKIP: 2018-R11 German Grand Prix     (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.589847Z","level":"info","event":"SKIP: 2018-R12 Hungarian Grand Prix  (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.590706Z","level":"info","event":"SKIP: 2018-R13 Belgian Grand Prix    (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.591588Z","level":"info","event":"SKIP: 2018-R14 Italian Grand Prix    (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.592649Z","level":"info","event":"SKIP: 2018-R15 Singapore Grand Prix  (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.593462Z","level":"info","event":"SKIP: 2018-R16 Russian Grand Prix    (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.594166Z","level":"info","event":"SKIP: 2018-R17 Japanese Grand Prix   (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.595117Z","level":"info","event":"SKIP: 2018-R18 United States Grand Prix (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.595874Z","level":"info","event":"SKIP: 2018-R19 Mexican Grand Prix    (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.596587Z","level":"info","event":"SKIP: 2018-R2 Bahrain Grand Prix     (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.597271Z","level":"info","event":"SKIP: 2018-R20 Brazilian Grand Prix  (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.597965Z","level":"info","event":"SKIP: 2018-R21 Abu Dhabi Grand Prix  (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.598681Z","level":"info","event":"SKIP: 2018-R3 Chinese Grand Prix     (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.599411Z","level":"info","event":"SKIP: 2018-R4 Azerbaijan Grand Prix  (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.600091Z","level":"info","event":"SKIP: 2018-R5 Spanish Grand Prix     (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.600791Z","level":"info","event":"SKIP: 2018-R6 Monaco Grand Prix      (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.601512Z","level":"info","event":"SKIP: 2018-R7 Canadian Grand Prix    (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.602182Z","level":"info","event":"SKIP: 2018-R8 French Grand Prix      (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.602983Z","level":"info","event":"SKIP: 2018-R9 Austrian Grand Prix    (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.603720Z","level":"info","event":"SKIP: 2019-R1 Australian Grand Prix  (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.604534Z","level":"info","event":"SKIP: 2019-R10 British Grand Prix    (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.605418Z","level":"info","event":"SKIP: 2019-R11 German Grand Prix     (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.606181Z","level":"info","event":"SKIP: 2019-R12 Hungarian Grand Prix  (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.606878Z","level":"info","event":"SKIP: 2019-R13 Belgian Grand Prix    (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.607620Z","level":"info","event":"SKIP: 2019-R14 Italian Grand Prix    (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.608362Z","level":"info","event":"SKIP: 2019-R15 Singapore Grand Prix  (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.609245Z","level":"info","event":"SKIP: 2019-R16 Russian Grand Prix    (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.609918Z","level":"info","event":"SKIP: 2019-R17 Japanese Grand Prix   (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.610648Z","level":"info","event":"SKIP: 2019-R18 Mexican Grand Prix    (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.611359Z","level":"info","event":"SKIP: 2019-R19 United States Grand Prix (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.612079Z","level":"info","event":"SKIP: 2019-R2 Bahrain Grand Prix     (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.612759Z","level":"info","event":"SKIP: 2019-R20 Brazilian Grand Prix  (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.613460Z","level":"info","event":"SKIP: 2019-R21 Abu Dhabi Grand Prix  (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.614186Z","level":"info","event":"SKIP: 2019-R3 Chinese Grand Prix     (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.614871Z","level":"info","event":"SKIP: 2019-R4 Azerbaijan Grand Prix  (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.615581Z","level":"info","event":"SKIP: 2019-R5 Spanish Grand Prix     (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.616377Z","level":"info","event":"SKIP: 2019-R6 Monaco Grand Prix      (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.617177Z","level":"info","event":"SKIP: 2019-R7 Canadian Grand Prix    (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.617873Z","level":"info","event":"SKIP: 2019-R8 French Grand Prix      (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.618675Z","level":"info","event":"SKIP: 2019-R9 Austrian Grand Prix    (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.619412Z","level":"info","event":"SKIP: 2020-R1 Austrian Grand Prix    (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.620133Z","level":"info","event":"SKIP: 2020-R10 Russian Grand Prix    (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.620879Z","level":"info","event":"SKIP: 2020-R11 Eifel Grand Prix      (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.621634Z","level":"info","event":"SKIP: 2020-R12 Portuguese Grand Prix (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.622389Z","level":"info","event":"SKIP: 2020-R13 Emilia Romagna Grand Prix (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.623111Z","level":"info","event":"SKIP: 2020-R14 Turkish Grand Prix    (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.623863Z","level":"info","event":"SKIP: 2020-R15 Bahrain Grand Prix    (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.624611Z","level":"info","event":"SKIP: 2020-R16 Sakhir Grand Prix     (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.625437Z","level":"info","event":"SKIP: 2020-R17 Abu Dhabi Grand Prix  (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.626146Z","level":"info","event":"SKIP: 2020-R2 Styrian Grand Prix     (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.626845Z","level":"info","event":"SKIP: 2020-R3 Hungarian Grand Prix   (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.627576Z","level":"info","event":"SKIP: 2020-R4 British Grand Prix     (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.628252Z","level":"info","event":"SKIP: 2020-R5 70th Anniversary Grand Prix (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.628955Z","level":"info","event":"SKIP: 2020-R6 Spanish Grand Prix     (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.629652Z","level":"info","event":"SKIP: 2020-R7 Belgian Grand Prix     (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.630327Z","level":"info","event":"SKIP: 2020-R8 Italian Grand Prix     (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.631022Z","level":"info","event":"SKIP: 2020-R9 Tuscan Grand Prix      (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.631757Z","level":"info","event":"SKIP: 2021-R1 Bahrain Grand Prix     (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.632449Z","level":"info","event":"SKIP: 2021-R10 British Grand Prix    (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.633118Z","level":"info","event":"SKIP: 2021-R11 Hungarian Grand Prix  (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.633559Z","level":"info","event":"ADD: 2021-R12 Belgian Grand Prix    (new race from API, race_id=10200)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.636801Z","level":"info","event":"SKIP: 2021-R13 Dutch Grand Prix      (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.637519Z","level":"info","event":"SKIP: 2021-R14 Italian Grand Prix    (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.638389Z","level":"info","event":"SKIP: 2021-R15 Russian Grand Prix    (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.639125Z","level":"info","event":"SKIP: 2021-R16 Turkish Grand Prix    (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.639809Z","level":"info","event":"SKIP: 2021-R17 United States Grand Prix (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.640527Z","level":"info","event":"SKIP: 2021-R18 Mexico City Grand Prix (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.641224Z","level":"info","event":"SKIP: 2021-R19 São Paulo Grand Prix  (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.641928Z","level":"info","event":"SKIP: 2021-R2 Emilia Romagna Grand Prix (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.642635Z","level":"info","event":"SKIP: 2021-R20 Qatar Grand Prix      (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.643386Z","level":"info","event":"SKIP: 2021-R21 Saudi Arabian Grand Prix (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.644112Z","level":"info","event":"SKIP: 2021-R22 Abu Dhabi Grand Prix  (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.644987Z","level":"info","event":"SKIP: 2021-R3 Portuguese Grand Prix  (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.645690Z","level":"info","event":"SKIP: 2021-R4 Spanish Grand Prix     (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.646443Z","level":"info","event":"SKIP: 2021-R5 Monaco Grand Prix      (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.647135Z","level":"info","event":"SKIP: 2021-R6 Azerbaijan Grand Prix  (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.647853Z","level":"info","event":"SKIP: 2021-R7 French Grand Prix      (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.648606Z","level":"info","event":"SKIP: 2021-R8 Styrian Grand Prix     (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.649448Z","level":"info","event":"SKIP: 2021-R9 Austrian Grand Prix    (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.650132Z","level":"info","event":"SKIP: 2022-R1 Bahrain Grand Prix     (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.650874Z","level":"info","event":"SKIP: 2022-R10 British Grand Prix    (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.651595Z","level":"info","event":"SKIP: 2022-R11 Austrian Grand Prix   (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.652278Z","level":"info","event":"SKIP: 2022-R12 French Grand Prix     (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.652980Z","level":"info","event":"SKIP: 2022-R13 Hungarian Grand Prix  (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.653679Z","level":"info","event":"SKIP: 2022-R14 Belgian Grand Prix    (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.654369Z","level":"info","event":"SKIP: 2022-R15 Dutch Grand Prix      (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.655117Z","level":"info","event":"SKIP: 2022-R16 Italian Grand Prix    (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.655874Z","level":"info","event":"SKIP: 2022-R17 Singapore Grand Prix  (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.656582Z","level":"info","event":"SKIP: 2022-R18 Japanese Grand Prix   (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.657267Z","level":"info","event":"SKIP: 2022-R19 United States Grand Prix (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.657951Z","level":"info","event":"SKIP: 2022-R2 Saudi Arabian Grand Prix (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.658634Z","level":"info","event":"SKIP: 2022-R20 Mexico City Grand Prix (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.659364Z","level":"info","event":"SKIP: 2022-R21 São Paulo Grand Prix  (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.660084Z","level":"info","event":"SKIP: 2022-R22 Abu Dhabi Grand Prix  (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.660888Z","level":"info","event":"SKIP: 2022-R3 Australian Grand Prix  (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.661631Z","level":"info","event":"SKIP: 2022-R4 Emilia Romagna Grand Prix (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.662327Z","level":"info","event":"SKIP: 2022-R5 Miami Grand Prix       (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.662995Z","level":"info","event":"SKIP: 2022-R6 Spanish Grand Prix     (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.663702Z","level":"info","event":"SKIP: 2022-R7 Monaco Grand Prix      (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.664484Z","level":"info","event":"SKIP: 2022-R8 Azerbaijan Grand Prix  (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.665285Z","level":"info","event":"SKIP: 2022-R9 Canadian Grand Prix    (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.666005Z","level":"info","event":"SKIP: 2023-R1 Bahrain Grand Prix     (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.666699Z","level":"info","event":"SKIP: 2023-R10 British Grand Prix    (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.667482Z","level":"info","event":"SKIP: 2023-R11 Hungarian Grand Prix  (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.668184Z","level":"info","event":"SKIP: 2023-R12 Belgian Grand Prix    (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.668537Z","level":"info","event":"ADD: 2023-R13 Dutch Grand Prix      (new race from API, race_id=10245)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.670785Z","level":"info","event":"ADD: 2023-R14 Italian Grand Prix    (new race from API, race_id=10246)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.673015Z","level":"info","event":"ADD: 2023-R15 Singapore Grand Prix  (new race from API, race_id=10247)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.675253Z","level":"info","event":"ADD: 2023-R16 Japanese Grand Prix   (new race from API, race_id=10248)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.677567Z","level":"info","event":"ADD: 2023-R17 Qatar Grand Prix      (new race from API, race_id=10249)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.679756Z","level":"info","event":"ADD: 2023-R18 United States Grand Prix (new race from API, race_id=10250)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.681904Z","level":"info","event":"ADD: 2023-R19 Mexico City Grand Prix (new race from API, race_id=10251)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.684458Z","level":"info","event":"SKIP: 2023-R2 Saudi Arabian Grand Prix (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.684919Z","level":"info","event":"ADD: 2023-R20 São Paulo Grand Prix  (new race from API, race_id=10253)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.687351Z","level":"info","event":"ADD: 2023-R21 Las Vegas Grand Prix  (new race from API, race_id=10254)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.689594Z","level":"info","event":"ADD: 2023-R22 Abu Dhabi Grand Prix  (new race from API, race_id=10255)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.692170Z","level":"info","event":"SKIP: 2023-R3 Australian Grand Prix  (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.692891Z","level":"info","event":"SKIP: 2023-R4 Azerbaijan Grand Prix  (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.693606Z","level":"info","event":"SKIP: 2023-R5 Miami Grand Prix       (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.694322Z","level":"info","event":"SKIP: 2023-R6 Monaco Grand Prix      (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.695357Z","level":"info","event":"SKIP: 2023-R7 Spanish Grand Prix     (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.696203Z","level":"info","event":"SKIP: 2023-R8 Canadian Grand Prix    (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.696956Z","level":"info","event":"SKIP: 2023-R9 Austrian Grand Prix    (CSV priority)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.697387Z","level":"info","event":"ADD: 2024-R1 Bahrain Grand Prix     (new race from API, race_id=10263)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.699676Z","level":"info","event":"ADD: 2024-R10 Spanish Grand Prix    (new race from API, race_id=10264)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.701826Z","level":"info","event":"ADD: 2024-R11 Austrian Grand Prix   (new race from API, race_id=10265)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.704180Z","level":"info","event":"ADD: 2024-R12 British Grand Prix    (new race from API, race_id=10266)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.707059Z","level":"info","event":"ADD: 2024-R13 Hungarian Grand Prix  (new race from API, race_id=10267)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.709741Z","level":"info","event":"ADD: 2024-R14 Belgian Grand Prix    (new race from API, race_id=10268)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.712245Z","level":"info","event":"ADD: 2024-R15 Dutch Grand Prix      (new race from API, race_id=10269)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.714469Z","level":"info","event":"ADD: 2024-R16 Italian Grand Prix    (new race from API, race_id=10270)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.716829Z","level":"info","event":"ADD: 2024-R17 Azerbaijan Grand Prix (new race from API, race_id=10271)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.718906Z","level":"info","event":"ADD: 2024-R18 Singapore Grand Prix  (new race from API, race_id=10272)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.721112Z","level":"info","event":"ADD: 2024-R19 United States Grand Prix (new race from API, race_id=10273)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.723555Z","level":"info","event":"ADD: 2024-R2 Saudi Arabian Grand Prix (new race from API, race_id=10274)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.725874Z","level":"info","event":"ADD: 2024-R20 Mexico City Grand Prix (new race from API, race_id=10275)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.728126Z","level":"info","event":"ADD: 2024-R21 São Paulo Grand Prix  (new race from API, race_id=10276)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.730414Z","level":"info","event":"ADD: 2024-R22 Las Vegas Grand Prix  (new race from API, race_id=10277)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.732587Z","level":"info","event":"ADD: 2024-R23 Qatar Grand Prix      (new race from API, race_id=10278)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.734998Z","level":"info","event":"ADD: 2024-R24 Abu Dhabi Grand Prix  (new race from API, race_id=10279)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.737333Z","level":"info","event":"ADD: 2024-R3 Australian Grand Prix  (new race from API, race_id=10280)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.739895Z","level":"info","event":"ADD: 2024-R4 Japanese Grand Prix    (new race from API, race_id=10281)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.742082Z","level":"info","event":"ADD: 2024-R5 Chinese Grand Prix     (new race from API, race_id=10282)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.744323Z","level":"info","event":"ADD: 2024-R6 Miami Grand Prix       (new race from API, race_id=10283)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.746496Z","level":"info","event":"ADD: 2024-R7 Emilia Romagna Grand Prix (new race from API, race_id=10284)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.748631Z","level":"info","event":"ADD: 2024-R8 Monaco Grand Prix      (new race from API, race_id=10285)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.751448Z","level":"info","event":"ADD: 2024-R9 Canadian Grand Prix    (new race from API, race_id=10286)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.752929Z","level":"info","event":"ADD: 2025-R1 Australian Grand Prix  (new race from API, race_id=10287)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.755465Z","level":"info","event":"ADD: 2025-R10 Canadian Grand Prix   (new race from API, race_id=10288)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.758160Z","level":"info","event":"ADD: 2025-R11 Austrian Grand Prix   (new race from API, race_id=10289)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.760500Z","level":"info","event":"ADD: 2025-R12 British Grand Prix    (new race from API, race_id=10290)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.762653Z","level":"info","event":"ADD: 2025-R13 Belgian Grand Prix    (new race from API, race_id=10291)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.764910Z","level":"info","event":"ADD: 2025-R14 Hungarian Grand Prix  (new race from API, race_id=10292)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.767245Z","level":"info","event":"ADD: 2025-R15 Dutch Grand Prix      (new race from API, race_id=10293)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.769530Z","level":"info","event":"ADD: 2025-R16 Italian Grand Prix    (new race from API, race_id=10294)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.771827Z","level":"info","event":"ADD: 2025-R17 Azerbaijan Grand Prix (new race from API, race_id=10295)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.774173Z","level":"info","event":"ADD: 2025-R18 Singapore Grand Prix  (new race from API, race_id=10296)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.776501Z","level":"info","event":"ADD: 2025-R19 United States Grand Prix (new race from API, race_id=10297)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.778704Z","level":"info","event":"ADD: 2025-R2 Chinese Grand Prix     (new race from API, race_id=10298)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.780962Z","level":"info","event":"ADD: 2025-R20 Mexico City Grand Prix (new race from API, race_id=10299)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.783143Z","level":"info","event":"ADD: 2025-R21 São Paulo Grand Prix  (new race from API, race_id=10300)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.785552Z","level":"info","event":"ADD: 2025-R22 Las Vegas Grand Prix  (new race from API, race_id=10301)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.787924Z","level":"info","event":"ADD: 2025-R23 Qatar Grand Prix      (new race from API, race_id=10302)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.790502Z","level":"info","event":"ADD: 2025-R24 Abu Dhabi Grand Prix  (new race from API, race_id=10303)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.792667Z","level":"info","event":"ADD: 2025-R3 Japanese Grand Prix    (new race from API, race_id=10304)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.794739Z","level":"info","event":"ADD: 2025-R4 Bahrain Grand Prix     (new race from API, race_id=10305)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.796920Z","level":"info","event":"ADD: 2025-R5 Saudi Arabian Grand Prix (new race from API, race_id=10306)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.798995Z","level":"info","event":"ADD: 2025-R6 Miami Grand Prix       (new race from API, race_id=10307)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.801087Z","level":"info","event":"ADD: 2025-R7 Emilia Romagna Grand Prix (new race from API, race_id=10308)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.803157Z","level":"info","event":"ADD: 2025-R8 Monaco Grand Prix      (new race from API, race_id=10309)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.805803Z","level":"info","event":"ADD: 2025-R9 Spanish Grand Prix     (new race from API, race_id=10310)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.807736Z","level":"info","event":"Merge complete: 310 total races","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.808055Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.808325Z","level":"info","event":"[STEP 7] Writing to Silver layer...","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.809698Z","level":"info","event":"❌ Error uploading dimensions/dim_race/dim_race.parquet: (\"object of type <class 'str'> cannot be converted to int\", 'Conversion failed for column race_time with type object')","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.809804Z","level":"error","event":"Task failed with exception","logger":"task","filename":"task_runner.py","lineno":1078,"error_detail":[{"exc_type":"ArrowTypeError","exc_value":"(\"object of type <class 'str'> cannot be converted to int\", 'Conversion failed for column race_time with type object')","exc_notes":[],"syntax_error":null,"is_cause":false,"frames":[{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/task_runner.py","lineno":1004,"name":"run"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/task_runner.py","lineno":1405,"name":"_execute_task"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/bases/operator.py","lineno":417,"name":"wrapper"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/standard/operators/python.py","lineno":214,"name":"execute"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/standard/operators/python.py","lineno":237,"name":"execute_callable"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/callback_runner.py","lineno":82,"name":"run"},{"filename":"/opt/airflow/dags/api_etl/api_races_bronze_to_silver.py","lineno":387,"name":"backfill_dim_race"},{"filename":"/opt/airflow/dags/utils/s3_helper.py","lineno":23,"name":"upload_parquet"},{"filename":"/opt/airflow/pyarrow/table.pxi","lineno":4751,"name":"pyarrow.lib.Table.from_pandas"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/pyarrow/pandas_compat.py","lineno":625,"name":"dataframe_to_arrays"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/pyarrow/pandas_compat.py","lineno":612,"name":"convert_column"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/pyarrow/pandas_compat.py","lineno":606,"name":"convert_column"},{"filename":"/opt/airflow/pyarrow/array.pxi","lineno":360,"name":"pyarrow.lib.array"},{"filename":"/opt/airflow/pyarrow/array.pxi","lineno":87,"name":"pyarrow.lib._ndarray_to_array"},{"filename":"/opt/airflow/pyarrow/error.pxi","lineno":92,"name":"pyarrow.lib.check_status"}],"is_group":false,"exceptions":[]}]}
+{"timestamp":"2026-02-09T14:31:49.828474Z","level":"info","event":"Task instance in failure state","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.829040Z","level":"info","event":"Task start","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.829325Z","level":"info","event":"Task:<Task(PythonOperator): backfill_dim_race>","logger":"task.stdout"}
+{"timestamp":"2026-02-09T14:31:49.829619Z","level":"info","event":"Failure caused by (\"object of type <class 'str'> cannot be converted to int\", 'Conversion failed for column race_time with type object')","logger":"task.stdout"}

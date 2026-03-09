@@ -1,0 +1,15 @@
+{"timestamp":"2026-02-04T12:18:24.444674Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-02-04T12:18:24.461615Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/f1_etl_silver_to_gold.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-02-04T12:18:25.048445Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2026-02-04T12:18:25.049187Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2026-02-04T12:18:25.049510Z","level":"info","event":"Current task name:transform_gold_fact_pitstops","logger":"task.stdout"}
+{"timestamp":"2026-02-04T12:18:25.049723Z","level":"info","event":"Dag name:f1_etl_silver_to_gold","logger":"task.stdout"}
+{"timestamp":"2026-02-04T12:18:25.052030Z","level":"info","event":"TRANSFORM: fact_pitstops -> Gold PostgreSQL","logger":"task.stdout"}
+{"timestamp":"2026-02-04T12:18:25.249637Z","level":"info","event":" Downloaded facts/fact_pitstops/fact_pitstops.parquet (9011 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-04T12:18:25.294410Z","level":"info","event":"Transformed 9011 pitstops","logger":"task.stdout"}
+{"timestamp":"2026-02-04T12:18:28.417714Z","level":"info","event":"Loaded 9011 pitstops to PostgreSQL","logger":"task.stdout"}
+{"timestamp":"2026-02-04T12:18:28.418414Z","level":"info","event":"Done. Returned value was: 9011","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":216}
+{"timestamp":"2026-02-04T12:18:28.418635Z","level":"info","event":"Pushing xcom","ti":"RuntimeTaskInstance(id=UUID('019c2896-cf66-7b4f-83a6-0ef9dc3caf28'), task_id='transform_gold_fact_pitstops', dag_id='f1_etl_silver_to_gold', run_id='manual__2026-02-04T12:18:17+00:00', try_number=1, dag_version_id=UUID('019c2890-f69e-76c7-979c-ba13f662757b'), map_index=-1, hostname='85b967703fe5', context_carrier={}, task=<Task(PythonOperator): transform_gold_fact_pitstops>, bundle_instance=LocalDagBundle(name=dags-folder), max_tries=1, start_date=datetime.datetime(2026, 2, 4, 12, 18, 23, 389420, tzinfo=datetime.timezone.utc), end_date=None, state=<TaskInstanceState.RUNNING: 'running'>, is_mapped=False, rendered_map_index=None)","logger":"task","filename":"task_runner.py","lineno":1450}
+{"timestamp":"2026-02-04T12:18:28.450344Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2026-02-04T12:18:28.450681Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2026-02-04T12:18:28.451254Z","level":"info","event":"Task operator:<Task(PythonOperator): transform_gold_fact_pitstops>","logger":"task.stdout"}

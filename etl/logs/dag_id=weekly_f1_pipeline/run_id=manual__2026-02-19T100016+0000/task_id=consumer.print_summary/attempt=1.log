@@ -1,0 +1,24 @@
+{"timestamp":"2026-02-19T10:11:27.599339Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-02-19T10:11:27.600297Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/weekly_f1_pipeline.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-02-19T10:11:28.241404Z","level":"warning","event":"The `airflow.utils.task_group.TaskGroup` attribute is deprecated. Please use `'airflow.sdk.TaskGroup'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/dags/weekly_f1_pipeline.py","lineno":36,"logger":"py.warnings"}
+{"timestamp":"2026-02-19T10:11:28.241580Z","level":"warning","event":"The `airflow.operators.trigger_dagrun.TriggerDagRunOperator` attribute is deprecated. Please use `'airflow.providers.standard.operators.trigger_dagrun.TriggerDagRunOperator'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/dags/kafka_producer_pipeline.py","lineno":35,"logger":"py.warnings"}
+{"timestamp":"2026-02-19T10:11:28.267320Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-19T10:11:28.267758Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-19T10:11:28.268639Z","level":"info","event":"KAFKA CONSUMER PIPELINE COMPLETE","logger":"task.stdout"}
+{"timestamp":"2026-02-19T10:11:28.269267Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-19T10:11:28.278891Z","level":"info","event":"  Drivers                  : 0 rows inserted into PostgreSQL","logger":"task.stdout"}
+{"timestamp":"2026-02-19T10:11:28.287171Z","level":"info","event":"  Constructors             : 0 rows inserted into PostgreSQL","logger":"task.stdout"}
+{"timestamp":"2026-02-19T10:11:28.298287Z","level":"info","event":"  Circuits                 : 0 rows inserted into PostgreSQL","logger":"task.stdout"}
+{"timestamp":"2026-02-19T10:11:28.308357Z","level":"info","event":"  Races                    : 0 rows inserted into PostgreSQL","logger":"task.stdout"}
+{"timestamp":"2026-02-19T10:11:28.318872Z","level":"info","event":"  Results                  : 0 rows inserted into PostgreSQL","logger":"task.stdout"}
+{"timestamp":"2026-02-19T10:11:28.329449Z","level":"info","event":"  Laps                     : 0 rows inserted into PostgreSQL","logger":"task.stdout"}
+{"timestamp":"2026-02-19T10:11:28.341175Z","level":"info","event":"  Pitstops                 : 0 rows inserted into PostgreSQL","logger":"task.stdout"}
+{"timestamp":"2026-02-19T10:11:28.368215Z","level":"info","event":"  Driver standings         : 0 rows inserted into PostgreSQL","logger":"task.stdout"}
+{"timestamp":"2026-02-19T10:11:28.381405Z","level":"info","event":"  Constructor standings    : 0 rows inserted into PostgreSQL","logger":"task.stdout"}
+{"timestamp":"2026-02-19T10:11:28.381788Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-19T10:11:28.381987Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-19T10:11:28.382186Z","level":"info","event":"Kafka offset status:","logger":"task.stdout"}
+{"timestamp":"2026-02-19T10:11:28.382360Z","level":"info","event":"  Consumer group 'f1-incremental-consumers' offsets committed.","logger":"task.stdout"}
+{"timestamp":"2026-02-19T10:11:28.382524Z","level":"info","event":"  Next run will read ONLY messages published after this point.","logger":"task.stdout"}
+{"timestamp":"2026-02-19T10:11:28.382686Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-19T10:11:28.380906Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":216}

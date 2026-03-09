@@ -1,0 +1,9 @@
+{"timestamp":"2026-02-03T14:11:41.424165Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-02-03T14:11:41.432480Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/f1_etl_pipeline_silver.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-02-03T14:11:41.901458Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2026-02-03T14:11:41.903986Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2026-02-03T14:11:41.904263Z","level":"info","event":"Current task name:transform_fact_race_results","logger":"task.stdout"}
+{"timestamp":"2026-02-03T14:11:41.904615Z","level":"info","event":"Dag name:f1_etl_pipeline_silver","logger":"task.stdout"}
+{"timestamp":"2026-02-03T14:11:41.909947Z","level":"info","event":"TRANSFORM: fact_race_results → Silver (Parquet with surrogate keys)","logger":"task.stdout"}
+{"timestamp":"2026-02-03T14:11:51.958970Z","level":"error","event":"Server indicated the task shouldn't be running anymore. Terminating process","detail":{"detail":{"reason":"not_found","message":"Task Instance not found"}},"logger":"task"}
+{"timestamp":"2026-02-03T14:11:57.111670Z","level":"error","event":"Task killed!","logger":"task"}

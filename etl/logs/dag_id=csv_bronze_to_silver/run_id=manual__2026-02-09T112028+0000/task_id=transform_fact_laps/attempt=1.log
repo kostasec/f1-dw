@@ -1,0 +1,9 @@
+{"timestamp":"2026-02-09T11:20:54.194939Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-02-09T11:20:54.204277Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/csv_bronze_to_silver.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-02-09T11:20:55.189778Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2026-02-09T11:20:55.190315Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2026-02-09T11:20:55.190664Z","level":"info","event":"Current task name:transform_fact_laps","logger":"task.stdout"}
+{"timestamp":"2026-02-09T11:20:55.190978Z","level":"info","event":"Dag name:csv_bronze_to_silver","logger":"task.stdout"}
+{"timestamp":"2026-02-09T11:20:55.208382Z","level":"info","event":"TRANSFORM: fact_laps → Silver (Parquet with surrogate key)","logger":"task.stdout"}
+{"timestamp":"2026-02-09T11:21:08.173356Z","level":"warning","event":"Columns (7,8,13,14,17,42,45,63) have mixed types. Specify dtype option on import or set low_memory=False.","category":"DtypeWarning","filename":"/opt/airflow/dags/csv_bronze_to_silver.py","lineno":420,"logger":"py.warnings"}
+{"timestamp":"2026-02-09T11:21:17.185204Z","level":"critical","event":"Process terminated by signal. Likely out of memory error (OOM). For more information, see https://airflow.apache.org/docs/apache-airflow/stable/troubleshooting.html#process-terminated-by-signal.","signal":-9,"signal_name":"SIGKILL","logger":"task"}

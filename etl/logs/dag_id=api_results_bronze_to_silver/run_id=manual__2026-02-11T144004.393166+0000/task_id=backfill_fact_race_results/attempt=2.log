@@ -1,0 +1,192 @@
+{"timestamp":"2026-02-12T08:32:20.370551Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-02-12T08:32:20.371731Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/api_etl/api_results_bronze_to_silver.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-02-12T08:32:20.833629Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:20.834176Z","level":"info","event":"F1 RACE RESULTS BACKFILL: ERGAST API -> SILVER","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:20.834601Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:20.835051Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:20.835374Z","level":"info","event":"[STEP 1] Scraping API...","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:20.835745Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:20.836107Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:20.836491Z","level":"info","event":"SCRAPING RACE RESULTS FROM ERGAST API: 2024-2024","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:20.836839Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:20.837160Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:20.837398Z","level":"info","event":"Fetching race results for 2024...","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.543237Z","level":"info","event":"100 results found across 6 races","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.545196Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.545568Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.545884Z","level":"info","event":"SCRAPING COMPLETE","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.546238Z","level":"info","event":"Total records: 100","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.546541Z","level":"info","event":"Years covered: 2024-2024","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.546849Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.547136Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.547402Z","level":"info","event":"API scraping complete: 100 result records","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.547677Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.547941Z","level":"info","event":"[STEP 2] Transforming to Silver schema...","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.548196Z","level":"info","event":"Transforming API data to Silver schema...","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.554767Z","level":"info","event":"Sorted by year + round + position for stable result_id generation","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.555278Z","level":"info","event":"Generated result_id: 10000001 - 10000100","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.561512Z","level":"info","event":"Transformed 100 results to Silver schema","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.562001Z","level":"info","event":"Source: api","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.562434Z","level":"info","event":"result_id range: 10000001 - 10000100","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.563100Z","level":"info","event":"Transformation complete: 100 results","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.563439Z","level":"info","event":"result_id range: 10000001 - 10000100","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.563796Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.564201Z","level":"info","event":"[STEP 3] Loading dimensions for FK resolution...","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.589553Z","level":"info","event":" Downloaded dimensions/dim_driver/dim_driver.parquet (81 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.593878Z","level":"info","event":" Downloaded dimensions/dim_constructor/dim_constructor.parquet (21 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.599961Z","level":"info","event":" Downloaded dimensions/dim_race/dim_race.parquet (280 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.605448Z","level":"info","event":" Downloaded dimensions/dim_time/dim_time.parquet (6940 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.605955Z","level":"info","event":"Loaded dimensions:","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.606328Z","level":"info","event":"  - dim_driver: 81 drivers","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.606664Z","level":"info","event":"  - dim_constructor: 21 constructors","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.606981Z","level":"info","event":"  - dim_race: 280 races","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.607303Z","level":"info","event":"  - dim_time: 6,940 dates","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.607608Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.607921Z","level":"info","event":"[STEP 4] Resolving foreign keys...","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.615752Z","level":"info","event":"Created lookup dictionaries:","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.616258Z","level":"info","event":"  - driver_ref -> driver_key: 81 entries","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.616684Z","level":"info","event":"  - constructor_ref -> constructor_key: 21 entries","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.617070Z","level":"info","event":"  - race_year+race_round -> race_key: 280 entries","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.617452Z","level":"info","event":"  - race_date -> time_key: 6940 entries","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.632917Z","level":"info","event":"All FKs resolved successfully","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.633434Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.633789Z","level":"info","event":"[STEP 5] Loading existing Silver data...","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.638128Z","level":"info","event":" Downloaded facts/fact_race_results/year=2024/data.parquet (130 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.638583Z","level":"info","event":"Loaded 130 existing results from Silver","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.639335Z","level":"info","event":"Existing sources: {'api': 130}","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.639654Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.639991Z","level":"info","event":"[STEP 6] Merging API data with existing Silver...","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.640322Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.640627Z","level":"info","event":"  Merge Configuration:","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.640963Z","level":"info","event":"Existing results: 130","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.641282Z","level":"info","event":"New API results: 100","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.641590Z","level":"info","event":"Merge key: result_id (PRIMARY natural key)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.641844Z","level":"info","event":"CSV priority: YES (skip API for CSV results)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.642233Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.642513Z","level":"info","event":"  Current max result_key: 5052","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.642786Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.643005Z","level":"info","event":"  Processing 100 API results:","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.643243Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.643459Z","level":"info","event":"UPDATE: result_id=10000001 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.644738Z","level":"info","event":"UPDATE: result_id=10000002 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.648821Z","level":"info","event":"UPDATE: result_id=10000003 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.653043Z","level":"info","event":"UPDATE: result_id=10000004 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.657494Z","level":"info","event":"UPDATE: result_id=10000005 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.661418Z","level":"info","event":"UPDATE: result_id=10000006 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.665600Z","level":"info","event":"UPDATE: result_id=10000007 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.670753Z","level":"info","event":"UPDATE: result_id=10000008 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.675259Z","level":"info","event":"UPDATE: result_id=10000009 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.680100Z","level":"info","event":"UPDATE: result_id=10000010 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.684526Z","level":"info","event":"UPDATE: result_id=10000011 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.688598Z","level":"info","event":"UPDATE: result_id=10000012 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.692628Z","level":"info","event":"UPDATE: result_id=10000013 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.696421Z","level":"info","event":"UPDATE: result_id=10000014 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.700286Z","level":"info","event":"UPDATE: result_id=10000015 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.704814Z","level":"info","event":"UPDATE: result_id=10000016 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.708718Z","level":"info","event":"UPDATE: result_id=10000017 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.712289Z","level":"info","event":"UPDATE: result_id=10000018 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.716122Z","level":"info","event":"UPDATE: result_id=10000019 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.719731Z","level":"info","event":"UPDATE: result_id=10000020 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.723267Z","level":"info","event":"UPDATE: result_id=10000021 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.726909Z","level":"info","event":"UPDATE: result_id=10000022 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.730504Z","level":"info","event":"UPDATE: result_id=10000023 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.735501Z","level":"info","event":"UPDATE: result_id=10000024 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.739792Z","level":"info","event":"UPDATE: result_id=10000025 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.743844Z","level":"info","event":"UPDATE: result_id=10000026 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.748201Z","level":"info","event":"UPDATE: result_id=10000027 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.752032Z","level":"info","event":"UPDATE: result_id=10000028 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.755642Z","level":"info","event":"UPDATE: result_id=10000029 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.759354Z","level":"info","event":"UPDATE: result_id=10000030 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.763009Z","level":"info","event":"UPDATE: result_id=10000031 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.767084Z","level":"info","event":"UPDATE: result_id=10000032 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.770704Z","level":"info","event":"UPDATE: result_id=10000033 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.774373Z","level":"info","event":"UPDATE: result_id=10000034 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.777880Z","level":"info","event":"UPDATE: result_id=10000035 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.782093Z","level":"info","event":"UPDATE: result_id=10000036 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.785715Z","level":"info","event":"UPDATE: result_id=10000037 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.789283Z","level":"info","event":"UPDATE: result_id=10000038 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.792799Z","level":"info","event":"UPDATE: result_id=10000039 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.796344Z","level":"info","event":"UPDATE: result_id=10000040 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.800463Z","level":"info","event":"UPDATE: result_id=10000041 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.804054Z","level":"info","event":"UPDATE: result_id=10000042 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.807643Z","level":"info","event":"UPDATE: result_id=10000043 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.811186Z","level":"info","event":"UPDATE: result_id=10000044 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.815273Z","level":"info","event":"UPDATE: result_id=10000045 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.818991Z","level":"info","event":"UPDATE: result_id=10000046 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.822565Z","level":"info","event":"UPDATE: result_id=10000047 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.826094Z","level":"info","event":"UPDATE: result_id=10000048 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.829646Z","level":"info","event":"UPDATE: result_id=10000049 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.833756Z","level":"info","event":"UPDATE: result_id=10000050 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.837428Z","level":"info","event":"UPDATE: result_id=10000051 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.841668Z","level":"info","event":"UPDATE: result_id=10000052 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.845687Z","level":"info","event":"UPDATE: result_id=10000053 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.850992Z","level":"info","event":"UPDATE: result_id=10000054 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.854662Z","level":"info","event":"UPDATE: result_id=10000055 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.858306Z","level":"info","event":"UPDATE: result_id=10000056 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.861849Z","level":"info","event":"UPDATE: result_id=10000057 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.867265Z","level":"info","event":"UPDATE: result_id=10000058 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.871429Z","level":"info","event":"UPDATE: result_id=10000059 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.875083Z","level":"info","event":"UPDATE: result_id=10000060 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.878751Z","level":"info","event":"UPDATE: result_id=10000061 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.882684Z","level":"info","event":"UPDATE: result_id=10000062 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.886440Z","level":"info","event":"UPDATE: result_id=10000063 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.898600Z","level":"info","event":"UPDATE: result_id=10000064 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.899090Z","level":"info","event":"UPDATE: result_id=10000065 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.899351Z","level":"info","event":"UPDATE: result_id=10000066 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.901974Z","level":"info","event":"UPDATE: result_id=10000067 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.905848Z","level":"info","event":"UPDATE: result_id=10000068 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.909672Z","level":"info","event":"UPDATE: result_id=10000069 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.913651Z","level":"info","event":"UPDATE: result_id=10000070 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.917545Z","level":"info","event":"UPDATE: result_id=10000071 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.921785Z","level":"info","event":"UPDATE: result_id=10000072 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.925594Z","level":"info","event":"UPDATE: result_id=10000073 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.930500Z","level":"info","event":"UPDATE: result_id=10000074 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.934640Z","level":"info","event":"UPDATE: result_id=10000075 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.938529Z","level":"info","event":"UPDATE: result_id=10000076 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.942439Z","level":"info","event":"UPDATE: result_id=10000077 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.946077Z","level":"info","event":"UPDATE: result_id=10000078 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.950446Z","level":"info","event":"UPDATE: result_id=10000079 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.954055Z","level":"info","event":"UPDATE: result_id=10000080 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.957608Z","level":"info","event":"UPDATE: result_id=10000081 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.961287Z","level":"info","event":"UPDATE: result_id=10000082 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.965293Z","level":"info","event":"UPDATE: result_id=10000083 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.968896Z","level":"info","event":"UPDATE: result_id=10000084 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.972462Z","level":"info","event":"UPDATE: result_id=10000085 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.976018Z","level":"info","event":"UPDATE: result_id=10000086 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.979541Z","level":"info","event":"UPDATE: result_id=10000087 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.984136Z","level":"info","event":"UPDATE: result_id=10000088 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.987799Z","level":"info","event":"UPDATE: result_id=10000089 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.991461Z","level":"info","event":"UPDATE: result_id=10000090 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.995044Z","level":"info","event":"UPDATE: result_id=10000091 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:45.999236Z","level":"info","event":"UPDATE: result_id=10000092 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:46.002903Z","level":"info","event":"UPDATE: result_id=10000093 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:46.006659Z","level":"info","event":"UPDATE: result_id=10000094 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:46.010247Z","level":"info","event":"UPDATE: result_id=10000095 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:46.013866Z","level":"info","event":"UPDATE: result_id=10000096 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:46.017937Z","level":"info","event":"UPDATE: result_id=10000097 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:46.021585Z","level":"info","event":"UPDATE: result_id=10000098 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:46.025519Z","level":"info","event":"UPDATE: result_id=10000099 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:46.029343Z","level":"info","event":"UPDATE: result_id=10000100 (API refresh, data changed)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:46.033018Z","level":"info","event":"Merge complete: 130 total results","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:46.033476Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:46.033833Z","level":"info","event":"[STEP 7] Writing to Silver layer (partitioned by year)...","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:46.044561Z","level":"info","event":" Uploaded facts/fact_race_results/year=2024/data.parquet (130 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:46.045043Z","level":"info","event":"  Year 2024: 130 results written","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:46.045373Z","level":"info","event":"Written to: s3://f1-silver/facts/fact_race_results/year=*/data.parquet","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:46.045738Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:46.046052Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:46.046365Z","level":"info","event":"BACKFILL SUMMARY","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:46.046632Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:46.046870Z","level":"info","event":"  Existing results in Silver: 130","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:46.047129Z","level":"info","event":"  API results scraped: 100","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:46.047423Z","level":"info","event":"  Final result count: 130","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:46.047692Z","level":"info","event":"  New results added: 0","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:46.047988Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:46.048274Z","level":"info","event":"  Final source breakdown:","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:46.048548Z","level":"info","event":"    api            : 130","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:46.048808Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:46.049087Z","level":"info","event":"  result_id ranges:","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:46.049313Z","level":"info","event":"    api            : 10000001 - 10000420","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:46.049517Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-12T08:32:46.063716Z","level":"info","event":"Done. Returned value was: {'existing_count': 130, 'api_scraped': 100, 'final_count': 130, 'new_results_added': 0}","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":216}
+{"timestamp":"2026-02-12T08:32:46.063985Z","level":"info","event":"Pushing xcom","ti":"RuntimeTaskInstance(id=UUID('019c50fa-ce13-7fb4-8542-8eb4a7d93558'), task_id='backfill_fact_race_results', dag_id='api_results_bronze_to_silver', run_id='manual__2026-02-11T14:40:04.393166+00:00', try_number=2, dag_version_id=UUID('019c4cbe-e291-76f5-ae42-bd3f3666cd2c'), map_index=-1, hostname='ec1430f51f9d', context_carrier={}, task=<Task(PythonOperator): backfill_fact_race_results>, bundle_instance=LocalDagBundle(name=dags-folder), max_tries=3, start_date=datetime.datetime(2026, 2, 12, 8, 32, 20, 330601, tzinfo=datetime.timezone.utc), end_date=None, state=<TaskInstanceState.RUNNING: 'running'>, is_mapped=False, rendered_map_index=None)","logger":"task","filename":"task_runner.py","lineno":1450}

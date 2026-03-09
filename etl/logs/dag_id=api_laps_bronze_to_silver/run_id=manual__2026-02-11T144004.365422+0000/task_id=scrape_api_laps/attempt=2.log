@@ -1,0 +1,14 @@
+{"timestamp":"2026-02-12T09:23:19.669312Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-02-12T09:23:19.671636Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/api_etl/api_laps_bronze_to_silver.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-02-12T09:23:20.256014Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-12T09:23:20.256769Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-12T09:23:20.257182Z","level":"info","event":"SCRAPING LAP TIMES FROM ERGAST API: 2024-2024","logger":"task.stdout"}
+{"timestamp":"2026-02-12T09:23:20.257581Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-12T09:23:20.257961Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-12T09:23:20.258310Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-12T09:23:20.258629Z","level":"info","event":"Scraping laps for 2024...","logger":"task.stdout"}
+{"timestamp":"2026-02-12T09:23:21.983127Z","level":"info","event":"Rate limit hit! Waiting 33s before retry 1/6...","logger":"task.stdout"}
+{"timestamp":"2026-02-12T09:23:55.515893Z","level":"info","event":"Rate limit hit! Waiting 63s before retry 2/6...","logger":"task.stdout"}
+{"timestamp":"2026-02-12T09:24:58.772782Z","level":"info","event":"Rate limit hit! Waiting 93s before retry 3/6...","logger":"task.stdout"}
+{"timestamp":"2026-02-12T09:25:13.819423Z","level":"error","event":"Server indicated the task shouldn't be running anymore. Terminating process","detail":{"detail":{"reason":"not_running","message":"TI is no longer in the running state and task should terminate","current_state":"failed"}},"logger":"task"}
+{"timestamp":"2026-02-12T09:25:23.823722Z","level":"error","event":"Task killed!","logger":"task"}

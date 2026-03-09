@@ -1,0 +1,18 @@
+{"timestamp":"2026-02-05T10:17:47.113126Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-02-05T10:17:47.114472Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/f1_etl_silver_to_gold.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-02-05T10:17:47.298576Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2026-02-05T10:17:47.301345Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2026-02-05T10:17:47.301845Z","level":"info","event":"Current task name:create_gold_schema","logger":"task.stdout"}
+{"timestamp":"2026-02-05T10:17:47.302305Z","level":"info","event":"Dag name:f1_etl_silver_to_gold","logger":"task.stdout"}
+{"timestamp":"2026-02-05T10:17:47.302675Z","level":"info","event":"============================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-05T10:17:47.303063Z","level":"info","event":"DROP & CREATE: Gold schemas in PostgreSQL","logger":"task.stdout"}
+{"timestamp":"2026-02-05T10:17:47.303433Z","level":"info","event":"============================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-05T10:17:47.322974Z","level":"info","event":"Running statement: \n        DROP SCHEMA IF EXISTS dimensions CASCADE;\n        DROP SCHEMA IF EXISTS facts CASCADE;\n    , parameters: None","logger":"airflow.task.hooks.airflow.providers.postgres.hooks.postgres.PostgresHook","filename":"sql.py","lineno":802}
+{"timestamp":"2026-02-05T10:17:47.338246Z","level":"info","event":"Dropped existing schemas","logger":"task.stdout"}
+{"timestamp":"2026-02-05T10:17:47.346737Z","level":"info","event":"Running statement: \n        CREATE SCHEMA dimensions;\n        CREATE SCHEMA facts;\n    , parameters: None","logger":"airflow.task.hooks.airflow.providers.postgres.hooks.postgres.PostgresHook","filename":"sql.py","lineno":802}
+{"timestamp":"2026-02-05T10:17:47.350491Z","level":"info","event":"Created fresh Gold schemas","logger":"task.stdout"}
+{"timestamp":"2026-02-05T10:17:47.350996Z","level":"info","event":"Done. Returned value was: True","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":216}
+{"timestamp":"2026-02-05T10:17:47.351294Z","level":"info","event":"Pushing xcom","ti":"RuntimeTaskInstance(id=UUID('019c2d4e-d03c-7c2d-a55a-2f06bd9197b7'), task_id='create_gold_schema', dag_id='f1_etl_silver_to_gold', run_id='manual__2026-02-05T09:27:21+00:00', try_number=2, dag_version_id=UUID('019c2890-f69e-76c7-979c-ba13f662757b'), map_index=-1, hostname='75a141cc4b31', context_carrier={}, task=<Task(PythonOperator): create_gold_schema>, bundle_instance=LocalDagBundle(name=dags-folder), max_tries=2, start_date=datetime.datetime(2026, 2, 5, 10, 17, 46, 791171, tzinfo=datetime.timezone.utc), end_date=None, state=<TaskInstanceState.RUNNING: 'running'>, is_mapped=False, rendered_map_index=None)","logger":"task","filename":"task_runner.py","lineno":1450}
+{"timestamp":"2026-02-05T10:17:47.377822Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2026-02-05T10:17:47.378353Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2026-02-05T10:17:47.378843Z","level":"info","event":"Task operator:<Task(PythonOperator): create_gold_schema>","logger":"task.stdout"}

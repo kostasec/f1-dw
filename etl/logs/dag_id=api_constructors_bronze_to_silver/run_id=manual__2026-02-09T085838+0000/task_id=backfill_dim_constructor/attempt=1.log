@@ -1,0 +1,33 @@
+{"timestamp":"2026-02-09T08:58:40.793812Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-02-09T08:58:40.794689Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/api_etl/api_constructors_bronze_to_silver.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-02-09T08:58:40.961280Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2026-02-09T08:58:40.961966Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2026-02-09T08:58:40.962391Z","level":"info","event":"Current task name:backfill_dim_constructor","logger":"task.stdout"}
+{"timestamp":"2026-02-09T08:58:40.962751Z","level":"info","event":"Dag name:api_constructors_bronze_to_silver","logger":"task.stdout"}
+{"timestamp":"2026-02-09T08:58:40.964254Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-09T08:58:40.964644Z","level":"info","event":"F1 CONSTRUCTOR BACKFILL: ERGAST API → SILVER","logger":"task.stdout"}
+{"timestamp":"2026-02-09T08:58:40.965001Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-09T08:58:40.965423Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-09T08:58:40.965768Z","level":"info","event":"[STEP 1] Scraping API...","logger":"task.stdout"}
+{"timestamp":"2026-02-09T08:58:40.966108Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-09T08:58:40.966433Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-09T08:58:40.966757Z","level":"info","event":"SCRAPING CONSTRUCTORS FROM API: 2011-2025","logger":"task.stdout"}
+{"timestamp":"2026-02-09T08:58:40.967078Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-09T08:58:40.967395Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-09T08:58:40.968100Z","level":"info","event":"Fetching constructors for 2011...","logger":"task.stdout"}
+{"timestamp":"2026-02-09T08:58:41.148418Z","level":"info","event":"Rate limit hit! Waiting 15s before retry 1/5...","logger":"task.stdout"}
+{"timestamp":"2026-02-09T08:58:56.197866Z","level":"info","event":"Rate limit hit! Waiting 30s before retry 2/5...","logger":"task.stdout"}
+{"timestamp":"2026-02-09T08:59:26.245428Z","level":"info","event":"Rate limit hit! Waiting 45s before retry 3/5...","logger":"task.stdout"}
+{"timestamp":"2026-02-09T09:00:11.290814Z","level":"info","event":"Rate limit hit! Waiting 60s before retry 4/5...","logger":"task.stdout"}
+{"timestamp":"2026-02-09T09:01:16.345587Z","level":"info","event":"12 constructors found","logger":"task.stdout"}
+{"timestamp":"2026-02-09T09:01:16.346028Z","level":"info","event":"Fetching constructors for 2012...","logger":"task.stdout"}
+{"timestamp":"2026-02-09T09:01:16.390181Z","level":"info","event":"Rate limit hit! Waiting 15s before retry 1/5...","logger":"task.stdout"}
+{"timestamp":"2026-02-09T09:01:31.436661Z","level":"info","event":"Rate limit hit! Waiting 30s before retry 2/5...","logger":"task.stdout"}
+{"timestamp":"2026-02-09T09:02:01.483213Z","level":"info","event":"Rate limit hit! Waiting 45s before retry 3/5...","logger":"task.stdout"}
+{"timestamp":"2026-02-09T09:02:46.529886Z","level":"info","event":"Rate limit hit! Waiting 60s before retry 4/5...","logger":"task.stdout"}
+{"timestamp":"2026-02-09T09:03:46.575583Z","level":"info","event":"Rate limit hit! Waiting 75s before retry 5/5...","logger":"task.stdout"}
+{"timestamp":"2026-02-09T09:05:01.570200Z","level":"error","event":"Task failed with exception","logger":"task","filename":"task_runner.py","lineno":1078,"error_detail":[{"exc_type":"HTTPError","exc_value":"Failed after 5 retries: https://api.jolpi.ca/ergast/f1/2012/constructors.json","exc_notes":[],"syntax_error":null,"is_cause":false,"frames":[{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/task_runner.py","lineno":1004,"name":"run"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/task_runner.py","lineno":1405,"name":"_execute_task"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/bases/operator.py","lineno":417,"name":"wrapper"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/standard/operators/python.py","lineno":214,"name":"execute"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/standard/operators/python.py","lineno":237,"name":"execute_callable"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/callback_runner.py","lineno":82,"name":"run"},{"filename":"/opt/airflow/dags/api_etl/api_constructors_bronze_to_silver.py","lineno":244,"name":"backfill_dim_constructor"},{"filename":"/opt/airflow/dags/utils/scraper/constructor.py","lineno":67,"name":"scrape_constructors_range"},{"filename":"/opt/airflow/dags/utils/scraper/constructor.py","lineno":52,"name":"scrape_constructors_year"},{"filename":"/opt/airflow/dags/utils/scraper/constructor.py","lineno":46,"name":"_get"}],"is_group":false,"exceptions":[]}]}
+{"timestamp":"2026-02-09T09:05:01.605972Z","level":"info","event":"Task instance in failure state","logger":"task.stdout"}
+{"timestamp":"2026-02-09T09:05:01.606556Z","level":"info","event":"Task start","logger":"task.stdout"}
+{"timestamp":"2026-02-09T09:05:01.610283Z","level":"info","event":"Task:<Task(PythonOperator): backfill_dim_constructor>","logger":"task.stdout"}
+{"timestamp":"2026-02-09T09:05:01.610818Z","level":"info","event":"Failure caused by Failed after 5 retries: https://api.jolpi.ca/ergast/f1/2012/constructors.json","logger":"task.stdout"}

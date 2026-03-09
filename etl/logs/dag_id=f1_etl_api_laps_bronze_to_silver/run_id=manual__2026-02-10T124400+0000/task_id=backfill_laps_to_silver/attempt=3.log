@@ -1,0 +1,107 @@
+{"timestamp":"2026-02-10T13:00:40.745229Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-02-10T13:00:40.746462Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/api_etl/api_laps_bronze_to_silver.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-02-10T13:00:41.173814Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-10T13:00:41.174454Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-10T13:00:41.174763Z","level":"info","event":"BACKFILLING LAP TIMES TO SILVER","logger":"task.stdout"}
+{"timestamp":"2026-02-10T13:00:41.180029Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-10T13:00:41.180622Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-10T13:00:41.248357Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-10T13:00:41.248761Z","level":"info","event":"[DEBUG] XCom data type: <class 'list'>","logger":"task.stdout"}
+{"timestamp":"2026-02-10T13:00:41.249043Z","level":"info","event":"[DEBUG] XCom data length: 720","logger":"task.stdout"}
+{"timestamp":"2026-02-10T13:00:41.249318Z","level":"info","event":"[DEBUG] First record keys: ['lap', 'year', 'source', 'race_year', 'created_at', 'driver_ref', 'race_round', 'lap_minutes', 'lap_position', 'lap_milliseconds']","logger":"task.stdout"}
+{"timestamp":"2026-02-10T13:00:41.249591Z","level":"info","event":"[DEBUG] First record sample: {'lap': 1, 'year': 2025, 'source': 'api', 'race_year': 2025, 'created_at': datetime.datetime(2026, 2, 10, 12, 53, 29, 707288), 'driver_ref': 'norris', 'race_round': 1, 'lap_minutes': '1:57.099', 'lap_position': 1, 'lap_milliseconds': 117098}","logger":"task.stdout"}
+{"timestamp":"2026-02-10T13:00:41.251630Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-10T13:00:41.251922Z","level":"info","event":"[DEBUG] DataFrame shape: (720, 10)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T13:00:41.252279Z","level":"info","event":"[DEBUG] DataFrame columns: ['lap', 'year', 'source', 'race_year', 'created_at', 'driver_ref', 'race_round', 'lap_minutes', 'lap_position', 'lap_milliseconds']","logger":"task.stdout"}
+{"timestamp":"2026-02-10T13:00:41.252589Z","level":"info","event":"[DEBUG] DataFrame dtypes:","logger":"task.stdout"}
+{"timestamp":"2026-02-10T13:00:41.252850Z","level":"info","event":"lap                          int64","logger":"task.stdout"}
+{"timestamp":"2026-02-10T13:00:41.253089Z","level":"info","event":"year                         int64","logger":"task.stdout"}
+{"timestamp":"2026-02-10T13:00:41.253335Z","level":"info","event":"source                      object","logger":"task.stdout"}
+{"timestamp":"2026-02-10T13:00:41.253583Z","level":"info","event":"race_year                    int64","logger":"task.stdout"}
+{"timestamp":"2026-02-10T13:00:41.253821Z","level":"info","event":"created_at          datetime64[ns]","logger":"task.stdout"}
+{"timestamp":"2026-02-10T13:00:41.254087Z","level":"info","event":"driver_ref                  object","logger":"task.stdout"}
+{"timestamp":"2026-02-10T13:00:41.254340Z","level":"info","event":"race_round                   int64","logger":"task.stdout"}
+{"timestamp":"2026-02-10T13:00:41.254551Z","level":"info","event":"lap_minutes                 object","logger":"task.stdout"}
+{"timestamp":"2026-02-10T13:00:41.254730Z","level":"info","event":"lap_position                 int64","logger":"task.stdout"}
+{"timestamp":"2026-02-10T13:00:41.254935Z","level":"info","event":"lap_milliseconds             int64","logger":"task.stdout"}
+{"timestamp":"2026-02-10T13:00:41.255169Z","level":"info","event":"dtype: object","logger":"task.stdout"}
+{"timestamp":"2026-02-10T13:00:41.255418Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-10T13:00:41.255626Z","level":"info","event":"API laps loaded from XCom: 720","logger":"task.stdout"}
+{"timestamp":"2026-02-10T13:00:41.255927Z","level":"info","event":"Loading dimensions for FK resolution...","logger":"task.stdout"}
+{"timestamp":"2026-02-10T13:00:41.281933Z","level":"info","event":" Downloaded dimensions/dim_driver/dim_driver.parquet (89 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T13:00:41.285489Z","level":"info","event":" Downloaded dimensions/dim_constructor/dim_constructor.parquet (23 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T13:00:41.290434Z","level":"info","event":" Downloaded dimensions/dim_race/dim_race.parquet (310 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T13:00:41.295675Z","level":"info","event":" Downloaded dimensions/dim_time/dim_time.parquet (6940 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T13:00:41.296129Z","level":"info","event":"  dim_driver: 89 records","logger":"task.stdout"}
+{"timestamp":"2026-02-10T13:00:41.296422Z","level":"info","event":"  dim_constructor: 23 records","logger":"task.stdout"}
+{"timestamp":"2026-02-10T13:00:41.296729Z","level":"info","event":"  dim_race: 310 records","logger":"task.stdout"}
+{"timestamp":"2026-02-10T13:00:41.297038Z","level":"info","event":"  dim_time: 6,940 records","logger":"task.stdout"}
+{"timestamp":"2026-02-10T13:00:41.297321Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-10T13:00:41.297568Z","level":"info","event":"Building FK lookup maps...","logger":"task.stdout"}
+{"timestamp":"2026-02-10T13:00:41.336702Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-10T13:00:41.337040Z","level":"info","event":"Building race-driver-constructor mapping from race results...","logger":"task.stdout"}
+{"timestamp":"2026-02-10T13:00:41.346221Z","level":"info","event":" Downloaded facts/fact_race_results/year=2011/data.parquet (100 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T13:00:41.369757Z","level":"info","event":" Downloaded facts/fact_race_results/year=2012/data.parquet (547 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T13:00:41.413474Z","level":"info","event":" Downloaded facts/fact_race_results/year=2013/data.parquet (431 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T13:00:41.457472Z","level":"info","event":" Downloaded facts/fact_race_results/year=2014/data.parquet (408 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T13:00:41.498463Z","level":"info","event":" Downloaded facts/fact_race_results/year=2015/data.parquet (377 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T13:00:41.540328Z","level":"info","event":" Downloaded facts/fact_race_results/year=2016/data.parquet (461 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T13:00:41.600398Z","level":"info","event":" Downloaded facts/fact_race_results/year=2017/data.parquet (387 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T13:00:41.638561Z","level":"info","event":" Downloaded facts/fact_race_results/year=2018/data.parquet (412 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T13:00:41.868616Z","level":"info","event":" Downloaded facts/fact_race_results/year=2019/data.parquet (439 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T13:00:41.908261Z","level":"info","event":" Downloaded facts/fact_race_results/year=2020/data.parquet (343 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T13:00:41.943644Z","level":"info","event":" Downloaded facts/fact_race_results/year=2021/data.parquet (427 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T13:00:41.982530Z","level":"info","event":" Downloaded facts/fact_race_results/year=2022/data.parquet (440 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T13:00:42.021093Z","level":"info","event":" Downloaded facts/fact_race_results/year=2023/data.parquet (260 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T13:00:42.052292Z","level":"info","event":" Downloaded facts/fact_race_results/year=2024/data.parquet (30 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T13:00:42.072154Z","level":"info","event":" Downloaded facts/fact_race_results/year=2025/data.parquet (30 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T13:00:42.087435Z","level":"info","event":"  Built race-driver-constructor mapping: 4,692 entries","logger":"task.stdout"}
+{"timestamp":"2026-02-10T13:00:42.087790Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-10T13:00:42.088155Z","level":"info","event":"Loading existing Silver laps...","logger":"task.stdout"}
+{"timestamp":"2026-02-10T13:00:42.141650Z","level":"info","event":" Downloaded facts/fact_laps/fact_laps.parquet (256836 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T13:00:42.142174Z","level":"info","event":"Existing laps loaded: 256,836","logger":"task.stdout"}
+{"timestamp":"2026-02-10T13:00:42.142500Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-10T13:00:42.142825Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-10T13:00:42.143097Z","level":"info","event":"MERGING LAPS: CSV + API","logger":"task.stdout"}
+{"timestamp":"2026-02-10T13:00:42.143422Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-10T13:00:42.144346Z","level":"info","event":"Existing laps: 256,836 (from CSV and previous API runs)","logger":"task.stdout"}
+{"timestamp":"2026-02-10T13:00:42.201957Z","level":"info","event":"  CSV laps (preserve): 256,836","logger":"task.stdout"}
+{"timestamp":"2026-02-10T13:00:42.202416Z","level":"info","event":"  API laps (existing): 0","logger":"task.stdout"}
+{"timestamp":"2026-02-10T13:01:11.822151Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-10T13:01:11.822682Z","level":"info","event":"  API laps processed: 720","logger":"task.stdout"}
+{"timestamp":"2026-02-10T13:01:11.823039Z","level":"info","event":"  API laps skipped (CSV exists): 0","logger":"task.stdout"}
+{"timestamp":"2026-02-10T13:01:11.823329Z","level":"info","event":"  API laps to add (new): 720","logger":"task.stdout"}
+{"timestamp":"2026-02-10T13:01:11.842623Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-10T13:01:11.849031Z","level":"info","event":"  [DEBUG] CSV columns (12): ['_match_key', 'constructor_key', 'created_at', 'driver_key', 'lap', 'lap_key', 'lap_milliseconds', 'lap_minutes', 'lap_position', 'race_key', 'source', 'time_key']","logger":"task.stdout"}
+{"timestamp":"2026-02-10T13:01:11.849427Z","level":"info","event":"  [DEBUG] API columns (12): ['_match_key', 'constructor_key', 'created_at', 'driver_key', 'lap', 'lap_milliseconds', 'lap_minutes', 'lap_position', 'race_key', 'source', 'time_key', 'year']","logger":"task.stdout"}
+{"timestamp":"2026-02-10T13:01:11.849806Z","level":"info","event":"  [DEBUG] CSV dtypes:","logger":"task.stdout"}
+{"timestamp":"2026-02-10T13:01:11.850106Z","level":"info","event":"lap_key                      int64","logger":"task.stdout"}
+{"timestamp":"2026-02-10T13:01:11.850385Z","level":"info","event":"lap                          int64","logger":"task.stdout"}
+{"timestamp":"2026-02-10T13:01:11.850611Z","level":"info","event":"lap_position                 int64","logger":"task.stdout"}
+{"timestamp":"2026-02-10T13:01:11.850894Z","level":"info","event":"lap_minutes                 object","logger":"task.stdout"}
+{"timestamp":"2026-02-10T13:01:11.851168Z","level":"info","event":"lap_milliseconds             int64","logger":"task.stdout"}
+{"timestamp":"2026-02-10T13:01:11.851437Z","level":"info","event":"driver_key                   int64","logger":"task.stdout"}
+{"timestamp":"2026-02-10T13:01:11.851659Z","level":"info","event":"constructor_key              int64","logger":"task.stdout"}
+{"timestamp":"2026-02-10T13:01:11.852007Z","level":"info","event":"race_key                     int64","logger":"task.stdout"}
+{"timestamp":"2026-02-10T13:01:11.852289Z","level":"info","event":"time_key                     int64","logger":"task.stdout"}
+{"timestamp":"2026-02-10T13:01:11.852575Z","level":"info","event":"created_at          datetime64[us]","logger":"task.stdout"}
+{"timestamp":"2026-02-10T13:01:11.852768Z","level":"info","event":"source                      object","logger":"task.stdout"}
+{"timestamp":"2026-02-10T13:01:11.852961Z","level":"info","event":"_match_key                  object","logger":"task.stdout"}
+{"timestamp":"2026-02-10T13:01:11.853146Z","level":"info","event":"dtype: object","logger":"task.stdout"}
+{"timestamp":"2026-02-10T13:01:11.853323Z","level":"info","event":"  [DEBUG] API dtypes:","logger":"task.stdout"}
+{"timestamp":"2026-02-10T13:01:11.853526Z","level":"info","event":"lap                          int64","logger":"task.stdout"}
+{"timestamp":"2026-02-10T13:01:11.853705Z","level":"info","event":"year                         int64","logger":"task.stdout"}
+{"timestamp":"2026-02-10T13:01:11.853873Z","level":"info","event":"source                      object","logger":"task.stdout"}
+{"timestamp":"2026-02-10T13:01:11.854047Z","level":"info","event":"created_at          datetime64[ns]","logger":"task.stdout"}
+{"timestamp":"2026-02-10T13:01:11.854217Z","level":"info","event":"lap_minutes                 object","logger":"task.stdout"}
+{"timestamp":"2026-02-10T13:01:11.854391Z","level":"info","event":"lap_position                 int64","logger":"task.stdout"}
+{"timestamp":"2026-02-10T13:01:11.854560Z","level":"info","event":"lap_milliseconds             int64","logger":"task.stdout"}
+{"timestamp":"2026-02-10T13:01:11.854738Z","level":"info","event":"driver_key                   int64","logger":"task.stdout"}
+{"timestamp":"2026-02-10T13:01:11.854906Z","level":"info","event":"race_key                     int64","logger":"task.stdout"}
+{"timestamp":"2026-02-10T13:01:11.855077Z","level":"info","event":"constructor_key            float64","logger":"task.stdout"}
+{"timestamp":"2026-02-10T13:01:11.855277Z","level":"info","event":"time_key                     int64","logger":"task.stdout"}
+{"timestamp":"2026-02-10T13:01:11.855466Z","level":"info","event":"_match_key                  object","logger":"task.stdout"}
+{"timestamp":"2026-02-10T13:01:11.855643Z","level":"info","event":"dtype: object","logger":"task.stdout"}
+{"timestamp":"2026-02-10T13:01:11.864530Z","level":"info","event":"  [DEBUG] Columns only in CSV: {'lap_key'}","logger":"task.stdout"}
+{"timestamp":"2026-02-10T13:01:11.865489Z","level":"info","event":"  [DEBUG] Columns only in API: {'year'}","logger":"task.stdout"}
+{"timestamp":"2026-02-10T13:01:11.866536Z","level":"error","event":"Task failed with exception","logger":"task","filename":"task_runner.py","lineno":1078,"error_detail":[{"exc_type":"KeyError","exc_value":"\"['lap_key'] not in index\"","exc_notes":[],"syntax_error":null,"is_cause":false,"frames":[{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/task_runner.py","lineno":1004,"name":"run"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/task_runner.py","lineno":1400,"name":"_execute_task"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/bases/operator.py","lineno":417,"name":"wrapper"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/standard/operators/python.py","lineno":214,"name":"execute"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/standard/operators/python.py","lineno":237,"name":"execute_callable"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/callback_runner.py","lineno":82,"name":"run"},{"filename":"/opt/airflow/dags/api_etl/api_laps_bronze_to_silver.py","lineno":482,"name":"backfill_laps_to_silver"},{"filename":"/opt/airflow/dags/api_etl/api_laps_bronze_to_silver.py","lineno":245,"name":"merge_laps"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/pandas/core/frame.py","lineno":3899,"name":"__getitem__"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/pandas/core/indexes/base.py","lineno":6115,"name":"_get_indexer_strict"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/pandas/core/indexes/base.py","lineno":6179,"name":"_raise_if_missing"}],"is_group":false,"exceptions":[]}]}

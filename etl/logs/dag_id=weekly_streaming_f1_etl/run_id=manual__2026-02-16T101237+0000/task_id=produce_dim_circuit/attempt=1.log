@@ -1,0 +1,70 @@
+{"timestamp":"2026-02-16T10:14:05.692686Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-02-16T10:14:05.703267Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/weekly_streaming_pipeline.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-02-16T10:14:12.348995Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:14:12.351088Z","level":"info","event":"[PRODUCER] Starting dim_circuit production...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:14:12.359332Z","level":"info","event":"<BrokerConnection client_id=f1-streaming-pipeline, node_id=bootstrap-0 host=kafka:29092 <connecting> [IPv4 ('172.18.0.4', 29092)]>: connecting to kafka:29092 [('172.18.0.4', 29092) IPv4]","logger":"kafka.conn","filename":"conn.py","lineno":395}
+{"timestamp":"2026-02-16T10:14:12.381913Z","level":"info","event":"<BrokerConnection client_id=f1-streaming-pipeline, node_id=bootstrap-0 host=kafka:29092 <checking_api_versions_recv> [IPv4 ('172.18.0.4', 29092)]>: Broker version identified as 2.6","logger":"kafka.conn","filename":"conn.py","lineno":615}
+{"timestamp":"2026-02-16T10:14:12.395896Z","level":"info","event":"<BrokerConnection client_id=f1-streaming-pipeline, node_id=bootstrap-0 host=kafka:29092 <connected> [IPv4 ('172.18.0.4', 29092)]>: Connection complete.","logger":"kafka.conn","filename":"conn.py","lineno":456}
+{"timestamp":"2026-02-16T10:14:12.409963Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:14:12.417839Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:14:12.418771Z","level":"info","event":"PRODUCING CIRCUITS FOR 2026 → Kafka Topic: dim-circuit","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:14:12.419798Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:14:12.420914Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:14:12.422013Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:14:12.422853Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:14:12.423885Z","level":"info","event":"SCRAPING CIRCUITS FROM API: 2026-2026","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:14:12.424894Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:14:12.431730Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:14:12.432875Z","level":"info","event":"Fetching circuits for 2026...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:14:35.920103Z","level":"info","event":"24 circuits found","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:14:35.928279Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:14:35.929495Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:14:35.930425Z","level":"info","event":"SCRAPING COMPLETE","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:14:35.933178Z","level":"info","event":"Total records: 24","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:14:35.935054Z","level":"info","event":"Unique circuits (by circuitId): 24","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:14:35.938395Z","level":"info","event":"Years covered: 2026-2026","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:14:35.940420Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:14:35.941200Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:14:35.941893Z","level":"info","event":"Transforming API data to Silver schema...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:14:35.942745Z","level":"info","event":"Deduplication: 24 records → 24 unique circuits","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:14:35.944210Z","level":"info","event":"Sorted by circuitId for stable circuit_id generation","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:14:35.967960Z","level":"info","event":"Transformed 24 circuits to Silver schema","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:14:35.968799Z","level":"info","event":"Source: api","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:14:35.969627Z","level":"info","event":"circuit_id range: 10001 - 10024","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:14:35.972108Z","level":"info","event":"Scraped 24 circuits for 2026","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:14:35.977093Z","level":"info","event":"<BrokerConnection client_id=f1-streaming-pipeline, node_id=1 host=kafka:29092 <connecting> [IPv4 ('172.18.0.4', 29092)]>: connecting to kafka:29092 [('172.18.0.4', 29092) IPv4]","logger":"kafka.conn","filename":"conn.py","lineno":395}
+{"timestamp":"2026-02-16T10:14:35.978771Z","level":"info","event":"<BrokerConnection client_id=f1-streaming-pipeline, node_id=1 host=kafka:29092 <connected> [IPv4 ('172.18.0.4', 29092)]>: Connection complete.","logger":"kafka.conn","filename":"conn.py","lineno":456}
+{"timestamp":"2026-02-16T10:14:35.981002Z","level":"info","event":"<BrokerConnection client_id=f1-streaming-pipeline, node_id=bootstrap-0 host=kafka:29092 <connected> [IPv4 ('172.18.0.4', 29092)]>: Closing connection. ","logger":"kafka.conn","filename":"conn.py","lineno":936}
+{"timestamp":"2026-02-16T10:14:36.018425Z","level":"info","event":" Sent to dim-circuit | Key: albert_park | Partition: 0","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:14:36.021621Z","level":"info","event":" Sent to dim-circuit | Key: americas | Partition: 0","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:14:36.030882Z","level":"info","event":" Sent to dim-circuit | Key: bahrain | Partition: 0","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:14:36.039790Z","level":"info","event":" Sent to dim-circuit | Key: baku | Partition: 0","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:14:36.046751Z","level":"info","event":" Sent to dim-circuit | Key: catalunya | Partition: 0","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:14:36.061870Z","level":"info","event":" Sent to dim-circuit | Key: hungaroring | Partition: 0","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:14:36.071589Z","level":"info","event":" Sent to dim-circuit | Key: interlagos | Partition: 0","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:14:36.075304Z","level":"info","event":" Sent to dim-circuit | Key: jeddah | Partition: 0","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:14:36.084315Z","level":"info","event":" Sent to dim-circuit | Key: losail | Partition: 0","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:14:36.091145Z","level":"info","event":" Sent to dim-circuit | Key: madring | Partition: 0","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:14:36.100738Z","level":"info","event":" Sent to dim-circuit | Key: marina_bay | Partition: 0","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:14:36.114654Z","level":"info","event":" Sent to dim-circuit | Key: miami | Partition: 0","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:14:36.123253Z","level":"info","event":" Sent to dim-circuit | Key: monaco | Partition: 0","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:14:36.134063Z","level":"info","event":" Sent to dim-circuit | Key: monza | Partition: 0","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:14:36.144524Z","level":"info","event":" Sent to dim-circuit | Key: red_bull_ring | Partition: 0","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:14:36.160088Z","level":"info","event":" Sent to dim-circuit | Key: rodriguez | Partition: 0","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:14:36.181683Z","level":"info","event":" Sent to dim-circuit | Key: shanghai | Partition: 0","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:14:36.197384Z","level":"info","event":" Sent to dim-circuit | Key: silverstone | Partition: 0","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:14:36.212876Z","level":"info","event":" Sent to dim-circuit | Key: spa | Partition: 0","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:14:36.221106Z","level":"info","event":" Sent to dim-circuit | Key: suzuka | Partition: 0","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:14:36.231622Z","level":"info","event":" Sent to dim-circuit | Key: vegas | Partition: 0","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:14:36.254699Z","level":"info","event":" Sent to dim-circuit | Key: villeneuve | Partition: 0","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:14:36.267915Z","level":"info","event":" Sent to dim-circuit | Key: yas_marina | Partition: 0","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:14:36.269958Z","level":"info","event":" Sent to dim-circuit | Key: zandvoort | Partition: 0","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:14:36.288088Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:14:36.291291Z","level":"info","event":"📊 Batch Stats for dim-circuit:","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:14:36.295895Z","level":"info","event":"    Sent: 24","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:14:36.296954Z","level":"info","event":"   ❌ Failed: 0","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:14:36.270604Z","level":"info","event":"<KafkaProducer client_id=f1-streaming-pipeline transactional_id=None>: Closing the Kafka producer with 9223372036.0 secs timeout.","logger":"kafka.producer.kafka","filename":"kafka.py","lineno":630}
+{"timestamp":"2026-02-16T10:14:36.271620Z","level":"info","event":"<BrokerConnection client_id=f1-streaming-pipeline, node_id=1 host=kafka:29092 <connected> [IPv4 ('172.18.0.4', 29092)]>: Closing connection. ","logger":"kafka.conn","filename":"conn.py","lineno":936}
+{"timestamp":"2026-02-16T10:14:36.385363Z","level":"info","event":"[PRODUCER] Completed: {'sent': 24, 'failed': 0}","logger":"task.stdout"}
+{"timestamp":"2026-02-16T10:14:36.398375Z","level":"info","event":"Done. Returned value was: {'sent': 24, 'failed': 0}","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":216}
+{"timestamp":"2026-02-16T10:14:36.400383Z","level":"info","event":"Pushing xcom","ti":"RuntimeTaskInstance(id=UUID('019c65f0-1698-7382-9dea-bc0f9aec337e'), task_id='produce_dim_circuit', dag_id='weekly_streaming_f1_etl', run_id='manual__2026-02-16T10:12:37+00:00', try_number=1, dag_version_id=UUID('019c61bd-e638-74f5-b658-bbd5e8d757b9'), map_index=-1, hostname='8ca1c3cee112', context_carrier={}, task=<Task(PythonOperator): produce_dim_circuit>, bundle_instance=LocalDagBundle(name=dags-folder), max_tries=2, start_date=datetime.datetime(2026, 2, 16, 10, 14, 4, 712804, tzinfo=datetime.timezone.utc), end_date=None, state=<TaskInstanceState.RUNNING: 'running'>, is_mapped=False, rendered_map_index=None)","logger":"task","filename":"task_runner.py","lineno":1450}

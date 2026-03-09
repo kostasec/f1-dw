@@ -1,0 +1,321 @@
+{"timestamp":"2026-02-16T11:11:39.890904Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-02-16T11:11:39.902754Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/weekly_streaming_pipeline.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-02-16T11:11:48.073756Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:48.077752Z","level":"info","event":"[CONSUMER] Starting dim_circuit consumption...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:48.090330Z","level":"info","event":"<BrokerConnection client_id=kafka-python-2.2.0, node_id=bootstrap-0 host=kafka:29092 <connecting> [IPv4 ('172.18.0.4', 29092)]>: connecting to kafka:29092 [('172.18.0.4', 29092) IPv4]","logger":"kafka.conn","filename":"conn.py","lineno":395}
+{"timestamp":"2026-02-16T11:11:48.127053Z","level":"info","event":"<BrokerConnection client_id=kafka-python-2.2.0, node_id=bootstrap-0 host=kafka:29092 <checking_api_versions_recv> [IPv4 ('172.18.0.4', 29092)]>: Broker version identified as 2.6","logger":"kafka.conn","filename":"conn.py","lineno":615}
+{"timestamp":"2026-02-16T11:11:48.130543Z","level":"info","event":"<BrokerConnection client_id=kafka-python-2.2.0, node_id=bootstrap-0 host=kafka:29092 <connected> [IPv4 ('172.18.0.4', 29092)]>: Connection complete.","logger":"kafka.conn","filename":"conn.py","lineno":456}
+{"timestamp":"2026-02-16T11:11:48.148046Z","level":"info","event":"Updating subscribed topics to: ('dim-circuit',)","logger":"kafka.consumer.subscription_state","filename":"subscription_state.py","lineno":177}
+{"timestamp":"2026-02-16T11:11:48.151788Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:48.152624Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:48.153318Z","level":"info","event":"CONSUMING: dim-circuit → dimensions/dim_circuit/dim_circuit.parquet","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:48.154079Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:48.154825Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:48.517486Z","level":"info","event":" Downloaded dimensions/dim_circuit/dim_circuit.parquet (35 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:48.520981Z","level":"info","event":" Loaded 35 existing records from Silver","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:48.538925Z","level":"info","event":"<BrokerConnection client_id=kafka-python-2.2.0, node_id=1 host=kafka:29092 <connecting> [IPv4 ('172.18.0.4', 29092)]>: connecting to kafka:29092 [('172.18.0.4', 29092) IPv4]","logger":"kafka.conn","filename":"conn.py","lineno":395}
+{"timestamp":"2026-02-16T11:11:48.545546Z","level":"info","event":"<BrokerConnection client_id=kafka-python-2.2.0, node_id=1 host=kafka:29092 <connected> [IPv4 ('172.18.0.4', 29092)]>: Connection complete.","logger":"kafka.conn","filename":"conn.py","lineno":456}
+{"timestamp":"2026-02-16T11:11:48.547043Z","level":"info","event":"<BrokerConnection client_id=kafka-python-2.2.0, node_id=bootstrap-0 host=kafka:29092 <connected> [IPv4 ('172.18.0.4', 29092)]>: Closing connection. ","logger":"kafka.conn","filename":"conn.py","lineno":936}
+{"timestamp":"2026-02-16T11:11:48.702551Z","level":"info","event":"Coordinator for group/f1-silver-consumers is BrokerMetadata(nodeId='coordinator-1', host='kafka', port=29092, rack=None)","logger":"kafka.cluster","filename":"cluster.py","lineno":398}
+{"timestamp":"2026-02-16T11:11:48.703281Z","level":"info","event":"Discovered coordinator coordinator-1 for group f1-silver-consumers","logger":"kafka.coordinator","filename":"base.py","lineno":745}
+{"timestamp":"2026-02-16T11:11:48.704122Z","level":"info","event":"Starting new heartbeat thread","logger":"kafka.coordinator","filename":"base.py","lineno":796}
+{"timestamp":"2026-02-16T11:11:48.740043Z","level":"info","event":"Revoking previously assigned partitions set() for group f1-silver-consumers","logger":"kafka.coordinator.consumer","filename":"consumer.py","lineno":357}
+{"timestamp":"2026-02-16T11:11:48.752849Z","level":"info","event":"<BrokerConnection client_id=kafka-python-2.2.0, node_id=coordinator-1 host=kafka:29092 <connecting> [IPv4 ('172.18.0.4', 29092)]>: connecting to kafka:29092 [('172.18.0.4', 29092) IPv4]","logger":"kafka.conn","filename":"conn.py","lineno":395}
+{"timestamp":"2026-02-16T11:11:48.754938Z","level":"info","event":"<BrokerConnection client_id=kafka-python-2.2.0, node_id=coordinator-1 host=kafka:29092 <connected> [IPv4 ('172.18.0.4', 29092)]>: Connection complete.","logger":"kafka.conn","filename":"conn.py","lineno":456}
+{"timestamp":"2026-02-16T11:11:48.897883Z","level":"info","event":"(Re-)joining group f1-silver-consumers","logger":"kafka.coordinator","filename":"base.py","lineno":500}
+{"timestamp":"2026-02-16T11:11:48.910133Z","level":"info","event":"(Re-)joining group f1-silver-consumers","logger":"kafka.coordinator","filename":"base.py","lineno":500}
+{"timestamp":"2026-02-16T11:11:48.927166Z","level":"info","event":"Elected group leader -- performing partition assignments using range","logger":"kafka.coordinator","filename":"base.py","lineno":563}
+{"timestamp":"2026-02-16T11:11:48.997750Z","level":"info","event":"Successfully joined group f1-silver-consumers with generation 11","logger":"kafka.coordinator","filename":"base.py","lineno":390}
+{"timestamp":"2026-02-16T11:11:49.006471Z","level":"info","event":"Updated partition assignment: [TopicPartition(topic='dim-circuit', partition=0)]","logger":"kafka.consumer.subscription_state","filename":"subscription_state.py","lineno":246}
+{"timestamp":"2026-02-16T11:11:49.006950Z","level":"info","event":"Setting newly assigned partitions {TopicPartition(topic='dim-circuit', partition=0)} for group f1-silver-consumers","logger":"kafka.coordinator.consumer","filename":"consumer.py","lineno":248}
+{"timestamp":"2026-02-16T11:11:49.075170Z","level":"info","event":"Resetting offset for partition TopicPartition(topic='dim-circuit', partition=0) to offset 0.","logger":"kafka.consumer.fetcher","filename":"fetcher.py","lineno":407}
+{"timestamp":"2026-02-16T11:11:49.679985Z","level":"info","event":"📥 Consumed 10 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:49.686704Z","level":"info","event":"📥 Consumed 20 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:49.687540Z","level":"info","event":"📥 Consumed 30 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:49.703656Z","level":"info","event":"📥 Consumed 40 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:49.704515Z","level":"info","event":"📥 Consumed 50 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:49.707039Z","level":"info","event":"📥 Consumed 60 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:49.710723Z","level":"info","event":"📥 Consumed 70 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:49.712752Z","level":"info","event":"📥 Consumed 80 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:49.714977Z","level":"info","event":"📥 Consumed 90 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:49.722386Z","level":"info","event":"📥 Consumed 100 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:49.725094Z","level":"info","event":"📥 Consumed 110 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:49.731882Z","level":"info","event":"📥 Consumed 120 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:49.739056Z","level":"info","event":"📥 Consumed 130 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:49.743707Z","level":"info","event":"📥 Consumed 140 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:49.745416Z","level":"info","event":"📥 Consumed 150 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:49.748346Z","level":"info","event":"📥 Consumed 160 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:49.749425Z","level":"info","event":"📥 Consumed 170 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:49.751743Z","level":"info","event":"📥 Consumed 180 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:49.754840Z","level":"info","event":"📥 Consumed 190 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:49.758092Z","level":"info","event":"📥 Consumed 200 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:49.760242Z","level":"info","event":"📥 Consumed 210 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:49.763629Z","level":"info","event":"📥 Consumed 220 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:49.767658Z","level":"info","event":"📥 Consumed 230 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:49.768617Z","level":"info","event":"📥 Consumed 240 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:52.033915Z","level":"warning","event":"Heartbeat failed for group f1-silver-consumers because it is rebalancing","logger":"kafka.coordinator","filename":"base.py","lineno":898}
+{"timestamp":"2026-02-16T11:11:52.034878Z","level":"info","event":"Revoking previously assigned partitions {TopicPartition(topic='dim-circuit', partition=0)} for group f1-silver-consumers","logger":"kafka.coordinator.consumer","filename":"consumer.py","lineno":357}
+{"timestamp":"2026-02-16T11:11:52.035552Z","level":"info","event":"(Re-)joining group f1-silver-consumers","logger":"kafka.coordinator","filename":"base.py","lineno":500}
+{"timestamp":"2026-02-16T11:11:52.069996Z","level":"info","event":"Elected group leader -- performing partition assignments using range","logger":"kafka.coordinator","filename":"base.py","lineno":563}
+{"timestamp":"2026-02-16T11:11:52.070848Z","level":"warning","event":"No partition metadata for topic fact-results","logger":"kafka.coordinator.assignors.range","filename":"range.py","lineno":47}
+{"timestamp":"2026-02-16T11:11:52.071418Z","level":"warning","event":"No partition metadata for topic dim-constructor","logger":"kafka.coordinator.assignors.range","filename":"range.py","lineno":47}
+{"timestamp":"2026-02-16T11:11:52.071778Z","level":"warning","event":"No partition metadata for topic dim-driver","logger":"kafka.coordinator.assignors.range","filename":"range.py","lineno":47}
+{"timestamp":"2026-02-16T11:11:52.146509Z","level":"info","event":"Successfully joined group f1-silver-consumers with generation 12","logger":"kafka.coordinator","filename":"base.py","lineno":390}
+{"timestamp":"2026-02-16T11:11:52.148185Z","level":"info","event":"Updated partition assignment: [TopicPartition(topic='dim-circuit', partition=0)]","logger":"kafka.consumer.subscription_state","filename":"subscription_state.py","lineno":246}
+{"timestamp":"2026-02-16T11:11:52.157580Z","level":"info","event":"Setting newly assigned partitions {TopicPartition(topic='dim-circuit', partition=0)} for group f1-silver-consumers","logger":"kafka.coordinator.consumer","filename":"consumer.py","lineno":248}
+{"timestamp":"2026-02-16T11:11:52.472475Z","level":"info","event":"Revoking previously assigned partitions {TopicPartition(topic='dim-circuit', partition=0)} for group f1-silver-consumers","logger":"kafka.coordinator.consumer","filename":"consumer.py","lineno":357}
+{"timestamp":"2026-02-16T11:11:52.473136Z","level":"info","event":"(Re-)joining group f1-silver-consumers","logger":"kafka.coordinator","filename":"base.py","lineno":500}
+{"timestamp":"2026-02-16T11:11:52.479193Z","level":"info","event":"Resetting offset for partition TopicPartition(topic='dim-circuit', partition=0) to offset 0.","logger":"kafka.consumer.fetcher","filename":"fetcher.py","lineno":407}
+{"timestamp":"2026-02-16T11:11:54.707097Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:54.717125Z","level":"info","event":"📊 Processing 240 new records from Kafka","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:54.728226Z","level":"info","event":"    Columns in new data: ['circuit_references', 'circuit_name', 'circuit_city', 'circuit_country', 'circuit_latitude', 'circuit_longtitude', 'circuit_altitude', 'circuit_url', 'circuit_id', 'source', 'created_at']","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:54.764309Z","level":"info","event":"🔄 Updated: circuit_references=albert_park","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:54.789094Z","level":"info","event":"🔄 Updated: circuit_references=americas","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:54.801130Z","level":"info","event":"🔄 Updated: circuit_references=bahrain","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:54.819927Z","level":"info","event":"🔄 Updated: circuit_references=baku","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:54.839361Z","level":"info","event":"🔄 Updated: circuit_references=catalunya","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:54.855735Z","level":"info","event":"🔄 Updated: circuit_references=hungaroring","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:54.877058Z","level":"info","event":"🔄 Updated: circuit_references=interlagos","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:54.883441Z","level":"info","event":"🔄 Updated: circuit_references=jeddah","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:54.901387Z","level":"info","event":"🔄 Updated: circuit_references=losail","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:54.917402Z","level":"warning","event":"The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.","category":"FutureWarning","filename":"/opt/airflow/dags/streaming/kafka_consumers.py","lineno":258,"logger":"py.warnings"}
+{"timestamp":"2026-02-16T11:11:54.933227Z","level":"info","event":"➕ Added: circuit_references=madring (circuit_key=36)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:54.942516Z","level":"info","event":"🔄 Updated: circuit_references=marina_bay","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:54.957045Z","level":"info","event":"🔄 Updated: circuit_references=miami","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:54.965226Z","level":"info","event":"🔄 Updated: circuit_references=monaco","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:54.982958Z","level":"info","event":"🔄 Updated: circuit_references=monza","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:54.995004Z","level":"info","event":"🔄 Updated: circuit_references=red_bull_ring","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:55.005298Z","level":"info","event":"🔄 Updated: circuit_references=rodriguez","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:55.017159Z","level":"info","event":"🔄 Updated: circuit_references=shanghai","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:55.024541Z","level":"info","event":"🔄 Updated: circuit_references=silverstone","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:55.032482Z","level":"info","event":"🔄 Updated: circuit_references=spa","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:55.045052Z","level":"info","event":"🔄 Updated: circuit_references=suzuka","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:55.061152Z","level":"info","event":"🔄 Updated: circuit_references=vegas","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:55.075609Z","level":"info","event":"🔄 Updated: circuit_references=villeneuve","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:55.090429Z","level":"info","event":"🔄 Updated: circuit_references=yas_marina","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:55.102453Z","level":"info","event":"🔄 Updated: circuit_references=zandvoort","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:55.113758Z","level":"info","event":"🔄 Updated: circuit_references=albert_park","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:55.127762Z","level":"info","event":"🔄 Updated: circuit_references=americas","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:55.145567Z","level":"info","event":"🔄 Updated: circuit_references=bahrain","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:55.163861Z","level":"info","event":"🔄 Updated: circuit_references=baku","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:55.182396Z","level":"info","event":"🔄 Updated: circuit_references=catalunya","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:55.205137Z","level":"info","event":"🔄 Updated: circuit_references=hungaroring","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:55.231808Z","level":"info","event":"🔄 Updated: circuit_references=interlagos","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:55.253282Z","level":"info","event":"🔄 Updated: circuit_references=jeddah","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:55.274416Z","level":"info","event":"🔄 Updated: circuit_references=losail","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:55.305612Z","level":"info","event":"🔄 Updated: circuit_references=madring","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:55.329044Z","level":"info","event":"🔄 Updated: circuit_references=marina_bay","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:55.339708Z","level":"info","event":"🔄 Updated: circuit_references=miami","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:55.358158Z","level":"info","event":"🔄 Updated: circuit_references=monaco","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:55.369187Z","level":"info","event":"🔄 Updated: circuit_references=monza","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:55.385301Z","level":"info","event":"🔄 Updated: circuit_references=red_bull_ring","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:55.397428Z","level":"info","event":"🔄 Updated: circuit_references=rodriguez","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:55.407365Z","level":"info","event":"🔄 Updated: circuit_references=shanghai","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:55.421213Z","level":"info","event":"🔄 Updated: circuit_references=silverstone","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:55.437892Z","level":"info","event":"🔄 Updated: circuit_references=spa","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:55.456611Z","level":"info","event":"🔄 Updated: circuit_references=suzuka","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:55.463891Z","level":"info","event":"🔄 Updated: circuit_references=vegas","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:55.480492Z","level":"info","event":"🔄 Updated: circuit_references=villeneuve","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:55.500451Z","level":"info","event":"🔄 Updated: circuit_references=yas_marina","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:55.517476Z","level":"info","event":"🔄 Updated: circuit_references=zandvoort","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:55.537137Z","level":"info","event":"🔄 Updated: circuit_references=albert_park","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:55.548548Z","level":"info","event":"🔄 Updated: circuit_references=americas","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:55.565421Z","level":"info","event":"🔄 Updated: circuit_references=bahrain","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:55.577079Z","level":"info","event":"🔄 Updated: circuit_references=baku","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:55.585683Z","level":"info","event":"🔄 Updated: circuit_references=catalunya","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:55.596681Z","level":"info","event":"🔄 Updated: circuit_references=hungaroring","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:55.611473Z","level":"info","event":"🔄 Updated: circuit_references=interlagos","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:55.628141Z","level":"info","event":"🔄 Updated: circuit_references=jeddah","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:55.643759Z","level":"info","event":"🔄 Updated: circuit_references=losail","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:55.655858Z","level":"info","event":"🔄 Updated: circuit_references=madring","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:55.671143Z","level":"info","event":"🔄 Updated: circuit_references=marina_bay","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:55.688329Z","level":"info","event":"🔄 Updated: circuit_references=miami","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:55.699960Z","level":"info","event":"🔄 Updated: circuit_references=monaco","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:55.710195Z","level":"info","event":"🔄 Updated: circuit_references=monza","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:55.722340Z","level":"info","event":"🔄 Updated: circuit_references=red_bull_ring","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:55.731239Z","level":"info","event":"🔄 Updated: circuit_references=rodriguez","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:55.749793Z","level":"info","event":"🔄 Updated: circuit_references=shanghai","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:55.761088Z","level":"info","event":"🔄 Updated: circuit_references=silverstone","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:55.770089Z","level":"info","event":"🔄 Updated: circuit_references=spa","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:55.783287Z","level":"info","event":"🔄 Updated: circuit_references=suzuka","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:55.793944Z","level":"info","event":"🔄 Updated: circuit_references=vegas","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:55.804893Z","level":"info","event":"🔄 Updated: circuit_references=villeneuve","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:55.812905Z","level":"info","event":"🔄 Updated: circuit_references=yas_marina","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:55.825148Z","level":"info","event":"🔄 Updated: circuit_references=zandvoort","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:55.834521Z","level":"info","event":"🔄 Updated: circuit_references=albert_park","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:55.849756Z","level":"info","event":"🔄 Updated: circuit_references=americas","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:55.866718Z","level":"info","event":"🔄 Updated: circuit_references=bahrain","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:55.876269Z","level":"info","event":"🔄 Updated: circuit_references=baku","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:55.887711Z","level":"info","event":"🔄 Updated: circuit_references=catalunya","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:55.905920Z","level":"info","event":"🔄 Updated: circuit_references=hungaroring","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:55.920165Z","level":"info","event":"🔄 Updated: circuit_references=interlagos","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:55.932074Z","level":"info","event":"🔄 Updated: circuit_references=jeddah","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:55.946115Z","level":"info","event":"🔄 Updated: circuit_references=losail","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:55.961558Z","level":"info","event":"🔄 Updated: circuit_references=madring","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:55.975143Z","level":"info","event":"🔄 Updated: circuit_references=marina_bay","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:55.986555Z","level":"info","event":"🔄 Updated: circuit_references=miami","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:55.996206Z","level":"info","event":"🔄 Updated: circuit_references=monaco","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:56.009593Z","level":"info","event":"🔄 Updated: circuit_references=monza","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:56.020925Z","level":"info","event":"🔄 Updated: circuit_references=red_bull_ring","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:56.034446Z","level":"info","event":"🔄 Updated: circuit_references=rodriguez","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:56.047251Z","level":"info","event":"🔄 Updated: circuit_references=shanghai","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:56.052200Z","level":"info","event":"🔄 Updated: circuit_references=silverstone","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:56.057382Z","level":"info","event":"🔄 Updated: circuit_references=spa","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:56.066129Z","level":"info","event":"🔄 Updated: circuit_references=suzuka","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:56.079053Z","level":"info","event":"🔄 Updated: circuit_references=vegas","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:56.086219Z","level":"info","event":"🔄 Updated: circuit_references=villeneuve","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:56.095056Z","level":"info","event":"🔄 Updated: circuit_references=yas_marina","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:56.103846Z","level":"info","event":"🔄 Updated: circuit_references=zandvoort","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:56.114033Z","level":"info","event":"🔄 Updated: circuit_references=albert_park","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:56.124409Z","level":"info","event":"🔄 Updated: circuit_references=americas","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:56.132128Z","level":"info","event":"🔄 Updated: circuit_references=bahrain","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:56.141824Z","level":"info","event":"🔄 Updated: circuit_references=baku","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:56.153119Z","level":"info","event":"🔄 Updated: circuit_references=catalunya","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:56.158506Z","level":"info","event":"🔄 Updated: circuit_references=hungaroring","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:56.166640Z","level":"info","event":"🔄 Updated: circuit_references=interlagos","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:56.178849Z","level":"info","event":"🔄 Updated: circuit_references=jeddah","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:56.196019Z","level":"info","event":"🔄 Updated: circuit_references=losail","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:56.206883Z","level":"info","event":"🔄 Updated: circuit_references=madring","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:56.219988Z","level":"info","event":"🔄 Updated: circuit_references=marina_bay","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:56.227507Z","level":"info","event":"🔄 Updated: circuit_references=miami","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:56.239006Z","level":"info","event":"🔄 Updated: circuit_references=monaco","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:56.246410Z","level":"info","event":"🔄 Updated: circuit_references=monza","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:56.261662Z","level":"info","event":"🔄 Updated: circuit_references=red_bull_ring","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:56.276246Z","level":"info","event":"🔄 Updated: circuit_references=rodriguez","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:56.287702Z","level":"info","event":"🔄 Updated: circuit_references=shanghai","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:56.296592Z","level":"info","event":"🔄 Updated: circuit_references=silverstone","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:56.305534Z","level":"info","event":"🔄 Updated: circuit_references=spa","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:56.313794Z","level":"info","event":"🔄 Updated: circuit_references=suzuka","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:56.322497Z","level":"info","event":"🔄 Updated: circuit_references=vegas","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:56.330061Z","level":"info","event":"🔄 Updated: circuit_references=villeneuve","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:56.345058Z","level":"info","event":"🔄 Updated: circuit_references=yas_marina","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:56.349505Z","level":"info","event":"🔄 Updated: circuit_references=zandvoort","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:56.360077Z","level":"info","event":"🔄 Updated: circuit_references=albert_park","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:56.369368Z","level":"info","event":"🔄 Updated: circuit_references=americas","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:56.379300Z","level":"info","event":"🔄 Updated: circuit_references=bahrain","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:56.389620Z","level":"info","event":"🔄 Updated: circuit_references=baku","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:56.398277Z","level":"info","event":"🔄 Updated: circuit_references=catalunya","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:56.407610Z","level":"info","event":"🔄 Updated: circuit_references=hungaroring","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:56.422352Z","level":"info","event":"🔄 Updated: circuit_references=interlagos","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:56.433112Z","level":"info","event":"🔄 Updated: circuit_references=jeddah","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:56.451544Z","level":"info","event":"🔄 Updated: circuit_references=losail","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:56.457310Z","level":"info","event":"🔄 Updated: circuit_references=madring","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:56.467253Z","level":"info","event":"🔄 Updated: circuit_references=marina_bay","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:56.481177Z","level":"info","event":"🔄 Updated: circuit_references=miami","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:56.493979Z","level":"info","event":"🔄 Updated: circuit_references=monaco","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:56.504210Z","level":"info","event":"🔄 Updated: circuit_references=monza","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:56.512299Z","level":"info","event":"🔄 Updated: circuit_references=red_bull_ring","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:56.520436Z","level":"info","event":"🔄 Updated: circuit_references=rodriguez","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:56.528680Z","level":"info","event":"🔄 Updated: circuit_references=shanghai","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:56.537824Z","level":"info","event":"🔄 Updated: circuit_references=silverstone","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:56.545029Z","level":"info","event":"🔄 Updated: circuit_references=spa","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:56.553764Z","level":"info","event":"🔄 Updated: circuit_references=suzuka","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:56.561353Z","level":"info","event":"🔄 Updated: circuit_references=vegas","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:56.573909Z","level":"info","event":"🔄 Updated: circuit_references=villeneuve","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:56.584021Z","level":"info","event":"🔄 Updated: circuit_references=yas_marina","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:56.593250Z","level":"info","event":"🔄 Updated: circuit_references=zandvoort","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:56.600132Z","level":"info","event":"🔄 Updated: circuit_references=albert_park","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:56.613057Z","level":"info","event":"🔄 Updated: circuit_references=americas","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:56.623288Z","level":"info","event":"🔄 Updated: circuit_references=bahrain","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:56.649496Z","level":"info","event":"🔄 Updated: circuit_references=baku","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:56.659662Z","level":"info","event":"🔄 Updated: circuit_references=catalunya","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:56.670699Z","level":"info","event":"🔄 Updated: circuit_references=hungaroring","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:56.678851Z","level":"info","event":"🔄 Updated: circuit_references=interlagos","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:56.689127Z","level":"info","event":"🔄 Updated: circuit_references=jeddah","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:56.695728Z","level":"info","event":"🔄 Updated: circuit_references=losail","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:56.708090Z","level":"info","event":"🔄 Updated: circuit_references=madring","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:56.716665Z","level":"info","event":"🔄 Updated: circuit_references=marina_bay","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:56.728352Z","level":"info","event":"🔄 Updated: circuit_references=miami","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:56.738910Z","level":"info","event":"🔄 Updated: circuit_references=monaco","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:56.747455Z","level":"info","event":"🔄 Updated: circuit_references=monza","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:56.761033Z","level":"info","event":"🔄 Updated: circuit_references=red_bull_ring","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:56.767313Z","level":"info","event":"🔄 Updated: circuit_references=rodriguez","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:56.778785Z","level":"info","event":"🔄 Updated: circuit_references=shanghai","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:56.788563Z","level":"info","event":"🔄 Updated: circuit_references=silverstone","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:56.799535Z","level":"info","event":"🔄 Updated: circuit_references=spa","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:56.811724Z","level":"info","event":"🔄 Updated: circuit_references=suzuka","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:56.820689Z","level":"info","event":"🔄 Updated: circuit_references=vegas","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:56.829854Z","level":"info","event":"🔄 Updated: circuit_references=villeneuve","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:56.842605Z","level":"info","event":"🔄 Updated: circuit_references=yas_marina","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:56.854894Z","level":"info","event":"🔄 Updated: circuit_references=zandvoort","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:56.861978Z","level":"info","event":"🔄 Updated: circuit_references=albert_park","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:56.872567Z","level":"info","event":"🔄 Updated: circuit_references=americas","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:56.880553Z","level":"info","event":"🔄 Updated: circuit_references=bahrain","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:56.889166Z","level":"info","event":"🔄 Updated: circuit_references=baku","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:56.900523Z","level":"info","event":"🔄 Updated: circuit_references=catalunya","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:56.910686Z","level":"info","event":"🔄 Updated: circuit_references=hungaroring","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:56.919948Z","level":"info","event":"🔄 Updated: circuit_references=interlagos","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:56.939402Z","level":"info","event":"🔄 Updated: circuit_references=jeddah","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:56.947167Z","level":"info","event":"🔄 Updated: circuit_references=losail","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:56.959576Z","level":"info","event":"🔄 Updated: circuit_references=madring","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:56.964439Z","level":"info","event":"🔄 Updated: circuit_references=marina_bay","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:56.975198Z","level":"info","event":"🔄 Updated: circuit_references=miami","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:56.984725Z","level":"info","event":"🔄 Updated: circuit_references=monaco","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:56.997097Z","level":"info","event":"🔄 Updated: circuit_references=monza","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:57.007798Z","level":"info","event":"🔄 Updated: circuit_references=red_bull_ring","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:57.016722Z","level":"info","event":"🔄 Updated: circuit_references=rodriguez","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:57.028127Z","level":"info","event":"🔄 Updated: circuit_references=shanghai","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:57.036767Z","level":"info","event":"🔄 Updated: circuit_references=silverstone","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:57.145095Z","level":"info","event":"🔄 Updated: circuit_references=spa","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:57.157084Z","level":"info","event":"🔄 Updated: circuit_references=suzuka","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:57.158141Z","level":"info","event":"🔄 Updated: circuit_references=vegas","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:57.164601Z","level":"info","event":"🔄 Updated: circuit_references=villeneuve","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:57.165648Z","level":"info","event":"🔄 Updated: circuit_references=yas_marina","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:57.166511Z","level":"info","event":"🔄 Updated: circuit_references=zandvoort","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:57.167555Z","level":"info","event":"🔄 Updated: circuit_references=albert_park","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:57.181254Z","level":"info","event":"🔄 Updated: circuit_references=americas","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:57.182934Z","level":"info","event":"🔄 Updated: circuit_references=bahrain","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:57.186974Z","level":"info","event":"🔄 Updated: circuit_references=baku","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:57.189006Z","level":"info","event":"🔄 Updated: circuit_references=catalunya","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:57.194992Z","level":"info","event":"🔄 Updated: circuit_references=hungaroring","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:57.207560Z","level":"info","event":"🔄 Updated: circuit_references=interlagos","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:57.215946Z","level":"info","event":"🔄 Updated: circuit_references=jeddah","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:57.231844Z","level":"info","event":"🔄 Updated: circuit_references=losail","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:57.238855Z","level":"info","event":"🔄 Updated: circuit_references=madring","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:57.248604Z","level":"info","event":"🔄 Updated: circuit_references=marina_bay","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:57.273114Z","level":"info","event":"🔄 Updated: circuit_references=miami","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:57.293825Z","level":"info","event":"🔄 Updated: circuit_references=monaco","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:57.314609Z","level":"info","event":"🔄 Updated: circuit_references=monza","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:57.327199Z","level":"info","event":"🔄 Updated: circuit_references=red_bull_ring","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:57.364369Z","level":"info","event":"🔄 Updated: circuit_references=rodriguez","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:57.379138Z","level":"info","event":"🔄 Updated: circuit_references=shanghai","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:57.389747Z","level":"info","event":"🔄 Updated: circuit_references=silverstone","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:57.409227Z","level":"info","event":"🔄 Updated: circuit_references=spa","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:57.422108Z","level":"info","event":"🔄 Updated: circuit_references=suzuka","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:57.432794Z","level":"info","event":"🔄 Updated: circuit_references=vegas","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:57.440171Z","level":"info","event":"🔄 Updated: circuit_references=villeneuve","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:57.457116Z","level":"info","event":"🔄 Updated: circuit_references=yas_marina","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:57.463800Z","level":"info","event":"🔄 Updated: circuit_references=zandvoort","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:57.477189Z","level":"info","event":"🔄 Updated: circuit_references=albert_park","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:57.497059Z","level":"info","event":"🔄 Updated: circuit_references=americas","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:57.506199Z","level":"info","event":"🔄 Updated: circuit_references=bahrain","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:57.517055Z","level":"info","event":"🔄 Updated: circuit_references=baku","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:57.522014Z","level":"info","event":"🔄 Updated: circuit_references=catalunya","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:57.530110Z","level":"info","event":"🔄 Updated: circuit_references=hungaroring","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:57.540038Z","level":"info","event":"🔄 Updated: circuit_references=interlagos","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:57.553761Z","level":"info","event":"🔄 Updated: circuit_references=jeddah","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:57.561939Z","level":"info","event":"🔄 Updated: circuit_references=losail","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:57.569926Z","level":"info","event":"🔄 Updated: circuit_references=madring","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:57.581238Z","level":"info","event":"🔄 Updated: circuit_references=marina_bay","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:57.592970Z","level":"info","event":"🔄 Updated: circuit_references=miami","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:57.597603Z","level":"info","event":"🔄 Updated: circuit_references=monaco","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:57.609986Z","level":"info","event":"🔄 Updated: circuit_references=monza","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:57.620834Z","level":"info","event":"🔄 Updated: circuit_references=red_bull_ring","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:57.632796Z","level":"info","event":"🔄 Updated: circuit_references=rodriguez","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:57.644280Z","level":"info","event":"🔄 Updated: circuit_references=shanghai","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:57.667789Z","level":"info","event":"🔄 Updated: circuit_references=silverstone","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:57.675600Z","level":"info","event":"🔄 Updated: circuit_references=spa","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:57.683961Z","level":"info","event":"🔄 Updated: circuit_references=suzuka","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:57.706284Z","level":"info","event":"🔄 Updated: circuit_references=vegas","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:57.719514Z","level":"info","event":"🔄 Updated: circuit_references=villeneuve","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:57.737170Z","level":"info","event":"🔄 Updated: circuit_references=yas_marina","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:57.755853Z","level":"info","event":"🔄 Updated: circuit_references=zandvoort","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:57.789754Z","level":"info","event":"    Converting created_at datetime.date/time → string for parquet","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:57.893050Z","level":"info","event":"Uploaded dimensions/dim_circuit/dim_circuit.parquet (36 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:57.905778Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:57.910429Z","level":"info","event":" Written to Silver: dimensions/dim_circuit/dim_circuit.parquet","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:11:57.912761Z","level":"info","event":"Elected group leader -- performing partition assignments using range","logger":"kafka.coordinator","filename":"base.py","lineno":563}
+{"timestamp":"2026-02-16T11:11:57.913585Z","level":"warning","event":"No partition metadata for topic dim-race","logger":"kafka.coordinator.assignors.range","filename":"range.py","lineno":47}
+{"timestamp":"2026-02-16T11:11:57.913854Z","level":"warning","event":"No partition metadata for topic fact-constructor-standings","logger":"kafka.coordinator.assignors.range","filename":"range.py","lineno":47}
+{"timestamp":"2026-02-16T11:11:57.914053Z","level":"warning","event":"No partition metadata for topic fact-driver-standings","logger":"kafka.coordinator.assignors.range","filename":"range.py","lineno":47}
+{"timestamp":"2026-02-16T11:11:57.933829Z","level":"error","event":"Task failed with exception","logger":"task","filename":"task_runner.py","lineno":1078,"error_detail":[{"exc_type":"CommitFailedError","exc_value":"CommitFailedError: Commit cannot be completed since the group has already\n            rebalanced and assigned the partitions to another member.\n            This means that the time between subsequent calls to poll()\n            was longer than the configured max_poll_interval_ms, which\n            typically implies that the poll loop is spending too much\n            time message processing. You can address this either by\n            increasing the rebalance timeout with max_poll_interval_ms,\n            or by reducing the maximum size of batches returned in poll()\n            with max_poll_records.\n            ","exc_notes":[],"syntax_error":null,"is_cause":false,"frames":[{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/task_runner.py","lineno":1004,"name":"run"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/task_runner.py","lineno":1405,"name":"_execute_task"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/bases/operator.py","lineno":417,"name":"wrapper"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/standard/operators/python.py","lineno":214,"name":"execute"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/standard/operators/python.py","lineno":237,"name":"execute_callable"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/callback_runner.py","lineno":82,"name":"run"},{"filename":"/opt/airflow/dags/weekly_streaming_pipeline.py","lineno":180,"name":"consume_circuits"},{"filename":"/opt/airflow/dags/streaming/kafka_consumers.py","lineno":300,"name":"consume"},{"filename":"/opt/airflow/dags/streaming/kafka_consumers.py","lineno":193,"name":"consume_and_merge"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/kafka/consumer/group.py","lineno":567,"name":"commit"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/kafka/coordinator/consumer.py","lineno":540,"name":"commit_offsets_sync"}],"is_group":false,"exceptions":[]}]}

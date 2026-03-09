@@ -1,0 +1,205 @@
+{"timestamp":"2026-02-13T15:08:56.791655Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-02-13T15:08:56.809682Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/api_etl/api_pitstops_bronze_to_silver.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-02-13T15:08:57.916427Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:08:57.916892Z","level":"info","event":"F1 PIT STOPS BACKFILL: ERGAST API -> SILVER","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:08:57.917259Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:08:57.917577Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:08:57.917799Z","level":"info","event":"[STEP 1] Scraping API...","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:08:57.918024Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:08:57.918228Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:08:57.918427Z","level":"info","event":"SCRAPING PIT STOPS FROM ERGAST API: 2024-2025","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:08:57.918626Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:08:57.918820Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:08:57.919059Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:08:57.919286Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:08:57.919569Z","level":"info","event":"SCRAPING PIT STOPS FOR 2024","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:08:57.919891Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:08:57.920118Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:08:57.920330Z","level":"info","event":"Fetching pit stops for 2024 Round 1...","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:08:58.655133Z","level":"info","event":"Rate limit hit! Waiting 6s before retry 1/5...","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:09:08.756937Z","level":"info","event":"  43 pit stops found","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:09:08.757351Z","level":"info","event":"Fetching pit stops for 2024 Round 2...","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:09:13.666839Z","level":"info","event":"  19 pit stops found","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:09:13.692610Z","level":"info","event":"Fetching pit stops for 2024 Round 3...","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:09:16.592462Z","level":"info","event":"  36 pit stops found","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:09:16.592741Z","level":"info","event":"Fetching pit stops for 2024 Round 4...","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:09:22.159858Z","level":"info","event":"  54 pit stops found","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:09:22.160336Z","level":"info","event":"Fetching pit stops for 2024 Round 5...","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:09:24.050215Z","level":"info","event":"Rate limit hit! Waiting 8s before retry 1/5...","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:09:36.142446Z","level":"info","event":"  40 pit stops found","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:09:36.184562Z","level":"info","event":"Fetching pit stops for 2024 Round 6...","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:09:40.254818Z","level":"info","event":"  28 pit stops found","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:09:40.259385Z","level":"info","event":"Fetching pit stops for 2024 Round 7...","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:09:43.556569Z","level":"info","event":"  27 pit stops found","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:09:43.557103Z","level":"info","event":"Fetching pit stops for 2024 Round 8...","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:09:46.231123Z","level":"info","event":"  23 pit stops found","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:09:46.232366Z","level":"info","event":"Fetching pit stops for 2024 Round 9...","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:09:52.873095Z","level":"info","event":"  42 pit stops found","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:09:52.873440Z","level":"info","event":"Fetching pit stops for 2024 Round 10...","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:09:58.386507Z","level":"info","event":"  42 pit stops found","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:09:58.387133Z","level":"info","event":"Fetching pit stops for 2024 Round 11...","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:10:02.139539Z","level":"info","event":"  45 pit stops found","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:10:02.140204Z","level":"info","event":"Fetching pit stops for 2024 Round 12...","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:10:02.263498Z","level":"info","event":"Rate limit hit! Waiting 7s before retry 1/5...","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:10:12.551790Z","level":"info","event":"  45 pit stops found","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:10:12.552701Z","level":"info","event":"Fetching pit stops for 2024 Round 13...","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:10:17.198633Z","level":"info","event":"  40 pit stops found","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:10:17.199024Z","level":"info","event":"Fetching pit stops for 2024 Round 14...","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:10:22.267848Z","level":"info","event":"  34 pit stops found","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:10:22.268484Z","level":"info","event":"Fetching pit stops for 2024 Round 15...","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:10:25.640276Z","level":"info","event":"  26 pit stops found","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:10:25.640669Z","level":"info","event":"Fetching pit stops for 2024 Round 16...","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:10:29.604279Z","level":"info","event":"  30 pit stops found","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:10:29.604794Z","level":"info","event":"Fetching pit stops for 2024 Round 17...","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:10:34.654891Z","level":"info","event":"  22 pit stops found","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:10:34.655605Z","level":"info","event":"Fetching pit stops for 2024 Round 18...","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:10:37.315618Z","level":"info","event":"  23 pit stops found","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:10:37.315966Z","level":"info","event":"Fetching pit stops for 2024 Round 19...","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:10:42.591294Z","level":"info","event":"  23 pit stops found","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:10:42.591644Z","level":"info","event":"Fetching pit stops for 2024 Round 20...","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:10:47.730353Z","level":"info","event":"  21 pit stops found","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:10:47.730855Z","level":"info","event":"Fetching pit stops for 2024 Round 21...","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:10:54.097903Z","level":"info","event":"  35 pit stops found","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:10:54.098423Z","level":"info","event":"Fetching pit stops for 2024 Round 22...","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:10:58.539281Z","level":"info","event":"  39 pit stops found","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:10:58.539586Z","level":"info","event":"Fetching pit stops for 2024 Round 23...","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:11:02.353306Z","level":"info","event":"  60 pit stops found","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:11:02.354705Z","level":"info","event":"Fetching pit stops for 2024 Round 24...","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:11:05.820177Z","level":"info","event":"  28 pit stops found","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:11:05.820827Z","level":"info","event":"Fetching pit stops for 2024 Round 25...","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:11:09.944791Z","level":"info","event":"  No data for 2024 Round 25","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:11:09.945550Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:11:09.946060Z","level":"info","event":"Total pit stops for 2024: 825","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:11:09.946469Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:11:09.946860Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:11:09.947231Z","level":"info","event":"SCRAPING PIT STOPS FOR 2025","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:11:09.947586Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:11:09.947913Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:11:09.948221Z","level":"info","event":"Fetching pit stops for 2025 Round 1...","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:11:15.323695Z","level":"info","event":"  82 pit stops found","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:11:15.324363Z","level":"info","event":"Fetching pit stops for 2025 Round 2...","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:11:20.800781Z","level":"info","event":"  25 pit stops found","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:11:20.801536Z","level":"info","event":"Fetching pit stops for 2025 Round 3...","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:11:25.864198Z","level":"info","event":"  21 pit stops found","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:11:25.864840Z","level":"info","event":"Fetching pit stops for 2025 Round 4...","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:11:29.568434Z","level":"info","event":"  42 pit stops found","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:11:29.568818Z","level":"info","event":"Fetching pit stops for 2025 Round 5...","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:11:35.146066Z","level":"info","event":"  19 pit stops found","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:11:35.146462Z","level":"info","event":"Fetching pit stops for 2025 Round 6...","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:11:39.640371Z","level":"info","event":"  18 pit stops found","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:11:39.640676Z","level":"info","event":"Fetching pit stops for 2025 Round 7...","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:11:46.012285Z","level":"info","event":"  37 pit stops found","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:11:46.013374Z","level":"info","event":"Fetching pit stops for 2025 Round 8...","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:11:52.818719Z","level":"info","event":"  40 pit stops found","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:11:52.846303Z","level":"info","event":"Fetching pit stops for 2025 Round 9...","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:11:57.418252Z","level":"info","event":"  54 pit stops found","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:11:57.418787Z","level":"info","event":"Fetching pit stops for 2025 Round 10...","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:12:01.046791Z","level":"info","event":"  82 pit stops found","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:12:01.047156Z","level":"info","event":"Fetching pit stops for 2025 Round 11...","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:12:04.463015Z","level":"info","event":"  32 pit stops found","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:12:04.463367Z","level":"info","event":"Fetching pit stops for 2025 Round 12...","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:12:08.383021Z","level":"info","event":"  35 pit stops found","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:12:08.404747Z","level":"info","event":"Fetching pit stops for 2025 Round 13...","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:12:13.302630Z","level":"info","event":"  26 pit stops found","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:12:13.303004Z","level":"info","event":"Fetching pit stops for 2025 Round 14...","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:12:16.156763Z","level":"info","event":"  29 pit stops found","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:12:16.157183Z","level":"info","event":"Fetching pit stops for 2025 Round 15...","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:12:22.447414Z","level":"info","event":"  40 pit stops found","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:12:22.447955Z","level":"info","event":"Fetching pit stops for 2025 Round 16...","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:12:27.915830Z","level":"info","event":"  19 pit stops found","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:12:27.916318Z","level":"info","event":"Fetching pit stops for 2025 Round 17...","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:12:32.105327Z","level":"info","event":"  21 pit stops found","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:12:32.107196Z","level":"info","event":"Fetching pit stops for 2025 Round 18...","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:12:37.148624Z","level":"info","event":"  23 pit stops found","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:12:37.152026Z","level":"info","event":"Fetching pit stops for 2025 Round 19...","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:12:41.619635Z","level":"info","event":"  21 pit stops found","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:12:41.630516Z","level":"info","event":"Fetching pit stops for 2025 Round 20...","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:12:46.417052Z","level":"info","event":"  27 pit stops found","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:12:46.417454Z","level":"info","event":"Fetching pit stops for 2025 Round 21...","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:12:50.614786Z","level":"info","event":"  37 pit stops found","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:12:50.638949Z","level":"info","event":"Fetching pit stops for 2025 Round 22...","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:12:54.506754Z","level":"info","event":"  23 pit stops found","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:12:54.507107Z","level":"info","event":"Fetching pit stops for 2025 Round 23...","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:12:58.298553Z","level":"info","event":"  41 pit stops found","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:12:58.299771Z","level":"info","event":"Fetching pit stops for 2025 Round 24...","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:13:03.435008Z","level":"info","event":"  27 pit stops found","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:13:03.435352Z","level":"info","event":"Fetching pit stops for 2025 Round 25...","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:13:07.415449Z","level":"info","event":"  No data for 2025 Round 25","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:13:07.416112Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:13:07.416558Z","level":"info","event":"Total pit stops for 2025: 821","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:13:07.417663Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:13:07.417994Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:13:07.418314Z","level":"info","event":"SCRAPING COMPLETE","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:13:07.419068Z","level":"info","event":"Total pit stops: 1,646","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:13:07.419635Z","level":"info","event":"Years covered: 2024-2025","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:13:07.420182Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:13:07.420616Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:13:07.421086Z","level":"info","event":"API scraping complete: 1,646 pit stop records","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:13:07.421490Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:13:07.421898Z","level":"info","event":"[STEP 2] Transforming to Silver schema...","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:13:07.422242Z","level":"info","event":"Transforming API data to Silver schema...","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:13:07.424357Z","level":"info","event":"Sorted by year + round + lap + stop","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:13:07.431156Z","level":"info","event":"Transformed 1646 pit stops to Silver schema","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:13:07.431568Z","level":"info","event":"Source: api","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:13:07.431943Z","level":"info","event":"Transformation complete: 1646 pit stops","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:13:07.432245Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:13:07.432519Z","level":"info","event":"[STEP 3] Loading dimensions for FK resolution...","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:13:07.460544Z","level":"info","event":" Downloaded dimensions/dim_driver/dim_driver.parquet (81 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:13:07.464840Z","level":"info","event":" Downloaded dimensions/dim_constructor/dim_constructor.parquet (21 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:13:07.469788Z","level":"info","event":" Downloaded dimensions/dim_race/dim_race.parquet (280 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:13:07.475238Z","level":"info","event":" Downloaded dimensions/dim_time/dim_time.parquet (6940 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:13:07.475688Z","level":"info","event":"Loaded dimensions:","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:13:07.476027Z","level":"info","event":"  - dim_driver: 81 drivers","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:13:07.476412Z","level":"info","event":"  - dim_constructor: 21 constructors","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:13:07.476799Z","level":"info","event":"  - dim_race: 280 races","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:13:07.477169Z","level":"info","event":"  - dim_time: 6,940 dates","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:13:07.477560Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:13:07.477940Z","level":"info","event":"[STEP 4] Resolving foreign keys...","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:13:07.485828Z","level":"info","event":"  Building race-driver-constructor mapping from race results...","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:13:07.491651Z","level":"info","event":" Downloaded facts/fact_race_results/year=2024/data.parquet (100 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:13:07.514640Z","level":"info","event":" Downloaded facts/fact_race_results/year=2025/data.parquet (100 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:13:07.531968Z","level":"info","event":"  Built race-driver-constructor mapping: 200 entries","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:13:07.532452Z","level":"info","event":"Created lookup dictionaries:","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:13:07.532807Z","level":"info","event":"  - driver_ref -> driver_key: 81 entries","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:13:07.533141Z","level":"info","event":"  - race_year+race_round -> race_key: 280 entries","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:13:07.533472Z","level":"info","event":"  - race_date -> time_key: 6940 entries","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:13:07.551220Z","level":"info","event":"WARNING: 1264 pit stops have unresolved constructor_key!","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:13:07.566027Z","level":"info","event":"All FKs resolved successfully","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:13:07.566947Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:13:07.568344Z","level":"info","event":"[STEP 5] Loading existing Silver data...","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:13:07.568730Z","level":"info","event":"Error reading facts/fact_pitstops/year=2024/data.parquet: S3 operation failed; code: NoSuchKey, message: The specified key does not exist., resource: /f1-silver/facts/fact_pitstops/year=2024/data.parquet, request_id: 1893D71A8FB273D8, host_id: dd9025bab4ad464b049177c95eb6ebf374d3b3fd1af9251148b658df7ac2e3e8, bucket_name: f1-silver, object_name: facts/fact_pitstops/year=2024/data.parquet","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:13:07.574341Z","level":"info","event":"Error reading facts/fact_pitstops/year=2025/data.parquet: S3 operation failed; code: NoSuchKey, message: The specified key does not exist., resource: /f1-silver/facts/fact_pitstops/year=2025/data.parquet, request_id: 1893D71A8FCCD434, host_id: dd9025bab4ad464b049177c95eb6ebf374d3b3fd1af9251148b658df7ac2e3e8, bucket_name: f1-silver, object_name: facts/fact_pitstops/year=2025/data.parquet","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:13:07.574806Z","level":"info","event":"No existing Silver data found (first run)","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:13:07.575225Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:13:07.575610Z","level":"info","event":"[STEP 6] Merging API data with existing Silver...","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:13:07.575889Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:13:07.576213Z","level":"info","event":"  Merge Configuration:","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:13:07.576549Z","level":"info","event":"Existing pit stops: 0","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:13:07.576889Z","level":"info","event":"New API pit stops: 1646","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:13:07.577154Z","level":"info","event":"Merge key: race_year + race_round + driver_ref + stop_number","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:13:07.577509Z","level":"info","event":"CSV priority: YES (skip API for CSV pit stops)","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:13:07.579286Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:13:07.579733Z","level":"info","event":"  FIRST RUN: No existing data, adding all API pit stops","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:13:07.580063Z","level":"info","event":"  Generated pitstop_key: 1-1646","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:13:07.580441Z","level":"info","event":"Merge complete: 1,646 total pit stops","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:13:07.580745Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:13:07.581116Z","level":"info","event":"[STEP 7] Writing to Silver layer (partitioned by year)...","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:13:07.582803Z","level":"info","event":" Uploaded facts/fact_pitstops/year=2024/data.parquet (825 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:13:07.586274Z","level":"info","event":"  Year 2024: 825 pit stops written","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:13:07.591138Z","level":"info","event":" Uploaded facts/fact_pitstops/year=2025/data.parquet (821 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:13:07.592128Z","level":"info","event":"  Year 2025: 821 pit stops written","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:13:07.592512Z","level":"info","event":"Written to: s3://f1-silver/facts/fact_pitstops/year=*/data.parquet","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:13:07.592927Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:13:07.593276Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:13:07.593549Z","level":"info","event":"BACKFILL SUMMARY","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:13:07.593886Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:13:07.594149Z","level":"info","event":"  Existing pit stops in Silver: 0","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:13:07.594511Z","level":"info","event":"  API pit stops scraped: 1646","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:13:07.594794Z","level":"info","event":"  Final pit stop count: 1,646","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:13:07.595108Z","level":"info","event":"  New pit stops added: 1646","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:13:07.595490Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:13:07.595844Z","level":"info","event":"  Final source breakdown:","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:13:07.596172Z","level":"info","event":"    api            : 1,646","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:13:07.596484Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-13T15:13:07.607393Z","level":"info","event":"Done. Returned value was: {'existing_count': 0, 'api_scraped': 1646, 'final_count': 1646, 'new_pitstops_added': 1646}","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":216}
+{"timestamp":"2026-02-13T15:13:07.607691Z","level":"info","event":"Pushing xcom","ti":"RuntimeTaskInstance(id=UUID('019c578c-425c-751a-ae12-8935324026d3'), task_id='backfill_fact_pitstops', dag_id='api_pitstops_bronze_to_silver', run_id='manual__2026-02-13T15:08:55.474598+00:00', try_number=1, dag_version_id=UUID('019c4d6a-4e3c-7468-8489-32126267c9ad'), map_index=-1, hostname='6dc0edc1fac9', context_carrier={}, task=<Task(PythonOperator): backfill_fact_pitstops>, bundle_instance=LocalDagBundle(name=dags-folder), max_tries=2, start_date=datetime.datetime(2026, 2, 13, 15, 8, 56, 649948, tzinfo=datetime.timezone.utc), end_date=None, state=<TaskInstanceState.RUNNING: 'running'>, is_mapped=False, rendered_map_index=None)","logger":"task","filename":"task_runner.py","lineno":1450}

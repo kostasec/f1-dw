@@ -1,0 +1,34 @@
+{"timestamp":"2026-02-09T08:57:16.870228Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-02-09T08:57:16.871312Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/api_etl/api_drivers_bronze_to_silver.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-02-09T08:57:17.195859Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2026-02-09T08:57:17.197772Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2026-02-09T08:57:17.199077Z","level":"info","event":"Current task name:backfill_dim_driver","logger":"task.stdout"}
+{"timestamp":"2026-02-09T08:57:17.199432Z","level":"info","event":"Dag name:api_drivers_bronze_to_silver","logger":"task.stdout"}
+{"timestamp":"2026-02-09T08:57:17.199696Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-09T08:57:17.199917Z","level":"info","event":"F1 DRIVER BACKFILL: ERGAST API → SILVER","logger":"task.stdout"}
+{"timestamp":"2026-02-09T08:57:17.200126Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-09T08:57:17.200430Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-09T08:57:17.200941Z","level":"info","event":"[STEP 1] Scraping API...","logger":"task.stdout"}
+{"timestamp":"2026-02-09T08:57:17.205694Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-09T08:57:17.206177Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-09T08:57:17.206469Z","level":"info","event":"SCRAPING DRIVERS FROM ERGAST API: 2011-2025","logger":"task.stdout"}
+{"timestamp":"2026-02-09T08:57:17.206760Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-09T08:57:17.206992Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-09T08:57:17.207388Z","level":"info","event":"Fetching drivers for 2011...","logger":"task.stdout"}
+{"timestamp":"2026-02-09T08:57:17.392615Z","level":"info","event":"Rate limit hit! Waiting 10s before retry 1/5...","logger":"task.stdout"}
+{"timestamp":"2026-02-09T08:57:32.447636Z","level":"info","event":"28 drivers found","logger":"task.stdout"}
+{"timestamp":"2026-02-09T08:57:32.448367Z","level":"info","event":"Fetching drivers for 2012...","logger":"task.stdout"}
+{"timestamp":"2026-02-09T08:57:37.502361Z","level":"info","event":"25 drivers found","logger":"task.stdout"}
+{"timestamp":"2026-02-09T08:57:37.503024Z","level":"info","event":"Fetching drivers for 2013...","logger":"task.stdout"}
+{"timestamp":"2026-02-09T08:57:37.552463Z","level":"info","event":"Rate limit hit! Waiting 10s before retry 1/5...","logger":"task.stdout"}
+{"timestamp":"2026-02-09T08:57:52.606940Z","level":"info","event":"23 drivers found","logger":"task.stdout"}
+{"timestamp":"2026-02-09T08:57:52.607996Z","level":"info","event":"Fetching drivers for 2014...","logger":"task.stdout"}
+{"timestamp":"2026-02-09T08:57:57.661904Z","level":"info","event":"24 drivers found","logger":"task.stdout"}
+{"timestamp":"2026-02-09T08:57:57.662354Z","level":"info","event":"Fetching drivers for 2015...","logger":"task.stdout"}
+{"timestamp":"2026-02-09T08:58:02.852662Z","level":"info","event":"22 drivers found","logger":"task.stdout"}
+{"timestamp":"2026-02-09T08:58:02.853049Z","level":"info","event":"Fetching drivers for 2016...","logger":"task.stdout"}
+{"timestamp":"2026-02-09T08:58:07.767931Z","level":"info","event":"24 drivers found","logger":"task.stdout"}
+{"timestamp":"2026-02-09T08:58:07.769014Z","level":"info","event":"Fetching drivers for 2017...","logger":"task.stdout"}
+{"timestamp":"2026-02-09T08:58:07.779722Z","level":"error","event":"Server indicated the task shouldn't be running anymore. Terminating process","detail":{"detail":{"reason":"not_running","message":"TI is no longer in the running state and task should terminate","current_state":"failed"}},"logger":"task"}
+{"timestamp":"2026-02-09T08:58:07.818007Z","level":"info","event":"Rate limit hit! Waiting 10s before retry 1/5...","logger":"task.stdout"}
+{"timestamp":"2026-02-09T08:58:12.806558Z","level":"error","event":"Task killed!","logger":"task"}

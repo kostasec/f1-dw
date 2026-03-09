@@ -1,0 +1,273 @@
+{"timestamp":"2026-02-16T09:52:39.513373Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-02-16T09:52:39.517915Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/weekly_streaming_pipeline.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-02-16T09:52:49.018244Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T09:52:49.019787Z","level":"info","event":"[CONSUMER] Starting dim_constructor consumption...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T09:52:49.032406Z","level":"info","event":"<BrokerConnection client_id=kafka-python-2.2.0, node_id=bootstrap-0 host=kafka:29092 <connecting> [IPv4 ('172.18.0.6', 29092)]>: connecting to kafka:29092 [('172.18.0.6', 29092) IPv4]","logger":"kafka.conn","filename":"conn.py","lineno":395}
+{"timestamp":"2026-02-16T09:52:49.072472Z","level":"info","event":"<BrokerConnection client_id=kafka-python-2.2.0, node_id=bootstrap-0 host=kafka:29092 <checking_api_versions_recv> [IPv4 ('172.18.0.6', 29092)]>: Broker version identified as 2.6","logger":"kafka.conn","filename":"conn.py","lineno":615}
+{"timestamp":"2026-02-16T09:52:49.111855Z","level":"info","event":"<BrokerConnection client_id=kafka-python-2.2.0, node_id=bootstrap-0 host=kafka:29092 <connected> [IPv4 ('172.18.0.6', 29092)]>: Connection complete.","logger":"kafka.conn","filename":"conn.py","lineno":456}
+{"timestamp":"2026-02-16T09:52:49.168594Z","level":"info","event":"Updating subscribed topics to: ('dim-constructor',)","logger":"kafka.consumer.subscription_state","filename":"subscription_state.py","lineno":177}
+{"timestamp":"2026-02-16T09:52:49.186073Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T09:52:49.188161Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-16T09:52:49.199733Z","level":"info","event":"CONSUMING: dim-constructor → dimensions/dim_constructor/dim_constructor.parquet","logger":"task.stdout"}
+{"timestamp":"2026-02-16T09:52:49.203169Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-16T09:52:49.204271Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T09:52:49.476921Z","level":"info","event":" Downloaded dimensions/dim_constructor/dim_constructor.parquet (21 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T09:52:49.486795Z","level":"info","event":" Loaded 21 existing records from Silver","logger":"task.stdout"}
+{"timestamp":"2026-02-16T09:52:49.496233Z","level":"info","event":"<BrokerConnection client_id=kafka-python-2.2.0, node_id=1 host=kafka:29092 <connecting> [IPv4 ('172.18.0.6', 29092)]>: connecting to kafka:29092 [('172.18.0.6', 29092) IPv4]","logger":"kafka.conn","filename":"conn.py","lineno":395}
+{"timestamp":"2026-02-16T09:52:49.502999Z","level":"info","event":"<BrokerConnection client_id=kafka-python-2.2.0, node_id=1 host=kafka:29092 <connected> [IPv4 ('172.18.0.6', 29092)]>: Connection complete.","logger":"kafka.conn","filename":"conn.py","lineno":456}
+{"timestamp":"2026-02-16T09:52:49.503918Z","level":"info","event":"<BrokerConnection client_id=kafka-python-2.2.0, node_id=bootstrap-0 host=kafka:29092 <connected> [IPv4 ('172.18.0.6', 29092)]>: Closing connection. ","logger":"kafka.conn","filename":"conn.py","lineno":936}
+{"timestamp":"2026-02-16T09:52:49.677494Z","level":"info","event":"Coordinator for group/f1-silver-consumers is BrokerMetadata(nodeId='coordinator-1', host='kafka', port=29092, rack=None)","logger":"kafka.cluster","filename":"cluster.py","lineno":398}
+{"timestamp":"2026-02-16T09:52:49.678216Z","level":"info","event":"Discovered coordinator coordinator-1 for group f1-silver-consumers","logger":"kafka.coordinator","filename":"base.py","lineno":745}
+{"timestamp":"2026-02-16T09:52:49.679322Z","level":"info","event":"Starting new heartbeat thread","logger":"kafka.coordinator","filename":"base.py","lineno":796}
+{"timestamp":"2026-02-16T09:52:49.710580Z","level":"info","event":"Revoking previously assigned partitions set() for group f1-silver-consumers","logger":"kafka.coordinator.consumer","filename":"consumer.py","lineno":357}
+{"timestamp":"2026-02-16T09:52:49.722125Z","level":"info","event":"<BrokerConnection client_id=kafka-python-2.2.0, node_id=coordinator-1 host=kafka:29092 <connecting> [IPv4 ('172.18.0.6', 29092)]>: connecting to kafka:29092 [('172.18.0.6', 29092) IPv4]","logger":"kafka.conn","filename":"conn.py","lineno":395}
+{"timestamp":"2026-02-16T09:52:49.723661Z","level":"info","event":"<BrokerConnection client_id=kafka-python-2.2.0, node_id=coordinator-1 host=kafka:29092 <connected> [IPv4 ('172.18.0.6', 29092)]>: Connection complete.","logger":"kafka.conn","filename":"conn.py","lineno":456}
+{"timestamp":"2026-02-16T09:52:49.831274Z","level":"info","event":"(Re-)joining group f1-silver-consumers","logger":"kafka.coordinator","filename":"base.py","lineno":500}
+{"timestamp":"2026-02-16T09:52:49.851367Z","level":"info","event":"(Re-)joining group f1-silver-consumers","logger":"kafka.coordinator","filename":"base.py","lineno":500}
+{"timestamp":"2026-02-16T09:52:49.883276Z","level":"info","event":"Elected group leader -- performing partition assignments using range","logger":"kafka.coordinator","filename":"base.py","lineno":563}
+{"timestamp":"2026-02-16T09:52:49.941787Z","level":"info","event":"Successfully joined group f1-silver-consumers with generation 3","logger":"kafka.coordinator","filename":"base.py","lineno":390}
+{"timestamp":"2026-02-16T09:52:49.949681Z","level":"info","event":"Updated partition assignment: [TopicPartition(topic='dim-constructor', partition=0)]","logger":"kafka.consumer.subscription_state","filename":"subscription_state.py","lineno":246}
+{"timestamp":"2026-02-16T09:52:49.958360Z","level":"info","event":"Setting newly assigned partitions {TopicPartition(topic='dim-constructor', partition=0)} for group f1-silver-consumers","logger":"kafka.coordinator.consumer","filename":"consumer.py","lineno":248}
+{"timestamp":"2026-02-16T09:52:49.997053Z","level":"info","event":"Resetting offset for partition TopicPartition(topic='dim-constructor', partition=0) to offset 0.","logger":"kafka.consumer.fetcher","filename":"fetcher.py","lineno":407}
+{"timestamp":"2026-02-16T09:52:50.393433Z","level":"info","event":"📥 Consumed 10 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T09:52:50.395419Z","level":"info","event":"📥 Consumed 20 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T09:52:50.396295Z","level":"info","event":"📥 Consumed 30 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T09:52:50.397149Z","level":"info","event":"📥 Consumed 40 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T09:52:50.401179Z","level":"info","event":"📥 Consumed 50 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T09:52:50.402135Z","level":"info","event":"📥 Consumed 60 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T09:52:50.402911Z","level":"info","event":"📥 Consumed 70 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T09:52:50.409105Z","level":"info","event":"📥 Consumed 80 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T09:52:52.982976Z","level":"warning","event":"Heartbeat failed for group f1-silver-consumers because it is rebalancing","logger":"kafka.coordinator","filename":"base.py","lineno":898}
+{"timestamp":"2026-02-16T09:52:53.477160Z","level":"info","event":"Revoking previously assigned partitions {TopicPartition(topic='dim-constructor', partition=0)} for group f1-silver-consumers","logger":"kafka.coordinator.consumer","filename":"consumer.py","lineno":357}
+{"timestamp":"2026-02-16T09:52:53.477816Z","level":"info","event":"(Re-)joining group f1-silver-consumers","logger":"kafka.coordinator","filename":"base.py","lineno":500}
+{"timestamp":"2026-02-16T09:52:53.519918Z","level":"info","event":"Elected group leader -- performing partition assignments using range","logger":"kafka.coordinator","filename":"base.py","lineno":563}
+{"timestamp":"2026-02-16T09:52:53.520785Z","level":"warning","event":"No partition metadata for topic fact-driver-standings","logger":"kafka.coordinator.assignors.range","filename":"range.py","lineno":47}
+{"timestamp":"2026-02-16T09:52:53.521260Z","level":"warning","event":"No partition metadata for topic dim-driver","logger":"kafka.coordinator.assignors.range","filename":"range.py","lineno":47}
+{"timestamp":"2026-02-16T09:52:53.521685Z","level":"warning","event":"No partition metadata for topic fact-constructor-standings","logger":"kafka.coordinator.assignors.range","filename":"range.py","lineno":47}
+{"timestamp":"2026-02-16T09:52:53.522067Z","level":"warning","event":"No partition metadata for topic dim-circuit","logger":"kafka.coordinator.assignors.range","filename":"range.py","lineno":47}
+{"timestamp":"2026-02-16T09:52:53.522445Z","level":"warning","event":"No partition metadata for topic fact-results","logger":"kafka.coordinator.assignors.range","filename":"range.py","lineno":47}
+{"timestamp":"2026-02-16T09:52:53.721725Z","level":"info","event":"Successfully joined group f1-silver-consumers with generation 4","logger":"kafka.coordinator","filename":"base.py","lineno":390}
+{"timestamp":"2026-02-16T09:52:53.722797Z","level":"info","event":"Updated partition assignment: [TopicPartition(topic='dim-constructor', partition=0)]","logger":"kafka.consumer.subscription_state","filename":"subscription_state.py","lineno":246}
+{"timestamp":"2026-02-16T09:52:53.723349Z","level":"info","event":"Setting newly assigned partitions {TopicPartition(topic='dim-constructor', partition=0)} for group f1-silver-consumers","logger":"kafka.coordinator.consumer","filename":"consumer.py","lineno":248}
+{"timestamp":"2026-02-16T09:52:53.724384Z","level":"info","event":"Revoking previously assigned partitions {TopicPartition(topic='dim-constructor', partition=0)} for group f1-silver-consumers","logger":"kafka.coordinator.consumer","filename":"consumer.py","lineno":357}
+{"timestamp":"2026-02-16T09:52:53.724898Z","level":"info","event":"(Re-)joining group f1-silver-consumers","logger":"kafka.coordinator","filename":"base.py","lineno":500}
+{"timestamp":"2026-02-16T09:52:55.400207Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T09:52:55.504574Z","level":"info","event":"📊 Processing 88 new records from Kafka","logger":"task.stdout"}
+{"timestamp":"2026-02-16T09:52:55.508790Z","level":"info","event":"    Columns in new data: ['constructor_ref', 'constructor_name', 'constructor_nationality', 'constructor_url', 'constructor_id', 'source', 'created_at']","logger":"task.stdout"}
+{"timestamp":"2026-02-16T09:52:55.404287Z","level":"error","event":"Task failed with exception","logger":"task","filename":"task_runner.py","lineno":1078,"error_detail":[{"exc_type":"NameError","exc_value":"name 'merge_key' is not defined","exc_notes":[],"syntax_error":null,"is_cause":false,"frames":[{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/task_runner.py","lineno":1004,"name":"run"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/task_runner.py","lineno":1405,"name":"_execute_task"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/bases/operator.py","lineno":417,"name":"wrapper"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/standard/operators/python.py","lineno":214,"name":"execute"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/standard/operators/python.py","lineno":237,"name":"execute_callable"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/callback_runner.py","lineno":82,"name":"run"},{"filename":"/opt/airflow/dags/weekly_streaming_pipeline.py","lineno":170,"name":"consume_constructors"},{"filename":"/opt/airflow/dags/streaming/kafka_consumers.py","lineno":277,"name":"consume"},{"filename":"/opt/airflow/dags/streaming/kafka_consumers.py","lineno":166,"name":"consume_and_merge"}],"is_group":false,"exceptions":[]}]}
+{"timestamp":"2026-02-16T11:35:54.934815Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-02-16T11:35:54.937638Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/weekly_streaming_pipeline.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-02-16T11:35:56.291873Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:35:56.292384Z","level":"info","event":"[CONSUMER] Starting dim_constructor consumption...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:35:56.294042Z","level":"info","event":"<BrokerConnection client_id=kafka-python-2.2.0, node_id=bootstrap-0 host=kafka:29092 <connecting> [IPv4 ('172.18.0.4', 29092)]>: connecting to kafka:29092 [('172.18.0.4', 29092) IPv4]","logger":"kafka.conn","filename":"conn.py","lineno":395}
+{"timestamp":"2026-02-16T11:35:56.300001Z","level":"info","event":"<BrokerConnection client_id=kafka-python-2.2.0, node_id=bootstrap-0 host=kafka:29092 <checking_api_versions_recv> [IPv4 ('172.18.0.4', 29092)]>: Broker version identified as 2.6","logger":"kafka.conn","filename":"conn.py","lineno":615}
+{"timestamp":"2026-02-16T11:35:56.303977Z","level":"info","event":"<BrokerConnection client_id=kafka-python-2.2.0, node_id=bootstrap-0 host=kafka:29092 <connected> [IPv4 ('172.18.0.4', 29092)]>: Connection complete.","logger":"kafka.conn","filename":"conn.py","lineno":456}
+{"timestamp":"2026-02-16T11:35:56.306246Z","level":"info","event":"Updating subscribed topics to: ('dim-constructor',)","logger":"kafka.consumer.subscription_state","filename":"subscription_state.py","lineno":177}
+{"timestamp":"2026-02-16T11:35:56.307461Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:35:56.308075Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:35:56.308520Z","level":"info","event":"CONSUMING: dim-constructor → dimensions/dim_constructor/dim_constructor.parquet","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:35:56.308864Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:35:56.309313Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:35:56.351210Z","level":"info","event":" Downloaded dimensions/dim_constructor/dim_constructor.parquet (21 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:35:56.352274Z","level":"info","event":" Loaded 21 existing records from Silver","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:35:56.354146Z","level":"info","event":"<BrokerConnection client_id=kafka-python-2.2.0, node_id=1 host=kafka:29092 <connecting> [IPv4 ('172.18.0.4', 29092)]>: connecting to kafka:29092 [('172.18.0.4', 29092) IPv4]","logger":"kafka.conn","filename":"conn.py","lineno":395}
+{"timestamp":"2026-02-16T11:35:56.355373Z","level":"info","event":"<BrokerConnection client_id=kafka-python-2.2.0, node_id=1 host=kafka:29092 <connected> [IPv4 ('172.18.0.4', 29092)]>: Connection complete.","logger":"kafka.conn","filename":"conn.py","lineno":456}
+{"timestamp":"2026-02-16T11:35:56.355751Z","level":"info","event":"<BrokerConnection client_id=kafka-python-2.2.0, node_id=bootstrap-0 host=kafka:29092 <connected> [IPv4 ('172.18.0.4', 29092)]>: Closing connection. ","logger":"kafka.conn","filename":"conn.py","lineno":936}
+{"timestamp":"2026-02-16T11:35:56.458027Z","level":"info","event":"Coordinator for group/f1-silver-consumers is BrokerMetadata(nodeId='coordinator-1', host='kafka', port=29092, rack=None)","logger":"kafka.cluster","filename":"cluster.py","lineno":398}
+{"timestamp":"2026-02-16T11:35:56.458352Z","level":"info","event":"Discovered coordinator coordinator-1 for group f1-silver-consumers","logger":"kafka.coordinator","filename":"base.py","lineno":745}
+{"timestamp":"2026-02-16T11:35:56.458581Z","level":"info","event":"Starting new heartbeat thread","logger":"kafka.coordinator","filename":"base.py","lineno":796}
+{"timestamp":"2026-02-16T11:35:56.459777Z","level":"info","event":"Revoking previously assigned partitions set() for group f1-silver-consumers","logger":"kafka.coordinator.consumer","filename":"consumer.py","lineno":357}
+{"timestamp":"2026-02-16T11:35:56.461329Z","level":"info","event":"<BrokerConnection client_id=kafka-python-2.2.0, node_id=coordinator-1 host=kafka:29092 <connecting> [IPv4 ('172.18.0.4', 29092)]>: connecting to kafka:29092 [('172.18.0.4', 29092) IPv4]","logger":"kafka.conn","filename":"conn.py","lineno":395}
+{"timestamp":"2026-02-16T11:35:56.462134Z","level":"info","event":"<BrokerConnection client_id=kafka-python-2.2.0, node_id=coordinator-1 host=kafka:29092 <connected> [IPv4 ('172.18.0.4', 29092)]>: Connection complete.","logger":"kafka.conn","filename":"conn.py","lineno":456}
+{"timestamp":"2026-02-16T11:35:56.563676Z","level":"info","event":"(Re-)joining group f1-silver-consumers","logger":"kafka.coordinator","filename":"base.py","lineno":500}
+{"timestamp":"2026-02-16T11:35:56.566187Z","level":"info","event":"(Re-)joining group f1-silver-consumers","logger":"kafka.coordinator","filename":"base.py","lineno":500}
+{"timestamp":"2026-02-16T11:35:56.609583Z","level":"info","event":"Successfully joined group f1-silver-consumers with generation 38","logger":"kafka.coordinator","filename":"base.py","lineno":390}
+{"timestamp":"2026-02-16T11:35:56.610110Z","level":"info","event":"Updated partition assignment: []","logger":"kafka.consumer.subscription_state","filename":"subscription_state.py","lineno":246}
+{"timestamp":"2026-02-16T11:35:56.610353Z","level":"info","event":"Setting newly assigned partitions set() for group f1-silver-consumers","logger":"kafka.coordinator.consumer","filename":"consumer.py","lineno":248}
+{"timestamp":"2026-02-16T11:35:59.615813Z","level":"warning","event":"Heartbeat failed for group f1-silver-consumers because it is rebalancing","logger":"kafka.coordinator","filename":"base.py","lineno":898}
+{"timestamp":"2026-02-16T11:35:59.616234Z","level":"info","event":"Revoking previously assigned partitions set() for group f1-silver-consumers","logger":"kafka.coordinator.consumer","filename":"consumer.py","lineno":357}
+{"timestamp":"2026-02-16T11:35:59.616486Z","level":"info","event":"(Re-)joining group f1-silver-consumers","logger":"kafka.coordinator","filename":"base.py","lineno":500}
+{"timestamp":"2026-02-16T11:35:59.641773Z","level":"info","event":"Successfully joined group f1-silver-consumers with generation 39","logger":"kafka.coordinator","filename":"base.py","lineno":390}
+{"timestamp":"2026-02-16T11:35:59.643402Z","level":"info","event":"Updated partition assignment: [TopicPartition(topic='dim-constructor', partition=0)]","logger":"kafka.consumer.subscription_state","filename":"subscription_state.py","lineno":246}
+{"timestamp":"2026-02-16T11:35:59.643772Z","level":"info","event":"Setting newly assigned partitions {TopicPartition(topic='dim-constructor', partition=0)} for group f1-silver-consumers","logger":"kafka.coordinator.consumer","filename":"consumer.py","lineno":248}
+{"timestamp":"2026-02-16T11:35:59.653522Z","level":"info","event":"Resetting offset for partition TopicPartition(topic='dim-constructor', partition=0) to offset 0.","logger":"kafka.consumer.fetcher","filename":"fetcher.py","lineno":407}
+{"timestamp":"2026-02-16T11:35:59.697065Z","level":"info","event":"Consumed 10 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:35:59.697885Z","level":"info","event":"Consumed 20 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:35:59.698515Z","level":"info","event":"Consumed 30 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:35:59.699172Z","level":"info","event":"Consumed 40 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:35:59.699771Z","level":"info","event":"Consumed 50 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:35:59.700254Z","level":"info","event":"Consumed 60 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:35:59.700825Z","level":"info","event":"Consumed 70 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:35:59.701478Z","level":"info","event":"Consumed 80 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:35:59.701952Z","level":"info","event":"Consumed 90 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:35:59.702398Z","level":"info","event":"Consumed 100 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:35:59.712082Z","level":"info","event":"Consumed 110 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:35:59.713312Z","level":"info","event":"Consumed 120 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:35:59.713935Z","level":"info","event":"Consumed 130 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:35:59.714579Z","level":"info","event":"Consumed 140 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.716171Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.720747Z","level":"info","event":" Processing 143 new records from Kafka","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.744437Z","level":"info","event":"    Columns in new data: ['constructor_ref', 'constructor_name', 'constructor_nationality', 'constructor_url', 'constructor_id', 'source', 'created_at']","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.744898Z","level":"info","event":" Updated: constructor_ref=alpine","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.745361Z","level":"info","event":" Updated: constructor_ref=aston_martin","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.746852Z","level":"info","event":" Added: constructor_ref=audi (constructor_key=22)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.748326Z","level":"info","event":" Added: constructor_ref=cadillac (constructor_key=23)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.749340Z","level":"info","event":" Updated: constructor_ref=ferrari","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.749901Z","level":"info","event":" Updated: constructor_ref=haas","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.750495Z","level":"info","event":" Updated: constructor_ref=mclaren","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.751091Z","level":"info","event":" Updated: constructor_ref=mercedes","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.751596Z","level":"info","event":" Updated: constructor_ref=rb","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.754212Z","level":"info","event":" Updated: constructor_ref=red_bull","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.758982Z","level":"info","event":" Updated: constructor_ref=williams","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.765254Z","level":"info","event":" Updated: constructor_ref=alpine","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.769592Z","level":"info","event":" Updated: constructor_ref=aston_martin","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.774281Z","level":"info","event":" Updated: constructor_ref=audi","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.778969Z","level":"info","event":" Updated: constructor_ref=cadillac","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.781749Z","level":"info","event":" Updated: constructor_ref=ferrari","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.786231Z","level":"info","event":" Updated: constructor_ref=haas","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.788751Z","level":"info","event":" Updated: constructor_ref=mclaren","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.792615Z","level":"info","event":" Updated: constructor_ref=mercedes","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.795641Z","level":"info","event":" Updated: constructor_ref=rb","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.798108Z","level":"info","event":" Updated: constructor_ref=red_bull","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.800280Z","level":"info","event":" Updated: constructor_ref=williams","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.802204Z","level":"info","event":" Updated: constructor_ref=alpine","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.805321Z","level":"info","event":" Updated: constructor_ref=aston_martin","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.812514Z","level":"info","event":" Updated: constructor_ref=audi","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.818529Z","level":"info","event":" Updated: constructor_ref=cadillac","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.820003Z","level":"info","event":" Updated: constructor_ref=ferrari","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.823031Z","level":"info","event":" Updated: constructor_ref=haas","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.826703Z","level":"info","event":" Updated: constructor_ref=mclaren","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.830783Z","level":"info","event":" Updated: constructor_ref=mercedes","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.833915Z","level":"info","event":" Updated: constructor_ref=rb","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.836459Z","level":"info","event":" Updated: constructor_ref=red_bull","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.839976Z","level":"info","event":" Updated: constructor_ref=williams","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.842813Z","level":"info","event":" Updated: constructor_ref=alpine","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.845967Z","level":"info","event":" Updated: constructor_ref=aston_martin","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.849476Z","level":"info","event":" Updated: constructor_ref=audi","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.852510Z","level":"info","event":" Updated: constructor_ref=cadillac","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.856329Z","level":"info","event":" Updated: constructor_ref=ferrari","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.860609Z","level":"info","event":" Updated: constructor_ref=haas","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.864727Z","level":"info","event":" Updated: constructor_ref=mclaren","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.868527Z","level":"info","event":" Updated: constructor_ref=mercedes","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.871472Z","level":"info","event":" Updated: constructor_ref=rb","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.875091Z","level":"info","event":" Updated: constructor_ref=red_bull","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.883499Z","level":"info","event":" Updated: constructor_ref=williams","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.887472Z","level":"info","event":" Updated: constructor_ref=alpine","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.892885Z","level":"info","event":" Updated: constructor_ref=aston_martin","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.896940Z","level":"info","event":" Updated: constructor_ref=audi","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.901015Z","level":"info","event":" Updated: constructor_ref=cadillac","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.903633Z","level":"info","event":" Updated: constructor_ref=ferrari","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.905961Z","level":"info","event":" Updated: constructor_ref=haas","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.907943Z","level":"info","event":" Updated: constructor_ref=mclaren","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.910434Z","level":"info","event":" Updated: constructor_ref=mercedes","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.913778Z","level":"info","event":" Updated: constructor_ref=rb","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.916700Z","level":"info","event":" Updated: constructor_ref=red_bull","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.919795Z","level":"info","event":" Updated: constructor_ref=williams","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.923001Z","level":"info","event":" Updated: constructor_ref=alpine","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.926055Z","level":"info","event":" Updated: constructor_ref=aston_martin","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.929562Z","level":"info","event":" Updated: constructor_ref=audi","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.932139Z","level":"info","event":" Updated: constructor_ref=cadillac","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.935166Z","level":"info","event":" Updated: constructor_ref=ferrari","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.937952Z","level":"info","event":" Updated: constructor_ref=haas","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.939807Z","level":"info","event":" Updated: constructor_ref=mclaren","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.941839Z","level":"info","event":" Updated: constructor_ref=mercedes","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.943985Z","level":"info","event":" Updated: constructor_ref=rb","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.947520Z","level":"info","event":" Updated: constructor_ref=red_bull","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.951829Z","level":"info","event":" Updated: constructor_ref=williams","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.955504Z","level":"info","event":" Updated: constructor_ref=alpine","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.958553Z","level":"info","event":" Updated: constructor_ref=aston_martin","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.961070Z","level":"info","event":" Updated: constructor_ref=audi","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.964439Z","level":"info","event":" Updated: constructor_ref=cadillac","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.968137Z","level":"info","event":" Updated: constructor_ref=ferrari","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.971967Z","level":"info","event":" Updated: constructor_ref=haas","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.974740Z","level":"info","event":" Updated: constructor_ref=mclaren","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.977657Z","level":"info","event":" Updated: constructor_ref=mercedes","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.980563Z","level":"info","event":" Updated: constructor_ref=rb","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.983752Z","level":"info","event":" Updated: constructor_ref=red_bull","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.985857Z","level":"info","event":" Updated: constructor_ref=williams","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.987816Z","level":"info","event":" Updated: constructor_ref=alpine","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.990823Z","level":"info","event":" Updated: constructor_ref=aston_martin","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.994652Z","level":"info","event":" Updated: constructor_ref=audi","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:04.997399Z","level":"info","event":" Updated: constructor_ref=cadillac","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:05.000566Z","level":"info","event":" Updated: constructor_ref=ferrari","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:05.003650Z","level":"info","event":" Updated: constructor_ref=haas","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:05.007385Z","level":"info","event":" Updated: constructor_ref=mclaren","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:05.010754Z","level":"info","event":" Updated: constructor_ref=mercedes","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:05.013862Z","level":"info","event":" Updated: constructor_ref=rb","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:05.017222Z","level":"info","event":" Updated: constructor_ref=red_bull","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:05.020500Z","level":"info","event":" Updated: constructor_ref=williams","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:05.022740Z","level":"info","event":" Updated: constructor_ref=alpine","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:05.025524Z","level":"info","event":" Updated: constructor_ref=aston_martin","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:05.028575Z","level":"info","event":" Updated: constructor_ref=audi","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:05.032049Z","level":"info","event":" Updated: constructor_ref=cadillac","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:05.035253Z","level":"info","event":" Updated: constructor_ref=ferrari","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:05.038263Z","level":"info","event":" Updated: constructor_ref=haas","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:05.040995Z","level":"info","event":" Updated: constructor_ref=mclaren","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:05.044863Z","level":"info","event":" Updated: constructor_ref=mercedes","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:05.048097Z","level":"info","event":" Updated: constructor_ref=rb","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:05.050320Z","level":"info","event":" Updated: constructor_ref=red_bull","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:05.055894Z","level":"info","event":" Updated: constructor_ref=williams","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:05.059006Z","level":"info","event":" Updated: constructor_ref=alpine","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:05.062869Z","level":"info","event":" Updated: constructor_ref=aston_martin","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:05.066396Z","level":"info","event":" Updated: constructor_ref=audi","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:05.069061Z","level":"info","event":" Updated: constructor_ref=cadillac","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:05.073658Z","level":"info","event":" Updated: constructor_ref=ferrari","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:05.076839Z","level":"info","event":" Updated: constructor_ref=haas","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:05.079864Z","level":"info","event":" Updated: constructor_ref=mclaren","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:05.082616Z","level":"info","event":" Updated: constructor_ref=mercedes","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:05.085976Z","level":"info","event":" Updated: constructor_ref=rb","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:05.089423Z","level":"info","event":" Updated: constructor_ref=red_bull","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:05.092522Z","level":"info","event":" Updated: constructor_ref=williams","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:05.095593Z","level":"info","event":" Updated: constructor_ref=alpine","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:05.098852Z","level":"info","event":" Updated: constructor_ref=aston_martin","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:05.101923Z","level":"info","event":" Updated: constructor_ref=audi","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:05.105064Z","level":"info","event":" Updated: constructor_ref=cadillac","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:05.107974Z","level":"info","event":" Updated: constructor_ref=ferrari","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:05.110805Z","level":"info","event":" Updated: constructor_ref=haas","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:05.113674Z","level":"info","event":" Updated: constructor_ref=mclaren","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:05.116667Z","level":"info","event":" Updated: constructor_ref=mercedes","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:05.119713Z","level":"info","event":" Updated: constructor_ref=rb","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:05.125050Z","level":"info","event":" Updated: constructor_ref=red_bull","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:05.127826Z","level":"info","event":" Updated: constructor_ref=williams","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:05.131866Z","level":"info","event":" Updated: constructor_ref=alpine","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:05.136083Z","level":"info","event":" Updated: constructor_ref=aston_martin","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:05.138254Z","level":"info","event":" Updated: constructor_ref=audi","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:05.140950Z","level":"info","event":" Updated: constructor_ref=cadillac","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:05.144092Z","level":"info","event":" Updated: constructor_ref=ferrari","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:05.147011Z","level":"info","event":" Updated: constructor_ref=haas","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:05.150003Z","level":"info","event":" Updated: constructor_ref=mclaren","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:05.152532Z","level":"info","event":" Updated: constructor_ref=mercedes","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:05.155895Z","level":"info","event":" Updated: constructor_ref=rb","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:05.160554Z","level":"info","event":" Updated: constructor_ref=red_bull","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:05.163872Z","level":"info","event":" Updated: constructor_ref=williams","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:05.166472Z","level":"info","event":" Updated: constructor_ref=alpine","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:05.169740Z","level":"info","event":" Updated: constructor_ref=aston_martin","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:05.173903Z","level":"info","event":" Updated: constructor_ref=audi","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:05.177730Z","level":"info","event":" Updated: constructor_ref=cadillac","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:05.180818Z","level":"info","event":" Updated: constructor_ref=ferrari","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:05.183901Z","level":"info","event":" Updated: constructor_ref=haas","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:05.187038Z","level":"info","event":" Updated: constructor_ref=mclaren","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:05.191566Z","level":"info","event":" Updated: constructor_ref=mercedes","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:05.194589Z","level":"info","event":" Updated: constructor_ref=rb","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:05.197298Z","level":"info","event":" Updated: constructor_ref=red_bull","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:05.200122Z","level":"info","event":" Updated: constructor_ref=williams","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:05.207499Z","level":"info","event":"    Converting created_at datetime.date/time to string for parquet","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:05.233406Z","level":"info","event":"Uploaded dimensions/dim_constructor/dim_constructor.parquet (23 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:05.234115Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:05.234778Z","level":"info","event":"Written to Silver: dimensions/dim_constructor/dim_constructor.parquet","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:05.236062Z","level":"info","event":"Kafka offset committed successfully","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:05.236173Z","level":"info","event":"Stopping heartbeat thread","logger":"kafka.coordinator","filename":"base.py","lineno":810}
+{"timestamp":"2026-02-16T11:36:08.236748Z","level":"warning","event":"Heartbeat thread did not fully terminate during close","logger":"kafka.coordinator","filename":"base.py","lineno":1013}
+{"timestamp":"2026-02-16T11:36:08.237100Z","level":"info","event":"Leaving consumer group (f1-silver-consumers).","logger":"kafka.coordinator","filename":"base.py","lineno":841}
+{"timestamp":"2026-02-16T11:36:08.239075Z","level":"info","event":"<BrokerConnection client_id=kafka-python-2.2.0, node_id=1 host=kafka:29092 <connected> [IPv4 ('172.18.0.4', 29092)]>: Closing connection. ","logger":"kafka.conn","filename":"conn.py","lineno":936}
+{"timestamp":"2026-02-16T11:36:08.239593Z","level":"info","event":"<BrokerConnection client_id=kafka-python-2.2.0, node_id=coordinator-1 host=kafka:29092 <connected> [IPv4 ('172.18.0.4', 29092)]>: Closing connection. ","logger":"kafka.conn","filename":"conn.py","lineno":936}
+{"timestamp":"2026-02-16T11:36:08.240562Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:08.241013Z","level":"info","event":" Consumer Stats:","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:08.241367Z","level":"info","event":"    Consumed: 143","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:08.241738Z","level":"info","event":"    New: 2","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:08.242217Z","level":"info","event":"    Updated: 141","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:08.242597Z","level":"info","event":"    Skipped: 0","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:08.242929Z","level":"info","event":"    Final count: 23","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:08.264245Z","level":"info","event":"[CONSUMER] Completed: {'consumed': 143, 'new': 2, 'updated': 141, 'skipped': 0}","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:36:08.264560Z","level":"info","event":"Done. Returned value was: {'consumed': 143, 'new': 2, 'updated': 141, 'skipped': 0}","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":216}
+{"timestamp":"2026-02-16T11:36:08.264938Z","level":"info","event":"Pushing xcom","ti":"RuntimeTaskInstance(id=UUID('019c663b-cae1-7da6-ba2b-a8b9b969e467'), task_id='consume_dim_constructor', dag_id='weekly_streaming_f1_etl', run_id='scheduled__2026-02-16T03:00:00+00:00', try_number=1, dag_version_id=UUID('019c663b-c7a8-7abc-a3fe-4ba651367d8d'), map_index=-1, hostname='8ca1c3cee112', context_carrier={}, task=<Task(PythonOperator): consume_dim_constructor>, bundle_instance=LocalDagBundle(name=dags-folder), max_tries=2, start_date=datetime.datetime(2026, 2, 16, 11, 35, 54, 796504, tzinfo=datetime.timezone.utc), end_date=None, state=<TaskInstanceState.RUNNING: 'running'>, is_mapped=False, rendered_map_index=None)","logger":"task","filename":"task_runner.py","lineno":1450}

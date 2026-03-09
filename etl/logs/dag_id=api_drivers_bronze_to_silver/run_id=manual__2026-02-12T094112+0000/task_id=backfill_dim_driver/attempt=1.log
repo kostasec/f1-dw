@@ -1,0 +1,16 @@
+{"timestamp":"2026-02-12T09:41:14.833359Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-02-12T09:41:14.835849Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/api_etl/api_drivers_bronze_to_silver.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-02-12T09:41:15.295956Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-12T09:41:15.296695Z","level":"info","event":"F1 DRIVER BACKFILL: ERGAST API → SILVER","logger":"task.stdout"}
+{"timestamp":"2026-02-12T09:41:15.297114Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-12T09:41:15.297466Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-12T09:41:15.297780Z","level":"info","event":"[STEP 1] Scraping API...","logger":"task.stdout"}
+{"timestamp":"2026-02-12T09:41:15.298062Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-12T09:41:15.298348Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-12T09:41:15.298569Z","level":"info","event":"SCRAPING DRIVERS FROM ERGAST API: 2024-2025","logger":"task.stdout"}
+{"timestamp":"2026-02-12T09:41:15.298918Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-12T09:41:15.299341Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-12T09:41:15.299755Z","level":"info","event":"Fetching drivers for 2024...","logger":"task.stdout"}
+{"timestamp":"2026-02-12T09:41:17.878548Z","level":"info","event":"Rate limit hit! Waiting 30s before retry 1/6...","logger":"task.stdout"}
+{"timestamp":"2026-02-12T09:41:37.922928Z","level":"error","event":"Server indicated the task shouldn't be running anymore. Terminating process","detail":{"detail":{"reason":"not_running","message":"TI is no longer in the running state and task should terminate","current_state":"failed"}},"logger":"task"}
+{"timestamp":"2026-02-12T09:41:42.940967Z","level":"error","event":"Task killed!","logger":"task"}

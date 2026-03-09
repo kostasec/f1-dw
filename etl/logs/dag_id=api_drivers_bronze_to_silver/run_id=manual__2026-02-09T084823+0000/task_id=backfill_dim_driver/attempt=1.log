@@ -1,0 +1,29 @@
+{"timestamp":"2026-02-09T08:48:25.438708Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-02-09T08:48:25.439650Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/api_etl/api_drivers_bronze_to_silver.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-02-09T08:48:25.643861Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2026-02-09T08:48:25.645025Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2026-02-09T08:48:25.654158Z","level":"info","event":"Current task name:backfill_dim_driver","logger":"task.stdout"}
+{"timestamp":"2026-02-09T08:48:25.655699Z","level":"info","event":"Dag name:api_drivers_bronze_to_silver","logger":"task.stdout"}
+{"timestamp":"2026-02-09T08:48:25.662673Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-09T08:48:25.663067Z","level":"info","event":"F1 DRIVER BACKFILL: ERGAST API → SILVER","logger":"task.stdout"}
+{"timestamp":"2026-02-09T08:48:25.663334Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-09T08:48:25.663674Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-09T08:48:25.664006Z","level":"info","event":"[STEP 1] Scraping API...","logger":"task.stdout"}
+{"timestamp":"2026-02-09T08:48:25.664260Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-09T08:48:25.665773Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-09T08:48:25.667571Z","level":"info","event":"SCRAPING DRIVERS FROM ERGAST API: 2011-2025","logger":"task.stdout"}
+{"timestamp":"2026-02-09T08:48:25.668265Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-09T08:48:25.669245Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-09T08:48:25.669636Z","level":"info","event":"Fetching drivers for 2011...","logger":"task.stdout"}
+{"timestamp":"2026-02-09T08:48:30.872187Z","level":"info","event":"28 drivers found","logger":"task.stdout"}
+{"timestamp":"2026-02-09T08:48:30.873263Z","level":"info","event":"Fetching drivers for 2012...","logger":"task.stdout"}
+{"timestamp":"2026-02-09T08:48:30.921860Z","level":"info","event":"Rate limit hit! Waiting 15s before retry 1/5...","logger":"task.stdout"}
+{"timestamp":"2026-02-09T08:48:45.970218Z","level":"info","event":"Rate limit hit! Waiting 30s before retry 2/5...","logger":"task.stdout"}
+{"timestamp":"2026-02-09T08:49:16.016646Z","level":"info","event":"Rate limit hit! Waiting 45s before retry 3/5...","logger":"task.stdout"}
+{"timestamp":"2026-02-09T08:50:01.062083Z","level":"info","event":"Rate limit hit! Waiting 60s before retry 4/5...","logger":"task.stdout"}
+{"timestamp":"2026-02-09T08:51:01.108152Z","level":"info","event":"Rate limit hit! Waiting 75s before retry 5/5...","logger":"task.stdout"}
+{"timestamp":"2026-02-09T08:52:16.103875Z","level":"error","event":"Task failed with exception","logger":"task","filename":"task_runner.py","lineno":1078,"error_detail":[{"exc_type":"HTTPError","exc_value":"Failed after 5 retries: https://api.jolpi.ca/ergast/f1/2012/drivers.json","exc_notes":[],"syntax_error":null,"is_cause":false,"frames":[{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/task_runner.py","lineno":1004,"name":"run"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/task_runner.py","lineno":1405,"name":"_execute_task"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/bases/operator.py","lineno":417,"name":"wrapper"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/standard/operators/python.py","lineno":214,"name":"execute"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/standard/operators/python.py","lineno":237,"name":"execute_callable"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/callback_runner.py","lineno":82,"name":"run"},{"filename":"/opt/airflow/dags/api_etl/api_drivers_bronze_to_silver.py","lineno":248,"name":"backfill_dim_driver"},{"filename":"/opt/airflow/dags/utils/scraper/driver.py","lineno":161,"name":"scrape_drivers_range"},{"filename":"/opt/airflow/dags/utils/scraper/driver.py","lineno":131,"name":"scrape_drivers_year"},{"filename":"/opt/airflow/dags/utils/scraper/driver.py","lineno":96,"name":"_get"}],"is_group":false,"exceptions":[]}]}
+{"timestamp":"2026-02-09T08:52:16.125444Z","level":"info","event":"Task instance in failure state","logger":"task.stdout"}
+{"timestamp":"2026-02-09T08:52:16.126348Z","level":"info","event":"Task start","logger":"task.stdout"}
+{"timestamp":"2026-02-09T08:52:16.126665Z","level":"info","event":"Task:<Task(PythonOperator): backfill_dim_driver>","logger":"task.stdout"}
+{"timestamp":"2026-02-09T08:52:16.126919Z","level":"info","event":"Failure caused by Failed after 5 retries: https://api.jolpi.ca/ergast/f1/2012/drivers.json","logger":"task.stdout"}

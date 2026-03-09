@@ -1,0 +1,287 @@
+{"timestamp":"2026-02-15T16:47:18.428906Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-02-15T16:47:18.431233Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/weekly_streaming_pipeline.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-02-15T16:47:19.689198Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-15T16:47:19.690114Z","level":"info","event":"[CONSUMER] Starting dim_circuit consumption...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T16:47:19.691966Z","level":"info","event":"<BrokerConnection client_id=kafka-python-2.2.0, node_id=bootstrap-0 host=kafka:29092 <connecting> [IPv4 ('172.18.0.4', 29092)]>: connecting to kafka:29092 [('172.18.0.4', 29092) IPv4]","logger":"kafka.conn","filename":"conn.py","lineno":395}
+{"timestamp":"2026-02-15T16:47:19.697574Z","level":"info","event":"<BrokerConnection client_id=kafka-python-2.2.0, node_id=bootstrap-0 host=kafka:29092 <checking_api_versions_recv> [IPv4 ('172.18.0.4', 29092)]>: Broker version identified as 2.6","logger":"kafka.conn","filename":"conn.py","lineno":615}
+{"timestamp":"2026-02-15T16:47:19.699381Z","level":"info","event":"<BrokerConnection client_id=kafka-python-2.2.0, node_id=bootstrap-0 host=kafka:29092 <connected> [IPv4 ('172.18.0.4', 29092)]>: Connection complete.","logger":"kafka.conn","filename":"conn.py","lineno":456}
+{"timestamp":"2026-02-15T16:47:19.701613Z","level":"info","event":"Updating subscribed topics to: ('dim-circuit',)","logger":"kafka.consumer.subscription_state","filename":"subscription_state.py","lineno":177}
+{"timestamp":"2026-02-15T16:47:19.705822Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-15T16:47:19.707750Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-15T16:47:19.708812Z","level":"info","event":"CONSUMING: dim-circuit → dimensions/dim_circuit/dim_circuit.parquet","logger":"task.stdout"}
+{"timestamp":"2026-02-15T16:47:19.709560Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-15T16:47:19.710152Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-15T16:47:19.758237Z","level":"info","event":" Downloaded dimensions/dim_circuit/dim_circuit.parquet (35 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-15T16:47:19.758971Z","level":"info","event":" Loaded 35 existing records from Silver","logger":"task.stdout"}
+{"timestamp":"2026-02-15T16:47:19.761998Z","level":"info","event":"<BrokerConnection client_id=kafka-python-2.2.0, node_id=1 host=kafka:29092 <connecting> [IPv4 ('172.18.0.4', 29092)]>: connecting to kafka:29092 [('172.18.0.4', 29092) IPv4]","logger":"kafka.conn","filename":"conn.py","lineno":395}
+{"timestamp":"2026-02-15T16:47:19.762609Z","level":"info","event":"<BrokerConnection client_id=kafka-python-2.2.0, node_id=1 host=kafka:29092 <connected> [IPv4 ('172.18.0.4', 29092)]>: Connection complete.","logger":"kafka.conn","filename":"conn.py","lineno":456}
+{"timestamp":"2026-02-15T16:47:19.762935Z","level":"info","event":"<BrokerConnection client_id=kafka-python-2.2.0, node_id=bootstrap-0 host=kafka:29092 <connected> [IPv4 ('172.18.0.4', 29092)]>: Closing connection. ","logger":"kafka.conn","filename":"conn.py","lineno":936}
+{"timestamp":"2026-02-15T16:47:19.865551Z","level":"info","event":"Coordinator for group/f1-silver-consumers is BrokerMetadata(nodeId='coordinator-1', host='kafka', port=29092, rack=None)","logger":"kafka.cluster","filename":"cluster.py","lineno":398}
+{"timestamp":"2026-02-15T16:47:19.865838Z","level":"info","event":"Discovered coordinator coordinator-1 for group f1-silver-consumers","logger":"kafka.coordinator","filename":"base.py","lineno":745}
+{"timestamp":"2026-02-15T16:47:19.866060Z","level":"info","event":"Starting new heartbeat thread","logger":"kafka.coordinator","filename":"base.py","lineno":796}
+{"timestamp":"2026-02-15T16:47:19.866949Z","level":"info","event":"Revoking previously assigned partitions set() for group f1-silver-consumers","logger":"kafka.coordinator.consumer","filename":"consumer.py","lineno":357}
+{"timestamp":"2026-02-15T16:47:19.868272Z","level":"info","event":"<BrokerConnection client_id=kafka-python-2.2.0, node_id=coordinator-1 host=kafka:29092 <connecting> [IPv4 ('172.18.0.4', 29092)]>: connecting to kafka:29092 [('172.18.0.4', 29092) IPv4]","logger":"kafka.conn","filename":"conn.py","lineno":395}
+{"timestamp":"2026-02-15T16:47:19.868896Z","level":"info","event":"<BrokerConnection client_id=kafka-python-2.2.0, node_id=coordinator-1 host=kafka:29092 <connected> [IPv4 ('172.18.0.4', 29092)]>: Connection complete.","logger":"kafka.conn","filename":"conn.py","lineno":456}
+{"timestamp":"2026-02-15T16:47:19.969977Z","level":"info","event":"(Re-)joining group f1-silver-consumers","logger":"kafka.coordinator","filename":"base.py","lineno":500}
+{"timestamp":"2026-02-15T16:47:19.972507Z","level":"info","event":"(Re-)joining group f1-silver-consumers","logger":"kafka.coordinator","filename":"base.py","lineno":500}
+{"timestamp":"2026-02-15T16:47:19.976216Z","level":"info","event":"Elected group leader -- performing partition assignments using range","logger":"kafka.coordinator","filename":"base.py","lineno":563}
+{"timestamp":"2026-02-15T16:47:19.980462Z","level":"info","event":"Successfully joined group f1-silver-consumers with generation 1","logger":"kafka.coordinator","filename":"base.py","lineno":390}
+{"timestamp":"2026-02-15T16:47:19.980817Z","level":"info","event":"Updated partition assignment: [TopicPartition(topic='dim-circuit', partition=0)]","logger":"kafka.consumer.subscription_state","filename":"subscription_state.py","lineno":246}
+{"timestamp":"2026-02-15T16:47:19.980989Z","level":"info","event":"Setting newly assigned partitions {TopicPartition(topic='dim-circuit', partition=0)} for group f1-silver-consumers","logger":"kafka.coordinator.consumer","filename":"consumer.py","lineno":248}
+{"timestamp":"2026-02-15T16:47:19.984195Z","level":"info","event":"Resetting offset for partition TopicPartition(topic='dim-circuit', partition=0) to offset 0.","logger":"kafka.consumer.fetcher","filename":"fetcher.py","lineno":407}
+{"timestamp":"2026-02-15T16:47:20.008079Z","level":"info","event":"📥 Consumed 10 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T16:47:20.008666Z","level":"info","event":"📥 Consumed 20 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T16:47:20.009243Z","level":"info","event":"📥 Consumed 30 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T16:47:20.009666Z","level":"info","event":"📥 Consumed 40 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T16:47:20.010217Z","level":"info","event":"📥 Consumed 50 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T16:47:20.010668Z","level":"info","event":"📥 Consumed 60 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T16:47:20.011229Z","level":"info","event":"📥 Consumed 70 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T16:47:20.011795Z","level":"info","event":"📥 Consumed 80 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T16:47:20.012333Z","level":"info","event":"📥 Consumed 90 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T16:47:20.012868Z","level":"info","event":"📥 Consumed 100 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T16:47:20.013404Z","level":"info","event":"📥 Consumed 110 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T16:47:20.013964Z","level":"info","event":"📥 Consumed 120 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T16:47:56.030618Z","level":"warning","event":"Heartbeat failed for group f1-silver-consumers because it is rebalancing","logger":"kafka.coordinator","filename":"base.py","lineno":898}
+{"timestamp":"2026-02-15T16:47:56.031277Z","level":"info","event":"Revoking previously assigned partitions {TopicPartition(topic='dim-circuit', partition=0)} for group f1-silver-consumers","logger":"kafka.coordinator.consumer","filename":"consumer.py","lineno":357}
+{"timestamp":"2026-02-15T16:47:56.031939Z","level":"info","event":"(Re-)joining group f1-silver-consumers","logger":"kafka.coordinator","filename":"base.py","lineno":500}
+{"timestamp":"2026-02-15T16:47:56.040328Z","level":"info","event":"Elected group leader -- performing partition assignments using range","logger":"kafka.coordinator","filename":"base.py","lineno":563}
+{"timestamp":"2026-02-15T16:47:56.040892Z","level":"warning","event":"No partition metadata for topic dim-constructor","logger":"kafka.coordinator.assignors.range","filename":"range.py","lineno":47}
+{"timestamp":"2026-02-15T16:47:56.049422Z","level":"info","event":"Successfully joined group f1-silver-consumers with generation 2","logger":"kafka.coordinator","filename":"base.py","lineno":390}
+{"timestamp":"2026-02-15T16:47:56.050076Z","level":"info","event":"Updated partition assignment: [TopicPartition(topic='dim-circuit', partition=0)]","logger":"kafka.consumer.subscription_state","filename":"subscription_state.py","lineno":246}
+{"timestamp":"2026-02-15T16:47:56.050564Z","level":"info","event":"Setting newly assigned partitions {TopicPartition(topic='dim-circuit', partition=0)} for group f1-silver-consumers","logger":"kafka.coordinator.consumer","filename":"consumer.py","lineno":248}
+{"timestamp":"2026-02-15T16:47:56.457964Z","level":"info","event":"Resetting offset for partition TopicPartition(topic='dim-circuit', partition=0) to offset 0.","logger":"kafka.consumer.fetcher","filename":"fetcher.py","lineno":407}
+{"timestamp":"2026-02-15T16:47:56.458507Z","level":"info","event":"Revoking previously assigned partitions {TopicPartition(topic='dim-circuit', partition=0)} for group f1-silver-consumers","logger":"kafka.coordinator.consumer","filename":"consumer.py","lineno":357}
+{"timestamp":"2026-02-15T16:47:56.458791Z","level":"info","event":"(Re-)joining group f1-silver-consumers","logger":"kafka.coordinator","filename":"base.py","lineno":500}
+{"timestamp":"2026-02-15T16:47:59.055300Z","level":"info","event":"Elected group leader -- performing partition assignments using range","logger":"kafka.coordinator","filename":"base.py","lineno":563}
+{"timestamp":"2026-02-15T16:47:59.059115Z","level":"info","event":"Successfully joined group f1-silver-consumers with generation 3","logger":"kafka.coordinator","filename":"base.py","lineno":390}
+{"timestamp":"2026-02-15T16:47:59.059513Z","level":"info","event":"Updated partition assignment: [TopicPartition(topic='dim-circuit', partition=0)]","logger":"kafka.consumer.subscription_state","filename":"subscription_state.py","lineno":246}
+{"timestamp":"2026-02-15T16:47:59.060002Z","level":"info","event":"Setting newly assigned partitions {TopicPartition(topic='dim-circuit', partition=0)} for group f1-silver-consumers","logger":"kafka.coordinator.consumer","filename":"consumer.py","lineno":248}
+{"timestamp":"2026-02-15T16:47:59.062886Z","level":"info","event":"Resetting offset for partition TopicPartition(topic='dim-circuit', partition=0) to offset 0.","logger":"kafka.consumer.fetcher","filename":"fetcher.py","lineno":407}
+{"timestamp":"2026-02-15T16:47:59.103334Z","level":"info","event":"📥 Consumed 130 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T16:47:59.103851Z","level":"info","event":"📥 Consumed 140 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T16:47:59.104231Z","level":"info","event":"📥 Consumed 150 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T16:47:59.104700Z","level":"info","event":"📥 Consumed 160 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T16:47:59.105216Z","level":"info","event":"📥 Consumed 170 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T16:47:59.105619Z","level":"info","event":"📥 Consumed 180 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T16:47:59.105998Z","level":"info","event":"📥 Consumed 190 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T16:47:59.106389Z","level":"info","event":"📥 Consumed 200 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T16:47:59.106758Z","level":"info","event":"📥 Consumed 210 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T16:47:59.107148Z","level":"info","event":"📥 Consumed 220 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T16:47:59.107469Z","level":"info","event":"📥 Consumed 230 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T16:47:59.107854Z","level":"info","event":"📥 Consumed 240 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T16:53:03.023194Z","level":"warning","event":"Heartbeat failed for group f1-silver-consumers because it is rebalancing","logger":"kafka.coordinator","filename":"base.py","lineno":898}
+{"timestamp":"2026-02-15T16:53:03.023568Z","level":"info","event":"Revoking previously assigned partitions {TopicPartition(topic='dim-circuit', partition=0)} for group f1-silver-consumers","logger":"kafka.coordinator.consumer","filename":"consumer.py","lineno":357}
+{"timestamp":"2026-02-15T16:53:03.023765Z","level":"info","event":"(Re-)joining group f1-silver-consumers","logger":"kafka.coordinator","filename":"base.py","lineno":500}
+{"timestamp":"2026-02-15T16:53:03.027938Z","level":"info","event":"Elected group leader -- performing partition assignments using range","logger":"kafka.coordinator","filename":"base.py","lineno":563}
+{"timestamp":"2026-02-15T16:53:03.028492Z","level":"warning","event":"No partition metadata for topic fact-results","logger":"kafka.coordinator.assignors.range","filename":"range.py","lineno":47}
+{"timestamp":"2026-02-15T16:53:03.033729Z","level":"info","event":"Successfully joined group f1-silver-consumers with generation 4","logger":"kafka.coordinator","filename":"base.py","lineno":390}
+{"timestamp":"2026-02-15T16:53:03.034250Z","level":"info","event":"Updated partition assignment: [TopicPartition(topic='dim-circuit', partition=0)]","logger":"kafka.consumer.subscription_state","filename":"subscription_state.py","lineno":246}
+{"timestamp":"2026-02-15T16:53:03.034565Z","level":"info","event":"Setting newly assigned partitions {TopicPartition(topic='dim-circuit', partition=0)} for group f1-silver-consumers","logger":"kafka.coordinator.consumer","filename":"consumer.py","lineno":248}
+{"timestamp":"2026-02-15T16:53:03.543062Z","level":"info","event":"Revoking previously assigned partitions {TopicPartition(topic='dim-circuit', partition=0)} for group f1-silver-consumers","logger":"kafka.coordinator.consumer","filename":"consumer.py","lineno":357}
+{"timestamp":"2026-02-15T16:53:03.543469Z","level":"info","event":"(Re-)joining group f1-silver-consumers","logger":"kafka.coordinator","filename":"base.py","lineno":500}
+{"timestamp":"2026-02-15T16:53:03.544686Z","level":"info","event":"Resetting offset for partition TopicPartition(topic='dim-circuit', partition=0) to offset 0.","logger":"kafka.consumer.fetcher","filename":"fetcher.py","lineno":407}
+{"timestamp":"2026-02-15T16:53:06.062858Z","level":"info","event":"Elected group leader -- performing partition assignments using range","logger":"kafka.coordinator","filename":"base.py","lineno":563}
+{"timestamp":"2026-02-15T16:53:06.073801Z","level":"info","event":"Successfully joined group f1-silver-consumers with generation 5","logger":"kafka.coordinator","filename":"base.py","lineno":390}
+{"timestamp":"2026-02-15T16:53:06.074652Z","level":"info","event":"Updated partition assignment: [TopicPartition(topic='dim-circuit', partition=0)]","logger":"kafka.consumer.subscription_state","filename":"subscription_state.py","lineno":246}
+{"timestamp":"2026-02-15T16:53:06.075014Z","level":"info","event":"Setting newly assigned partitions {TopicPartition(topic='dim-circuit', partition=0)} for group f1-silver-consumers","logger":"kafka.coordinator.consumer","filename":"consumer.py","lineno":248}
+{"timestamp":"2026-02-15T16:53:06.118215Z","level":"info","event":"Resetting offset for partition TopicPartition(topic='dim-circuit', partition=0) to offset 0.","logger":"kafka.consumer.fetcher","filename":"fetcher.py","lineno":407}
+{"timestamp":"2026-02-15T16:53:06.208656Z","level":"info","event":"📥 Consumed 250 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T16:53:06.209524Z","level":"info","event":"📥 Consumed 260 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T16:53:06.210846Z","level":"info","event":"📥 Consumed 270 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T16:53:06.211672Z","level":"info","event":"📥 Consumed 280 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T16:53:06.212825Z","level":"info","event":"📥 Consumed 290 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T16:53:06.213686Z","level":"info","event":"📥 Consumed 300 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T16:53:06.215087Z","level":"info","event":"📥 Consumed 310 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T16:53:06.216010Z","level":"info","event":"📥 Consumed 320 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T16:53:06.217354Z","level":"info","event":"📥 Consumed 330 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T16:53:06.218639Z","level":"info","event":"📥 Consumed 340 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T16:53:06.219543Z","level":"info","event":"📥 Consumed 350 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T16:53:06.220995Z","level":"info","event":"📥 Consumed 360 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T16:53:30.104315Z","level":"warning","event":"Heartbeat failed for group f1-silver-consumers because it is rebalancing","logger":"kafka.coordinator","filename":"base.py","lineno":898}
+{"timestamp":"2026-02-15T16:53:30.105156Z","level":"info","event":"Revoking previously assigned partitions {TopicPartition(topic='dim-circuit', partition=0)} for group f1-silver-consumers","logger":"kafka.coordinator.consumer","filename":"consumer.py","lineno":357}
+{"timestamp":"2026-02-15T16:53:30.105534Z","level":"info","event":"(Re-)joining group f1-silver-consumers","logger":"kafka.coordinator","filename":"base.py","lineno":500}
+{"timestamp":"2026-02-15T16:53:30.224804Z","level":"info","event":"Elected group leader -- performing partition assignments using range","logger":"kafka.coordinator","filename":"base.py","lineno":563}
+{"timestamp":"2026-02-15T16:53:30.230454Z","level":"warning","event":"No partition metadata for topic dim-driver","logger":"kafka.coordinator.assignors.range","filename":"range.py","lineno":47}
+{"timestamp":"2026-02-15T16:53:30.240578Z","level":"info","event":"Successfully joined group f1-silver-consumers with generation 6","logger":"kafka.coordinator","filename":"base.py","lineno":390}
+{"timestamp":"2026-02-15T16:53:30.241022Z","level":"info","event":"Updated partition assignment: [TopicPartition(topic='dim-circuit', partition=0)]","logger":"kafka.consumer.subscription_state","filename":"subscription_state.py","lineno":246}
+{"timestamp":"2026-02-15T16:53:30.241271Z","level":"info","event":"Setting newly assigned partitions {TopicPartition(topic='dim-circuit', partition=0)} for group f1-silver-consumers","logger":"kafka.coordinator.consumer","filename":"consumer.py","lineno":248}
+{"timestamp":"2026-02-15T16:53:30.546786Z","level":"info","event":"Revoking previously assigned partitions {TopicPartition(topic='dim-circuit', partition=0)} for group f1-silver-consumers","logger":"kafka.coordinator.consumer","filename":"consumer.py","lineno":357}
+{"timestamp":"2026-02-15T16:53:30.547215Z","level":"info","event":"(Re-)joining group f1-silver-consumers","logger":"kafka.coordinator","filename":"base.py","lineno":500}
+{"timestamp":"2026-02-15T16:53:30.548564Z","level":"info","event":"Resetting offset for partition TopicPartition(topic='dim-circuit', partition=0) to offset 0.","logger":"kafka.consumer.fetcher","filename":"fetcher.py","lineno":407}
+{"timestamp":"2026-02-15T16:53:33.289107Z","level":"info","event":"Elected group leader -- performing partition assignments using range","logger":"kafka.coordinator","filename":"base.py","lineno":563}
+{"timestamp":"2026-02-15T16:53:33.295268Z","level":"info","event":"Successfully joined group f1-silver-consumers with generation 7","logger":"kafka.coordinator","filename":"base.py","lineno":390}
+{"timestamp":"2026-02-15T16:53:33.295803Z","level":"info","event":"Updated partition assignment: [TopicPartition(topic='dim-circuit', partition=0)]","logger":"kafka.consumer.subscription_state","filename":"subscription_state.py","lineno":246}
+{"timestamp":"2026-02-15T16:53:33.296072Z","level":"info","event":"Setting newly assigned partitions {TopicPartition(topic='dim-circuit', partition=0)} for group f1-silver-consumers","logger":"kafka.coordinator.consumer","filename":"consumer.py","lineno":248}
+{"timestamp":"2026-02-15T16:53:33.301776Z","level":"info","event":"Resetting offset for partition TopicPartition(topic='dim-circuit', partition=0) to offset 0.","logger":"kafka.consumer.fetcher","filename":"fetcher.py","lineno":407}
+{"timestamp":"2026-02-15T16:53:33.346958Z","level":"info","event":"📥 Consumed 370 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T16:53:33.347547Z","level":"info","event":"📥 Consumed 380 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T16:53:33.348040Z","level":"info","event":"📥 Consumed 390 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T16:53:33.348584Z","level":"info","event":"📥 Consumed 400 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T16:53:33.349162Z","level":"info","event":"📥 Consumed 410 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T16:53:33.349627Z","level":"info","event":"📥 Consumed 420 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T16:53:33.350150Z","level":"info","event":"📥 Consumed 430 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T16:53:33.350978Z","level":"info","event":"📥 Consumed 440 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T16:53:33.351469Z","level":"info","event":"📥 Consumed 450 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T16:53:33.351910Z","level":"info","event":"📥 Consumed 460 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T16:53:33.352381Z","level":"info","event":"📥 Consumed 470 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T16:53:33.352893Z","level":"info","event":"📥 Consumed 480 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T16:53:36.299370Z","level":"warning","event":"Heartbeat failed for group f1-silver-consumers because it is rebalancing","logger":"kafka.coordinator","filename":"base.py","lineno":898}
+{"timestamp":"2026-02-15T16:53:36.299785Z","level":"info","event":"Revoking previously assigned partitions {TopicPartition(topic='dim-circuit', partition=0)} for group f1-silver-consumers","logger":"kafka.coordinator.consumer","filename":"consumer.py","lineno":357}
+{"timestamp":"2026-02-15T16:53:36.300029Z","level":"info","event":"(Re-)joining group f1-silver-consumers","logger":"kafka.coordinator","filename":"base.py","lineno":500}
+{"timestamp":"2026-02-15T16:53:36.306067Z","level":"info","event":"Elected group leader -- performing partition assignments using range","logger":"kafka.coordinator","filename":"base.py","lineno":563}
+{"timestamp":"2026-02-15T16:53:36.306589Z","level":"warning","event":"No partition metadata for topic dim-race","logger":"kafka.coordinator.assignors.range","filename":"range.py","lineno":47}
+{"timestamp":"2026-02-15T16:53:36.313189Z","level":"info","event":"Successfully joined group f1-silver-consumers with generation 8","logger":"kafka.coordinator","filename":"base.py","lineno":390}
+{"timestamp":"2026-02-15T16:53:36.313632Z","level":"info","event":"Updated partition assignment: [TopicPartition(topic='dim-circuit', partition=0)]","logger":"kafka.consumer.subscription_state","filename":"subscription_state.py","lineno":246}
+{"timestamp":"2026-02-15T16:53:36.313888Z","level":"info","event":"Setting newly assigned partitions {TopicPartition(topic='dim-circuit', partition=0)} for group f1-silver-consumers","logger":"kafka.coordinator.consumer","filename":"consumer.py","lineno":248}
+{"timestamp":"2026-02-15T16:53:36.520933Z","level":"info","event":"Resetting offset for partition TopicPartition(topic='dim-circuit', partition=0) to offset 0.","logger":"kafka.consumer.fetcher","filename":"fetcher.py","lineno":407}
+{"timestamp":"2026-02-15T16:53:36.521389Z","level":"info","event":"Revoking previously assigned partitions {TopicPartition(topic='dim-circuit', partition=0)} for group f1-silver-consumers","logger":"kafka.coordinator.consumer","filename":"consumer.py","lineno":357}
+{"timestamp":"2026-02-15T16:53:36.521707Z","level":"info","event":"(Re-)joining group f1-silver-consumers","logger":"kafka.coordinator","filename":"base.py","lineno":500}
+{"timestamp":"2026-02-15T16:53:39.341897Z","level":"info","event":"Elected group leader -- performing partition assignments using range","logger":"kafka.coordinator","filename":"base.py","lineno":563}
+{"timestamp":"2026-02-15T16:53:39.355073Z","level":"info","event":"Successfully joined group f1-silver-consumers with generation 9","logger":"kafka.coordinator","filename":"base.py","lineno":390}
+{"timestamp":"2026-02-15T16:53:39.355707Z","level":"info","event":"Updated partition assignment: [TopicPartition(topic='dim-circuit', partition=0)]","logger":"kafka.consumer.subscription_state","filename":"subscription_state.py","lineno":246}
+{"timestamp":"2026-02-15T16:53:39.356098Z","level":"info","event":"Setting newly assigned partitions {TopicPartition(topic='dim-circuit', partition=0)} for group f1-silver-consumers","logger":"kafka.coordinator.consumer","filename":"consumer.py","lineno":248}
+{"timestamp":"2026-02-15T16:53:39.562482Z","level":"info","event":"Resetting offset for partition TopicPartition(topic='dim-circuit', partition=0) to offset 0.","logger":"kafka.consumer.fetcher","filename":"fetcher.py","lineno":407}
+{"timestamp":"2026-02-15T16:53:39.606502Z","level":"info","event":"📥 Consumed 490 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T16:53:39.607414Z","level":"info","event":"📥 Consumed 500 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T16:53:39.608229Z","level":"info","event":"📥 Consumed 510 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T16:53:39.609530Z","level":"info","event":"📥 Consumed 520 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T16:53:39.610281Z","level":"info","event":"📥 Consumed 530 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T16:53:39.610990Z","level":"info","event":"📥 Consumed 540 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T16:53:39.611787Z","level":"info","event":"📥 Consumed 550 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T16:53:39.612240Z","level":"info","event":"📥 Consumed 560 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T16:53:39.612796Z","level":"info","event":"📥 Consumed 570 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T16:53:39.613354Z","level":"info","event":"📥 Consumed 580 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T16:53:39.613925Z","level":"info","event":"📥 Consumed 590 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T16:53:39.614400Z","level":"info","event":"📥 Consumed 600 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T16:53:48.366771Z","level":"warning","event":"Heartbeat failed for group f1-silver-consumers because it is rebalancing","logger":"kafka.coordinator","filename":"base.py","lineno":898}
+{"timestamp":"2026-02-15T16:53:48.367325Z","level":"info","event":"Revoking previously assigned partitions {TopicPartition(topic='dim-circuit', partition=0)} for group f1-silver-consumers","logger":"kafka.coordinator.consumer","filename":"consumer.py","lineno":357}
+{"timestamp":"2026-02-15T16:53:48.367664Z","level":"info","event":"(Re-)joining group f1-silver-consumers","logger":"kafka.coordinator","filename":"base.py","lineno":500}
+{"timestamp":"2026-02-15T16:53:48.426707Z","level":"info","event":"Elected group leader -- performing partition assignments using range","logger":"kafka.coordinator","filename":"base.py","lineno":563}
+{"timestamp":"2026-02-15T16:53:48.427285Z","level":"warning","event":"No partition metadata for topic fact-constructor-standings","logger":"kafka.coordinator.assignors.range","filename":"range.py","lineno":47}
+{"timestamp":"2026-02-15T16:53:48.431925Z","level":"info","event":"Successfully joined group f1-silver-consumers with generation 10","logger":"kafka.coordinator","filename":"base.py","lineno":390}
+{"timestamp":"2026-02-15T16:53:48.432332Z","level":"info","event":"Updated partition assignment: [TopicPartition(topic='dim-circuit', partition=0)]","logger":"kafka.consumer.subscription_state","filename":"subscription_state.py","lineno":246}
+{"timestamp":"2026-02-15T16:53:48.432545Z","level":"info","event":"Setting newly assigned partitions {TopicPartition(topic='dim-circuit', partition=0)} for group f1-silver-consumers","logger":"kafka.coordinator.consumer","filename":"consumer.py","lineno":248}
+{"timestamp":"2026-02-15T16:53:48.840747Z","level":"info","event":"Revoking previously assigned partitions {TopicPartition(topic='dim-circuit', partition=0)} for group f1-silver-consumers","logger":"kafka.coordinator.consumer","filename":"consumer.py","lineno":357}
+{"timestamp":"2026-02-15T16:53:48.841150Z","level":"info","event":"(Re-)joining group f1-silver-consumers","logger":"kafka.coordinator","filename":"base.py","lineno":500}
+{"timestamp":"2026-02-15T16:53:48.842615Z","level":"info","event":"Resetting offset for partition TopicPartition(topic='dim-circuit', partition=0) to offset 0.","logger":"kafka.consumer.fetcher","filename":"fetcher.py","lineno":407}
+{"timestamp":"2026-02-15T16:53:51.486593Z","level":"info","event":"Elected group leader -- performing partition assignments using range","logger":"kafka.coordinator","filename":"base.py","lineno":563}
+{"timestamp":"2026-02-15T16:53:51.496910Z","level":"info","event":"Successfully joined group f1-silver-consumers with generation 11","logger":"kafka.coordinator","filename":"base.py","lineno":390}
+{"timestamp":"2026-02-15T16:53:51.503017Z","level":"info","event":"Updated partition assignment: [TopicPartition(topic='dim-circuit', partition=0)]","logger":"kafka.consumer.subscription_state","filename":"subscription_state.py","lineno":246}
+{"timestamp":"2026-02-15T16:53:51.503761Z","level":"info","event":"Setting newly assigned partitions {TopicPartition(topic='dim-circuit', partition=0)} for group f1-silver-consumers","logger":"kafka.coordinator.consumer","filename":"consumer.py","lineno":248}
+{"timestamp":"2026-02-15T16:53:51.524239Z","level":"info","event":"Resetting offset for partition TopicPartition(topic='dim-circuit', partition=0) to offset 0.","logger":"kafka.consumer.fetcher","filename":"fetcher.py","lineno":407}
+{"timestamp":"2026-02-15T16:53:51.637917Z","level":"info","event":"📥 Consumed 610 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T16:53:51.649735Z","level":"info","event":"📥 Consumed 620 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T16:53:51.655490Z","level":"info","event":"📥 Consumed 630 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T16:53:51.658734Z","level":"info","event":"📥 Consumed 640 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T16:53:51.664897Z","level":"info","event":"📥 Consumed 650 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T16:53:51.671665Z","level":"info","event":"📥 Consumed 660 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T16:53:51.672985Z","level":"info","event":"📥 Consumed 670 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T16:53:51.681869Z","level":"info","event":"📥 Consumed 680 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T16:53:51.683324Z","level":"info","event":"📥 Consumed 690 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T16:53:51.684985Z","level":"info","event":"📥 Consumed 700 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T16:53:51.689285Z","level":"info","event":"📥 Consumed 710 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T16:53:51.690043Z","level":"info","event":"📥 Consumed 720 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T16:53:54.501802Z","level":"warning","event":"Heartbeat failed for group f1-silver-consumers because it is rebalancing","logger":"kafka.coordinator","filename":"base.py","lineno":898}
+{"timestamp":"2026-02-15T16:53:54.502373Z","level":"info","event":"Revoking previously assigned partitions {TopicPartition(topic='dim-circuit', partition=0)} for group f1-silver-consumers","logger":"kafka.coordinator.consumer","filename":"consumer.py","lineno":357}
+{"timestamp":"2026-02-15T16:53:54.502927Z","level":"info","event":"(Re-)joining group f1-silver-consumers","logger":"kafka.coordinator","filename":"base.py","lineno":500}
+{"timestamp":"2026-02-15T16:53:55.081555Z","level":"info","event":"Elected group leader -- performing partition assignments using range","logger":"kafka.coordinator","filename":"base.py","lineno":563}
+{"timestamp":"2026-02-15T16:53:55.082120Z","level":"warning","event":"No partition metadata for topic fact-driver-standings","logger":"kafka.coordinator.assignors.range","filename":"range.py","lineno":47}
+{"timestamp":"2026-02-15T16:53:55.092843Z","level":"info","event":"Successfully joined group f1-silver-consumers with generation 12","logger":"kafka.coordinator","filename":"base.py","lineno":390}
+{"timestamp":"2026-02-15T16:53:55.093360Z","level":"info","event":"Updated partition assignment: [TopicPartition(topic='dim-circuit', partition=0)]","logger":"kafka.consumer.subscription_state","filename":"subscription_state.py","lineno":246}
+{"timestamp":"2026-02-15T16:53:55.093651Z","level":"info","event":"Setting newly assigned partitions {TopicPartition(topic='dim-circuit', partition=0)} for group f1-silver-consumers","logger":"kafka.coordinator.consumer","filename":"consumer.py","lineno":248}
+{"timestamp":"2026-02-15T16:53:55.093961Z","level":"info","event":"Revoking previously assigned partitions {TopicPartition(topic='dim-circuit', partition=0)} for group f1-silver-consumers","logger":"kafka.coordinator.consumer","filename":"consumer.py","lineno":357}
+{"timestamp":"2026-02-15T16:53:55.095717Z","level":"info","event":"(Re-)joining group f1-silver-consumers","logger":"kafka.coordinator","filename":"base.py","lineno":500}
+{"timestamp":"2026-02-15T16:53:58.125623Z","level":"info","event":"Elected group leader -- performing partition assignments using range","logger":"kafka.coordinator","filename":"base.py","lineno":563}
+{"timestamp":"2026-02-15T16:53:58.147919Z","level":"info","event":"Successfully joined group f1-silver-consumers with generation 13","logger":"kafka.coordinator","filename":"base.py","lineno":390}
+{"timestamp":"2026-02-15T16:53:58.150988Z","level":"info","event":"Updated partition assignment: [TopicPartition(topic='dim-circuit', partition=0)]","logger":"kafka.consumer.subscription_state","filename":"subscription_state.py","lineno":246}
+{"timestamp":"2026-02-15T16:53:58.151319Z","level":"info","event":"Setting newly assigned partitions {TopicPartition(topic='dim-circuit', partition=0)} for group f1-silver-consumers","logger":"kafka.coordinator.consumer","filename":"consumer.py","lineno":248}
+{"timestamp":"2026-02-15T16:53:58.162940Z","level":"info","event":"Resetting offset for partition TopicPartition(topic='dim-circuit', partition=0) to offset 0.","logger":"kafka.consumer.fetcher","filename":"fetcher.py","lineno":407}
+{"timestamp":"2026-02-15T16:53:58.421189Z","level":"info","event":"📥 Consumed 730 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T16:53:58.421788Z","level":"info","event":"📥 Consumed 740 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T16:53:58.422677Z","level":"info","event":"📥 Consumed 750 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T16:53:58.424047Z","level":"info","event":"📥 Consumed 760 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T16:53:58.424633Z","level":"info","event":"📥 Consumed 770 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T16:53:58.425243Z","level":"info","event":"📥 Consumed 780 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T16:53:58.425845Z","level":"info","event":"📥 Consumed 790 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T16:53:58.426901Z","level":"info","event":"📥 Consumed 800 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T16:53:58.427522Z","level":"info","event":"📥 Consumed 810 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T16:53:58.430687Z","level":"info","event":"📥 Consumed 820 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T16:53:58.431271Z","level":"info","event":"📥 Consumed 830 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T16:53:58.431826Z","level":"info","event":"📥 Consumed 840 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T16:54:04.158046Z","level":"warning","event":"Heartbeat failed for group f1-silver-consumers because it is rebalancing","logger":"kafka.coordinator","filename":"base.py","lineno":898}
+{"timestamp":"2026-02-15T16:54:04.158453Z","level":"info","event":"Revoking previously assigned partitions {TopicPartition(topic='dim-circuit', partition=0)} for group f1-silver-consumers","logger":"kafka.coordinator.consumer","filename":"consumer.py","lineno":357}
+{"timestamp":"2026-02-15T16:54:04.158795Z","level":"info","event":"(Re-)joining group f1-silver-consumers","logger":"kafka.coordinator","filename":"base.py","lineno":500}
+{"timestamp":"2026-02-15T16:54:11.152349Z","level":"info","event":"Elected group leader -- performing partition assignments using range","logger":"kafka.coordinator","filename":"base.py","lineno":563}
+{"timestamp":"2026-02-15T16:54:11.152816Z","level":"warning","event":"No partition metadata for topic fact-laps","logger":"kafka.coordinator.assignors.range","filename":"range.py","lineno":47}
+{"timestamp":"2026-02-15T16:54:11.153046Z","level":"warning","event":"No partition metadata for topic fact-pitstops","logger":"kafka.coordinator.assignors.range","filename":"range.py","lineno":47}
+{"timestamp":"2026-02-15T16:54:11.160176Z","level":"info","event":"Successfully joined group f1-silver-consumers with generation 14","logger":"kafka.coordinator","filename":"base.py","lineno":390}
+{"timestamp":"2026-02-15T16:54:11.160622Z","level":"info","event":"Updated partition assignment: [TopicPartition(topic='dim-circuit', partition=0)]","logger":"kafka.consumer.subscription_state","filename":"subscription_state.py","lineno":246}
+{"timestamp":"2026-02-15T16:54:11.161146Z","level":"info","event":"Setting newly assigned partitions {TopicPartition(topic='dim-circuit', partition=0)} for group f1-silver-consumers","logger":"kafka.coordinator.consumer","filename":"consumer.py","lineno":248}
+{"timestamp":"2026-02-15T16:54:11.161512Z","level":"info","event":"Revoking previously assigned partitions {TopicPartition(topic='dim-circuit', partition=0)} for group f1-silver-consumers","logger":"kafka.coordinator.consumer","filename":"consumer.py","lineno":357}
+{"timestamp":"2026-02-15T16:54:11.161908Z","level":"info","event":"(Re-)joining group f1-silver-consumers","logger":"kafka.coordinator","filename":"base.py","lineno":500}
+{"timestamp":"2026-02-15T16:54:14.186474Z","level":"info","event":"Elected group leader -- performing partition assignments using range","logger":"kafka.coordinator","filename":"base.py","lineno":563}
+{"timestamp":"2026-02-15T16:54:14.196191Z","level":"info","event":"Successfully joined group f1-silver-consumers with generation 15","logger":"kafka.coordinator","filename":"base.py","lineno":390}
+{"timestamp":"2026-02-15T16:54:14.197471Z","level":"info","event":"Updated partition assignment: [TopicPartition(topic='dim-circuit', partition=0)]","logger":"kafka.consumer.subscription_state","filename":"subscription_state.py","lineno":246}
+{"timestamp":"2026-02-15T16:54:14.199820Z","level":"info","event":"Setting newly assigned partitions {TopicPartition(topic='dim-circuit', partition=0)} for group f1-silver-consumers","logger":"kafka.coordinator.consumer","filename":"consumer.py","lineno":248}
+{"timestamp":"2026-02-15T16:54:14.206790Z","level":"info","event":"Resetting offset for partition TopicPartition(topic='dim-circuit', partition=0) to offset 0.","logger":"kafka.consumer.fetcher","filename":"fetcher.py","lineno":407}
+{"timestamp":"2026-02-15T16:54:14.446334Z","level":"info","event":"📥 Consumed 850 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T16:54:14.448011Z","level":"info","event":"📥 Consumed 860 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T16:54:14.448787Z","level":"info","event":"📥 Consumed 870 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T16:54:14.450667Z","level":"info","event":"📥 Consumed 880 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T16:54:14.451208Z","level":"info","event":"📥 Consumed 890 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T16:54:14.451940Z","level":"info","event":"📥 Consumed 900 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T16:54:14.452450Z","level":"info","event":"📥 Consumed 910 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T16:54:14.453195Z","level":"info","event":"📥 Consumed 920 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T16:54:14.453808Z","level":"info","event":"📥 Consumed 930 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T16:54:14.454389Z","level":"info","event":"📥 Consumed 940 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T16:54:14.456044Z","level":"info","event":"📥 Consumed 950 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T16:54:14.456828Z","level":"info","event":"📥 Consumed 960 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T17:13:54.442489Z","level":"warning","event":"Heartbeat failed for group f1-silver-consumers because it is rebalancing","logger":"kafka.coordinator","filename":"base.py","lineno":898}
+{"timestamp":"2026-02-15T17:13:54.443002Z","level":"info","event":"Revoking previously assigned partitions {TopicPartition(topic='dim-circuit', partition=0)} for group f1-silver-consumers","logger":"kafka.coordinator.consumer","filename":"consumer.py","lineno":357}
+{"timestamp":"2026-02-15T17:13:54.443317Z","level":"info","event":"(Re-)joining group f1-silver-consumers","logger":"kafka.coordinator","filename":"base.py","lineno":500}
+{"timestamp":"2026-02-15T17:13:59.285837Z","level":"info","event":"Elected group leader -- performing partition assignments using range","logger":"kafka.coordinator","filename":"base.py","lineno":563}
+{"timestamp":"2026-02-15T17:13:59.299323Z","level":"info","event":"Successfully joined group f1-silver-consumers with generation 16","logger":"kafka.coordinator","filename":"base.py","lineno":390}
+{"timestamp":"2026-02-15T17:13:59.305270Z","level":"info","event":"Updated partition assignment: [TopicPartition(topic='dim-circuit', partition=0)]","logger":"kafka.consumer.subscription_state","filename":"subscription_state.py","lineno":246}
+{"timestamp":"2026-02-15T17:13:59.306020Z","level":"info","event":"Setting newly assigned partitions {TopicPartition(topic='dim-circuit', partition=0)} for group f1-silver-consumers","logger":"kafka.coordinator.consumer","filename":"consumer.py","lineno":248}
+{"timestamp":"2026-02-15T17:13:59.329106Z","level":"info","event":"Resetting offset for partition TopicPartition(topic='dim-circuit', partition=0) to offset 0.","logger":"kafka.consumer.fetcher","filename":"fetcher.py","lineno":407}
+{"timestamp":"2026-02-15T17:13:59.412172Z","level":"info","event":"📥 Consumed 970 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T17:13:59.412698Z","level":"info","event":"📥 Consumed 980 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T17:13:59.413319Z","level":"info","event":"📥 Consumed 990 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T17:13:59.415824Z","level":"info","event":"📥 Consumed 1000 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T17:13:59.416321Z","level":"info","event":"📥 Consumed 1010 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T17:13:59.416822Z","level":"info","event":"📥 Consumed 1020 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T17:13:59.417331Z","level":"info","event":"📥 Consumed 1030 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T17:13:59.417828Z","level":"info","event":"📥 Consumed 1040 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T17:13:59.418365Z","level":"info","event":"📥 Consumed 1050 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T17:13:59.419018Z","level":"info","event":"📥 Consumed 1060 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T17:13:59.419872Z","level":"info","event":"📥 Consumed 1070 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T17:13:59.420394Z","level":"info","event":"📥 Consumed 1080 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T17:14:11.316834Z","level":"warning","event":"Heartbeat failed for group f1-silver-consumers because it is rebalancing","logger":"kafka.coordinator","filename":"base.py","lineno":898}
+{"timestamp":"2026-02-15T17:14:11.317422Z","level":"info","event":"Revoking previously assigned partitions {TopicPartition(topic='dim-circuit', partition=0)} for group f1-silver-consumers","logger":"kafka.coordinator.consumer","filename":"consumer.py","lineno":357}
+{"timestamp":"2026-02-15T17:14:11.317959Z","level":"info","event":"(Re-)joining group f1-silver-consumers","logger":"kafka.coordinator","filename":"base.py","lineno":500}
+{"timestamp":"2026-02-15T17:14:11.336675Z","level":"info","event":"Elected group leader -- performing partition assignments using range","logger":"kafka.coordinator","filename":"base.py","lineno":563}
+{"timestamp":"2026-02-15T17:14:11.346858Z","level":"info","event":"Successfully joined group f1-silver-consumers with generation 17","logger":"kafka.coordinator","filename":"base.py","lineno":390}
+{"timestamp":"2026-02-15T17:14:11.347313Z","level":"info","event":"Updated partition assignment: [TopicPartition(topic='dim-circuit', partition=0)]","logger":"kafka.consumer.subscription_state","filename":"subscription_state.py","lineno":246}
+{"timestamp":"2026-02-15T17:14:11.347570Z","level":"info","event":"Setting newly assigned partitions {TopicPartition(topic='dim-circuit', partition=0)} for group f1-silver-consumers","logger":"kafka.coordinator.consumer","filename":"consumer.py","lineno":248}
+{"timestamp":"2026-02-15T17:14:11.563872Z","level":"info","event":"Revoking previously assigned partitions {TopicPartition(topic='dim-circuit', partition=0)} for group f1-silver-consumers","logger":"kafka.coordinator.consumer","filename":"consumer.py","lineno":357}
+{"timestamp":"2026-02-15T17:14:11.564329Z","level":"info","event":"(Re-)joining group f1-silver-consumers","logger":"kafka.coordinator","filename":"base.py","lineno":500}
+{"timestamp":"2026-02-15T17:14:11.565722Z","level":"info","event":"Resetting offset for partition TopicPartition(topic='dim-circuit', partition=0) to offset 0.","logger":"kafka.consumer.fetcher","filename":"fetcher.py","lineno":407}
+{"timestamp":"2026-02-15T17:14:14.361470Z","level":"info","event":"Elected group leader -- performing partition assignments using range","logger":"kafka.coordinator","filename":"base.py","lineno":563}
+{"timestamp":"2026-02-15T17:14:14.367170Z","level":"info","event":"Successfully joined group f1-silver-consumers with generation 18","logger":"kafka.coordinator","filename":"base.py","lineno":390}
+{"timestamp":"2026-02-15T17:14:14.371650Z","level":"info","event":"Updated partition assignment: [TopicPartition(topic='dim-circuit', partition=0)]","logger":"kafka.consumer.subscription_state","filename":"subscription_state.py","lineno":246}
+{"timestamp":"2026-02-15T17:14:14.373416Z","level":"info","event":"Setting newly assigned partitions {TopicPartition(topic='dim-circuit', partition=0)} for group f1-silver-consumers","logger":"kafka.coordinator.consumer","filename":"consumer.py","lineno":248}
+{"timestamp":"2026-02-15T17:14:14.378345Z","level":"info","event":"Resetting offset for partition TopicPartition(topic='dim-circuit', partition=0) to offset 0.","logger":"kafka.consumer.fetcher","filename":"fetcher.py","lineno":407}
+{"timestamp":"2026-02-15T17:14:14.403159Z","level":"info","event":"📥 Consumed 1090 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T17:14:14.403823Z","level":"info","event":"📥 Consumed 1100 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T17:14:14.404520Z","level":"info","event":"📥 Consumed 1110 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T17:14:14.405046Z","level":"info","event":"📥 Consumed 1120 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T17:14:14.405373Z","level":"info","event":"📥 Consumed 1130 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T17:14:14.405663Z","level":"info","event":"📥 Consumed 1140 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T17:14:14.405971Z","level":"info","event":"📥 Consumed 1150 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T17:14:14.406268Z","level":"info","event":"📥 Consumed 1160 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T17:14:14.406547Z","level":"info","event":"📥 Consumed 1170 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T17:14:14.406817Z","level":"info","event":"📥 Consumed 1180 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T17:14:14.407135Z","level":"info","event":"📥 Consumed 1190 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T17:14:14.407432Z","level":"info","event":"📥 Consumed 1200 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-15T17:14:54.659034Z","level":"error","event":"Server indicated the task shouldn't be running anymore. Terminating process","detail":{"detail":{"reason":"not_found","message":"Task Instance not found"}},"logger":"task"}
+{"timestamp":"2026-02-15T17:14:59.701256Z","level":"error","event":"Task killed!","logger":"task"}

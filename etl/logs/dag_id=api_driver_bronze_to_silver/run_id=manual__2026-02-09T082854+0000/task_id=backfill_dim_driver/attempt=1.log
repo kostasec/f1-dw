@@ -1,0 +1,26 @@
+{"timestamp":"2026-02-09T08:28:57.641353Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-02-09T08:28:57.650321Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/api_etl/api_driver_bronze_to_silver.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-02-09T08:28:58.003196Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2026-02-09T08:28:58.003622Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2026-02-09T08:28:58.004487Z","level":"info","event":"Current task name:backfill_dim_driver","logger":"task.stdout"}
+{"timestamp":"2026-02-09T08:28:58.005396Z","level":"info","event":"Dag name:api_driver_bronze_to_silver","logger":"task.stdout"}
+{"timestamp":"2026-02-09T08:28:58.009900Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-09T08:28:58.010258Z","level":"info","event":"F1 DRIVER BACKFILL: ERGAST API → SILVER","logger":"task.stdout"}
+{"timestamp":"2026-02-09T08:28:58.011270Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-09T08:28:58.024095Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-09T08:28:58.024450Z","level":"info","event":"[STEP 1] Scraping API...","logger":"task.stdout"}
+{"timestamp":"2026-02-09T08:28:58.026821Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-09T08:28:58.027557Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-09T08:28:58.028318Z","level":"info","event":"SCRAPING DRIVERS FROM ERGAST API: 2011-2025","logger":"task.stdout"}
+{"timestamp":"2026-02-09T08:28:58.028567Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-09T08:28:58.030567Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-09T08:28:58.030980Z","level":"info","event":"Fetching drivers for 2011...","logger":"task.stdout"}
+{"timestamp":"2026-02-09T08:28:58.664311Z","level":"info","event":"28 drivers found","logger":"task.stdout"}
+{"timestamp":"2026-02-09T08:28:58.664759Z","level":"info","event":"Fetching drivers for 2012...","logger":"task.stdout"}
+{"timestamp":"2026-02-09T08:28:58.720421Z","level":"info","event":"ERROR: API request failed for https://api.jolpi.ca/ergast/f1/2012/drivers.json","logger":"task.stdout"}
+{"timestamp":"2026-02-09T08:28:58.720813Z","level":"info","event":"Reason: 429 Client Error: Too Many Requests for url: https://api.jolpi.ca/ergast/f1/2012/drivers.json","logger":"task.stdout"}
+{"timestamp":"2026-02-09T08:28:58.721233Z","level":"error","event":"Task failed with exception","logger":"task","filename":"task_runner.py","lineno":1078,"error_detail":[{"exc_type":"HTTPError","exc_value":"429 Client Error: Too Many Requests for url: https://api.jolpi.ca/ergast/f1/2012/drivers.json","exc_notes":[],"syntax_error":null,"is_cause":false,"frames":[{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/task_runner.py","lineno":1004,"name":"run"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/task_runner.py","lineno":1405,"name":"_execute_task"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/bases/operator.py","lineno":417,"name":"wrapper"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/standard/operators/python.py","lineno":214,"name":"execute"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/standard/operators/python.py","lineno":237,"name":"execute_callable"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/callback_runner.py","lineno":82,"name":"run"},{"filename":"/opt/airflow/dags/api_etl/api_driver_bronze_to_silver.py","lineno":278,"name":"backfill_dim_driver"},{"filename":"/opt/airflow/dags/utils/scraper/driver.py","lineno":147,"name":"scrape_drivers_range"},{"filename":"/opt/airflow/dags/utils/scraper/driver.py","lineno":117,"name":"scrape_drivers_year"},{"filename":"/opt/airflow/dags/utils/scraper/driver.py","lineno":72,"name":"_get"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/requests/models.py","lineno":1026,"name":"raise_for_status"}],"is_group":false,"exceptions":[]}]}
+{"timestamp":"2026-02-09T08:28:58.755796Z","level":"info","event":"Task instance in failure state","logger":"task.stdout"}
+{"timestamp":"2026-02-09T08:28:58.759304Z","level":"info","event":"Task start","logger":"task.stdout"}
+{"timestamp":"2026-02-09T08:28:58.763186Z","level":"info","event":"Task:<Task(PythonOperator): backfill_dim_driver>","logger":"task.stdout"}
+{"timestamp":"2026-02-09T08:28:58.763479Z","level":"info","event":"Failure caused by 429 Client Error: Too Many Requests for url: https://api.jolpi.ca/ergast/f1/2012/drivers.json","logger":"task.stdout"}

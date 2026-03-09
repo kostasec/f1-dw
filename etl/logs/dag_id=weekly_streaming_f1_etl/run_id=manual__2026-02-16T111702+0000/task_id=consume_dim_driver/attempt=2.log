@@ -1,0 +1,124 @@
+{"timestamp":"2026-02-16T11:28:07.289633Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-02-16T11:28:07.292863Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/weekly_streaming_pipeline.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-02-16T11:28:08.933130Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:28:08.933990Z","level":"info","event":"[CONSUMER] Starting dim_driver consumption...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:28:08.935670Z","level":"info","event":"<BrokerConnection client_id=kafka-python-2.2.0, node_id=bootstrap-0 host=kafka:29092 <connecting> [IPv4 ('172.18.0.4', 29092)]>: connecting to kafka:29092 [('172.18.0.4', 29092) IPv4]","logger":"kafka.conn","filename":"conn.py","lineno":395}
+{"timestamp":"2026-02-16T11:28:08.940181Z","level":"info","event":"<BrokerConnection client_id=kafka-python-2.2.0, node_id=bootstrap-0 host=kafka:29092 <checking_api_versions_recv> [IPv4 ('172.18.0.4', 29092)]>: Broker version identified as 2.6","logger":"kafka.conn","filename":"conn.py","lineno":615}
+{"timestamp":"2026-02-16T11:28:08.941610Z","level":"info","event":"<BrokerConnection client_id=kafka-python-2.2.0, node_id=bootstrap-0 host=kafka:29092 <connected> [IPv4 ('172.18.0.4', 29092)]>: Connection complete.","logger":"kafka.conn","filename":"conn.py","lineno":456}
+{"timestamp":"2026-02-16T11:28:08.943242Z","level":"info","event":"Updating subscribed topics to: ('dim-driver',)","logger":"kafka.consumer.subscription_state","filename":"subscription_state.py","lineno":177}
+{"timestamp":"2026-02-16T11:28:08.944235Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:28:08.944810Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:28:08.945375Z","level":"info","event":"CONSUMING: dim-driver → dimensions/dim_driver/dim_driver.parquet","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:28:08.946026Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:28:08.946558Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:28:08.994060Z","level":"info","event":" Downloaded dimensions/dim_driver/dim_driver.parquet (82 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:28:08.994823Z","level":"info","event":" Loaded 82 existing records from Silver","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:28:08.997725Z","level":"info","event":"<BrokerConnection client_id=kafka-python-2.2.0, node_id=1 host=kafka:29092 <connecting> [IPv4 ('172.18.0.4', 29092)]>: connecting to kafka:29092 [('172.18.0.4', 29092) IPv4]","logger":"kafka.conn","filename":"conn.py","lineno":395}
+{"timestamp":"2026-02-16T11:28:08.998545Z","level":"info","event":"<BrokerConnection client_id=kafka-python-2.2.0, node_id=1 host=kafka:29092 <connected> [IPv4 ('172.18.0.4', 29092)]>: Connection complete.","logger":"kafka.conn","filename":"conn.py","lineno":456}
+{"timestamp":"2026-02-16T11:28:08.998907Z","level":"info","event":"<BrokerConnection client_id=kafka-python-2.2.0, node_id=bootstrap-0 host=kafka:29092 <connected> [IPv4 ('172.18.0.4', 29092)]>: Closing connection. ","logger":"kafka.conn","filename":"conn.py","lineno":936}
+{"timestamp":"2026-02-16T11:28:09.101731Z","level":"info","event":"Coordinator for group/f1-silver-consumers is BrokerMetadata(nodeId='coordinator-1', host='kafka', port=29092, rack=None)","logger":"kafka.cluster","filename":"cluster.py","lineno":398}
+{"timestamp":"2026-02-16T11:28:09.102065Z","level":"info","event":"Discovered coordinator coordinator-1 for group f1-silver-consumers","logger":"kafka.coordinator","filename":"base.py","lineno":745}
+{"timestamp":"2026-02-16T11:28:09.102425Z","level":"info","event":"Starting new heartbeat thread","logger":"kafka.coordinator","filename":"base.py","lineno":796}
+{"timestamp":"2026-02-16T11:28:09.103748Z","level":"info","event":"Revoking previously assigned partitions set() for group f1-silver-consumers","logger":"kafka.coordinator.consumer","filename":"consumer.py","lineno":357}
+{"timestamp":"2026-02-16T11:28:09.105531Z","level":"info","event":"<BrokerConnection client_id=kafka-python-2.2.0, node_id=coordinator-1 host=kafka:29092 <connecting> [IPv4 ('172.18.0.4', 29092)]>: connecting to kafka:29092 [('172.18.0.4', 29092) IPv4]","logger":"kafka.conn","filename":"conn.py","lineno":395}
+{"timestamp":"2026-02-16T11:28:09.106444Z","level":"info","event":"<BrokerConnection client_id=kafka-python-2.2.0, node_id=coordinator-1 host=kafka:29092 <connected> [IPv4 ('172.18.0.4', 29092)]>: Connection complete.","logger":"kafka.conn","filename":"conn.py","lineno":456}
+{"timestamp":"2026-02-16T11:28:09.208167Z","level":"info","event":"(Re-)joining group f1-silver-consumers","logger":"kafka.coordinator","filename":"base.py","lineno":500}
+{"timestamp":"2026-02-16T11:28:09.210443Z","level":"info","event":"(Re-)joining group f1-silver-consumers","logger":"kafka.coordinator","filename":"base.py","lineno":500}
+{"timestamp":"2026-02-16T11:28:09.215525Z","level":"info","event":"Elected group leader -- performing partition assignments using range","logger":"kafka.coordinator","filename":"base.py","lineno":563}
+{"timestamp":"2026-02-16T11:28:09.219528Z","level":"info","event":"Successfully joined group f1-silver-consumers with generation 33","logger":"kafka.coordinator","filename":"base.py","lineno":390}
+{"timestamp":"2026-02-16T11:28:09.220019Z","level":"info","event":"Updated partition assignment: [TopicPartition(topic='dim-driver', partition=0)]","logger":"kafka.consumer.subscription_state","filename":"subscription_state.py","lineno":246}
+{"timestamp":"2026-02-16T11:28:09.220318Z","level":"info","event":"Setting newly assigned partitions {TopicPartition(topic='dim-driver', partition=0)} for group f1-silver-consumers","logger":"kafka.coordinator.consumer","filename":"consumer.py","lineno":248}
+{"timestamp":"2026-02-16T11:28:09.352641Z","level":"info","event":"Consumed 10 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:28:09.353335Z","level":"info","event":"Consumed 20 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:28:09.353911Z","level":"info","event":"Consumed 30 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:28:09.355393Z","level":"info","event":"Consumed 40 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:28:09.355978Z","level":"info","event":"Consumed 50 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:28:09.356505Z","level":"info","event":"Consumed 60 messages...","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:28:14.357996Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:28:14.383355Z","level":"info","event":" Processing 66 new records from Kafka","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:28:14.383809Z","level":"info","event":"    Columns in new data: ['driver_ref', 'driver_number', 'driver_code', 'driver_forename', 'driver_surname', 'driver_dob', 'driver_nationality', 'driver_url', 'driver_id', 'source', 'created_at']","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:28:14.384399Z","level":"info","event":" Updated: driver_ref=albon","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:28:14.384881Z","level":"info","event":" Updated: driver_ref=alonso","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:28:14.385385Z","level":"info","event":" Updated: driver_ref=antonelli","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:28:14.385837Z","level":"info","event":" Updated: driver_ref=bearman","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:28:14.386273Z","level":"info","event":" Updated: driver_ref=bortoleto","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:28:14.386865Z","level":"info","event":" Updated: driver_ref=bottas","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:28:14.388078Z","level":"info","event":" Updated: driver_ref=colapinto","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:28:14.390354Z","level":"info","event":" Updated: driver_ref=gasly","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:28:14.392705Z","level":"info","event":" Updated: driver_ref=hadjar","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:28:14.394876Z","level":"info","event":" Updated: driver_ref=hamilton","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:28:14.398903Z","level":"info","event":" Updated: driver_ref=hulkenberg","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:28:14.401732Z","level":"info","event":" Updated: driver_ref=lawson","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:28:14.404499Z","level":"info","event":" Updated: driver_ref=leclerc","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:28:14.406759Z","level":"info","event":" Updated: driver_ref=lindblad","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:28:14.409005Z","level":"info","event":" Updated: driver_ref=max_verstappen","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:28:14.411342Z","level":"info","event":" Updated: driver_ref=norris","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:28:14.413637Z","level":"info","event":" Updated: driver_ref=ocon","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:28:14.415803Z","level":"info","event":" Updated: driver_ref=perez","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:28:14.418723Z","level":"info","event":" Updated: driver_ref=piastri","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:28:14.421653Z","level":"info","event":" Updated: driver_ref=russell","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:28:14.424175Z","level":"info","event":" Updated: driver_ref=sainz","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:28:14.426517Z","level":"info","event":" Updated: driver_ref=stroll","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:28:14.428932Z","level":"info","event":" Updated: driver_ref=albon","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:28:14.431382Z","level":"info","event":" Updated: driver_ref=alonso","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:28:14.433870Z","level":"info","event":" Updated: driver_ref=antonelli","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:28:14.437294Z","level":"info","event":" Updated: driver_ref=bearman","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:28:14.439662Z","level":"info","event":" Updated: driver_ref=bortoleto","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:28:14.442091Z","level":"info","event":" Updated: driver_ref=bottas","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:28:14.444451Z","level":"info","event":" Updated: driver_ref=colapinto","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:28:14.446682Z","level":"info","event":" Updated: driver_ref=gasly","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:28:14.451054Z","level":"info","event":" Updated: driver_ref=hadjar","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:28:14.456006Z","level":"info","event":" Updated: driver_ref=hamilton","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:28:14.461003Z","level":"info","event":" Updated: driver_ref=hulkenberg","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:28:14.465828Z","level":"info","event":" Updated: driver_ref=lawson","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:28:14.470003Z","level":"info","event":" Updated: driver_ref=leclerc","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:28:14.474326Z","level":"info","event":" Updated: driver_ref=lindblad","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:28:14.477362Z","level":"info","event":" Updated: driver_ref=max_verstappen","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:28:14.479956Z","level":"info","event":" Updated: driver_ref=norris","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:28:14.482776Z","level":"info","event":" Updated: driver_ref=ocon","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:28:14.487874Z","level":"info","event":" Updated: driver_ref=perez","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:28:14.492202Z","level":"info","event":" Updated: driver_ref=piastri","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:28:14.496788Z","level":"info","event":" Updated: driver_ref=russell","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:28:14.501896Z","level":"info","event":" Updated: driver_ref=sainz","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:28:14.508131Z","level":"info","event":" Updated: driver_ref=stroll","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:28:14.513770Z","level":"info","event":" Updated: driver_ref=albon","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:28:14.519219Z","level":"info","event":" Updated: driver_ref=alonso","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:28:14.524145Z","level":"info","event":" Updated: driver_ref=antonelli","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:28:14.530563Z","level":"info","event":" Updated: driver_ref=bearman","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:28:14.535260Z","level":"info","event":" Updated: driver_ref=bortoleto","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:28:14.538677Z","level":"info","event":" Updated: driver_ref=bottas","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:28:14.542103Z","level":"info","event":" Updated: driver_ref=colapinto","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:28:14.545610Z","level":"info","event":" Updated: driver_ref=gasly","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:28:14.548646Z","level":"info","event":" Updated: driver_ref=hadjar","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:28:14.551767Z","level":"info","event":" Updated: driver_ref=hamilton","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:28:14.554645Z","level":"info","event":" Updated: driver_ref=hulkenberg","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:28:14.557274Z","level":"info","event":" Updated: driver_ref=lawson","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:28:14.559948Z","level":"info","event":" Updated: driver_ref=leclerc","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:28:14.565672Z","level":"info","event":" Updated: driver_ref=lindblad","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:28:14.569277Z","level":"info","event":" Updated: driver_ref=max_verstappen","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:28:14.574469Z","level":"info","event":" Updated: driver_ref=norris","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:28:14.579536Z","level":"info","event":" Updated: driver_ref=ocon","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:28:14.583371Z","level":"info","event":" Updated: driver_ref=perez","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:28:14.589432Z","level":"info","event":" Updated: driver_ref=piastri","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:28:14.594690Z","level":"info","event":" Updated: driver_ref=russell","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:28:14.599902Z","level":"info","event":" Updated: driver_ref=sainz","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:28:14.609426Z","level":"info","event":" Updated: driver_ref=stroll","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:28:14.647496Z","level":"info","event":"Uploaded dimensions/dim_driver/dim_driver.parquet (82 rows)","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:28:14.648086Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:28:14.649645Z","level":"info","event":"Written to Silver: dimensions/dim_driver/dim_driver.parquet","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:28:14.650291Z","level":"info","event":"Kafka offset committed successfully","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:28:14.650334Z","level":"info","event":"Stopping heartbeat thread","logger":"kafka.coordinator","filename":"base.py","lineno":810}
+{"timestamp":"2026-02-16T11:28:17.651117Z","level":"warning","event":"Heartbeat thread did not fully terminate during close","logger":"kafka.coordinator","filename":"base.py","lineno":1013}
+{"timestamp":"2026-02-16T11:28:17.651704Z","level":"info","event":"Leaving consumer group (f1-silver-consumers).","logger":"kafka.coordinator","filename":"base.py","lineno":841}
+{"timestamp":"2026-02-16T11:28:17.656292Z","level":"info","event":"<BrokerConnection client_id=kafka-python-2.2.0, node_id=1 host=kafka:29092 <connected> [IPv4 ('172.18.0.4', 29092)]>: Closing connection. ","logger":"kafka.conn","filename":"conn.py","lineno":936}
+{"timestamp":"2026-02-16T11:28:17.656996Z","level":"info","event":"<BrokerConnection client_id=kafka-python-2.2.0, node_id=coordinator-1 host=kafka:29092 <connected> [IPv4 ('172.18.0.4', 29092)]>: Closing connection. ","logger":"kafka.conn","filename":"conn.py","lineno":936}
+{"timestamp":"2026-02-16T11:28:17.658539Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:28:17.659219Z","level":"info","event":" Consumer Stats:","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:28:17.659865Z","level":"info","event":"    Consumed: 66","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:28:17.660488Z","level":"info","event":"    New: 0","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:28:17.661132Z","level":"info","event":"    Updated: 66","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:28:17.661727Z","level":"info","event":"    Skipped: 0","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:28:17.662320Z","level":"info","event":"    Final count: 82","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:28:17.687478Z","level":"info","event":"[CONSUMER] Completed: {'consumed': 66, 'new': 0, 'updated': 66, 'skipped': 0}","logger":"task.stdout"}
+{"timestamp":"2026-02-16T11:28:17.688047Z","level":"info","event":"Done. Returned value was: {'consumed': 66, 'new': 0, 'updated': 66, 'skipped': 0}","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":216}
+{"timestamp":"2026-02-16T11:28:17.688528Z","level":"info","event":"Pushing xcom","ti":"RuntimeTaskInstance(id=UUID('019c662c-0431-76ea-893c-ade09f9efb4c'), task_id='consume_dim_driver', dag_id='weekly_streaming_f1_etl', run_id='manual__2026-02-16T11:17:02+00:00', try_number=2, dag_version_id=UUID('019c61bd-e638-74f5-b658-bbd5e8d757b9'), map_index=-1, hostname='8ca1c3cee112', context_carrier={}, task=<Task(PythonOperator): consume_dim_driver>, bundle_instance=LocalDagBundle(name=dags-folder), max_tries=2, start_date=datetime.datetime(2026, 2, 16, 11, 28, 7, 86345, tzinfo=datetime.timezone.utc), end_date=None, state=<TaskInstanceState.RUNNING: 'running'>, is_mapped=False, rendered_map_index=None)","logger":"task","filename":"task_runner.py","lineno":1450}

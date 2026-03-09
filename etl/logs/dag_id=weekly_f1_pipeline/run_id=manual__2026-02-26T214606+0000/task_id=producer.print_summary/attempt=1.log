@@ -1,0 +1,19 @@
+{"timestamp":"2026-02-26T21:57:00.494005Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-02-26T21:57:00.498144Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/weekly_f1_pipeline.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-02-26T21:57:04.407860Z","level":"warning","event":"The `airflow.utils.task_group.TaskGroup` attribute is deprecated. Please use `'airflow.sdk.TaskGroup'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/dags/weekly_f1_pipeline.py","lineno":36,"logger":"py.warnings"}
+{"timestamp":"2026-02-26T21:57:04.408621Z","level":"warning","event":"The `airflow.operators.trigger_dagrun.TriggerDagRunOperator` attribute is deprecated. Please use `'airflow.providers.standard.operators.trigger_dagrun.TriggerDagRunOperator'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/dags/kafka_producer_pipeline.py","lineno":35,"logger":"py.warnings"}
+{"timestamp":"2026-02-26T21:57:04.519309Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-26T21:57:04.520165Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-26T21:57:04.520899Z","level":"info","event":"KAFKA PRODUCER PIPELINE COMPLETE","logger":"task.stdout"}
+{"timestamp":"2026-02-26T21:57:04.524991Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-26T21:57:04.568885Z","level":"info","event":"  Drivers                  : 0 new records published","logger":"task.stdout"}
+{"timestamp":"2026-02-26T21:57:04.619381Z","level":"info","event":"  Constructors             : 0 new records published","logger":"task.stdout"}
+{"timestamp":"2026-02-26T21:57:04.688733Z","level":"info","event":"  Circuits                 : 0 new records published","logger":"task.stdout"}
+{"timestamp":"2026-02-26T21:57:04.744701Z","level":"info","event":"  Races                    : 0 new records published","logger":"task.stdout"}
+{"timestamp":"2026-02-26T21:57:04.777073Z","level":"info","event":"  Results                  : 0 new records published","logger":"task.stdout"}
+{"timestamp":"2026-02-26T21:57:04.818827Z","level":"info","event":"  Laps                     : 0 new records published","logger":"task.stdout"}
+{"timestamp":"2026-02-26T21:57:04.861093Z","level":"info","event":"  Pitstops                 : 0 new records published","logger":"task.stdout"}
+{"timestamp":"2026-02-26T21:57:04.911132Z","level":"info","event":"  Driver standings         : 0 new records published","logger":"task.stdout"}
+{"timestamp":"2026-02-26T21:57:04.981328Z","level":"info","event":"  Constructor standings    : 0 new records published","logger":"task.stdout"}
+{"timestamp":"2026-02-26T21:57:04.982325Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-26T21:57:04.972989Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":216}

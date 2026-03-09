@@ -1,0 +1,23 @@
+{"timestamp":"2026-02-11T12:39:05.096067Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-02-11T12:39:05.097102Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/api_etl/api_constructorStandings_bronze.to_silver.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-02-11T12:39:05.612044Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-11T12:39:05.612619Z","level":"info","event":"F1 CONSTRUCTOR STANDINGS BACKFILL: ERGAST API -> SILVER","logger":"task.stdout"}
+{"timestamp":"2026-02-11T12:39:05.612846Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-11T12:39:05.613114Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-11T12:39:05.613303Z","level":"info","event":"[STEP 1] Scraping API...","logger":"task.stdout"}
+{"timestamp":"2026-02-11T12:39:05.613493Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-11T12:39:05.613676Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-11T12:39:05.613861Z","level":"info","event":"SCRAPING CONSTRUCTOR STANDINGS FROM ERGAST API: 2011-2025","logger":"task.stdout"}
+{"timestamp":"2026-02-11T12:39:05.614081Z","level":"info","event":"======================================================================","logger":"task.stdout"}
+{"timestamp":"2026-02-11T12:39:05.614273Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-02-11T12:39:05.614455Z","level":"info","event":"Fetching constructor standings for 2011...","logger":"task.stdout"}
+{"timestamp":"2026-02-11T12:39:26.697801Z","level":"info","event":"12 standings found for 2011","logger":"task.stdout"}
+{"timestamp":"2026-02-11T12:39:26.698493Z","level":"info","event":"Fetching constructor standings for 2012...","logger":"task.stdout"}
+{"timestamp":"2026-02-11T12:39:50.602020Z","level":"info","event":"12 standings found for 2012","logger":"task.stdout"}
+{"timestamp":"2026-02-11T12:39:50.602361Z","level":"info","event":"Fetching constructor standings for 2013...","logger":"task.stdout"}
+{"timestamp":"2026-02-11T12:40:13.474690Z","level":"info","event":"11 standings found for 2013","logger":"task.stdout"}
+{"timestamp":"2026-02-11T12:40:13.475093Z","level":"info","event":"Fetching constructor standings for 2014...","logger":"task.stdout"}
+{"timestamp":"2026-02-11T12:40:33.535207Z","level":"error","event":"Server indicated the task shouldn't be running anymore. Terminating process","detail":{"detail":{"reason":"not_running","message":"TI is no longer in the running state and task should terminate","current_state":"failed"}},"logger":"task"}
+{"timestamp":"2026-02-11T12:40:35.148823Z","level":"info","event":"11 standings found for 2014","logger":"task.stdout"}
+{"timestamp":"2026-02-11T12:40:35.149308Z","level":"info","event":"Fetching constructor standings for 2015...","logger":"task.stdout"}
+{"timestamp":"2026-02-11T12:40:43.542609Z","level":"error","event":"Task killed!","logger":"task"}
