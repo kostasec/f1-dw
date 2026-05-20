@@ -11,7 +11,7 @@ A data warehouse for Formula 1 race data built on a Bronze-Silver-Gold medallion
 │ f1_data.csv │     │  MinIO S3 (Parquet, partitioned) │     │  PostgreSQL     │
 │ Ergast API  │     │  Dimensions + Facts              │     │  Constellation  │
 └─────────────┘     └──────────────────────────────────┘     │  Schema         │
-                                                              └─────────────────┘
+                                                             └─────────────────┘
 ```
 
 **Bronze** — raw sources: historical CSV file (2012–2025) and the Ergast REST API.
