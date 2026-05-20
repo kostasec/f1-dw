@@ -6,10 +6,10 @@ A data warehouse for Formula 1 race data built on a Bronze-Silver-Gold medallion
 
 ```
 ┌─────────────┐     ┌──────────────────────────────────┐     ┌─────────────────┐
-│   BRONZE    │────▶│              SILVER               │────▶│      GOLD       │
-│             │     │                                   │     │                 │
-│ f1_data.csv │     │  MinIO S3 (Parquet, partitioned)  │     │  PostgreSQL     │
-│ Ergast API  │     │  Dimensions + Facts               │     │  Constellation  │
+│   BRONZE    │────▶│              SILVER               │────▶│      GOLD     │
+│             │     │                                  │     │                 │
+│ f1_data.csv │     │  MinIO S3 (Parquet, partitioned) │     │  PostgreSQL     │
+│ Ergast API  │     │  Dimensions + Facts              │     │  Constellation  │
 └─────────────┘     └──────────────────────────────────┘     │  Schema         │
                                                               └─────────────────┘
 ```
